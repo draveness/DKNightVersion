@@ -30,7 +30,7 @@
 //    return self;
 //}
 
-- (void)setThemeVersion:(DKThemeVersion)themeVersion {
+- (void)setThemeVersion:(DSThemeVersion)themeVersion {
     if (_themeVersion == themeVersion) {
         // if the type does not change, do not execute code below to enhance performance.
         return;

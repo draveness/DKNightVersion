@@ -8,7 +8,7 @@
 
 #import "UILabel+NightVersion.h"
 #import "UIView+NightVersion.h"
-#import "DKUtilities.h"
+#import "DSUtilities.h"
 
 static char *nightTextColorKey;
 static char *normalTextColorKey;
@@ -43,9 +43,9 @@ static char *normalTextColorKey;
 - (void)rerenderColor {
     [super rerenderColor];
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    if (manager.themeVersion == DKThemeVersionNight) {
+    if (manager.themeVersion == DSThemeVersionNight) {
         self.textColor = self.nightTextColor;
-    } else if (manager.themeVersion == DKThemeVersionNight) {
+    } else if (manager.themeVersion == DSThemeVersionNormal) {
         self.textColor = self.normalTextColor;
     }
 }
