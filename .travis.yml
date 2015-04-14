@@ -1,2 +1,11 @@
 language: objective-c
+before_install:
 
+    - export LANG=en_US.UTF-8
+    - env
+    - locale
+
+script:
+
+    - pod lib lint --allow-warnings
+    - xctool -workspace DKNightVersion.xcodeproj -scheme 'SDWebImage' -sdk iphonesimulator -arch i386 build
