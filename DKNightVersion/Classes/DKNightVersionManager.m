@@ -23,13 +23,6 @@
     return instance;
 }
 
-//- (instancetype)init {
-//    if (self = [super init]) {
-//        _themeVersion = DSThemeVersionNight;
-//    }
-//    return self;
-//}
-
 - (void)setThemeVersion:(DKThemeVersion)themeVersion {
     if (_themeVersion == themeVersion) {
         // if the type does not change, do not execute code below to enhance performance.
