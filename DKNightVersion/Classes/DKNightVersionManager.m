@@ -7,10 +7,6 @@
 //
 
 #import "DKNightVersionManager.h"
-#import "AppDelegate.h"
-
-
-#define applicationDelegate [UIApplication sharedApplication].delegate
 
 @implementation DKNightVersionManager
 
@@ -29,7 +25,7 @@
         return;
     }
     _themeVersion = themeVersion;
-    [self darkenView:applicationDelegate.window];
+    [self darkenView:[UIApplication sharedApplication].delegate.window];
 }
 
 - (void)darkenView:(id)object {
