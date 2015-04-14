@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    A longer description of DKNightVersion in Markdown format.
 
-                   * This framework is target for easily integrate night mode in iOS App.
+                   * This framework is target for easily integrate night dark mode in iOS App.
                    * It is inspired by many famous framework, and implement with runtime
                    * library. Hope this will help you reduce your work.
                    DESC
