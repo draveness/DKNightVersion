@@ -9,6 +9,7 @@
 #import "DKNightVersionManager.h"
 #import "AppDelegate.h"
 
+
 #define applicationDelegate [UIApplication sharedApplication].delegate
 
 @implementation DKNightVersionManager
