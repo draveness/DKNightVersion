@@ -12,10 +12,10 @@
 		189854C11ADD5B550050568B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
 		189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189854C21ADD5B550050568B /* LaunchScreen.xib */; };
 		189854D01ADD5B560050568B /* DKNightVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854CF1ADD5B560050568B /* DKNightVersionTests.m */; };
-		189854E31ADD5B770050568B /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854DC1ADD5B770050568B /* DKNightVersionManager.m */; };
-		189854E41ADD5B770050568B /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E01ADD5B770050568B /* UILabel+NightVersion.m */; };
-		189854E51ADD5B770050568B /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E21ADD5B770050568B /* UIView+NightVersion.m */; };
 		189854E81ADD5BCE0050568B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E71ADD5BCE0050568B /* RootViewController.m */; };
+		189854F31ADD73CD0050568B /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854EC1ADD73CD0050568B /* DKNightVersionManager.m */; };
+		189854F41ADD73CD0050568B /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854F01ADD73CD0050568B /* UILabel+NightVersion.m */; };
+		189854F51ADD73CD0050568B /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854F21ADD73CD0050568B /* UIView+NightVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +39,16 @@
 		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189854CF1ADD5B560050568B /* DKNightVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionTests.m; sourceTree = "<group>"; };
-		189854DA1ADD5B770050568B /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
-		189854DB1ADD5B770050568B /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
-		189854DC1ADD5B770050568B /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManager.m; sourceTree = "<group>"; };
-		189854DD1ADD5B770050568B /* DKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKUtilities.h; sourceTree = "<group>"; };
-		189854DF1ADD5B770050568B /* UILabel+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NightVersion.h"; sourceTree = "<group>"; };
-		189854E01ADD5B770050568B /* UILabel+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NightVersion.m"; sourceTree = "<group>"; };
-		189854E11ADD5B770050568B /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
-		189854E21ADD5B770050568B /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 		189854E61ADD5BCE0050568B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		189854E71ADD5BCE0050568B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		189854EA1ADD73CD0050568B /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
+		189854EB1ADD73CD0050568B /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
+		189854EC1ADD73CD0050568B /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManager.m; sourceTree = "<group>"; };
+		189854ED1ADD73CD0050568B /* DKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKUtilities.h; sourceTree = "<group>"; };
+		189854EF1ADD73CD0050568B /* UILabel+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NightVersion.h"; sourceTree = "<group>"; };
+		189854F01ADD73CD0050568B /* UILabel+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NightVersion.m"; sourceTree = "<group>"; };
+		189854F11ADD73CD0050568B /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
+		189854F21ADD73CD0050568B /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		189854B81ADD5B550050568B /* DKNightVersion */ = {
 			isa = PBXGroup;
 			children = (
-				189854D91ADD5B770050568B /* Classes */,
+				189854E91ADD73CD0050568B /* Classes */,
 				189854BD1ADD5B550050568B /* AppDelegate.h */,
 				189854BE1ADD5B550050568B /* AppDelegate.m */,
 				189854E61ADD5BCE0050568B /* RootViewController.h */,
@@ -128,25 +128,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		189854D91ADD5B770050568B /* Classes */ = {
+		189854E91ADD73CD0050568B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				189854DA1ADD5B770050568B /* DKNightVersion.h */,
-				189854DB1ADD5B770050568B /* DKNightVersionManager.h */,
-				189854DC1ADD5B770050568B /* DKNightVersionManager.m */,
-				189854DD1ADD5B770050568B /* DKUtilities.h */,
-				189854DE1ADD5B770050568B /* UIKit */,
+				189854EA1ADD73CD0050568B /* DKNightVersion.h */,
+				189854EB1ADD73CD0050568B /* DKNightVersionManager.h */,
+				189854EC1ADD73CD0050568B /* DKNightVersionManager.m */,
+				189854ED1ADD73CD0050568B /* DKUtilities.h */,
+				189854EE1ADD73CD0050568B /* UIKit */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		189854DE1ADD5B770050568B /* UIKit */ = {
+		189854EE1ADD73CD0050568B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				189854DF1ADD5B770050568B /* UILabel+NightVersion.h */,
-				189854E01ADD5B770050568B /* UILabel+NightVersion.m */,
-				189854E11ADD5B770050568B /* UIView+NightVersion.h */,
-				189854E21ADD5B770050568B /* UIView+NightVersion.m */,
+				189854EF1ADD73CD0050568B /* UILabel+NightVersion.h */,
+				189854F01ADD73CD0050568B /* UILabel+NightVersion.m */,
+				189854F11ADD73CD0050568B /* UIView+NightVersion.h */,
+				189854F21ADD73CD0050568B /* UIView+NightVersion.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -250,11 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189854E31ADD5B770050568B /* DKNightVersionManager.m in Sources */,
+				189854F31ADD73CD0050568B /* DKNightVersionManager.m in Sources */,
 				189854BF1ADD5B550050568B /* AppDelegate.m in Sources */,
+				189854F51ADD73CD0050568B /* UIView+NightVersion.m in Sources */,
 				189854E81ADD5BCE0050568B /* RootViewController.m in Sources */,
-				189854E51ADD5B770050568B /* UIView+NightVersion.m in Sources */,
-				189854E41ADD5B770050568B /* UILabel+NightVersion.m in Sources */,
+				189854F41ADD73CD0050568B /* UILabel+NightVersion.m in Sources */,
 				189854BC1ADD5B550050568B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +442,7 @@
 				189854D51ADD5B560050568B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189854D61ADD5B560050568B /* Build configuration list for PBXNativeTarget "DKNightVersionTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +451,7 @@
 				189854D81ADD5B560050568B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

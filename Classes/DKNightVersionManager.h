@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIView+NightVersion.h"
 
 typedef enum : NSUInteger {
     DKThemeVersionNormal,

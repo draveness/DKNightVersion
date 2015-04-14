@@ -41,9 +41,9 @@ static char *normalBackgroundColorKey;
 
 - (void)rerenderColor {
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    if (manager.themeVersion == DSThemeVersionNight) {
+    if (manager.themeVersion == DKThemeVersionNight) {
         self.backgroundColor = self.nightBackgroundColor;
-    } else if (manager.themeVersion == DSThemeVersionNormal) {
+    } else if (manager.themeVersion == DKThemeVersionNight) {
         self.backgroundColor = self.nightBackgroundColor;
     }
 }

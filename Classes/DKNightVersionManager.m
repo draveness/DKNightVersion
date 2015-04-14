@@ -7,10 +7,6 @@
 //
 
 #import "DKNightVersionManager.h"
-#import "UIView+NightVersion.h"
-#import "AppDelegate.h"
-
-#define applicationDelegate [UIApplication sharedApplication].delegate
 
 @implementation DKNightVersionManager
 
@@ -23,20 +19,13 @@
     return instance;
 }
 
-//- (instancetype)init {
-//    if (self = [super init]) {
-//        _themeVersion = DSThemeVersionNight;
-//    }
-//    return self;
-//}
-
-- (void)setThemeVersion:(DSThemeVersion)themeVersion {
+- (void)setThemeVersion:(DKThemeVersion)themeVersion {
     if (_themeVersion == themeVersion) {
         // if the type does not change, do not execute code below to enhance performance.
         return;
     }
     _themeVersion = themeVersion;
-    [self darkenView:applicationDelegate.window];
+    [self darkenView:[UIApplication sharedApplication].delegate.window];
 }
 
 - (void)darkenView:(id)object {
