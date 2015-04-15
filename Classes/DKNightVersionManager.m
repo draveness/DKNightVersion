@@ -25,12 +25,12 @@
         return;
     }
     _themeVersion = themeVersion;
-    [self darkenView:[UIApplication sharedApplication].delegate.window];
+    [self switchColor:[UIApplication sharedApplication].delegate.window];
 }
 
-- (void)darkenView:(id)object {
-    if ([object respondsToSelector:@selector(rerenderColor)]) {
-        [object rerenderColor];
+- (void)switchColor:(id)object {
+    if ([object respondsToSelector:@selector(switchColor)]) {
+        [object switchColor];
     }
     if ([object respondsToSelector:@selector(subviews)]) {
         if (![object subviews]) {
@@ -38,11 +38,11 @@
             return;
         } else {
             for (id subview in [object subviews]) {
-                if ([subview respondsToSelector:@selector(rerenderColor)]) {
-                    [subview rerenderColor];
+                if ([subview respondsToSelector:@selector(switchColor)]) {
+                    [subview switchColor];
                 }
                 // recursice darken all the subviews of current view.
-                [self darkenView:subview];
+                [self switchColor:subview];
             }
         }
     }

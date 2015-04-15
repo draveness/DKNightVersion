@@ -1,0 +1,4 @@
+UIView:
+  - backgroundColor
+UILabel:
+  - textColor

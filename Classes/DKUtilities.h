@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 DeltaX. All rights reserved.
 //
 
-#ifndef DRDarkTheme_DRUtilities_h
-#define DRDarkTheme_DRUtilities_h
+#ifndef DKNightVersion_DKUtilities_h
+#define DKNightVersion_DKUtilities_h
 
 #import "objc/runtime.h"
 #import "DKNightVersionManager.h"
 
-#define DKNightVersionMethodSwzzling(origin, swizzle)                                    \
+#define DK_MEHTOD_SWIZZLING(origin, swizzle)                                       \
     static dispatch_once_t onceToken;                                              \
     dispatch_once(&onceToken, ^{                                                   \
         Class class = [self class];                                                \
@@ -33,7 +33,7 @@
         } else {                                                                   \
             method_exchangeImplementations(originalMethod, swizzledMethod);        \
         }                                                                          \
-    }); 
+    });
 
 
 #endif

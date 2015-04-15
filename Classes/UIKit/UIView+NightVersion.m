@@ -9,25 +9,37 @@
 #import "UIView+NightVersion.h"
 #import "DKUtilities.h"
 
+@interface UIView ()
+
+@property (nonatomic, strong) UIColor *normalBackgroundColor;
+
+@end
+
 static char *nightBackgroundColorKey;
 static char *normalBackgroundColorKey;
 
 @implementation UIView (NightVersion)
 
+#pragma mark - Hook
+
 + (void)load {
-    DKNightVersionMethodSwzzling(setBackgroundColor:, hook_setBackgroundColor:)
+    DK_MEHTOD_SWIZZLING(setBackgroundColor:, hook_setBackgroundColor:)
 }
 
 - (void)hook_setBackgroundColor:(UIColor *)backgroundColor {
-    objc_setAssociatedObject(self, &normalBackgroundColorKey, backgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.normalBackgroundColor = backgroundColor;
     [self hook_setBackgroundColor:backgroundColor];
 }
+
+#pragma mark - BackgroundColor
 
 - (UIColor *)normalBackgroundColor {
     return objc_getAssociatedObject(self, &normalBackgroundColorKey);
 }
 
-#pragma mark - backgroundColor
+- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
+    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 - (UIColor *)nightBackgroundColor {
     return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : self.backgroundColor;
@@ -37,15 +49,11 @@ static char *normalBackgroundColorKey;
     objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark - RenderColor
+#pragma mark - SwitchColor
 
-- (void)rerenderColor {
+- (void)switchColor {
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    if (manager.themeVersion == DKThemeVersionNight) {
-        self.backgroundColor = self.nightBackgroundColor;
-    } else if (manager.themeVersion == DKThemeVersionNight) {
-        self.backgroundColor = self.nightBackgroundColor;
-    }
+    self.backgroundColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor;
 }
 
 @end

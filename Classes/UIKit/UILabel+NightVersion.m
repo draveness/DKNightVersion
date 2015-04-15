@@ -10,25 +10,37 @@
 #import "UIView+NightVersion.h"
 #import "DKUtilities.h"
 
-static char *nightTextColorKey;
-static char *normalTextColorKey;
+@interface UILabel ()
+
+@property (nonatomic, strong) UIColor *normalTextColor;
+
+@end
 
 @implementation UILabel (NightVersion)
 
+static char *nightTextColorKey;
+static char *normalTextColorKey;
+
+#pragma mark - Hook
+
 + (void)load {
-    DKNightVersionMethodSwzzling(setTextColor:, hook_setTextColor:)
+    DK_MEHTOD_SWIZZLING(setTextColor:, hook_setTextColor:)
 }
 
 - (void)hook_setTextColor:(UIColor *)textColor {
-    objc_setAssociatedObject(self, &normalTextColorKey, textColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.normalTextColor = textColor;
     [self hook_setTextColor:textColor];
 }
+
+#pragma mark - TextColor
 
 - (UIColor *)normalTextColor {
     return objc_getAssociatedObject(self, &normalTextColorKey);
 }
 
-#pragma mark - textColor
+- (void)setNormalTextColor:(UIColor *)normalTextColor {
+    objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 - (UIColor *)nightTextColor {
     return objc_getAssociatedObject(self, &nightTextColorKey) ? : self.textColor;
@@ -38,16 +50,12 @@ static char *normalTextColorKey;
     objc_setAssociatedObject(self, &nightTextColorKey, nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark - RenderColor
+#pragma mark - SwitchColor
 
-- (void)rerenderColor {
-    [super rerenderColor];
+- (void)switchColor {
+    [super switchColor];
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    if (manager.themeVersion == DKThemeVersionNight) {
-        self.textColor = self.nightTextColor;
-    } else if (manager.themeVersion == DKThemeVersionNight) {
-        self.textColor = self.normalTextColor;
-    }
+    self.textColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
 }
 
 @end
