@@ -5,13 +5,13 @@ require 'yaml'
 
 def objc_code_generator(table)
 	table.each do |cls|
-		FileUtils.mkdir_p('UIKit')
-		FileUtils.mkdir_p("UIKit/#{cls.name}")
+		FileUtils.mkdir_p("../Classes/UIKit")
+		FileUtils.mkdir_p("../Classes/UIKit/#{cls.name}")
 		cls.properties.each do |property|
-			File.open('UIKit/' + cls.name + '/' + cls.file_name(property) + '.h', "w+") do |f|
+			File.open('../Classes/UIKit/' + cls.name + '/' + cls.file_name(property) + '.h', "w+") do |f|
 				f.write(cls.interface_class_string(property))
 			end
-			File.open('UIKit/' + cls.name + '/' + cls.file_name(property) + '.m', "w+") do |f|
+			File.open('../Classes/UIKit/' + cls.name + '/' + cls.file_name(property) + '.m', "w+") do |f|
 				f.write(cls.implementation_class_string(property))
 			end
 		end
