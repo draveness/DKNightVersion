@@ -9,7 +9,7 @@ A light weight framework adds night version to your app.
 ## Podfile
 
 ```
-pod "AFNetworking", "~> 0.3.0"
+pod "AFNetworking", "~> 0.3.1"
 ```
 
 ## Usage
