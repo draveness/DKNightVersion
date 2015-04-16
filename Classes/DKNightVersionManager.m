@@ -7,6 +7,7 @@
 //
 
 #import "DKNightVersionManager.h"
+#import "objc/runtime.h"
 
 @implementation DKNightVersionManager
 

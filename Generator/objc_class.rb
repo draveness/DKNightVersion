@@ -16,7 +16,6 @@ class ObjcClass
 //  #{name}+#{property.cap_name}.h
 //  #{name}+#{property.cap_name}
 //
-//  Created by apple on 4/14/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
 
 #{interface_import_string}
@@ -33,7 +32,6 @@ H
 //  #{name}+#{property.cap_name}.m
 //  #{name}+#{property.cap_name}
 //
-//  Created by apple on 4/14/15.
 //  Copyright (c) 2015 Draveness. All rights reserved.
 
 #{implementation_import_string(property)}
