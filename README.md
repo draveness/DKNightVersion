@@ -72,6 +72,7 @@ Drag them in your workspace. And then everything works fine.
 # Contact
 
 - [Draveness](http://github.com/draveness)
+- Personal website [DeltaX](http://deltax.me)
 
 # License
 
