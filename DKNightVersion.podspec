@@ -92,11 +92,11 @@ Pod::Spec.new do |s|
   s.source_files = "DKNightVersion.h"
 
   s.subspec 'Core' do |ss|
-    s.source_files  = "Classes/Core/*.{h,m}"
+    ss.source_files  = "Classes/Core/*.{h,m}"
   end
 
   s.subspec 'UIKit' do |ss|
-    s.source_files  = "Classes/UIKit/*.{h,m}"
+    ss.source_files  = "Classes/UIKit/*.{h,m}"
   end
 
   s.subspec 'Generator' do |ss|
