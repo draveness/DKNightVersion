@@ -1,4 +1,7 @@
 UIView:
-  - backgroundColor
+  properies:
+    - backgroundColor
 UILabel:
-  - textColor
+  superclass: UIView
+  properies:
+    - textColor

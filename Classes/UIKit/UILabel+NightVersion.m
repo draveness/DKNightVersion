@@ -2,9 +2,7 @@
 //  UILabel+NightVersion.m
 //  UILabel+NightVersion
 //
-//  Created by apple on 4/14/15.
-//  Copyright (c) 2015 DeltaX. All rights reserved.
-//
+//  Copyright (c) 2015 Draveness. All rights reserved.
 
 #import "UILabel+NightVersion.h"
 #import "UIView+NightVersion.h"
