@@ -6,13 +6,20 @@
 //  Copyright (c) 2015 DeltaX. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "UIView+NightVersion.h"
 
 typedef enum : NSUInteger {
     DKThemeVersionNormal,
     DKThemeVersionNight,
 } DKThemeVersion;
+
+@protocol DKNightVersionSwichColorProtocol <NSObject>
+
+- (void)switchColor;
+- (NSArray *)subviews;
+
+@end
 
 @interface DKNightVersionManager : NSObject
 

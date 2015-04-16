@@ -6,7 +6,7 @@ require 'yaml'
 
 def objc_code_generator(table)
 	table.each do |cls|
-		relative_path =  "../UIKit"
+		relative_path =  "../Classes/UIKit"
 		subfolder_path = relative_path + '/' + cls.name + '/'
 
 		FileUtils.mkdir_p(relative_path)

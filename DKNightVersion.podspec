@@ -89,7 +89,20 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   
-  s.source_files = "Classes/**/*"
+  s.source_files = "Pod/Classes/DKNightVersion.h"
+
+  s.subspec 'Core' do |ss|
+      ss.source_files = "Pod/Classes/Core/**"
+  end
+
+  s.subspec 'Generator' do |ss|
+      ss.resource = "Pod/Generator/**"
+  end
+
+  s.subspec 'UIKIt' do |ss|
+      ss.source_files = "Pod/Classes/UIKit/**/**"
+      ss.dependency 'DKNightVersion/Core'
+  end
 
   # s.exclude_files = "Classes/Exclude"
 

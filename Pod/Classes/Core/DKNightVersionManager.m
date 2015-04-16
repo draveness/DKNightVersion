@@ -26,10 +26,10 @@
         return;
     }
     _themeVersion = themeVersion;
-    [self switchColor:[UIApplication sharedApplication].delegate.window];
+    [self switchColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
 }
 
-- (void)switchColor:(id)object {
+- (void)switchColor:(id <DKNightVersionSwichColorProtocol>)object {
     if ([object respondsToSelector:@selector(switchColor)]) {
         [object switchColor];
     }
