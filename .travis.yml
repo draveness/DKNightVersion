@@ -1,10 +1,8 @@
 language: objective-c
 before_install:
-
     - export LANG=en_US.UTF-8
     - env
     - locale
 
 script:
-
-    - pod lib lint --allow-warnings
+    - pod lib lint 
