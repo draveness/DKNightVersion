@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DKNightVersion"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "A light weight framework adds night version to your app on iOS."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.2.0" }
+  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.2.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
