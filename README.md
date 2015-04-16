@@ -1,6 +1,8 @@
 # DSNightVersion
 A light weight framework adds night version to your app.
 
+![Build Status](https://travis-ci.org/Draveness/DKNightVersion.svg?branch=0.3.0)
+
 # Installation with CocoaPods
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like DKNightVersion in your projects.
