@@ -26,7 +26,7 @@ private
 #pragma mark - Hook
 
 #{method_swizzling_string}
-- (void)hook_set#{cap_name}:(#{type} *):#{name} {
+- (void)hook_set#{cap_name}:(#{type} *)#{name} {
     self.normal#{cap_name} = #{name};
    [self hook_set#{cap_name}:#{name}];
 }
@@ -40,8 +40,8 @@ H
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
         Class class = [self class];                                                
-        SEL originalSelector = @selector(set#{name}:);                                  
-        SEL swizzledSelector = @selector(hook_set#{name}:);                                 
+        SEL originalSelector = @selector(set#{cap_name}:);                                  
+        SEL swizzledSelector = @selector(hook_set#{cap_name}:);                                 
         Method originalMethod = class_getInstanceMethod(class, originalSelector);  
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
         BOOL didAddMethod =                                                        

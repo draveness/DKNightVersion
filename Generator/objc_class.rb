@@ -89,8 +89,8 @@ H
 
 	def implementation_static_char_string(property)
 		s = <<H
-static char *night#{property.name}Key;
-static char *normal#{property.name}Key;
+static char *night#{property.cap_name}Key;
+static char *normal#{property.cap_name}Key;
 H
 	end
 
@@ -105,9 +105,3 @@ H
 	end
 
 end
-
-# p = Property.new("backgroundColor")
-# c = Class.new("UIView")
-# # puts p.method_string
-# puts c.implement_class_string(p)
-# puts c.interface_class_string(p)

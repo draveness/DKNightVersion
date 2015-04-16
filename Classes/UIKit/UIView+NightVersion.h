@@ -7,19 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+backgroundColor.h"
 
 @interface UIView (NightVersion)
-
-/**
- Set this property when swich to night version view background color turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightBackgroundColor;
-
-/**
- View background color in normal version.
- */
-@property (nonatomic, strong, readonly) UIColor *normalBackgroundColor;
-
 
 /**
  *  Every time color changes, this method should called to rerender view's color
