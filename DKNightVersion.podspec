@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DKNightVersion"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "A light weight framework adds night version to your app on iOS."
 
   s.description  = <<-DESC
@@ -91,6 +91,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "Classes/*.{h,m}"
   s.source_files  = "Classes/**/*.{h,m}"
+  s.source_files  = "Generator/**"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
