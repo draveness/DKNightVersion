@@ -1,5 +1,5 @@
 # DSNightVersion
-A light weight framework adds night version to your app.
+A lightweight framework adding night version to your app.
 
 [![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
 # Installation with CocoaPods
@@ -22,7 +22,7 @@ pod "AFNetworking", "~> 0.3.1"
 
 # How to use
 
-API documentation is not available now.
+API documentation is not available for now.
 
 ## Using night color
 
@@ -35,19 +35,19 @@ self.view.nightBackgroundColor = [UIColor blackColor];
 self.label.nightTextColor = [UIColor whiteColor];
 ```
 
-## Using DKNightVersionManager change theme
+## Using DKNightVersionManager to change the theme
 
-Use `DKNightVersionManager` sets the `themeVersion`.
+Use `DKNightVersionManager` to set the `themeVersion`.
 
 ```
 [[DKNightVersionManager sharedNightVersionManager] setThemeVersion:DKThemeVersionNight];
 ```
 
-If you want to back to normal theme version, use `DKThemeVersionNormal` instead.
+If you want to change it back to the normal theme, use `DKThemeVersionNormal` instead.
 
 ## Using property table generate color
 
-`property_table.yaml` is a file which saves the night color you need, if the exising colors is not enough for you, add the `class` and `property` in it.
+`property_table.yaml` is a file which saves the night color you need. If the existing colors are not enough for you, add the `class` and `property` in it.
 
 ```
 UIView:
@@ -59,15 +59,15 @@ UILabel:
     - textColor
 ```
 
-Notice the superclass property is needed if it has a superclass.
+Notice that the superclass property is needed if it has a superclass.
 
 ```
 ruby objc_generator.rb
 ```
 
-Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit` folder. 
+Run this command in `Classes/Generator` folder. This will dynamically generate Objective-C code in `Classes/UIKit` folder. 
 
-Drag them in your workspace. And then everything works fine.
+Drag them in your workspace and then everything works fine.
 
 # Contact
 
