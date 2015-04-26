@@ -48,7 +48,7 @@ Use `DKNightVersionManager` sets the theme.
 [[DKNightVersionManager sharedNightVersionManager] nightFalling];
 ```
 
-If you want to back to normal theme version:
+If you'd like to switch back to normal theme version:
 
 ```
 [[DKNightVersionManager sharedNightVersionManager] dawnComing];
