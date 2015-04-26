@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DKNightVersion"
-  s.version      = "0.4.0"
+  s.version      = "0.4.1"
   s.summary      = "A light weight framework adding night version to your app on iOS."
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.4.0" }
+  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.4.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -99,8 +99,8 @@ Pod::Spec.new do |s|
       ss.resource = "Pod/Generator/**"
   end
 
-  s.subspec 'UIKIt' do |ss|
-      ss.source_files = "Pod/Classes/UIKit/Auto/**"
+  s.subspec 'UIKit' do |ss|
+      ss.source_files = "Pod/Classes/UIKit/Auto/**/*"
       ss.dependency 'DKNightVersion/Core'
   end
 
