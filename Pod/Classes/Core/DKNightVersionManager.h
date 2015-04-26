@@ -24,15 +24,27 @@ typedef enum : NSUInteger {
 @interface DKNightVersionManager : NSObject
 
 /**
- Set themeVersion to swich to night or normal theme, default is DKThemeVersionNormal.
- */
-@property (nonatomic, assign) DKThemeVersion themeVersion;
-
-/**
- * Returns global DKNightVersionManager instance.
+ *  @author Draveness
  *
- * @return DKNightVersionManager shared instance
+ *  Returns global DKNightVersionManager instance.
+ *
+ *  @return DKNightVersionManager shared instance
  */
 + (DKNightVersionManager *)sharedNightVersionManager;
+
+/**
+ *  @author Draveness
+ *
+ *  Night falling
+ */
+- (void)nightFalling;
+
+/**
+ *  @author Draveness
+ *
+ *  Dawn coming
+ */
+- (void)dawnComing;
+
 
 @end

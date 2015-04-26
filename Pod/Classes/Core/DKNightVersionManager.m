@@ -9,6 +9,15 @@
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
+@interface DKNightVersionManager ()
+
+/**
+ Set themeVersion to swich to night or normal theme, default is DKThemeVersionNormal.
+ */
+@property (nonatomic, assign) DKThemeVersion themeVersion;
+
+@end
+
 @implementation DKNightVersionManager
 
 + (DKNightVersionManager *)sharedNightVersionManager {
@@ -18,6 +27,14 @@
         instance = [self new];
     });
     return instance;
+}
+
+- (void)nightFalling {
+    self.themeVersion = DKThemeVersionNight;
+}
+
+- (void)dawnComing {
+    self.themeVersion = DKThemeVersionNormal;
 }
 
 - (void)setThemeVersion:(DKThemeVersion)themeVersion {

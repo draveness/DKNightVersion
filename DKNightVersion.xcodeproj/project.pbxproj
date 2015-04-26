@@ -88,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180CDCA91AECC17F00164D1F /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				189854BD1ADD5B550050568B /* AppDelegate.h */,
+				189854BE1ADD5B550050568B /* AppDelegate.m */,
+				189854E61ADD5BCE0050568B /* RootViewController.h */,
+				189854E71ADD5BCE0050568B /* RootViewController.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
 		189854AD1ADD5B550050568B = {
 			isa = PBXGroup;
 			children = (
@@ -109,11 +120,8 @@
 		189854B81ADD5B550050568B /* DKNightVersion */ = {
 			isa = PBXGroup;
 			children = (
+				180CDCA91AECC17F00164D1F /* Demo */,
 				18A41E201AE019F000042CF4 /* Pod */,
-				189854BD1ADD5B550050568B /* AppDelegate.h */,
-				189854BE1ADD5B550050568B /* AppDelegate.m */,
-				189854E61ADD5BCE0050568B /* RootViewController.h */,
-				189854E71ADD5BCE0050568B /* RootViewController.m */,
 				189854C01ADD5B550050568B /* Images.xcassets */,
 				189854C21ADD5B550050568B /* LaunchScreen.xib */,
 				189854B91ADD5B550050568B /* Supporting Files */,
