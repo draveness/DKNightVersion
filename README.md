@@ -1,5 +1,5 @@
 # DSNightVersion
-A light weight framework adds night version to your app.
+A light weight framework adding night version to your app.
 
 [![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
 
@@ -10,7 +10,7 @@ A light weight framework adds night version to your app.
 ## Podfile
 
 ```
-pod "AFNetworking", "~> 0.3.1"
+pod "AFNetworking", "~> 0.4.0"
 ```
 
 ## Usage
@@ -41,10 +41,14 @@ self.label.nightTextColor = [UIColor whiteColor];
 Use `DKNightVersionManager` sets the `themeVersion`.
 
 ```
-[[DKNightVersionManager sharedNightVersionManager] setThemeVersion:DKThemeVersionNight];
+[[DKNightVersionManager sharedNightVersionManager] nightFalling];
 ```
 
-If you want to back to normal theme version, use `DKThemeVersionNormal` instead.
+If you want to back to normal theme version:
+
+```
+[[DKNightVersionManager sharedNightVersionManager] dawnComing];
+```
 
 ## Using property table generate color
 
