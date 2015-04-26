@@ -24,6 +24,12 @@ typedef enum : NSUInteger {
 @interface DKNightVersionManager : NSObject
 
 /**
+ Current ThemeVersion, default is DKThemeVersionNormal. Readonly
+ */
+@property (nonatomic, assign, readonly) DKThemeVersion themeVersion;
+
+
+/**
  *  @author Draveness
  *
  *  Returns global DKNightVersionManager instance.
