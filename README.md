@@ -42,7 +42,7 @@ self.label.nightTextColor = [UIColor whiteColor];
 
 ## Using DKNightVersionManager change theme
 
-Use `DKNightVersionManager` sets the `themeVersion`.
+Use `DKNightVersionManager` sets the theme.
 
 ```
 [[DKNightVersionManager sharedNightVersionManager] nightFalling];
