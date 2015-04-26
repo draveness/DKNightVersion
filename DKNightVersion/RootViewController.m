@@ -28,13 +28,13 @@
     label.textColor = [UIColor darkGrayColor];
     label.nightTextColor = [UIColor colorWithRed:0.396 green:0.400 blue:0.408 alpha:1.0];
 
-    UIButton *nightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    nightButton.center = CGPointMake(self.view.center.x, 400);
+    UIButton *nightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    nightButton.center = CGPointMake(self.view.center.x, 450);
     [nightButton setTitle:@"Night Falls" forState:UIControlStateNormal];
     [nightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [nightButton addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *dawnButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+    UIButton *dawnButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
     [dawnButton setTitle:@"Dawn Comes" forState:UIControlStateNormal];
     dawnButton.center = CGPointMake(self.view.center.x, 500);
     [dawnButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -47,9 +47,6 @@
     [self.view addSubview:nightButton];
     [self.view addSubview:dawnButton];
 
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [[DKNightVersionManager sharedNightVersionManager] nightFalling];
-//    });
 }
 
 - (void)nightFalls {

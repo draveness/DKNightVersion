@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DKNightVersion"
-  s.version      = "0.3.1"
-  s.summary      = "A light weight framework adds night version to your app on iOS."
+  s.version      = "0.4.0"
+  s.summary      = "A light weight framework adding night version to your app on iOS."
 
   s.description  = <<-DESC
                    A longer description of DKNightVersion in Markdown format.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.3.1" }
+  s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => "0.4.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   
-  s.source_files = "Pod/Classes/DKNightVersion.h"
+  s.source_files = "Pod/Classes/DKNightVersion.h", "Pod/Classes/DKNightVersionConstants.h"
 
   s.subspec 'Core' do |ss|
       ss.source_files = "Pod/Classes/Core/**"
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UIKIt' do |ss|
-      ss.source_files = "Pod/Classes/UIKit/**/**"
+      ss.source_files = "Pod/Classes/UIKit/Auto/**"
       ss.dependency 'DKNightVersion/Core'
   end
 

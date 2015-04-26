@@ -40,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		180CDCB21AECCDAF00164D1F /* DKNightVersionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConstants.h; sourceTree = "<group>"; };
 		180CDCCB1AECD56C00164D1F /* UILabel+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NightVersion.h"; sourceTree = "<group>"; };
 		180CDCCC1AECD56C00164D1F /* UILabel+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NightVersion.m"; sourceTree = "<group>"; };
 		180CDCCD1AECD56C00164D1F /* UILabel+TextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextColor.h"; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		180CDCD61AECD56C00164D1F /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundColor.m"; sourceTree = "<group>"; };
 		180CDCD71AECD56C00164D1F /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
 		180CDCD81AECD56C00164D1F /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
+		180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConstants.h; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854BA1ADD5B550050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189854BB1ADD5B550050568B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,8 +161,16 @@
 		180CDCDF1AECD59200164D1F /* Manual */ = {
 			isa = PBXGroup;
 			children = (
+				180CDCE01AECD61600164D1F /* UIButton */,
 			);
 			path = Manual;
+			sourceTree = "<group>";
+		};
+		180CDCE01AECD61600164D1F /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		189854AD1ADD5B550050568B = {
@@ -234,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				18A41E251AE019F000042CF4 /* DKNightVersion.h */,
-				180CDCB21AECCDAF00164D1F /* DKNightVersionConstants.h */,
 				18A41E221AE019F000042CF4 /* Core */,
 				180CDCB31AECD08C00164D1F /* UIKit */,
 			);
@@ -244,6 +251,7 @@
 		18A41E221AE019F000042CF4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */,
 				18A41E231AE019F000042CF4 /* DKNightVersionManager.h */,
 				18A41E241AE019F000042CF4 /* DKNightVersionManager.m */,
 			);
