@@ -60,6 +60,7 @@ H
 	def implementation_import_string(property)
 		s = <<H
 #import \"#{name}+#{property.name}.h\"
+#import "DKNightVersionManager.h"
 #import \"objc/runtime.h\"
 H
 	end

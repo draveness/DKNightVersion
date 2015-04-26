@@ -15,8 +15,10 @@ H
 
 #{method_swizzling_string}
 - (void)hook_set#{cap_name}:(#{type} *)#{name} {
-    self.normal#{cap_name} = #{name};
-   [self hook_set#{cap_name}:#{name}];
+    if ([DKNightVersionManager sharedNightVersionManager].themeVersion == DKThemeVersionNormal) {
+        self.normal#{cap_name} = #{name};
+    }
+    [self hook_set#{cap_name}:#{name}];
 }
 H
 	end

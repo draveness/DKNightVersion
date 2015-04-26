@@ -30,10 +30,12 @@
 }
 
 - (void)nightFalling {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.themeVersion = DKThemeVersionNight;
 }
 
 - (void)dawnComing {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     self.themeVersion = DKThemeVersionNormal;
 }
 

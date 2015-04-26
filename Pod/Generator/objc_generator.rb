@@ -11,10 +11,10 @@ def objc_code_generator(table)
 
 		FileUtils.mkdir_p(relative_path)
 		FileUtils.mkdir_p(relative_path + "/#{cls.name}")
-		File.open(relative_path + '/' + cls.night_header_file_name, "w+") do |f|
+		File.open(subfolder_path + '/' + cls.night_header_file_name, "w+") do |f|
 			f.write(cls.night_interface_string)
 		end
-		File.open(relative_path + '/' + cls.night_file_name + '.m', "w+") do |f|
+		File.open(subfolder_path + '/' + cls.night_file_name + '.m', "w+") do |f|
 			f.write(cls.night_implementation_string)
 		end
 		cls.properties.each do |property|

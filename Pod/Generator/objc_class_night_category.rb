@@ -37,6 +37,7 @@ H
 #import "#{name}+NightVersion.h"
 #{night_implementation_superclass_string}
 #import "DKNightVersionManager.h"
+#import "DKNightVersionConstants.h"
 
 @implementation #{name} (NightVersion)
 
@@ -44,7 +45,9 @@ H
 
 - (void)switchColor {
     #{night_implementation_method_string}DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    #{night_implementation_property_string}
+    [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
+        #{night_implementation_property_string}
+    }];
 }
 
 @end

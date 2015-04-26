@@ -5,3 +5,8 @@ UILabel:
   superclass: UIView
   properies:
     - textColor
+UINavigationBar:
+  superclass: UIView
+  properies:
+    - barTintColor
+

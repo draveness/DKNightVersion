@@ -5,6 +5,7 @@
 //  Copyright (c) 2015 Draveness. All rights reserved.
 
 #import "UILabel+textColor.h"
+#import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
 @interface UILabel ()
@@ -39,8 +40,10 @@ static char *normalTextColorKey;
 }
 
 - (void)hook_setTextColor:(UIColor *)textColor {
-    self.normalTextColor = textColor;
-   [self hook_setTextColor:textColor];
+    if ([DKNightVersionManager sharedNightVersionManager].themeVersion == DKThemeVersionNormal) {
+        self.normalTextColor = textColor;
+    }
+    [self hook_setTextColor:textColor];
 }
 
 #pragma mark - TextColor

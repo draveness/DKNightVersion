@@ -7,6 +7,7 @@
 #import "UILabel+NightVersion.h"
 #import "UIView+NightVersion.h"
 #import "DKNightVersionManager.h"
+#import "DKNightVersionConstants.h"
 
 @implementation UILabel (NightVersion)
 
@@ -15,7 +16,9 @@
 - (void)switchColor {
     [super switchColor];
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    self.textColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
+    [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
+        self.textColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
+    }];
 }
 
 @end

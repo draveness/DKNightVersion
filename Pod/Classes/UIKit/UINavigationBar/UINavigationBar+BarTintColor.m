@@ -1,23 +1,23 @@
 //
-//  UIView+BackgroundColor.m
-//  UIView+BackgroundColor
+//  UINavigationBar+BarTintColor.m
+//  UINavigationBar+BarTintColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 
-#import "UIView+backgroundColor.h"
+#import "UINavigationBar+barTintColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
-@interface UIView ()
+@interface UINavigationBar ()
 
-@property (nonatomic, strong) UIColor *normalBackgroundColor;
+@property (nonatomic, strong) UIColor *normalBarTintColor;
 
 @end
 
-@implementation UIView (BackgroundColor)
+@implementation UINavigationBar (BarTintColor)
 
-static char *nightBackgroundColorKey;
-static char *normalBackgroundColorKey;
+static char *nightBarTintColorKey;
+static char *normalBarTintColorKey;
 
 #pragma mark - Hook
 
@@ -25,8 +25,8 @@ static char *normalBackgroundColorKey;
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
         Class class = [self class];                                                
-        SEL originalSelector = @selector(setBackgroundColor:);                                  
-        SEL swizzledSelector = @selector(hook_setBackgroundColor:);                                 
+        SEL originalSelector = @selector(setBarTintColor:);                                  
+        SEL swizzledSelector = @selector(hook_setBarTintColor:);                                 
         Method originalMethod = class_getInstanceMethod(class, originalSelector);  
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
         BOOL didAddMethod =                                                        
@@ -39,29 +39,29 @@ static char *normalBackgroundColorKey;
     });
 }
 
-- (void)hook_setBackgroundColor:(UIColor *)backgroundColor {
+- (void)hook_setBarTintColor:(UIColor *)barTintColor {
     if ([DKNightVersionManager sharedNightVersionManager].themeVersion == DKThemeVersionNormal) {
-        self.normalBackgroundColor = backgroundColor;
+        self.normalBarTintColor = barTintColor;
     }
-    [self hook_setBackgroundColor:backgroundColor];
+    [self hook_setBarTintColor:barTintColor];
 }
 
-#pragma mark - BackgroundColor
+#pragma mark - BarTintColor
 
-- (UIColor *)normalBackgroundColor {
-    return objc_getAssociatedObject(self, &normalBackgroundColorKey);
+- (UIColor *)normalBarTintColor {
+    return objc_getAssociatedObject(self, &normalBarTintColorKey);
 }
 
-- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
-    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
+    objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIColor *)nightBackgroundColor {
-    return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : self.backgroundColor;
+- (UIColor *)nightBarTintColor {
+    return objc_getAssociatedObject(self, &nightBarTintColorKey) ? : self.barTintColor;
 }
 
-- (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
-    objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
+    objc_setAssociatedObject(self, &nightBarTintColorKey, nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 
