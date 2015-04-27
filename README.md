@@ -14,7 +14,7 @@ A light weight framework adding night version to your app.
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.4.1"
+pod "DKNightVersion", "~> 0.4.2"
 ```
 
 ## Usage
@@ -45,13 +45,13 @@ self.label.nightTextColor = [UIColor whiteColor];
 Use `DKNightVersionManager` sets the theme.
 
 ```
-[[DKNightVersionManager sharedNightVersionManager] nightFalling];
+[DKNightVersionManager nightFalling];
 ```
 
 If you'd like to switch back to normal theme version:
 
 ```
-[[DKNightVersionManager sharedNightVersionManager] dawnComing];
+[DKNightVersionManager dawnComing];
 ```
 
 ## Using property table generate color

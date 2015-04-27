@@ -16,21 +16,18 @@ typedef enum : NSUInteger {
 @interface DKNightVersionManager : NSObject
 
 /**
- *  @author Draveness
  *
  *  Current ThemeVersion, default is DKThemeVersionNormal.
  */
 + (DKThemeVersion)currentThemeVersion;
 
 /**
- *  @author Draveness
  *
  *  Night falling
  */
 + (void)nightFalling;
 
 /**
- *  @author Draveness
  *
  *  Dawn coming
  */
