@@ -18,7 +18,7 @@
 @interface DKNightVersionManager ()
 
 /**
- Set themeVersion to swich to night or normal theme, default is DKThemeVersionNormal.
+ Set themeVersion to switch to night or normal theme, default is DKThemeVersionNormal.
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
 
