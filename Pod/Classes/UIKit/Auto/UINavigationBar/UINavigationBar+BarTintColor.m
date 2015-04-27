@@ -53,6 +53,9 @@ static char *normalBarTintColorKey;
 }
 
 - (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
+//    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+//        self.barTintColor = normalBarTintColor;
+//    }
     objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -61,6 +64,9 @@ static char *normalBarTintColorKey;
 }
 
 - (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        self.barTintColor = nightBarTintColor;
+    }
     objc_setAssociatedObject(self, &nightBarTintColorKey, nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

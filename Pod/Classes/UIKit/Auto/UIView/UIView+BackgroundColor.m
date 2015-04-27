@@ -53,6 +53,9 @@ static char *normalBackgroundColorKey;
 }
 
 - (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
+//    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+//        self.backgroundColor = normalBackgroundColor;
+//    }
     objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -61,6 +64,9 @@ static char *normalBackgroundColorKey;
 }
 
 - (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        self.backgroundColor = nightBackgroundColor;
+    }
     objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

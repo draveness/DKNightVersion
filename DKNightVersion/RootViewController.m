@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "SuccViewController.h"
 #import "DKNightVersion.h"
 
 @interface RootViewController ()
@@ -43,13 +44,19 @@
     [dawnButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
     [dawnButton addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
 
+    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    [nextButton setTitle:@"Next" forState:UIControlStateNormal];
+    nextButton.center = CGPointMake(self.view.center.x, 550);
+    [nextButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+    [nextButton addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+
     self.view.nightBackgroundColor = [UIColor colorWithRed:0.141 green:0.145 blue:0.153 alpha:1.0];
     self.navigationController.navigationBar.nightBarTintColor = [UIColor colorWithRed:0.196 green:0.201 blue:0.212 alpha:1.0];
 
     [self.view addSubview:label];
     [self.view addSubview:nightButton];
     [self.view addSubview:dawnButton];
-
+    [self.view addSubview:nextButton];
 }
 
 - (void)nightFalls {
@@ -58,6 +65,10 @@
 
 - (void)dawnComes {
     [DKNightVersionManager dawnComing];
+}
+
+- (void)push {
+    [self.navigationController pushViewController:[[SuccViewController alloc] init] animated:YES];
 }
 
 

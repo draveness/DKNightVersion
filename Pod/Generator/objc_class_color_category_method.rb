@@ -64,6 +64,9 @@ module ObjcClassColorCategoryMethod
 }
 
 - (void)setNight#{cap_name}:(#{type} *)night#{cap_name} {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        self.#{name} = night#{cap_name};
+    }
     objc_setAssociatedObject(self, &night#{cap_name}Key, night#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 		OBJECT_C

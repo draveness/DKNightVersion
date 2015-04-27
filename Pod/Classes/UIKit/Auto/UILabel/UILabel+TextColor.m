@@ -53,6 +53,9 @@ static char *normalTextColorKey;
 }
 
 - (void)setNormalTextColor:(UIColor *)normalTextColor {
+//    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+//        self.textColor = normalTextColor;
+//    }
     objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -61,6 +64,9 @@ static char *normalTextColorKey;
 }
 
 - (void)setNightTextColor:(UIColor *)nightTextColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        self.textColor = nightTextColor;
+    }
     objc_setAssociatedObject(self, &nightTextColorKey, nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

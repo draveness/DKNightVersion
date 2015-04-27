@@ -13,6 +13,7 @@
 		180CDCDC1AECD56C00164D1F /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD31AECD56C00164D1F /* UINavigationBar+NightVersion.m */; };
 		180CDCDD1AECD56C00164D1F /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD61AECD56C00164D1F /* UIView+BackgroundColor.m */; };
 		180CDCDE1AECD56C00164D1F /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD81AECD56C00164D1F /* UIView+NightVersion.m */; };
+		187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
 		189854BC1ADD5B550050568B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BB1ADD5B550050568B /* main.m */; };
 		189854BF1ADD5B550050568B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BE1ADD5B550050568B /* AppDelegate.m */; };
 		189854C11ADD5B550050568B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
@@ -53,6 +54,8 @@
 		180CDCD71AECD56C00164D1F /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
 		180CDCD81AECD56C00164D1F /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 		180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConstants.h; sourceTree = "<group>"; };
+		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
+		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854BA1ADD5B550050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189854BB1ADD5B550050568B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				189854BE1ADD5B550050568B /* AppDelegate.m */,
 				189854E61ADD5BCE0050568B /* RootViewController.h */,
 				189854E71ADD5BCE0050568B /* RootViewController.m */,
+				187E6D521AEEA4C80004CFE4 /* SuccViewController.h */,
+				187E6D531AEEA4C80004CFE4 /* SuccViewController.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				180CDCDE1AECD56C00164D1F /* UIView+NightVersion.m in Sources */,
 				189854E81ADD5BCE0050568B /* RootViewController.m in Sources */,
 				180CDCD91AECD56C00164D1F /* UILabel+NightVersion.m in Sources */,
+				187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */,
 				180CDCDD1AECD56C00164D1F /* UIView+BackgroundColor.m in Sources */,
 				189854BC1ADD5B550050568B /* main.m in Sources */,
 				180CDCDA1AECD56C00164D1F /* UILabel+TextColor.m in Sources */,
