@@ -1,26 +1,25 @@
-require "./objc_class_color_category.rb"
-require "./objc_class_night_category.rb"
+# -*- coding: utf-8 -*-
+
+require_relative 'objc_class_color_category'
+require_relative 'objc_class_night_category'
 
 class ObjcClass
-	include ObjcClassColorCategory
-	include ObjcClassNightCategory
+	include ObjcClassColorCategory, ObjcClassNightCategory
 
-	attr_accessor :name
-	attr_accessor :properties
-	attr_accessor :superclass
+	attr_accessor :name, :properties, :superclass
 
-	def initialize(name, superclass)
+	def initialize(name, superclass, properties = [])
 		@name = name
 		@superclass = superclass
-		@properties = []
+		@properties = properties
 	end
 
 	def night_header_file_name
-		name + '+NightVersion.h' 
+		name + '+NightVersion.h'
 	end
 
 	def night_file_name
-		name + '+NightVersion' 
+		name + '+NightVersion'
 	end
 
 	def header_file_name(property)
@@ -28,6 +27,6 @@ class ObjcClass
 	end
 
 	def file_name(property)
-		s = "#{name}+#{property.cap_name}"
+		"#{name}+#{property.cap_name}"
 	end
 end
