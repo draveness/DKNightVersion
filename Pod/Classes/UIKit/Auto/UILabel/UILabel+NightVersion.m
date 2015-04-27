@@ -15,9 +15,8 @@
 
 - (void)switchColor {
     [super switchColor];
-    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        self.textColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
+        self.textColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
     }];
 }
 

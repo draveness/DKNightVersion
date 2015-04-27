@@ -40,7 +40,7 @@ static char *normalBarTintColorKey;
 }
 
 - (void)hook_setBarTintColor:(UIColor *)barTintColor {
-    if ([DKNightVersionManager sharedNightVersionManager].themeVersion == DKThemeVersionNormal) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         self.normalBarTintColor = barTintColor;
     }
     [self hook_setBarTintColor:barTintColor];

@@ -44,8 +44,7 @@ H
 #pragma mark - SwitchColor
 
 - (void)switchColor {
-    #{night_implementation_method_string}DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
-    [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
+    #{night_implementation_method_string}[UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         #{night_implementation_property_string}
     }];
 }
@@ -69,7 +68,7 @@ H
 	def night_implementation_property_string
 		s = ""
 		properties.each do |property|
-			s = s + "self.#{property.name} = (manager.themeVersion == DKThemeVersionNight) ? \
+			s = s + "self.#{property.name} = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? \
 self.night#{property.cap_name} : self.normal#{property.cap_name};"
 		end
 		s

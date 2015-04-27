@@ -53,11 +53,11 @@
 }
 
 - (void)nightFalls {
-    [[DKNightVersionManager sharedNightVersionManager] nightFalling];
+    [DKNightVersionManager nightFalling];
 }
 
 - (void)dawnComes {
-    [[DKNightVersionManager sharedNightVersionManager] dawnComing];
+    [DKNightVersionManager dawnComing];
 }
 
 

@@ -7,7 +7,13 @@
 //
 
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+
+@protocol DKNightVersionSwichColorProtocol <NSObject>
+
+- (void)switchColor;
+- (NSArray *)subviews;
+
+@end
 
 @interface DKNightVersionManager ()
 
@@ -29,19 +35,23 @@
     return instance;
 }
 
-- (void)nightFalling {
++ (void)nightFalling {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.themeVersion = DKThemeVersionNight;
+    self.sharedNightVersionManager.themeVersion = DKThemeVersionNight;
 }
 
-- (void)dawnComing {
++ (void)dawnComing {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    self.themeVersion = DKThemeVersionNormal;
+    self.sharedNightVersionManager.themeVersion = DKThemeVersionNormal;
+}
+
++ (DKThemeVersion)currentThemeVersion {
+    return self.sharedNightVersionManager.themeVersion;
 }
 
 - (void)setThemeVersion:(DKThemeVersion)themeVersion {
     if (_themeVersion == themeVersion) {
-        // if the type does not change, do not execute code below to enhance performance.
+        // if type does not change, don't execute code below to enhance performance.
         return;
     }
     _themeVersion = themeVersion;

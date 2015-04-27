@@ -14,9 +14,8 @@
 #pragma mark - SwitchColor
 
 - (void)switchColor {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        self.backgroundColor = (manager.themeVersion == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor;
+        self.backgroundColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor;
     }];
 }
 

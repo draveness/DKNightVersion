@@ -13,43 +13,28 @@ typedef enum : NSUInteger {
     DKThemeVersionNight,
 } DKThemeVersion;
 
-@protocol DKNightVersionSwichColorProtocol <NSObject>
-
-- (void)switchColor;
-- (NSArray *)subviews;
-
-@end
-
 @interface DKNightVersionManager : NSObject
-
-/**
- Current ThemeVersion, default is DKThemeVersionNormal. Readonly
- */
-@property (nonatomic, assign, readonly) DKThemeVersion themeVersion;
-
 
 /**
  *  @author Draveness
  *
- *  Returns global DKNightVersionManager instance.
- *
- *  @return DKNightVersionManager shared instance
+ *  Current ThemeVersion, default is DKThemeVersionNormal.
  */
-+ (DKNightVersionManager *)sharedNightVersionManager;
++ (DKThemeVersion)currentThemeVersion;
 
 /**
  *  @author Draveness
  *
  *  Night falling
  */
-- (void)nightFalling;
++ (void)nightFalling;
 
 /**
  *  @author Draveness
  *
  *  Dawn coming
  */
-- (void)dawnComing;
++ (void)dawnComing;
 
 
 @end
