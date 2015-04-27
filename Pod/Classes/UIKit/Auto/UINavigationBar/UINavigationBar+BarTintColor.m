@@ -53,9 +53,6 @@ static char *normalBarTintColorKey;
 }
 
 - (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
-//    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-//        self.barTintColor = normalBarTintColor;
-//    }
     objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
