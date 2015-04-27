@@ -1,45 +1,32 @@
-require './objc_property'
-require './objc_class'
+# -*- coding: utf-8 -*-
+
 require 'fileutils'
 require 'yaml'
 
+require_relative 'objc_property'
+require_relative 'objc_class'
 
-def objc_code_generator(table)
-	table.each do |cls|
-		relative_path =  "../Classes/UIKit/Auto"
-		subfolder_path = relative_path + '/' + cls.name + '/'
+def objc_code_generator(klasses)
+	relative_path = File.join('..', 'Classes', 'UIKit', 'Auto')
+	FileUtils.mkdir_p(relative_path)
+	klasses.each do |klass|
+		subfolder_path = File.join(relative_path, klass.name)
+		FileUtils.mkdir_p(subfolder_path)
 
-		FileUtils.mkdir_p(relative_path)
-		FileUtils.mkdir_p(relative_path + "/#{cls.name}")
-		File.open(subfolder_path + '/' + cls.night_header_file_name, "w+") do |f|
-			f.write(cls.night_interface_string)
-		end
-		File.open(subfolder_path + '/' + cls.night_file_name + '.m', "w+") do |f|
-			f.write(cls.night_implementation_string)
-		end
-		cls.properties.each do |property|
-			File.open(subfolder_path + cls.header_file_name(property), "w+") do |f|
-				f.write(cls.interface_class_string(property))
-			end
-			File.open(subfolder_path + cls.file_name(property) + '.m', "w+") do |f|
-				f.write(cls.implementation_class_string(property))
-			end
+		File.write File.join(subfolder_path, klass.night_header_file_name), klass.night_interface_string
+		File.write File.join(subfolder_path, klass.night_file_name + '.m'), klass.night_implementation_string
+
+		klass.properties.each do |property|
+			File.write File.join(subfolder_path, klass.header_file_name(property)), klass.interface_class_string(property)
+			File.write File.join(subfolder_path, klass.file_name(property) + '.m'), klass.implementation_class_string(property)
 		end
 	end
 end
 
 def parse_yaml(file)
-	yaml = YAML.load_file(file)
-	table = []
-	yaml.each do |cls, hash|
-		objc_class = ObjcClass.new(cls.to_s, hash["superclass"])
-		hash["properies"].each do |property|
-			objc_property = ObjcProperty.new(property.to_s)
-			objc_class.properties << objc_property
-		end
-		table << objc_class
+	YAML.load_file(file).map do |klass, config|
+		ObjcClass.new(klass.to_s, config["superclass"], config["properies"].map { |property| ObjcProperty.new(property.to_s) })
 	end
-	table
 end
 
 table = parse_yaml('property_table.yaml')

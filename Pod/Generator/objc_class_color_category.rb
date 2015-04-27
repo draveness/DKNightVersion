@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+
 module ObjcClassColorCategory
-    def interface_class_string(property)
-		s = <<H
+	def interface_class_string(property)
+		<<-OBJECT_C
 //
 //  #{name}+#{property.cap_name}.h
 //  #{name}+#{property.cap_name}
@@ -12,11 +14,11 @@ module ObjcClassColorCategory
 #{interface_string(property)}
 #{interface_property_string(property)}
 @end
-H
+		OBJECT_C
 	end
 
 	def implementation_class_string(property)
-		s = <<H
+		<<-OBJECT_C
 //
 //  #{name}+#{property.cap_name}.m
 //  #{name}+#{property.cap_name}
@@ -26,7 +28,7 @@ H
 #{implementation_import_string(property)}
 #{implementation_interface_string(property)}
 #{implementation_string(property)}
-H
+		OBJECT_C
 	end
 
 private
@@ -36,13 +38,13 @@ private
 	end
 
 	def interface_string(property)
-		s = <<H
+		<<-OBJECT_C
 @interface #{name} (#{property.cap_name})
-H
+		OBJECT_C
 	end
 
 	def interface_property_string(property)
-		s = <<H
+		s = <<-OBJECT_C
 /**
  Set this property when switch to night version #{name[2..-1].downcase} #{property.name.downcase} turns to this color.
 */
@@ -53,43 +55,43 @@ H
 */
 @property (nonatomic, strong, readonly) #{property.type} *normal#{property.cap_name};
 
-H
+		OBJECT_C
 	end
 
 
 	def implementation_import_string(property)
-		s = <<H
+		<<-OBJECT_C
 #import \"#{name}+#{property.name}.h\"
 #import "DKNightVersionManager.h"
 #import \"objc/runtime.h\"
-H
+		OBJECT_C
 	end
 
 	def implementation_interface_string(property)
-		s = <<H
+		<<-OBJECT_C
 @interface #{name} ()
 
 @property (nonatomic, strong) #{property.type} *normal#{property.cap_name};
 
 @end
-H
+		OBJECT_C
 	end
 
 	def implementation_static_char_string(property)
-		s = <<H
+		<<-OBJECT_C
 static char *night#{property.cap_name}Key;
 static char *normal#{property.cap_name}Key;
-H
+		OBJECT_C
 	end
 
 	def implementation_string(property)
-		s = <<H
+		<<-OBJECT_C
 @implementation #{name} (#{property.cap_name})
 
 #{implementation_static_char_string(property)}
 #{property.method_string}
 @end
-H
+		OBJECT_C
 	end
 
 end

@@ -1,16 +1,17 @@
+# -*- coding: utf-8 -*-
+
 module ObjcClassColorCategoryMethod
 
-
 	def method_string
-		s = <<H
+		<<-OBJECT_C
 #{hook_method_string}
 #{dynamic_property_string}
-H
+		OBJECT_C
 	end
 
 
 	def hook_method_string
-		s = <<H
+		<<-OBJECT_C
 #pragma mark - Hook
 
 #{method_swizzling_string}
@@ -20,12 +21,12 @@ H
     }
     [self hook_set#{cap_name}:#{name}];
 }
-H
+		OBJECT_C
 	end
 
 
 	def method_swizzling_string
-		s = <<H
+		<<-OBJECT_C
 + (void)load {
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
@@ -43,11 +44,11 @@ H
         }
     });
 }
-H
+		OBJECT_C
 	end
 
 	def dynamic_property_string
-		s = <<H
+		<<-OBJECT_C
 #pragma mark - #{cap_name}
 
 - (#{type} *)normal#{cap_name} {
@@ -65,7 +66,7 @@ H
 - (void)setNight#{cap_name}:(#{type} *)night#{cap_name} {
     objc_setAssociatedObject(self, &night#{cap_name}Key, night#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-H
+		OBJECT_C
 	end
 
 end

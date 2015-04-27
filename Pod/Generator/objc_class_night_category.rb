@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 module ObjcClassNightCategory
 
 	def night_interface_string
-		s = <<H
+		<<-OBJECT_C
 //
 //  #{name}+NightVersion.h
 //  #{name}+NightVersion
@@ -15,19 +17,17 @@ module ObjcClassNightCategory
 - (void)switchColor;
 
 @end
-H
+		OBJECT_C
 	end
 
 	def night_interface_import_string
-		s = ""
-		properties.each do |property|
-			s = s + "#import \"" + name + "+#{property.cap_name}.h\"\n"
-		end
-		s
+		properties.map { |property|
+			"#import \"" + name + "+#{property.cap_name}.h\"\n"
+		}.join
 	end
 
 	def night_implementation_string
-		s = <<H
+		<<-OBJECT_C
 //
 //  #{name}+NightVersion.m
 //  #{name}+NightVersion
@@ -50,28 +50,22 @@ H
 }
 
 @end
-H
+		OBJECT_C
 	end
 
 	def night_implementation_superclass_string
-		s = superclass ? "#import \"#{superclass}+NightVersion.h\"" : ""
+		superclass ? "#import \"#{superclass}+NightVersion.h\"" : ""
 	end
 
 	def night_implementation_method_string
-		if superclass
-			super_string = "[super switchColor];\n    " 
-		else
-			super_string = ""
-		end
+		superclass ? "[super switchColor];\n    " : ""
 	end
 
 	def night_implementation_property_string
-		s = ""
-		properties.each do |property|
-			s = s + "self.#{property.name} = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? \
+		properties.map { |property|
+			"self.#{property.name} = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? \
 self.night#{property.cap_name} : self.normal#{property.cap_name};"
-		end
-		s
+		}.join
 	end
 
 end
