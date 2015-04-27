@@ -74,7 +74,7 @@ Notice the superclass property is needed if it has a superclass.
 ruby objc_generator.rb
 ```
 
-Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit` folder. 
+Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit/Auto` folder. 
 
 Drag them in your workspace. And then everything works fine.
 
@@ -86,3 +86,7 @@ Drag them in your workspace. And then everything works fine.
 # License
 
 DKNightVersion is available under the MIT license. See the LICENSE file for more info.
+
+# Todo
+
+Add UIButton support
