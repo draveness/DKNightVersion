@@ -14,7 +14,7 @@ A light weight framework adding night version to your iOS app.
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.4.3"
+pod "DKNightVersion", :head
 ```
 
 ## Usage
