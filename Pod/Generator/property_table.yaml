@@ -1,6 +1,7 @@
 UIView:
   properties:
     - backgroundColor
+    - tintColor
 UILabel:
   superclass: UIView
   properties:
@@ -9,4 +10,3 @@ UINavigationBar:
   superclass: UIView
   properties:
     - barTintColor
-    - tintColor

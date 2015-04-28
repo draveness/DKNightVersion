@@ -16,7 +16,7 @@
 - (void)switchColor {
     [super switchColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        self.barTintColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor;self.tintColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor;
+        self.barTintColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor;
     }];
 }
 

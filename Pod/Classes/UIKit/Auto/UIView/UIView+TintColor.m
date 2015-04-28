@@ -1,20 +1,20 @@
 //
-//  UINavigationBar+TintColor.m
-//  UINavigationBar+TintColor
+//  UIView+TintColor.m
+//  UIView+TintColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 
-#import "UINavigationBar+tintColor.h"
+#import "UIView+tintColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
-@interface UINavigationBar ()
+@interface UIView ()
 
 @property (nonatomic, strong) UIColor *normalTintColor;
 
 @end
 
-@implementation UINavigationBar (TintColor)
+@implementation UIView (TintColor)
 
 static char *nightTintColorKey;
 static char *normalTintColorKey;
