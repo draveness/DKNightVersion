@@ -18,16 +18,11 @@ Pod::Spec.new do |s|
   s.source_files = "Pod/Classes/DKNightVersion.h"
 
   s.subspec 'Core' do |ss|
-      ss.source_files = "Pod/Classes/Core/**" 
-  end
-
-  s.subspec 'Generator' do |ss|
-      ss.resource = "Pod/Generator/**"
+      ss.source_files = "Pod/Classes/Core/**"
   end
 
   s.subspec 'UIKit' do |ss|
-      ss.source_files = "Pod/Classes/UIKit/Auto/**/*"
-      ss.source_files = "Pod/Classes/UIKit/Manual/**/*"
+      ss.source_files = "Pod/Classes/UIKit/Auto/**/*", "Pod/Classes/UIKit/Manual/**/*"
       ss.dependency 'DKNightVersion/Core'
   end
 
