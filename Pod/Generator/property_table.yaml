@@ -1,13 +1,11 @@
 UIView:
-  properies:
+  properties:
     - backgroundColor
 UILabel:
   superclass: UIView
-  properies:
+  properties:
     - textColor
 UINavigationBar:
   superclass: UIView
-  properies:
+  properties:
     - barTintColor
-
-

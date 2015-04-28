@@ -25,7 +25,7 @@ end
 
 def parse_yaml(file)
 	YAML.load_file(file).map do |klass, config|
-		ObjcClass.new(klass.to_s, config["superclass"], config["properies"].map { |property| ObjcProperty.new(property.to_s) })
+		ObjcClass.new(klass.to_s, config["superclass"], config["properties"].map { |property| ObjcProperty.new(property.to_s) })
 	end
 end
 

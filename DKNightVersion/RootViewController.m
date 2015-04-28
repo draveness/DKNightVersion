@@ -35,6 +35,7 @@
     nightButton.titleLabel.font = [UIFont systemFontOfSize:30];
     [nightButton setTitle:@"Night Falls" forState:UIControlStateNormal];
     [nightButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+    nightButton.nightTitleColor = [UIColor whiteColor];
     [nightButton addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *dawnButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
@@ -42,12 +43,14 @@
     dawnButton.titleLabel.font = [UIFont systemFontOfSize:30];
     dawnButton.center = CGPointMake(self.view.center.x, 450);
     [dawnButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+    dawnButton.nightTitleColor = [UIColor whiteColor];
     [dawnButton addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
     [nextButton setTitle:@"Next" forState:UIControlStateNormal];
     nextButton.center = CGPointMake(self.view.center.x, 550);
     [nextButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+    nextButton.nightTitleColor = [UIColor whiteColor];
     [nextButton addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 
     self.view.nightBackgroundColor = [UIColor colorWithRed:0.141 green:0.145 blue:0.153 alpha:1.0];

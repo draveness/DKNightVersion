@@ -13,5 +13,6 @@
 #import "UILabel+NightVersion.h"
 #import "UIView+NightVersion.h"
 #import "UINavigationBar+NightVersion.h"
+#import "UIButton+NightVersion.h"
 
 #endif
