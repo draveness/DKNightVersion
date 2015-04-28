@@ -1,4 +1,4 @@
-# DSNightVersion
+# DKNightVersion
 A light weight framework adding night version to your iOS app.
 
 [![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
