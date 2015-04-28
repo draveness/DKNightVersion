@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationController.navigationBar.nightTintColor = [UIColor whiteColor];
+
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
     label.center = CGPointMake(self.view.center.x, 240);
     label.clipsToBounds = YES;

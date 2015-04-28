@@ -9,3 +9,4 @@ UINavigationBar:
   superclass: UIView
   properties:
     - barTintColor
+    - tintColor

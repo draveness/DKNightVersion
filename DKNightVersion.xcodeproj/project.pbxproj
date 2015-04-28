@@ -13,6 +13,7 @@
 		180CDCDC1AECD56C00164D1F /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD31AECD56C00164D1F /* UINavigationBar+NightVersion.m */; };
 		180CDCDD1AECD56C00164D1F /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD61AECD56C00164D1F /* UIView+BackgroundColor.m */; };
 		180CDCDE1AECD56C00164D1F /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CDCD81AECD56C00164D1F /* UIView+NightVersion.m */; };
+		186425771AEF40B200D149FA /* UINavigationBar+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 186425761AEF40B200D149FA /* UINavigationBar+TintColor.m */; };
 		187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
 		187E6D641AEF14900004CFE4 /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D611AEF14900004CFE4 /* UIButton+NightVersion.m */; };
 		187E6D651AEF14900004CFE4 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D631AEF14900004CFE4 /* UIButton+TitleColor.m */; };
@@ -56,6 +57,8 @@
 		180CDCD71AECD56C00164D1F /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
 		180CDCD81AECD56C00164D1F /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 		180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConstants.h; sourceTree = "<group>"; };
+		186425751AEF40B200D149FA /* UINavigationBar+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TintColor.h"; sourceTree = "<group>"; };
+		186425761AEF40B200D149FA /* UINavigationBar+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TintColor.m"; sourceTree = "<group>"; };
 		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
 		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		187E6D601AEF14900004CFE4 /* UIButton+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NightVersion.h"; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 		180CDCCF1AECD56C00164D1F /* UINavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				186425751AEF40B200D149FA /* UINavigationBar+TintColor.h */,
+				186425761AEF40B200D149FA /* UINavigationBar+TintColor.m */,
 				180CDCD01AECD56C00164D1F /* UINavigationBar+BarTintColor.h */,
 				180CDCD11AECD56C00164D1F /* UINavigationBar+BarTintColor.m */,
 				180CDCD21AECD56C00164D1F /* UINavigationBar+NightVersion.h */,
@@ -403,6 +408,7 @@
 				187E6D641AEF14900004CFE4 /* UIButton+NightVersion.m in Sources */,
 				189854BC1ADD5B550050568B /* main.m in Sources */,
 				180CDCDA1AECD56C00164D1F /* UILabel+TextColor.m in Sources */,
+				186425771AEF40B200D149FA /* UINavigationBar+TintColor.m in Sources */,
 				180CDCDB1AECD56C00164D1F /* UINavigationBar+BarTintColor.m in Sources */,
 				180CDCDC1AECD56C00164D1F /* UINavigationBar+NightVersion.m in Sources */,
 				187E6D651AEF14900004CFE4 /* UIButton+TitleColor.m in Sources */,
