@@ -14,7 +14,7 @@ A light weight framework adding night version to your iOS app.
 ## Podfile
 
 ```
-pod "DKNightVersion", :head
+pod "DKNightVersion", "0.4.5"
 ```
 
 ## Usage
@@ -54,33 +54,9 @@ If you'd like to switch back to normal theme version:
 [DKNightVersionManager dawnComing];
 ```
 
-## Using property table generate color
-
-`property_table.yaml` is a file which saves the night color you need, if the exising colors is not enough for you, add the `class` and `property` in it.
-
-```
-UIView:
-  properies:
-    - backgroundColor
-UILabel:
-  superclass: UIView
-  properies:
-    - textColor
-```
-
-Notice the superclass property is needed if it has a superclass.
-
-```
-ruby objc_generator.rb
-```
-
-Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit/Auto` folder. 
-
-Drag them in your workspace. And then everything works fine.
-
 # Contact
 
-- [Draveness](http://github.com/draveness)
+- Powered by [Draveness](http://github.com/draveness)
 - Personal website [DeltaX](http://deltax.me)
 
 # License
@@ -89,4 +65,4 @@ DKNightVersion is available under the MIT license. See the LICENSE file for more
 
 # Todo
 
-Add UIButton support
+Add more color support
