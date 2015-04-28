@@ -65,4 +65,32 @@ DKNightVersion is available under the MIT license. See the LICENSE file for more
 
 # Todo
 
-Add more color support
+- Add more color support
+- Test
+- Documentation
+
+## Using property table generate color
+
+**Not recommend use property table for production.**
+
+`property_table.yaml` is a file which saves the night color you need, if the exising colors is not enough for you, add the `class` and `property` in it.
+
+```
+UIView:
+  properies:
+    - backgroundColor
+UILabel:
+  superclass: UIView
+  properies:
+    - textColor
+```
+
+Notice the superclass property is needed if it has a superclass.
+
+```
+ruby objc_generator.rb
+```
+
+Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit/Auto` folder. 
+
+And drag files generated just now in your workspace.
