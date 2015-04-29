@@ -15,12 +15,12 @@
 
 @implementation UILabel (NightVersion)
 
-#pragma mark - SwitchColor
+#pragma mark - TransformColor
 
 - (void)transformColor {
     [super transformColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        self.textColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
+        [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
     }];
 }
 

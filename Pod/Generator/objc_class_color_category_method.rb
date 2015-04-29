@@ -15,11 +15,11 @@ module ObjcClassColorCategoryMethod
 #pragma mark - Hook
 
 #{method_swizzling_string}
-- (void)hook_set#{cap_name}:(#{type} *)#{name} {
+- (void)hook_set#{cap_name}:(#{type} *)#{name} #{method} {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        self.normal#{cap_name} = #{name};
+        [self setNormal#{cap_name}:#{name}];
     }
-    [self hook_set#{cap_name}:#{name}];
+    [self hook_set#{cap_name}:#{name}#{selector_name}#{parameter}];
 }
 		OBJECT_C
 	end
@@ -31,8 +31,8 @@ module ObjcClassColorCategoryMethod
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
         Class class = [self class];                                                
-        SEL originalSelector = @selector(set#{cap_name}:);                                  
-        SEL swizzledSelector = @selector(hook_set#{cap_name}:);                                 
+        SEL originalSelector = @selector(set#{cap_name}:#{selector_name});                                  
+        SEL swizzledSelector = @selector(hook_set#{cap_name}:#{selector_name});                                 
         Method originalMethod = class_getInstanceMethod(class, originalSelector);  
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
         BOOL didAddMethod =                                                        
@@ -60,12 +60,12 @@ module ObjcClassColorCategoryMethod
 }
 
 - (#{type} *)night#{cap_name} {
-    return objc_getAssociatedObject(self, &night#{cap_name}Key) ? : self.#{name};
+    return objc_getAssociatedObject(self, &night#{cap_name}Key) ? : self.#{if getter then getter else name end};
 }
 
 - (void)setNight#{cap_name}:(#{type} *)night#{cap_name} {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        self.#{name} = night#{cap_name};
+        [self set#{cap_name}:night#{cap_name}#{selector_name}#{parameter}];
     }
     objc_setAssociatedObject(self, &night#{cap_name}Key, night#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

@@ -1,12 +1,19 @@
 UIView:
   properties:
-    - backgroundColor
-    - tintColor
+  - backgroundColor:
+  - tintColor:
 UILabel:
   superclass: UIView
   properties:
-    - textColor
+  - textColor:
 UINavigationBar:
   superclass: UIView
   properties:
-    - barTintColor
+  - barTintColor:
+UIButton:
+  superclass: UIView
+  properties:
+  - titleColor:
+      getter: currentTitleColor
+      method: forState:(UIControlState)state
+      parameter: UIControlStateNormal

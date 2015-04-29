@@ -15,12 +15,12 @@
 
 @implementation UINavigationBar (NightVersion)
 
-#pragma mark - SwitchColor
+#pragma mark - TransformColor
 
 - (void)transformColor {
     [super transformColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        self.barTintColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor;
+        [self setBarTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor];
     }];
 }
 

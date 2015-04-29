@@ -43,9 +43,9 @@ static char *normalTextColorKey;
     });
 }
 
-- (void)hook_setTextColor:(UIColor *)textColor {
+- (void)hook_setTextColor:(UIColor *)textColor  {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        self.normalTextColor = textColor;
+        [self setNormalTextColor:textColor];
     }
     [self hook_setTextColor:textColor];
 }
@@ -66,7 +66,7 @@ static char *normalTextColorKey;
 
 - (void)setNightTextColor:(UIColor *)nightTextColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        self.textColor = nightTextColor;
+        [self setTextColor:nightTextColor];
     }
     objc_setAssociatedObject(self, &nightTextColorKey, nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

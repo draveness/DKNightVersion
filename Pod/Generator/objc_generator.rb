@@ -25,10 +25,20 @@ end
 
 def parse_yaml(file)
 	YAML.load_file(file).map do |klass, config|
-		ObjcClass.new(klass.to_s, config["superclass"], config["properties"].map { |property| ObjcProperty.new(property.to_s) })
+		ObjcClass.new(klass.to_s, config["superclass"], config["properties"].map { |property| 
+			key = property.keys.first
+			value = property.values.first
+			if value.nil?
+				ObjcProperty.new(name: key)
+			else
+				ObjcProperty.new(name: key, method: value["method"], parameter: value["parameter"], getter: value["getter"])
+			end
+		})
 	end
 end
 
 table = parse_yaml('property_table.yaml')
+puts table.inspect
+# puts YAML.load_file('property_table.yaml')
 objc_code_generator(table)
 

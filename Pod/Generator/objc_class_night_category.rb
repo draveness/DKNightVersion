@@ -49,7 +49,7 @@ module ObjcClassNightCategory
 
 @implementation #{name} (NightVersion)
 
-#pragma mark - SwitchColor
+#pragma mark - TransformColor
 
 - (void)transformColor {
     #{night_implementation_method_string}[UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
@@ -71,8 +71,8 @@ module ObjcClassNightCategory
 
 	def night_implementation_property_string
 		properties.map { |property|
-			"self.#{property.name} = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? \
-self.night#{property.cap_name} : self.normal#{property.cap_name};"
+			"[self set#{property.cap_name}:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? \
+self.night#{property.cap_name} : self.normal#{property.cap_name}#{property.selector_name}#{property.parameter}];"
 		}.join
 	end
 
