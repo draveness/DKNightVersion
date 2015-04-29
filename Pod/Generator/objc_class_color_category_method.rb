@@ -60,7 +60,7 @@ module ObjcClassColorCategoryMethod
 }
 
 - (#{type} *)night#{cap_name} {
-    return objc_getAssociatedObject(self, &night#{cap_name}Key) ? : self.#{if getter then getter else name end};
+    return objc_getAssociatedObject(self, &night#{cap_name}Key) ? : self.#{getter ? getter : name};
 }
 
 - (void)setNight#{cap_name}:(#{type} *)night#{cap_name} {
