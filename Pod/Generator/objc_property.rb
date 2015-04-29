@@ -7,17 +7,11 @@ class ObjcProperty
 
 	attr_accessor :name, :type, :getter, :method, :parameter
 
-	# def initialize(name, type = "UIColor", method = "", parameter = "")
-	# 	@name = name
-	# 	@type = type
-	# 	@method = method
-	# 	@parameter = parameter
-	# end
 	def initialize args
-    	args.each do |k,v|
-    		instance_variable_set("@#{k}", v) unless v.nil?
-   		end
-   		@type = "UIColor"
+        args.each do |k,v|
+           instance_variable_set("@#{k}", v) unless v.nil?
+        end
+        @type = "UIColor"
   	end
 	
 	def cap_name
