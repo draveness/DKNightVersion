@@ -11,10 +11,10 @@
 
 @implementation UIButton (NightVersion)
 
-#pragma mark - SwitchColor
+#pragma mark - transformColor
 
-- (void)switchColor {
-    [super switchColor];
+- (void)transformColor {
+    [super transformColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         UIColor *titleColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTitleColor : self.normalTitleColor;
         [self setTitleColor:titleColor forState:UIControlStateNormal];

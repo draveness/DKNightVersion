@@ -17,7 +17,7 @@
 
 #pragma mark - SwitchColor
 
-- (void)switchColor {
+- (void)transformColor {
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         self.backgroundColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor;self.tintColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor;
     }];

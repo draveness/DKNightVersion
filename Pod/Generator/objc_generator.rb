@@ -30,6 +30,5 @@ def parse_yaml(file)
 end
 
 table = parse_yaml('property_table.yaml')
-# puts table[1].night_implementation_string
 objc_code_generator(table)
 

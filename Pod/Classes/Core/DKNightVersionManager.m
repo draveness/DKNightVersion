@@ -10,7 +10,7 @@
 
 @protocol DKNightVersionSwichColorProtocol <NSObject>
 
-- (void)switchColor;
+- (void)transformColor;
 - (NSArray *)subviews;
 
 @end
@@ -55,12 +55,12 @@
         return;
     }
     _themeVersion = themeVersion;
-    [self switchColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
+    [self transformColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
 }
 
-- (void)switchColor:(id <DKNightVersionSwichColorProtocol>)object {
-    if ([object respondsToSelector:@selector(switchColor)]) {
-        [object switchColor];
+- (void)transformColor:(id <DKNightVersionSwichColorProtocol>)object {
+    if ([object respondsToSelector:@selector(transformColor)]) {
+        [object transformColor];
     }
     if ([object respondsToSelector:@selector(subviews)]) {
         if (![object subviews]) {
@@ -68,11 +68,11 @@
             return;
         } else {
             for (id subview in [object subviews]) {
-                if ([subview respondsToSelector:@selector(switchColor)]) {
-                    [subview switchColor];
+                if ([subview respondsToSelector:@selector(transformColor)]) {
+                    [subview transformColor];
                 }
                 // recursice darken all the subviews of current view.
-                [self switchColor:subview];
+                [self transformColor:subview];
             }
         }
     }

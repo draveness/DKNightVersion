@@ -9,6 +9,6 @@
 
 @interface UIButton (NightVersion)
 
-- (void)switchColor;
+- (void)transformColor;
 
 @end

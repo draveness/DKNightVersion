@@ -18,7 +18,7 @@ module ObjcClassNightCategory
 #{night_interface_import_string}
 @interface #{name} (NightVersion)
 
-- (void)switchColor;
+- (void)transformColor;
 
 @end
 		OBJECT_C
@@ -51,7 +51,7 @@ module ObjcClassNightCategory
 
 #pragma mark - SwitchColor
 
-- (void)switchColor {
+- (void)transformColor {
     #{night_implementation_method_string}[UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         #{night_implementation_property_string}
     }];
@@ -66,7 +66,7 @@ module ObjcClassNightCategory
 	end
 
 	def night_implementation_method_string
-		superclass ? "[super switchColor];\n    " : ""
+		superclass ? "[super transformColor];\n    " : ""
 	end
 
 	def night_implementation_property_string

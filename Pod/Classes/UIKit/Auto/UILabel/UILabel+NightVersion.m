@@ -17,8 +17,8 @@
 
 #pragma mark - SwitchColor
 
-- (void)switchColor {
-    [super switchColor];
+- (void)transformColor {
+    [super transformColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         self.textColor = ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor;
     }];
