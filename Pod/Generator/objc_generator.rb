@@ -38,7 +38,7 @@ def parse_yaml(file)
 end
 
 table = parse_yaml('property_table.yaml')
-puts table.inspect
+# puts table.inspect
 # puts YAML.load_file('property_table.yaml')
 objc_code_generator(table)
 
