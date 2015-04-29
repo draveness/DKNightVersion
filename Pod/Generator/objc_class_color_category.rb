@@ -96,9 +96,9 @@ static char *normal#{property.cap_name}Key;
 
 	def implementation_string(property)
 		<<-OBJECT_C
+#{implementation_static_char_string(property)}
 @implementation #{name} (#{property.cap_name})
 
-#{implementation_static_char_string(property)}
 #{property.method_string}
 @end
 		OBJECT_C

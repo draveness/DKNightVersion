@@ -18,10 +18,10 @@
 
 @end
 
-@implementation UIView (TintColor)
-
 static char *nightTintColorKey;
 static char *normalTintColorKey;
+
+@implementation UIView (TintColor)
 
 #pragma mark - Hook
 

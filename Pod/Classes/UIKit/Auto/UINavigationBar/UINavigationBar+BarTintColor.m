@@ -18,10 +18,10 @@
 
 @end
 
-@implementation UINavigationBar (BarTintColor)
-
 static char *nightBarTintColorKey;
 static char *normalBarTintColorKey;
+
+@implementation UINavigationBar (BarTintColor)
 
 #pragma mark - Hook
 

@@ -18,10 +18,10 @@
 
 @end
 
-@implementation UIView (BackgroundColor)
-
 static char *nightBackgroundColorKey;
 static char *normalBackgroundColorKey;
+
+@implementation UIView (BackgroundColor)
 
 #pragma mark - Hook
 

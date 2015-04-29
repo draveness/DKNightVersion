@@ -18,10 +18,10 @@
 
 @end
 
-@implementation UILabel (TextColor)
-
 static char *nightTextColorKey;
 static char *normalTextColorKey;
+
+@implementation UILabel (TextColor)
 
 #pragma mark - Hook
 
