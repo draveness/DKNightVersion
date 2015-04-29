@@ -10,7 +10,7 @@
 
 @protocol DKNightVersionSwichColorProtocol <NSObject>
 
-- (void)transformColor;
+- (void)changeColor;
 - (NSArray *)subviews;
 
 @end
@@ -59,8 +59,8 @@
 }
 
 - (void)transformColor:(id <DKNightVersionSwichColorProtocol>)object {
-    if ([object respondsToSelector:@selector(transformColor)]) {
-        [object transformColor];
+    if ([object respondsToSelector:@selector(changeColor)]) {
+        [object changeColor];
     }
     if ([object respondsToSelector:@selector(subviews)]) {
         if (![object subviews]) {
@@ -68,8 +68,8 @@
             return;
         } else {
             for (id subview in [object subviews]) {
-                if ([subview respondsToSelector:@selector(transformColor)]) {
-                    [subview transformColor];
+                if ([subview respondsToSelector:@selector(changeColor)]) {
+                    [subview changeColor];
                 }
                 // recursice darken all the subviews of current view.
                 [self transformColor:subview];

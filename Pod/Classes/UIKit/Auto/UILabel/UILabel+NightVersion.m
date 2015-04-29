@@ -17,8 +17,8 @@
 
 #pragma mark - TransformColor
 
-- (void)transformColor {
-    [super transformColor];
+- (void)changeColor {
+    [super changeColor];
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
     }];

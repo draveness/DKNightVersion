@@ -13,6 +13,6 @@
 
 @interface UINavigationBar (NightVersion)
 
-- (void)transformColor;
+- (void)changeColor;
 
 @end

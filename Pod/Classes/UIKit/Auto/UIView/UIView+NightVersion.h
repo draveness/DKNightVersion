@@ -14,6 +14,6 @@
 
 @interface UIView (NightVersion)
 
-- (void)transformColor;
+- (void)changeColor;
 
 @end

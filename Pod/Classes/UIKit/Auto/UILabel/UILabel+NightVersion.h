@@ -13,6 +13,6 @@
 
 @interface UILabel (NightVersion)
 
-- (void)transformColor;
+- (void)changeColor;
 
 @end
