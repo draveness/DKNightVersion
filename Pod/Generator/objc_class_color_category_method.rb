@@ -49,16 +49,6 @@ module ObjcClassColorCategoryMethod
 
 	def dynamic_property_string
 		<<-OBJECT_C
-#pragma mark - #{cap_name}
-
-- (#{type} *)normal#{cap_name} {
-    return objc_getAssociatedObject(self, &normal#{cap_name}Key);
-}
-
-- (void)setNormal#{cap_name}:(#{type} *)normal#{cap_name} {
-    objc_setAssociatedObject(self, &normal#{cap_name}Key, normal#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (#{type} *)night#{cap_name} {
     return objc_getAssociatedObject(self, &night#{cap_name}Key) ? : self.#{getter || name};
 }
@@ -68,6 +58,14 @@ module ObjcClassColorCategoryMethod
         [self set#{cap_name}:night#{cap_name}#{selector_name}#{parameter}];
     }
     objc_setAssociatedObject(self, &night#{cap_name}Key, night#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (#{type} *)normal#{cap_name} {
+    return objc_getAssociatedObject(self, &normal#{cap_name}Key);
+}
+
+- (void)setNormal#{cap_name}:(#{type} *)normal#{cap_name} {
+    objc_setAssociatedObject(self, &normal#{cap_name}Key, normal#{cap_name}, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 		OBJECT_C
 	end

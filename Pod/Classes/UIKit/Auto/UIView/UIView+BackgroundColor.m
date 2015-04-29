@@ -50,16 +50,6 @@ static char *normalBackgroundColorKey;
     [self hook_setBackgroundColor:backgroundColor];
 }
 
-#pragma mark - BackgroundColor
-
-- (UIColor *)normalBackgroundColor {
-    return objc_getAssociatedObject(self, &normalBackgroundColorKey);
-}
-
-- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
-    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (UIColor *)nightBackgroundColor {
     return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : self.backgroundColor;
 }
@@ -69,6 +59,14 @@ static char *normalBackgroundColorKey;
         [self setBackgroundColor:nightBackgroundColor];
     }
     objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalBackgroundColor {
+    return objc_getAssociatedObject(self, &normalBackgroundColorKey);
+}
+
+- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
+    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 

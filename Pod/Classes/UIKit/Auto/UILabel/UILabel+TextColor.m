@@ -50,16 +50,6 @@ static char *normalTextColorKey;
     [self hook_setTextColor:textColor];
 }
 
-#pragma mark - TextColor
-
-- (UIColor *)normalTextColor {
-    return objc_getAssociatedObject(self, &normalTextColorKey);
-}
-
-- (void)setNormalTextColor:(UIColor *)normalTextColor {
-    objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (UIColor *)nightTextColor {
     return objc_getAssociatedObject(self, &nightTextColorKey) ? : self.textColor;
 }
@@ -69,6 +59,14 @@ static char *normalTextColorKey;
         [self setTextColor:nightTextColor];
     }
     objc_setAssociatedObject(self, &nightTextColorKey, nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalTextColor {
+    return objc_getAssociatedObject(self, &normalTextColorKey);
+}
+
+- (void)setNormalTextColor:(UIColor *)normalTextColor {
+    objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 

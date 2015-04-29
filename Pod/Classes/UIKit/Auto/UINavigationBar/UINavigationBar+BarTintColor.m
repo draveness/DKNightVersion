@@ -50,16 +50,6 @@ static char *normalBarTintColorKey;
     [self hook_setBarTintColor:barTintColor];
 }
 
-#pragma mark - BarTintColor
-
-- (UIColor *)normalBarTintColor {
-    return objc_getAssociatedObject(self, &normalBarTintColorKey);
-}
-
-- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
-    objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (UIColor *)nightBarTintColor {
     return objc_getAssociatedObject(self, &nightBarTintColorKey) ? : self.barTintColor;
 }
@@ -69,6 +59,14 @@ static char *normalBarTintColorKey;
         [self setBarTintColor:nightBarTintColor];
     }
     objc_setAssociatedObject(self, &nightBarTintColorKey, nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalBarTintColor {
+    return objc_getAssociatedObject(self, &normalBarTintColorKey);
+}
+
+- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
+    objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 

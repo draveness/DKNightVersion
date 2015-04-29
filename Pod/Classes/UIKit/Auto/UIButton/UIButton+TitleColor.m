@@ -50,16 +50,6 @@ static char *normalTitleColorKey;
     [self hook_setTitleColor:titleColor forState:UIControlStateNormal];
 }
 
-#pragma mark - TitleColor
-
-- (UIColor *)normalTitleColor {
-    return objc_getAssociatedObject(self, &normalTitleColorKey);
-}
-
-- (void)setNormalTitleColor:(UIColor *)normalTitleColor {
-    objc_setAssociatedObject(self, &normalTitleColorKey, normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (UIColor *)nightTitleColor {
     return objc_getAssociatedObject(self, &nightTitleColorKey) ? : self.currentTitleColor;
 }
@@ -69,6 +59,14 @@ static char *normalTitleColorKey;
         [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
     }
     objc_setAssociatedObject(self, &nightTitleColorKey, nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalTitleColor {
+    return objc_getAssociatedObject(self, &normalTitleColorKey);
+}
+
+- (void)setNormalTitleColor:(UIColor *)normalTitleColor {
+    objc_setAssociatedObject(self, &normalTitleColorKey, normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 

@@ -50,16 +50,6 @@ static char *normalTintColorKey;
     [self hook_setTintColor:tintColor];
 }
 
-#pragma mark - TintColor
-
-- (UIColor *)normalTintColor {
-    return objc_getAssociatedObject(self, &normalTintColorKey);
-}
-
-- (void)setNormalTintColor:(UIColor *)normalTintColor {
-    objc_setAssociatedObject(self, &normalTintColorKey, normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (UIColor *)nightTintColor {
     return objc_getAssociatedObject(self, &nightTintColorKey) ? : self.tintColor;
 }
@@ -69,6 +59,14 @@ static char *normalTintColorKey;
         [self setTintColor:nightTintColor];
     }
     objc_setAssociatedObject(self, &nightTintColorKey, nightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)normalTintColor {
+    return objc_getAssociatedObject(self, &normalTintColorKey);
+}
+
+- (void)setNormalTintColor:(UIColor *)normalTintColor {
+    objc_setAssociatedObject(self, &normalTintColorKey, normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 
