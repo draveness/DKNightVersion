@@ -46,13 +46,15 @@ private
 	def interface_property_string(property)
 		s = <<-OBJECT_C
 /**
- Set this property when switch to night version #{name[2..-1].downcase} #{property.name.downcase} turns to this color.
-*/
+ *
+ * Set this property when switch to night version #{name[2..-1].downcase} #{property.name.downcase} turns to this color.
+ */
 @property (nonatomic, strong) #{property.type} *night#{property.cap_name};
 
 /**
- #{name[2..-1].capitalize} #{property.name.downcase} in normal version.
-*/
+ *
+ *  #{name[2..-1].capitalize} #{property.name.downcase} in normal version.
+ */
 @property (nonatomic, strong, readonly) #{property.type} *normal#{property.cap_name};
 
 		OBJECT_C

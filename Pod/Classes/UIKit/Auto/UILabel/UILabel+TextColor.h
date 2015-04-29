@@ -9,13 +9,15 @@
 @interface UILabel (TextColor)
 
 /**
- Set this property when switch to night version label textcolor turns to this color.
-*/
+ *
+ * Set this property when switch to night version label textcolor turns to this color.
+ */
 @property (nonatomic, strong) UIColor *nightTextColor;
 
 /**
- Label textcolor in normal version.
-*/
+ *
+ *  Label textcolor in normal version.
+ */
 @property (nonatomic, strong, readonly) UIColor *normalTextColor;
 
 
