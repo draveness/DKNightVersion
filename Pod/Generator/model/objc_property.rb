@@ -27,9 +27,3 @@ class ObjcProperty
 		s.join(' ')
 	end
 end
-#
-#c = ObjcProperty.new({ name:"titleColor"})
-#puts c.set_color_method('nightColor')
-#
-#s = ObjcProperty.new({setter: "setTitleColor:(UIColor*)titleColor forState:(UIControlState)state", getter: "currentTitleColor", parameter: "UIControlStateNormal", name:"titleColor"})
-#puts s.set_color_method('nightColor')
