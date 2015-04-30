@@ -1,6 +1,6 @@
 //
-//  UILabel+NightVersion.h
-//  UILabel+NightVersion
+//  UILabel+BackgroundColor.h
+//  UILabel+BackgroundColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -10,13 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UILabel+TextColor.h"
-
-#import "UILabel+BackgroundColor.h"
-
-
-@interface UILabel (NightVersion)
-
-- (void)changeColor;
+@interface UILabel (BackgroundColor)
 
 @end

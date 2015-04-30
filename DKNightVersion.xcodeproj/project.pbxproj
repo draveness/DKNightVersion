@@ -24,6 +24,7 @@
 		18B43F9D1AF2BD3700A4BB5D /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B43F921AF2BD3700A4BB5D /* UIView+BackgroundColor.m */; };
 		18B43F9E1AF2BD3700A4BB5D /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B43F941AF2BD3700A4BB5D /* UIView+NightVersion.m */; };
 		18B43F9F1AF2BD3700A4BB5D /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B43F961AF2BD3700A4BB5D /* UIView+TintColor.m */; };
+		18B43FA21AF2BE0600A4BB5D /* UILabel+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B43FA11AF2BE0600A4BB5D /* UILabel+BackgroundColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		18B43F941AF2BD3700A4BB5D /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 		18B43F951AF2BD3700A4BB5D /* UIView+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TintColor.h"; sourceTree = "<group>"; };
 		18B43F961AF2BD3700A4BB5D /* UIView+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TintColor.m"; sourceTree = "<group>"; };
+		18B43FA01AF2BE0600A4BB5D /* UILabel+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+BackgroundColor.h"; sourceTree = "<group>"; };
+		18B43FA11AF2BE0600A4BB5D /* UILabel+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+BackgroundColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,8 @@
 				18B43F881AF2BD3700A4BB5D /* UILabel+NightVersion.m */,
 				18B43F891AF2BD3700A4BB5D /* UILabel+TextColor.h */,
 				18B43F8A1AF2BD3700A4BB5D /* UILabel+TextColor.m */,
+				18B43FA01AF2BE0600A4BB5D /* UILabel+BackgroundColor.h */,
+				18B43FA11AF2BE0600A4BB5D /* UILabel+BackgroundColor.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				18B43F9A1AF2BD3700A4BB5D /* UILabel+TextColor.m in Sources */,
 				18B43F9B1AF2BD3700A4BB5D /* UINavigationBar+BarTintColor.m in Sources */,
 				189854E81ADD5BCE0050568B /* RootViewController.m in Sources */,
+				18B43FA21AF2BE0600A4BB5D /* UILabel+BackgroundColor.m in Sources */,
 				187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */,
 				18B43F9D1AF2BD3700A4BB5D /* UIView+BackgroundColor.m in Sources */,
 				189854BC1ADD5B550050568B /* main.m in Sources */,

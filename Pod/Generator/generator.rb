@@ -70,10 +70,12 @@ def objc_code_generator(klasses)
 		File.write File.join(subfolder_path, klass.nightversion_imp_name),    render(nightversion_imp,    klass)
 
 		klass.properties.each do |property|
-			if !klass.superclass || klass.superclass.properties.find_index(property) == nil
+			superclass_has_property = has_property(klass.superclass, property.name) if klass.superclass
+
+			if !klass.superclass || !superclass_has_property
 				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_header, klass, property)
 				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_imp,    klass, property)
-			elsif klass.superclass.properties.find_index(property)
+			elsif superclass_has_property
 				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_simply_header, klass, property)
 				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_simply_imp,    klass, property)
 			end
