@@ -23,8 +23,6 @@ static char *normalTintColorKey;
 
 @implementation UIView (TintColor)
 
-#pragma mark - Hook
-
 + (void)load {
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
@@ -43,7 +41,7 @@ static char *normalTintColorKey;
     });
 }
 
-- (void)hook_setTintColor:(UIColor *)tintColor  {
+- (void)hook_setTintColor:(UIColor*)tintColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalTintColor:tintColor];
     }
@@ -69,6 +67,4 @@ static char *normalTintColorKey;
     objc_setAssociatedObject(self, &normalTintColorKey, normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-
 @end
-

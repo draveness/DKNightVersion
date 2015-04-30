@@ -1,6 +1,6 @@
 //
-//  UIButton+NightVersion.h
-//  UIButton+NightVersion
+//  <%= klass.name %>+NightVersion.h
+//  <%= klass.name %>+NightVersion
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -9,9 +9,11 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
-#import "UIButton+TitleColor.h"
+<% klass.properties.each do |property| %>
+<%= "#import \"" + klass.name + "+#{property.cap_name}.h\"" %>
+<% end %>
 
-@interface UIButton (NightVersion)
+@interface <%= klass.name %> (NightVersion)
 
 - (void)changeColor;
 

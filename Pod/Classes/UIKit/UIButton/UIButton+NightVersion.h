@@ -1,6 +1,6 @@
 //
-//  UIView+NightVersion.h
-//  UIView+NightVersion
+//  UIButton+NightVersion.h
+//  UIButton+NightVersion
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -9,10 +9,11 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
-#import "UIView+BackgroundColor.h"
-#import "UIView+TintColor.h"
 
-@interface UIView (NightVersion)
+#import "UIButton+TitleColor.h"
+
+
+@interface UIButton (NightVersion)
 
 - (void)changeColor;
 

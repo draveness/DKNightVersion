@@ -9,18 +9,24 @@
 //  test it. And finally open a pull request.
 
 #import "UIButton+NightVersion.h"
+
 #import "UIView+NightVersion.h"
+
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
 
 @implementation UIButton (NightVersion)
 
-#pragma mark - TransformColor
+#pragma mark - ChangeColor
 
 - (void)changeColor {
+    
     [super changeColor];
+    
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
+        
         [self setTitleColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTitleColor : self.normalTitleColor forState:UIControlStateNormal];
+        
     }];
 }
 

@@ -1,6 +1,6 @@
 //
-//  UILabel+TextColor.m
-//  UILabel+TextColor
+//  UIView+BackgroundColor.m
+//  UIView+BackgroundColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,29 +8,27 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UILabel+textColor.h"
+#import "UIView+backgroundColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
-@interface UILabel ()
+@interface UIView ()
 
-@property (nonatomic, strong) UIColor *normalTextColor;
+@property (nonatomic, strong) UIColor *normalBackgroundColor;
 
 @end
 
-static char *nightTextColorKey;
-static char *normalTextColorKey;
+static char *nightBackgroundColorKey;
+static char *normalBackgroundColorKey;
 
-@implementation UILabel (TextColor)
-
-#pragma mark - Hook
+@implementation UIView (BackgroundColor)
 
 + (void)load {
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
         Class class = [self class];                                                
-        SEL originalSelector = @selector(setTextColor:);                                  
-        SEL swizzledSelector = @selector(hook_setTextColor:);                                 
+        SEL originalSelector = @selector(setBackgroundColor:);                                  
+        SEL swizzledSelector = @selector(hook_setBackgroundColor:);                                 
         Method originalMethod = class_getInstanceMethod(class, originalSelector);  
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
         BOOL didAddMethod =                                                        
@@ -43,32 +41,30 @@ static char *normalTextColorKey;
     });
 }
 
-- (void)hook_setTextColor:(UIColor *)textColor  {
+- (void)hook_setBackgroundColor:(UIColor*)backgroundColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalTextColor:textColor];
+        [self setNormalBackgroundColor:backgroundColor];
     }
-    [self hook_setTextColor:textColor];
+    [self hook_setBackgroundColor:backgroundColor];
 }
 
-- (UIColor *)nightTextColor {
-    return objc_getAssociatedObject(self, &nightTextColorKey) ? : self.textColor;
+- (UIColor *)nightBackgroundColor {
+    return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : self.backgroundColor;
 }
 
-- (void)setNightTextColor:(UIColor *)nightTextColor {
+- (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setTextColor:nightTextColor];
+        [self setBackgroundColor:nightBackgroundColor];
     }
-    objc_setAssociatedObject(self, &nightTextColorKey, nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIColor *)normalTextColor {
-    return objc_getAssociatedObject(self, &normalTextColorKey);
+- (UIColor *)normalBackgroundColor {
+    return objc_getAssociatedObject(self, &normalBackgroundColorKey);
 }
 
-- (void)setNormalTextColor:(UIColor *)normalTextColor {
-    objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
+    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
 
 @end
-

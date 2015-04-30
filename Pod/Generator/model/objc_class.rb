@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 
-require_relative 'objc_class_color_category'
-require_relative 'objc_class_night_category'
-
 class ObjcClass
-	include ObjcClassColorCategory, ObjcClassNightCategory
-
 	attr_accessor :name, :properties, :superclass
 
 	def initialize(name, superclass, properties = [])
@@ -14,17 +9,23 @@ class ObjcClass
 		@properties = properties
 	end
 
-	def night_header_file_name
+	def nightversion_header_name
 		name + '+NightVersion.h'
 	end
 
-	def night_file_name
-		name + '+NightVersion'
+	def nightversion_imp_name
+		name + '+NightVersion.m'
 	end
 
-	def header_file_name(property)
+	def color_header_name(property)
 		file_name(property) + '.h'
 	end
+	
+	def color_imp_name(property)
+		file_name(property) + '.m'
+	end
+
+private
 
 	def file_name(property)
 		"#{name}+#{property.cap_name}"

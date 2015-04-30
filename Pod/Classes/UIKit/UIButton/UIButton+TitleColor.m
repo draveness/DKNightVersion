@@ -1,6 +1,6 @@
 //
-//  UINavigationBar+BarTintColor.m
-//  UINavigationBar+BarTintColor
+//  UIButton+TitleColor.m
+//  UIButton+TitleColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,29 +8,27 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UINavigationBar+barTintColor.h"
+#import "UIButton+titleColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
-@interface UINavigationBar ()
+@interface UIButton ()
 
-@property (nonatomic, strong) UIColor *normalBarTintColor;
+@property (nonatomic, strong) UIColor *normalTitleColor;
 
 @end
 
-static char *nightBarTintColorKey;
-static char *normalBarTintColorKey;
+static char *nightTitleColorKey;
+static char *normalTitleColorKey;
 
-@implementation UINavigationBar (BarTintColor)
-
-#pragma mark - Hook
+@implementation UIButton (TitleColor)
 
 + (void)load {
     static dispatch_once_t onceToken;                                              
     dispatch_once(&onceToken, ^{                                                   
         Class class = [self class];                                                
-        SEL originalSelector = @selector(setBarTintColor:);                                  
-        SEL swizzledSelector = @selector(hook_setBarTintColor:);                                 
+        SEL originalSelector = @selector(setTitleColor:forState:);                                  
+        SEL swizzledSelector = @selector(hook_setTitleColor:forState:);                                 
         Method originalMethod = class_getInstanceMethod(class, originalSelector);  
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
         BOOL didAddMethod =                                                        
@@ -43,32 +41,30 @@ static char *normalBarTintColorKey;
     });
 }
 
-- (void)hook_setBarTintColor:(UIColor *)barTintColor  {
+- (void)hook_setTitleColor:(UIColor*)titleColor forState:(UIControlState)state {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalBarTintColor:barTintColor];
+        [self setNormalTitleColor:titleColor];
     }
-    [self hook_setBarTintColor:barTintColor];
+    [self hook_setTitleColor:titleColor forState:UIControlStateNormal];
 }
 
-- (UIColor *)nightBarTintColor {
-    return objc_getAssociatedObject(self, &nightBarTintColorKey) ? : self.barTintColor;
+- (UIColor *)nightTitleColor {
+    return objc_getAssociatedObject(self, &nightTitleColorKey) ? : self.currentTitleColor;
 }
 
-- (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
+- (void)setNightTitleColor:(UIColor *)nightTitleColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setBarTintColor:nightBarTintColor];
+        [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
     }
-    objc_setAssociatedObject(self, &nightBarTintColorKey, nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &nightTitleColorKey, nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIColor *)normalBarTintColor {
-    return objc_getAssociatedObject(self, &normalBarTintColorKey);
+- (UIColor *)normalTitleColor {
+    return objc_getAssociatedObject(self, &normalTitleColorKey);
 }
 
-- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
-    objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setNormalTitleColor:(UIColor *)normalTitleColor {
+    objc_setAssociatedObject(self, &normalTitleColorKey, normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
 
 @end
-
