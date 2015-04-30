@@ -12,8 +12,6 @@
 
 #import "UILabel+TextColor.h"
 
-#import "UILabel+BackgroundColor.h"
-
 
 @interface UILabel (NightVersion)
 
