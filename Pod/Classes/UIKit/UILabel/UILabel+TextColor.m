@@ -49,7 +49,7 @@ static char *normalTextColorKey;
 }
 
 - (UIColor *)nightTextColor {
-    return objc_getAssociatedObject(self, &nightTextColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.class.defaultNightTextColor :self.textColor);
+    return objc_getAssociatedObject(self, &nightTextColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTextColor :self.textColor);
 }
 
 - (void)setNightTextColor:(UIColor *)nightTextColor {
@@ -67,7 +67,7 @@ static char *normalTextColorKey;
     objc_setAssociatedObject(self, &normalTextColorKey, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-+ (UIColor *)defaultNightTextColor {
+- (UIColor *)defaultNightTextColor {
     return UIColorFromRGB(0x5d5d5d);
 }
 

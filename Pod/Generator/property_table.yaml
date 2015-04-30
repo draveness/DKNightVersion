@@ -5,14 +5,17 @@ UIView:
   - tintColor:
       defaultColor: "0xffffff"
 UILabel:
+  superclass: UIView
   properties:
   - textColor:
       defaultColor: "0x5d5d5d"
 UINavigationBar:
+  superclass: UIView
   properties:
   - barTintColor:
       defaultColor: "0x444444"
 UIButton:
+  superclass: UIView
   properties:
   - titleColor:
       defaultColor: "0xb9b9b9"

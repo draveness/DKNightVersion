@@ -49,7 +49,7 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)nightTintColor {
-    return objc_getAssociatedObject(self, &nightTintColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.class.defaultNightTintColor :self.tintColor);
+    return objc_getAssociatedObject(self, &nightTintColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTintColor :self.tintColor);
 }
 
 - (void)setNightTintColor:(UIColor *)nightTintColor {
@@ -67,7 +67,7 @@ static char *normalTintColorKey;
     objc_setAssociatedObject(self, &normalTintColorKey, normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-+ (UIColor *)defaultNightTintColor {
+- (UIColor *)defaultNightTintColor {
     return UIColorFromRGB(0xffffff);
 }
 

@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 class ObjcClass
-	attr_accessor :name, :properties
+	attr_accessor :name, :properties, :superclass, :superclass_name
 
-	def initialize(name, properties = [])
+	def initialize(name, superclass_name, properties = [])
 		@name = name
-		@properties = properties
+        @superclass_name = superclass_name
+        @properties = properties
 	end
 
 	def nightversion_header_name

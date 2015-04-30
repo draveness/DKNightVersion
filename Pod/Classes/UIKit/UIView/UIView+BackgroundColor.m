@@ -49,7 +49,7 @@ static char *normalBackgroundColorKey;
 }
 
 - (UIColor *)nightBackgroundColor {
-    return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.class.defaultNightBackgroundColor :self.backgroundColor);
+    return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBackgroundColor :self.backgroundColor);
 }
 
 - (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
@@ -67,7 +67,7 @@ static char *normalBackgroundColorKey;
     objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-+ (UIColor *)defaultNightBackgroundColor {
+- (UIColor *)defaultNightBackgroundColor {
     return UIColorFromRGB(0x343434);
 }
 
