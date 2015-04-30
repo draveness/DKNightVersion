@@ -9,7 +9,6 @@
 //  test it. And finally open a pull request.
 
 #import "UIView+NightVersion.h"
-
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
 

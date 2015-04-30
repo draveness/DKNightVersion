@@ -49,7 +49,7 @@ static char *normalTitleColorKey;
 }
 
 - (UIColor *)nightTitleColor {
-    return objc_getAssociatedObject(self, &nightTitleColorKey) ? : self.currentTitleColor;
+    return objc_getAssociatedObject(self, &nightTitleColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.class.defaultNightTitleColor :self.currentTitleColor);
 }
 
 - (void)setNightTitleColor:(UIColor *)nightTitleColor {
@@ -65,6 +65,10 @@ static char *normalTitleColorKey;
 
 - (void)setNormalTitleColor:(UIColor *)normalTitleColor {
     objc_setAssociatedObject(self, &normalTitleColorKey, normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
++ (UIColor *)defaultNightTitleColor {
+    return UIColorFromRGB(0xb9b9b9);
 }
 
 @end

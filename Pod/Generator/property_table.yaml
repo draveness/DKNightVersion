@@ -1,0 +1,21 @@
+UIView:
+  properties:
+  - backgroundColor:
+      defaultColor: "0x343434"
+  - tintColor:
+      defaultColor: "0xffffff"
+UILabel:
+  properties:
+  - textColor:
+      defaultColor: "0x5d5d5d"
+UINavigationBar:
+  properties:
+  - barTintColor:
+      defaultColor: "0x444444"
+UIButton:
+  properties:
+  - titleColor:
+      defaultColor: "0xb9b9b9"
+      getter: currentTitleColor
+      setter: setTitleColor:(UIColor*)titleColor forState:(UIControlState)state
+      parameter: UIControlStateNormal

@@ -9,9 +9,6 @@
 //  test it. And finally open a pull request.
 
 #import "<%= klass.name %>+NightVersion.h"
-<% if klass.superclass %>
-<%= "#import \"#{klass.superclass}+NightVersion.h\"" %>
-<% end %>
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
 
@@ -20,9 +17,7 @@
 #pragma mark - ChangeColor
 
 - (void)changeColor {
-    <% if klass.superclass %>
-    <%= '[super changeColor];' %>
-    <% end %>
+    <%# end %>
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         <% klass.properties.each do |property| %>
         <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>

@@ -9,9 +9,6 @@
 //  test it. And finally open a pull request.
 
 #import "UINavigationBar+NightVersion.h"
-
-#import "UIView+NightVersion.h"
-
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
 
@@ -20,8 +17,6 @@
 #pragma mark - ChangeColor
 
 - (void)changeColor {
-    
-    [super changeColor];
     
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         

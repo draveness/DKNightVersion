@@ -10,13 +10,13 @@ require_relative 'model/objc_class'
 
 def parse_yaml(file)
 	YAML.load_file(file).map do |klass, config|
-		ObjcClass.new(klass.to_s, config["superclass"], config["properties"].map { |property| 
+		ObjcClass.new(klass.to_s, config["properties"].map { |property| 
 			key = property.keys.first
 			value = property.values.first
 			if value.nil?
-				ObjcProperty.new(name: key)
+				ObjcProperty.new(name: key, default_color: value["defaultColor"])
 			else
-				ObjcProperty.new(name: key, setter: value["setter"], parameter: value["parameter"], getter: value["getter"])
+				ObjcProperty.new(name: key, setter: value["setter"], parameter: value["parameter"], getter: value["getter"], default_color: value["defaultColor"])
 			end
 		})
 	end

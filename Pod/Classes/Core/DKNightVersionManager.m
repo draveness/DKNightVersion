@@ -21,6 +21,7 @@
  Set themeVersion to switch to night or normal theme, default is DKThemeVersionNormal.
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
+@property (nonatomic, assign) BOOL useDefaultNightColor;
 
 @end
 
@@ -28,9 +29,10 @@
 
 + (DKNightVersionManager *)sharedNightVersionManager {
     static dispatch_once_t once;
-    static id instance;
+    static DKNightVersionManager *instance;
     dispatch_once(&once, ^{
         instance = [self new];
+        instance.useDefaultNightColor = YES;
     });
     return instance;
 }
@@ -76,6 +78,14 @@
             }
         }
     }
+}
+
++ (BOOL)useDefaultNightColor {
+    return self.sharedNightVersionManager.useDefaultNightColor;
+}
+
++ (void)setUseDefaultNightColor:(BOOL)use {
+    [self.sharedNightVersionManager setUseDefaultNightColor:use];
 }
 
 @end

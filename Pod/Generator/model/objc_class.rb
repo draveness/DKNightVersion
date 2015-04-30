@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
 class ObjcClass
-	attr_accessor :name, :properties, :superclass
+	attr_accessor :name, :properties
 
-	def initialize(name, superclass, properties = [])
+	def initialize(name, properties = [])
 		@name = name
-		@superclass = superclass
 		@properties = properties
 	end
 

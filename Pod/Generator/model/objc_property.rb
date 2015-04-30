@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class ObjcProperty
-	attr_accessor :name, :type, :getter, :setter, :parameter
+	attr_accessor :name, :type, :getter, :setter, :parameter, :default_color
 
 	def initialize args
         args.each do |k,v|
@@ -21,7 +21,7 @@ class ObjcProperty
 	end
 	
 	def set_color_method(color)
-		s = setter.split(' ').map { |s| (/.*:/).match(s).to_s }
+		s = setter.split(' ').map { |str| (/.*:/).match(str).to_s }
 		s.first.concat(color)
 		s[1].concat(parameter) unless parameter.nil?
 		s.join(' ')
