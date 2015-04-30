@@ -55,10 +55,10 @@
         return;
     }
     _themeVersion = themeVersion;
-    [self transformColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
+    [self changeColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
 }
 
-- (void)transformColor:(id <DKNightVersionSwichColorProtocol>)object {
+- (void)changeColor:(id <DKNightVersionSwichColorProtocol>)object {
     if ([object respondsToSelector:@selector(changeColor)]) {
         [object changeColor];
     }
@@ -72,7 +72,7 @@
                     [subview changeColor];
                 }
                 // recursice darken all the subviews of current view.
-                [self transformColor:subview];
+                [self changeColor:subview];
             }
         }
     }
