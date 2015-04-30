@@ -17,6 +17,7 @@
 @implementation UIButton (BackgroundColor)
 
 - (UIColor *)defaultNightBackgroundColor {
+    if (self isKindOfClass:[UIButton class])
     return self.normalBackgroundColor;
 }
 
