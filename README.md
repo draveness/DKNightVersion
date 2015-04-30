@@ -91,9 +91,9 @@ UILabel:
 Notice the superclass property is needed if it has a superclass.
 
 ```
-ruby objc_generator.rb
+ruby generator.rb
 ```
 
-Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit/Auto` folder. 
+Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit` folder. 
 
 And drag files generated just now in your workspace.
