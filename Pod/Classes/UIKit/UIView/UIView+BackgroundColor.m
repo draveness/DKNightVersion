@@ -68,7 +68,11 @@ static char *normalBackgroundColorKey;
 }
 
 - (UIColor *)defaultNightBackgroundColor {
-    return UIColorFromRGB(0x343434);
+    if ([self isMemberOfClass:[UIView class]]) { 
+        return UIColorFromRGB(0x343434);
+    } else {
+        return self.normalBackgroundColor;
+    }
 }
 
 @end

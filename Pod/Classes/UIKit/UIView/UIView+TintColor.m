@@ -68,7 +68,11 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)defaultNightTintColor {
-    return UIColorFromRGB(0xffffff);
+    if ([self isMemberOfClass:[UIView class]]) { 
+        return UIColorFromRGB(0xffffff);
+    } else {
+        return self.normalTintColor;
+    }
 }
 
 @end

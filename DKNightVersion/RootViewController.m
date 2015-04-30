@@ -30,6 +30,7 @@
     label.text = @"DKNightVersion is a light weight framework adding night version to your app. ";
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor darkGrayColor];
+    label.nightBackgroundColor = [UIColor redColor];
 //    label.nightTextColor = [UIColor colorWithRed:0.396 green:0.400 blue:0.408 alpha:1.0];
 //    label.nightBackgroundColor = [UIColor redColor];
 

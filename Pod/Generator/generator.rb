@@ -78,18 +78,18 @@ def objc_code_generator(klasses)
 				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_simply_imp,    klass, property)
 			end
 		end
-		if klass.superclass
-			klass.superclass.properties.each do |property|
-				p = has_property(klass, property.name)
-				if p
-				then 
-					property.default_color = p.default_color
-				else property.default_color = nil
-				end
-				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_simply_header, klass, property)
-				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_simply_imp,    klass, property)
-			end
-		end
+#		if klass.superclass
+#			klass.superclass.properties.each do |property|
+#				p = has_property(klass, property.name)
+#				if p
+#				then 
+#					property.default_color = p.default_color
+#				else property.default_color = nil
+#				end
+#				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_simply_header, klass, property)
+#				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_simply_imp,    klass, property)
+#			end
+#		end
 	end
 end
 
