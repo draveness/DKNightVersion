@@ -9,11 +9,9 @@
 //  test it. And finally open a pull request.
 
 #import "<%= klass.name %>+NightVersion.h"
-<% if klass.superclass_name %>
-<%= "#import \"#{klass.superclass_name}+NightVersion.h\"" %>
-<% end %>
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
+<% if klass.all_superklass_name %><% klass.all_superklass_name.reverse.each do |name| %><%= "#import \"#{name}+NightVersion.h\"\n" %><% end %><% end %>
 
 @implementation <%= klass.name %> (NightVersion)
 
@@ -21,9 +19,9 @@
 
 - (void)changeColor {
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        <% if klass.superclass_name %><% klass.superclass.properties.each do |property| %>
-        <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %><% end %><% end %>
-        <% klass.properties.each do |property| %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %><% end %>
+        <% klass.all_properties.each do |property| %>
+        <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+        <% end %>
 
     }];
 }

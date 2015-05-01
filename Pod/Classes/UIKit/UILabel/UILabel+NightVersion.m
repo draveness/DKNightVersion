@@ -9,11 +9,10 @@
 //  test it. And finally open a pull request.
 
 #import "UILabel+NightVersion.h"
-
-#import "UIView+NightVersion.h"
-
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
+#import "UIView+NightVersion.h"
+
 
 @implementation UILabel (NightVersion)
 
@@ -22,9 +21,12 @@
 - (void)changeColor {
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
+        
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+        
+        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+        
 
     }];
 }

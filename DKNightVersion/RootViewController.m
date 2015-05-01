@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationController.navigationBar.nightTintColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.nightTintColor = [UIColor whiteColor];
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
     label.center = CGPointMake(self.view.center.x, 240);
@@ -30,8 +30,6 @@
     label.text = @"DKNightVersion is a light weight framework adding night version to your app. ";
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor darkGrayColor];
-//    label.nightTextColor = [UIColor colorWithRed:0.396 green:0.400 blue:0.408 alpha:1.0];
-    label.nightBackgroundColor = [UIColor redColor];
 
     UIButton *nightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
     nightButton.center = CGPointMake(self.view.center.x, 350);

@@ -1,6 +1,6 @@
 //
-//  UINavigationBar+NightVersion.h
-//  UINavigationBar+NightVersion
+//  UIScrollView+NightVersion.h
+//  UIScrollView+NightVersion
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -10,12 +10,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UINavigationBar+BarTintColor.h"
-
-#import "UINavigationBar+TintColor.h"
+#import "UIScrollView+BackgroundColor.h"
 
 
-@interface UINavigationBar (NightVersion)
+@interface UIScrollView (NightVersion)
 
 - (void)changeColor;
 

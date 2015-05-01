@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 class ObjcClass
-	attr_accessor :name, :properties, :superclass, :superclass_name
+	attr_accessor :name, :properties, :superklass, :superklass_name
+    attr_reader :all_properties
 
-	def initialize(name, superclass_name, properties = [])
+	def initialize(name, superklass_name, properties = [])
 		@name = name
-        @superclass_name = superclass_name
+        @superklass_name = superklass_name
         @properties = properties
 	end
 
@@ -25,9 +26,36 @@ class ObjcClass
 		file_name(property) + '.m'
 	end
 
+    def all_properties
+        p = properties
+        name = p.map { |property| property.name }
+        k = superklass
+        while k
+            superklass.properties.each do |property|
+                p << property if !name.find_index(property.name)
+            end
+            k = k.superklass
+            name = p.map { |property| property.name }
+        end
+        p.uniq
+    end
+
+
+    def all_superklass_name
+        k = []
+        return if !superklass_name
+        s = superklass
+        while s
+            k << s.name
+            s = s.superklass
+        end
+        k
+    end
+
 private
 
 	def file_name(property)
 		"#{name}+#{property.cap_name}"
 	end
+
 end

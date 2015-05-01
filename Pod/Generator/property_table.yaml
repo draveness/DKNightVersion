@@ -5,20 +5,34 @@ UIView:
   - tintColor:
       defaultColor: "0xffffff"
 UILabel:
-  superclass: UIView
+  superklass: UIView
   properties:
   - textColor:
       defaultColor: "0x5d5d5d"
 UINavigationBar:
-  superclass: UIView
+  superklass: UIView
   properties:
   - barTintColor:
       defaultColor: "0x444444"
+  - tintColor:
+      defaultColor: "0xffffff"
 UIButton:
-  superclass: UIView
+  superklass: UIView
   properties:
   - titleColor:
       defaultColor: "0xb9b9b9"
       getter: currentTitleColor
       setter: setTitleColor:(UIColor*)titleColor forState:(UIControlState)state
       parameter: UIControlStateNormal
+UIScrollView:
+  superklass: UIView
+  properties:
+  - backgroundColor:
+      defaultColor: "0x343434"
+UITableView:
+  superklass: UIScrollView
+  properties:
+  - backgroundColor:
+      defaultColor: "0x343434"
+  - separatorColor:
+      defaultColor: "0x313131"

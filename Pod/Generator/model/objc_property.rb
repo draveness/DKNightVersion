@@ -26,4 +26,5 @@ class ObjcProperty
 		s[1].concat(parameter) unless parameter.nil?
 		s.join(' ')
 	end
+
 end

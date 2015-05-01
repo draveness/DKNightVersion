@@ -10,20 +10,16 @@ require_relative 'model/objc_class'
 
 def parse_yaml(file)
 	table = YAML.load_file(file).map do |klass, config|
-		ObjcClass.new(klass.to_s, config["superclass"], config["properties"].map { |property| 
+		ObjcClass.new(klass.to_s, config["superklass"], config["properties"].map { |property| 
 			key = property.keys.first
 			value = property.values.first
-			if value.nil?
-				ObjcProperty.new(name: key)
-			else
-				ObjcProperty.new(name: key, setter: value["setter"], parameter: value["parameter"], getter: value["getter"], default_color: value["defaultColor"])
-			end
+			ObjcProperty.new(name: key, setter: value["setter"], parameter: value["parameter"], getter: value["getter"], default_color: value["defaultColor"])
 		})
 	end
 	table.each do |first_klass|
 		table.each do |second_klass|
-			if first_klass.superclass_name == second_klass.name
-				first_klass.superclass = second_klass
+			if first_klass.superklass_name == second_klass.name
+				first_klass.superklass = second_klass
 			end
 		end
 	end
@@ -58,7 +54,6 @@ def objc_code_generator(klasses)
 	nightversion_header = File.join(template_folder, 'nightversion.h.erb')
 	nightversion_imp    = File.join(template_folder, 'nightversion.m.erb')
 	
-	
 	relative_path = File.join('..', 'Classes', 'UIKit')
 	FileUtils.mkdir_p(relative_path)
 	klasses.each do |klass|
@@ -70,12 +65,12 @@ def objc_code_generator(klasses)
 		File.write File.join(subfolder_path, klass.nightversion_imp_name),    render(nightversion_imp,    klass)
 
 		klass.properties.each do |property|
-			superclass_has_property = has_property(klass.superclass, property.name) if klass.superclass
+			superklass_has_property = has_property(klass.superklass, property.name) if klass.superklass
 
-			if !klass.superclass || !superclass_has_property
+			if !klass.superklass || !superklass_has_property
 				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_header, klass, property)
 				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_imp,    klass, property)
-			elsif superclass_has_property
+			elsif superklass_has_property
 				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_simply_header, klass, property)
 				File.write File.join(subfolder_path, klass.color_imp_name(property)),    render(color_simply_imp,    klass, property)
 			end
@@ -84,13 +79,17 @@ def objc_code_generator(klasses)
 end
 
 def has_property(klass, name)
-	klass.properties.each do |property|
-		if property.name == name
-			return property
-		end
-	end
+    while klass
+	    klass.properties.each do |property|
+	    	if property.name == name
+	    		return property
+	    	end
+	    end
+        klass = klass.superklass
+    end
 	return nil
 end
 
 table = parse_yaml('property_table.yaml')
+# puts table.inspect
 objc_code_generator(table)

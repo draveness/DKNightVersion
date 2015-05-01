@@ -9,11 +9,10 @@
 //  test it. And finally open a pull request.
 
 #import "UIButton+NightVersion.h"
-
-#import "UIView+NightVersion.h"
-
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
+#import "UIView+NightVersion.h"
+
 
 @implementation UIButton (NightVersion)
 
@@ -22,9 +21,12 @@
 - (void)changeColor {
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         [self setTitleColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTitleColor : self.normalTitleColor forState:UIControlStateNormal];
+        
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+        
+        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+        
 
     }];
 }

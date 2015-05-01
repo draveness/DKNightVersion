@@ -24,21 +24,21 @@ static char *normalBackgroundColorKey;
 @implementation UIView (BackgroundColor)
 
 + (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(setBackgroundColor:);                                  
-        SEL swizzledSelector = @selector(hook_setBackgroundColor:);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
+static dispatch_once_t onceToken;                                              
+dispatch_once(&onceToken, ^{                                                   
+    Class class = [self class];                                                
+    SEL originalSelector = @selector(setBackgroundColor:);                                  
+    SEL swizzledSelector = @selector(hook_setBackgroundColor:);                                 
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);  
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
+    BOOL didAddMethod =                                                        
+    class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
+    if (didAddMethod){
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
+    } else {                                                                   
+        method_exchangeImplementations(originalMethod, swizzledMethod);        
+    }
+});
 }
 
 - (void)hook_setBackgroundColor:(UIColor*)backgroundColor {
@@ -71,7 +71,8 @@ static char *normalBackgroundColorKey;
     if ([self isMemberOfClass:[UIView class]]) { 
         return UIColorFromRGB(0x343434);
     } else {
-        return self.normalBackgroundColor;
+        UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
+        return resultColor;
     }
 }
 

@@ -1,6 +1,6 @@
 //
-//  UIView+NightVersion.m
-//  UIView+NightVersion
+//  UIScrollView+NightVersion.m
+//  UIScrollView+NightVersion
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,12 +8,13 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UIView+NightVersion.h"
+#import "UIScrollView+NightVersion.h"
 #import "DKNightVersionManager.h"
 #import "DKNightVersionConstants.h"
+#import "UIView+NightVersion.h"
 
 
-@implementation UIView (NightVersion)
+@implementation UIScrollView (NightVersion)
 
 #pragma mark - ChangeColor
 
