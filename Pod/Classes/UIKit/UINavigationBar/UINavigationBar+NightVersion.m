@@ -28,7 +28,6 @@
         
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
         
-
     }];
 }
 

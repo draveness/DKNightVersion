@@ -25,7 +25,6 @@
         
         [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         
-
     }];
 }
 
