@@ -19,9 +19,10 @@
 #pragma mark - ChangeColor
 
 - (void)changeColor {
+    
+    [self setBarTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor];
+    
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        
-        [self setBarTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor];
         
         [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         

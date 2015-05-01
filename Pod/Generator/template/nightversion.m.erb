@@ -18,10 +18,13 @@
 #pragma mark - ChangeColor
 
 - (void)changeColor {
+    <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' %>
+    <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+    <% end %><% end %>
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
-        <% klass.all_properties.each do |property| %>
+        <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %>
         <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
-        <% end %>
+        <% end %><% end %>
 
     }];
 }

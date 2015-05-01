@@ -20,6 +20,7 @@
 #pragma mark - ChangeColor
 
 - (void)changeColor {
+    
     [UIView animateWithDuration:NIGHT_ANIMATION_DURATION animations:^{
         
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
