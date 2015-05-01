@@ -21,6 +21,8 @@
  Set themeVersion to switch to night or normal theme, default is DKThemeVersionNormal.
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
+
+
 @property (nonatomic, assign) BOOL useDefaultNightColor;
 
 @end
@@ -70,11 +72,11 @@
             return;
         } else {
             for (id subview in [object subviews]) {
+                // recursice darken all the subviews of current view.
+                [self changeColor:subview];
                 if ([subview respondsToSelector:@selector(changeColor)]) {
                     [subview changeColor];
                 }
-                // recursice darken all the subviews of current view.
-                [self changeColor:subview];
             }
         }
     }

@@ -9,6 +9,6 @@
 #ifndef DKNightVersion_DKNightVersionConstants_h
 #define DKNightVersion_DKNightVersionConstants_h
 
-#define NIGHT_ANIMATION_DURATION 0.3f
+#define NIGHT_ANIMATION_DURATION 0.5f
 
 #endif
