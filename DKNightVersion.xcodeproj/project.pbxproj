@@ -31,6 +31,7 @@
 		18B4412E1AF32A3200A4BB5D /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4411B1AF32A3200A4BB5D /* UIView+BackgroundColor.m */; };
 		18B4412F1AF32A3200A4BB5D /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4411D1AF32A3200A4BB5D /* UIView+NightVersion.m */; };
 		18B441301AF32A3200A4BB5D /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4411F1AF32A3200A4BB5D /* UIView+TintColor.m */; };
+		18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441321AF32FA900A4BB5D /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		18B4411D1AF32A3200A4BB5D /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
 		18B4411E1AF32A3200A4BB5D /* UIView+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TintColor.h"; sourceTree = "<group>"; };
 		18B4411F1AF32A3200A4BB5D /* UIView+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TintColor.m"; sourceTree = "<group>"; };
+		18B441311AF32FA900A4BB5D /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		18B441321AF32FA900A4BB5D /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				189854E71ADD5BCE0050568B /* RootViewController.m */,
 				187E6D521AEEA4C80004CFE4 /* SuccViewController.h */,
 				187E6D531AEEA4C80004CFE4 /* SuccViewController.m */,
+				18B441311AF32FA900A4BB5D /* TableViewCell.h */,
+				18B441321AF32FA900A4BB5D /* TableViewCell.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 		18A41E211AE019F000042CF4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18B441341AF335CE00A4BB5D /* Helper */,
 				18A41E251AE019F000042CF4 /* DKNightVersion.h */,
 				18A41E221AE019F000042CF4 /* Core */,
 			);
@@ -307,6 +313,13 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		18B441341AF335CE00A4BB5D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +428,7 @@
 				18B441271AF32A3200A4BB5D /* UIScrollView+BackgroundColor.m in Sources */,
 				18B441281AF32A3200A4BB5D /* UIScrollView+NightVersion.m in Sources */,
 				18B441201AF32A3200A4BB5D /* UIButton+NightVersion.m in Sources */,
+				18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */,
 				18B441221AF32A3200A4BB5D /* UILabel+NightVersion.m in Sources */,
 				18B441211AF32A3200A4BB5D /* UIButton+TitleColor.m in Sources */,
 				189854BF1ADD5B550050568B /* AppDelegate.m in Sources */,
