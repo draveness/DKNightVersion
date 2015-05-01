@@ -73,6 +73,7 @@
         } else {
             for (id subview in [object subviews]) {
                 // recursice darken all the subviews of current view.
+                NSLog(@"%@", subview);
                 [self changeColor:subview];
                 if ([subview respondsToSelector:@selector(changeColor)]) {
                     [subview changeColor];

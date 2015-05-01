@@ -12,6 +12,9 @@
 #import "DKNightVersionManager.h"
 #import "UILabel+NightVersion.h"
 #import "UIView+NightVersion.h"
+#import "UIScrollView+NightVersion.h"
+#import "UITableView+NightVersion.h"
+#import "UITableViewCell+NightVersion.h"
 #import "UINavigationBar+NightVersion.h"
 #import "UIButton+NightVersion.h"
 

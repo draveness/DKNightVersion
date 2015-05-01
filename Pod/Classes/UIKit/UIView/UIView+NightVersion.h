@@ -9,9 +9,7 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
-
 #import "UIView+BackgroundColor.h"
-
 #import "UIView+TintColor.h"
 
 

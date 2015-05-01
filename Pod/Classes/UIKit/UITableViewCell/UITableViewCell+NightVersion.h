@@ -1,6 +1,6 @@
 //
-//  UIButton+NightVersion.h
-//  UIButton+NightVersion
+//  UITableViewCell+NightVersion.h
+//  UITableViewCell+NightVersion
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -9,10 +9,10 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
-#import "UIButton+TitleColor.h"
+#import "UITableViewCell+BackgroundColor.h"
 
 
-@interface UIButton (NightVersion)
+@interface UITableViewCell (NightVersion)
 
 - (void)changeColor;
 

@@ -9,9 +9,7 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
-<% klass.properties.each do |property| %>
-<%= "#import \"" + klass.name + "+#{property.cap_name}.h\"" %>
-<% end %>
+<% klass.properties.each do |property| %><%= "#import \"" + klass.name + "+#{property.cap_name}.h\"\n" %><% end %>
 
 @interface <%= klass.name %> (NightVersion)
 

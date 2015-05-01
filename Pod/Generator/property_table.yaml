@@ -20,7 +20,7 @@ UIButton:
   superklass: UIView
   properties:
   - titleColor:
-      defaultColor: "0xb9b9b9"
+      defaultColor: "0x5F80AC"
       getter: currentTitleColor
       setter: setTitleColor:(UIColor*)titleColor forState:(UIControlState)state
       parameter: UIControlStateNormal
@@ -36,3 +36,8 @@ UITableView:
       defaultColor: "0x343434"
   - separatorColor:
       defaultColor: "0x313131"
+UITableViewCell:
+  superklass: UIView
+  properties:
+  - backgroundColor:
+      defaultColor: "0x343434"
