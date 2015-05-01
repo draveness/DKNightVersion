@@ -17,7 +17,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.4.5"
+pod "DKNightVersion", "~> 0.5.0"
 ```
 
 ## Usage
@@ -72,59 +72,3 @@ DKNightVersion is available under the MIT license. See the LICENSE file for more
 - Test
 - Documentation
 
-## Using property table generate color
-
-**Not recommend use property table for production, this ruby sciprt is just for developing.**
-
-`property_table.yaml` is a file which saves the night color you need, if the exising colors is not enough for you, add the `class` and `property` in it.
-
-```
-UIView:
-  properties:
-  - backgroundColor:
-      defaultColor: "0x343434"
-  - tintColor:
-      defaultColor: "0xffffff"
-UILabel:
-  superklass: UIView
-  properties:
-  - textColor:
-      defaultColor: "0x5d5d5d"
-UINavigationBar:
-  superklass: UIView
-  properties:
-  - barTintColor:
-      defaultColor: "0x444444"
-  - tintColor:
-      defaultColor: "0xffffff"
-UIButton:
-  superklass: UIView
-  properties:
-  - titleColor:
-      defaultColor: "0xb9b9b9"
-      getter: currentTitleColor
-      setter: setTitleColor:(UIColor*)titleColor forState:(UIControlState)state
-      parameter: UIControlStateNormal
-UIScrollView:
-  superklass: UIView
-  properties:
-  - backgroundColor:
-      defaultColor: "0x343434"
-UITableView:
-  superklass: UIScrollView
-  properties:
-  - backgroundColor:
-      defaultColor: "0x343434"
-  - separatorColor:
-      defaultColor: "0x313131"
-```
-
-Notice the superclass property is needed if it has a superclass.
-
-```
-ruby generator.rb
-```
-
-Run this command in `Classes/Generator` folder, this will dynamically generate Objective-C code in `Classes/UIKit` folder. 
-
-And drag files generated just now in your workspace.

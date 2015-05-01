@@ -20,9 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self nightFalls];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self nightFalls];
+//    });
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
     navigationLabel.text = @"DKNightVersion";
     navigationLabel.textAlignment = NSTextAlignmentCenter;
