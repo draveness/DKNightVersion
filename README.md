@@ -57,6 +57,28 @@ If you'd like to switch back to normal theme version:
 [DKNightVersionManager dawnComing];
 ```
 
+## Using default night version
+
+You can turn off the default night mode color and set it on your own.
+
+```
+[DKNightVersionManager setUseDefaultNightColor:NO];
+```
+
+If you turn on this function, you could also change the `nightColor` property of any UIKit instances. 
+
+## Picking Color
+
+DKNightVersionManager will pick the proper color by check the `nightColor` you set first. If you didn't provide a `nightColor` and `useDefaultNightColor` is `YES`, the manager then return the default night color. But when you turn the default behavior off, manager would return normal color you set.
+
+1. `useDefaultNightColor == YES` (The default behavior)
+
+`nightColor` > `defaultNightColor` > `normalColor`
+
+2. `useDefaultNightColor == NO`
+
+`nightColor` > `normalColor`
+
 # Contact
 
 - Powered by [Draveness](http://github.com/draveness)
@@ -71,4 +93,3 @@ DKNightVersion is available under the MIT license. See the LICENSE file for more
 - Add more color support
 - Test
 - Documentation
-
