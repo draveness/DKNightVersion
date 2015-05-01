@@ -21,7 +21,6 @@
 		18B441231AF32A3200A4BB5D /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441001AF32A3200A4BB5D /* UILabel+TextColor.m */; };
 		18B441241AF32A3200A4BB5D /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441031AF32A3200A4BB5D /* UINavigationBar+BarTintColor.m */; };
 		18B441251AF32A3200A4BB5D /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441051AF32A3200A4BB5D /* UINavigationBar+NightVersion.m */; };
-		18B441261AF32A3200A4BB5D /* UINavigationBar+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441071AF32A3200A4BB5D /* UINavigationBar+TintColor.m */; };
 		18B441271AF32A3200A4BB5D /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4410A1AF32A3200A4BB5D /* UIScrollView+BackgroundColor.m */; };
 		18B441281AF32A3200A4BB5D /* UIScrollView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4410C1AF32A3200A4BB5D /* UIScrollView+NightVersion.m */; };
 		18B441291AF32A3200A4BB5D /* UITableView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4410F1AF32A3200A4BB5D /* UITableView+BackgroundColor.m */; };
@@ -75,8 +74,6 @@
 		18B441031AF32A3200A4BB5D /* UINavigationBar+BarTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BarTintColor.m"; sourceTree = "<group>"; };
 		18B441041AF32A3200A4BB5D /* UINavigationBar+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NightVersion.h"; sourceTree = "<group>"; };
 		18B441051AF32A3200A4BB5D /* UINavigationBar+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NightVersion.m"; sourceTree = "<group>"; };
-		18B441061AF32A3200A4BB5D /* UINavigationBar+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TintColor.h"; sourceTree = "<group>"; };
-		18B441071AF32A3200A4BB5D /* UINavigationBar+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TintColor.m"; sourceTree = "<group>"; };
 		18B441091AF32A3200A4BB5D /* UIScrollView+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+BackgroundColor.h"; sourceTree = "<group>"; };
 		18B4410A1AF32A3200A4BB5D /* UIScrollView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+BackgroundColor.m"; sourceTree = "<group>"; };
 		18B4410B1AF32A3200A4BB5D /* UIScrollView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+NightVersion.h"; sourceTree = "<group>"; };
@@ -258,8 +255,6 @@
 				18B441031AF32A3200A4BB5D /* UINavigationBar+BarTintColor.m */,
 				18B441041AF32A3200A4BB5D /* UINavigationBar+NightVersion.h */,
 				18B441051AF32A3200A4BB5D /* UINavigationBar+NightVersion.m */,
-				18B441061AF32A3200A4BB5D /* UINavigationBar+TintColor.h */,
-				18B441071AF32A3200A4BB5D /* UINavigationBar+TintColor.m */,
 			);
 			path = UINavigationBar;
 			sourceTree = "<group>";
@@ -419,7 +414,6 @@
 				18A41E391AE019F000042CF4 /* DKNightVersionManager.m in Sources */,
 				18B441271AF32A3200A4BB5D /* UIScrollView+BackgroundColor.m in Sources */,
 				18B441281AF32A3200A4BB5D /* UIScrollView+NightVersion.m in Sources */,
-				18B441261AF32A3200A4BB5D /* UINavigationBar+TintColor.m in Sources */,
 				18B441201AF32A3200A4BB5D /* UIButton+NightVersion.m in Sources */,
 				18B441221AF32A3200A4BB5D /* UILabel+NightVersion.m in Sources */,
 				18B441211AF32A3200A4BB5D /* UIButton+TitleColor.m in Sources */,

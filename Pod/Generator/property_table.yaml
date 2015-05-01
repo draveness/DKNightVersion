@@ -14,8 +14,6 @@ UINavigationBar:
   properties:
   - barTintColor:
       defaultColor: "0x444444"
-  - tintColor:
-      defaultColor: "0xffffff"
 UIButton:
   superklass: UIView
   properties:

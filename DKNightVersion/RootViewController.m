@@ -42,22 +42,22 @@
 //    dawnButton.center = CGPointMake(self.view.center.x, 450);
 //    [dawnButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
 //    [dawnButton addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
-//
-//    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
-//    [nextButton setTitle:@"Next" forState:UIControlStateNormal];
-//    nextButton.center = CGPointMake(self.view.center.x, 550);
-//    [nextButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
-//    [nextButton addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+
+    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    [nextButton setTitle:@"Next" forState:UIControlStateNormal];
+    nextButton.center = CGPointMake(self.view.center.x, 550);
+    [nextButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+    [nextButton addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 //
 //    [self.view addSubview:label];
 //    [self.view addSubview:nightButton];
 //    [self.view addSubview:dawnButton];
-//    [self.view addSubview:nextButton];
+    [self.view addSubview:nextButton];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     NSLog(@"%@", self.tableView.superview);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self nightFalls];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self nightFalls];
+//    });
 }
 
 - (void)nightFalls {
@@ -85,16 +85,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 200, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 230, 80)];
+    label.numberOfLines = 0;
     label.text = @"DKNightVersion is a light weight framework adding night version to your iOS app.";
     label.textColor = [UIColor darkGrayColor];
     [cell addSubview:label];
+
+    CGRect rect = CGRectMake(250, 10, 100, 80);
+    if (indexPath.row % 2 == 0) {
+        UIButton *nightButton = [[UIButton alloc] initWithFrame:rect];
+        nightButton.titleLabel.font = [UIFont systemFontOfSize:20];
+        [nightButton setTitle:@"Night Falls" forState:UIControlStateNormal];
+        [nightButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+        [nightButton addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:nightButton];
+    } else {
+        UIButton *dawnButton = [[UIButton alloc] initWithFrame:rect];
+        [dawnButton setTitle:@"Dawn Comes" forState:UIControlStateNormal];
+        dawnButton.titleLabel.font = [UIFont systemFontOfSize:20];
+        [dawnButton setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+        [dawnButton addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:dawnButton];
+    }
 
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 100;
 }
 
 @end

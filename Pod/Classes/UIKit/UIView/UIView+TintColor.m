@@ -71,7 +71,7 @@ static char *normalTintColorKey;
     if ([self isMemberOfClass:[UIView class]]) { 
         return UIColorFromRGB(0xffffff);
     } else {
-        UIColor *resultColor = self.normalTintColor ?: [UIColor clearColor];
+        UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];
         return resultColor;
     }
 }
