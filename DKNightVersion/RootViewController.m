@@ -85,8 +85,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 200, 40)];
+    label.text = @"DKNightVersion is a light weight framework adding night version to your iOS app.";
+    label.textColor = [UIColor darkGrayColor];
+    [cell addSubview:label];
+
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 
 @end

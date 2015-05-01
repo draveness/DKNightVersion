@@ -27,7 +27,7 @@ class ObjcClass
 	end
 
     def all_properties
-        p = properties
+        p = properties.dup
         name = p.map { |property| property.name }
         k = superklass
         while k
