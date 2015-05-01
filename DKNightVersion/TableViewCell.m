@@ -27,6 +27,8 @@
         self.button = [[UIButton alloc] initWithFrame:rect];
         self.button.titleLabel.font = [UIFont systemFontOfSize:20];
         [self.button setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
+
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.button];
     }
     return self;
