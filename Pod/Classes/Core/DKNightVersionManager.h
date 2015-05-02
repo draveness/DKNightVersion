@@ -16,20 +16,27 @@ typedef enum : NSUInteger {
     DKThemeVersionNight,
 } DKThemeVersion;
 
+extern NSString *const DKNightVersionNightFallingNotification;
+extern NSString *const DKNightVersionDawnComingNotification;
+
+extern CGFloat const DKNightVersionAnimationDuration;
+
 @interface DKNightVersionManager : NSObject
 
 /**
  *  Current ThemeVersion, default is DKThemeVersionNormal.
+ *
+ *  @return Current theme version, default is DKThemeVersionNormal. Readonly
  */
 + (DKThemeVersion)currentThemeVersion;
 
 /**
- *  Night falling
+ *  Night falling. When nightFalling is called, post DKNightVersionNightFallingNotification. You  can setup customize with observing the notification.
  */
 + (void)nightFalling;
 
 /**
- *  Dawn coming
+ *  Dawn coming. When dawnComing is called, post DKNightVersionDawnComingNotification. You  can setup customize with observing the notification.
  */
 + (void)dawnComing;
 

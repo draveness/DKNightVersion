@@ -8,6 +8,11 @@
 
 #import "DKNightVersionManager.h"
 
+NSString *const DKNightVersionNightFallingNotification = @"DKNightVersionNightFallingNotification";
+NSString *const DKNightVersionDawnComingNotification = @"DKNightVersionDawnComingNotification";
+
+CGFloat const DKNightVersionAnimationDuration = 0.3f;
+
 @protocol DKNightVersionSwichColorProtocol <NSObject>
 
 - (void)changeColor;
@@ -41,11 +46,13 @@
 
 + (void)nightFalling {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionNightFallingNotification object:nil];
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNight;
 }
 
 + (void)dawnComing {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionDawnComingNotification object:nil];
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNormal;
 }
 

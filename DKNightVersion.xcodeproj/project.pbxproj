@@ -45,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConstants.h; sourceTree = "<group>"; };
 		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
 		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,7 +208,6 @@
 		18A41E221AE019F000042CF4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				180CDCE11AECD76300164D1F /* DKNightVersionConstants.h */,
 				18A41E231AE019F000042CF4 /* DKNightVersionManager.h */,
 				18A41E241AE019F000042CF4 /* DKNightVersionManager.m */,
 				18B440F61AF32A3200A4BB5D /* UIKit */,
