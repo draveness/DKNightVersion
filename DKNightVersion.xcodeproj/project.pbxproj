@@ -198,7 +198,6 @@
 		18A41E211AE019F000042CF4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				18B441341AF335CE00A4BB5D /* Helper */,
 				18A41E251AE019F000042CF4 /* DKNightVersion.h */,
 				18A41E221AE019F000042CF4 /* Core */,
 			);
@@ -309,13 +308,6 @@
 				18B4411F1AF32A3200A4BB5D /* UIView+TintColor.m */,
 			);
 			path = UIView;
-			sourceTree = "<group>";
-		};
-		18B441341AF335CE00A4BB5D /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
