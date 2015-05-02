@@ -54,7 +54,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    NSLog(@"isisisisis %@",cell.contentView.class);
     if (indexPath.row % 2 == 0) {
         [cell.button setTitle:@"Night Falls" forState:UIControlStateNormal];
         [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
