@@ -59,6 +59,14 @@ If you'd like to switch back to normal mode:
 
 It's pretty easy to swich theme between night and normal mode.
 
+## Make your own customize
+
+`nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called.
+
+Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`.
+
+You can observe these notification in proper place, and make your own customize easily.
+
 ## Using default night version
 
 If you set `useDefaultNightColor` property for singleton manager to `YES`, which is the default value. DKNightVersion will provide you a default night mode. 
