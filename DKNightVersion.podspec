@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DKNightVersion"
-  s.version      = "0.5.0"
+  s.version      = "0.5.1"
   s.summary      = "A light weight framework adding night version to your app on iOS."
   s.description  = <<-DESC
                    A longer description of DKNightVersion in Markdown format.
