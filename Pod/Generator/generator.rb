@@ -29,6 +29,8 @@ def render(template, klass, property=nil)
 end
 
 def objc_code_generator(klasses)
+    groups = {}
+
 	template_folder = File.join('.', 'template')
 	color_header        = File.join(template_folder, 'color.h.erb')
 	color_imp           = File.join(template_folder, 'color.m.erb')
@@ -44,11 +46,19 @@ def objc_code_generator(klasses)
 		FileUtils.rm_rf(subfolder_path)
 		FileUtils.mkdir_p(subfolder_path)
 
+        path = File.join('Pod', 'Classes', 'UIKit', klass.name)
+        groups[klass.name] = []
+        groups[klass.name] << File.join(path, klass.nightversion_header_name)
+        groups[klass.name] << File.join(path, klass.nightversion_imp_name)
+
 		File.write File.join(subfolder_path, klass.nightversion_header_name), render(nightversion_header, klass)
 		File.write File.join(subfolder_path, klass.nightversion_imp_name),    render(nightversion_imp,    klass)
 
 		klass.properties.each do |property|
 			superklass_has_property = has_property(klass.superklass, property.name) if klass.superklass
+
+            groups[klass.name] << File.join(path, klass.color_header_name(property))
+            groups[klass.name] << File.join(path, klass.color_imp_name(property))
 
 			if !klass.superklass || !superklass_has_property
 				File.write File.join(subfolder_path, klass.color_header_name(property)), render(color_header, klass, property)
@@ -59,6 +69,7 @@ def objc_code_generator(klasses)
 			end
 		end
 	end
+    groups
 end
 
 def has_property(klass, name)
@@ -130,4 +141,5 @@ table = parse_json('property.json')
 add_superklass_relation(table)
 handle_method(table)
 
-objc_code_generator(table)
+group = objc_code_generator(table)
+File.write File.join('project', 'project.json'), group.to_json
