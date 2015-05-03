@@ -109,19 +109,25 @@ def add_superklass_relation(table)
     table
 end
 
-table = parse_json('property.json')
-add_superklass_relation(table)
-
-table.each do |klass|
-    if klass.name == 'UIButton'
-        klass.properties.each do |property|
-            if property.name == 'titleColor'
-                property.setter = 'setTitleColor:(UIColor*)titleColor forState:(UIControlState)state'
-                property.getter = 'currentTitleColor'
-                property.parameter = 'UIControlStateNormal'
+def handle_method(table)
+    method_json = JSON.parse File.read('json/method.json')
+    table.each do |klass|
+        if method_json[klass.name]
+            klass.properties.each do |property|
+                if method_json[klass.name][property.name]
+                    property_json = method_json[klass.name][property.name]
+                    property.getter    = property_json['getter']
+                    property.setter    = property_json['setter']
+                    property.parameter = property_json['parameter']
+                end
             end
         end
     end
 end
+
+
+table = parse_json('property.json')
+add_superklass_relation(table)
+handle_method(table)
 
 objc_code_generator(table)

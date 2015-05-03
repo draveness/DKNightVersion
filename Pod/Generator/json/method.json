@@ -1,0 +1,11 @@
+{
+    "UIButton":
+    {
+        "titleColor":
+        {
+            "getter": "currentTitleColor",
+            "setter": "setTitleColor:(UIColor*)titleColor forState:(UIControlState)state",
+            "parameter": "UIControlStateNormal"
+        }
+    }
+}
