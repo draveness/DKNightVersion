@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Generator' do |ss|
-    ss.source_files = "Pod/Classes/Generator/**/*"
+    ss.source_files = "Pod/Generator/**/*"
   end
 
 end
