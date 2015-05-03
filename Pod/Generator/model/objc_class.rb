@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
 class ObjcClass
-	attr_accessor :name, :properties, :superklass, :superklass_name
-    attr_reader :all_properties
+	attr_accessor :name, :properties, :superklass
+    attr_reader :all_properties, :superklass_name
 
-	def initialize(name, superklass_name, properties = [])
+	#def initialize(name, superklass_name, properties = [])
+	#	@name = name
+    #    @superklass_name = superklass_name
+    #    @properties = properties
+	#end
+	def initialize(name, properties = [])
 		@name = name
-        @superklass_name = superklass_name
         @properties = properties
 	end
 
@@ -38,6 +42,14 @@ class ObjcClass
             name = p.map { |property| property.name }
         end
         p.uniq
+    end
+
+    def superklass_name
+        if superklass
+            superklass.name
+        else
+            nil
+        end
     end
 
 

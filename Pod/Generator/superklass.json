@@ -1,0 +1,22 @@
+{
+    "UIView": 
+    [
+        "UILabel",
+        "UIControl",
+        "UINavigationBar",
+        "UIScrollView",
+        "UITableViewCell",
+        "UIImageView",
+        "UIProgressView"
+    ],
+    "UIControl": 
+    [
+        "UIButton",
+        "UITextField",
+        "UISwitch"
+    ],
+    "UIScrollView": 
+    [
+        "UITableView"
+    ]
+}

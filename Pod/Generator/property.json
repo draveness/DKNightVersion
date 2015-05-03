@@ -1,0 +1,32 @@
+{
+    "UIView": 
+    { 
+        "backgroundColor": "0x343434",
+        "tintColor": "0xffffff"
+    },
+    "UILabel":
+    {
+        "textColor": "0x5d5d5d"
+    },
+    "UINavigationBar":
+    {
+        "barTintColor": "0x444444"
+    },
+    "UIButton":
+    {
+        "titleColor": "0x5F80AC"
+    },
+    "UIScrollView":
+    {
+        "backgroundColor": "0x343434"
+    },
+    "UITableView":
+    {
+        "backgroundColor": "0x343434",
+        "separatorColor": "0x313131"
+    },
+    "UITableViewCell":
+    {
+        "backgroundColor": "0x343434" 
+    } 
+}

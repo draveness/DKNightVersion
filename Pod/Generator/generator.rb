@@ -4,6 +4,7 @@ require 'fileutils'
 require 'erb'
 require 'yaml'
 require 'ostruct'
+require 'json'
 
 require_relative 'model/objc_property'
 require_relative 'model/objc_class'
@@ -24,6 +25,10 @@ def parse_yaml(file)
 		end
 	end
 	table
+end
+
+def parse_json(file)
+    superklass_json = JSON.parse File.read('superklass.json')
 end
 
 class ErbalT < OpenStruct
@@ -90,6 +95,53 @@ def has_property(klass, name)
 	return nil
 end
 
-table = parse_yaml('property_table.yaml')
-# puts table.inspect
+def is_superklass(superklass, subklass)
+    superklass_json = JSON.parse File.read('superklass.json')
+    subklass_list = superklass_json[superklass]
+    if subklass_list
+        if subklass_list.find_index(subklass)
+            return true
+        else
+            subklass_list.inject(false) do |memo, sub| memo || is_superklass(sub, subklass) end
+        end
+    else
+        return false
+    end
+end
+
+
+def parse_json(file)
+    property_json = JSON.parse File.read(file)
+    property_json.map do |klass, colors|
+        ObjcClass.new(klass, colors.map { |color, value| ObjcProperty.new(name: color, default_color: value) })
+    end
+end
+
+def add_superklass_relation(table)
+    table.each do |first_klass|
+        table.each do |second_klass|
+            if is_superklass(first_klass.name, second_klass.name)
+                second_klass.superklass = first_klass if second_klass.superklass.nil? || 
+                    is_superklass(second_klass.superklass.name, first_klass.name)
+            end
+        end
+    end
+    table
+end
+
+table = parse_json('property.json')
+add_superklass_relation(table)
+
+table.each do |klass|
+    if klass.name == 'UIButton'
+        klass.properties.each do |property|
+            if property.name == 'titleColor'
+                property.setter = 'setTitleColor:(UIColor*)titleColor forState:(UIControlState)state'
+                property.getter = 'currentTitleColor'
+                property.parameter = 'UIControlStateNormal'
+            end
+        end
+    end
+end
+
 objc_code_generator(table)
