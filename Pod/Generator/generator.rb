@@ -74,7 +74,7 @@ def has_property(klass, name)
 end
 
 def is_superklass(superklass, subklass)
-    superklass_json = JSON.parse File.read('superklass.json')
+    superklass_json = JSON.parse File.read('setting/superklass.json')
     subklass_list = superklass_json[superklass]
     if subklass_list
         if subklass_list.find_index(subklass)
