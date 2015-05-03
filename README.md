@@ -61,11 +61,15 @@ It's pretty easy to swich theme between night and normal mode.
 
 ## Make your own customize
 
-`nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called.
+### Notification
 
-Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`.
+`nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
-You can observe these notification in proper place, and make your own customize easily.
+### JSON
+
+There is a json file in `Generator` folder named `property.json`, you can change the color in it, which will cuz the default color changing to the color you want.
+
+And run `ruby generator.rb` in terminal. If you add new color property, drag the new file to proper place, and then everything works well.
 
 ## Using default night version
 
