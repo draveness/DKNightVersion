@@ -26,4 +26,8 @@ Pod::Spec.new do |s|
       ss.dependency 'DKNightVersion/Core'
   end
 
+  s.subspec 'Generator' do |ss|
+    ss.source_files = "Pod/Classes/Generator/**/*"
+  end
+
 end
