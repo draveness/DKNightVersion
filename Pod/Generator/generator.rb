@@ -9,45 +9,23 @@ require 'json'
 require_relative 'model/objc_property'
 require_relative 'model/objc_class'
 
-def parse_yaml(file)
-	table = YAML.load_file(file).map do |klass, config|
-		ObjcClass.new(klass.to_s, config["superklass"], config["properties"].map { |property| 
-			key = property.keys.first
-			value = property.values.first
-			ObjcProperty.new(name: key, setter: value["setter"], parameter: value["parameter"], getter: value["getter"], default_color: value["defaultColor"])
-		})
-	end
-	table.each do |first_klass|
-		table.each do |second_klass|
-			if first_klass.superklass_name == second_klass.name
-				first_klass.superklass = second_klass
-			end
-		end
-	end
-	table
-end
-
-def parse_json(file)
-    superklass_json = JSON.parse File.read('superklass.json')
-end
-
 class ErbalT < OpenStruct
-  def self.render_from_hash(t, h)
-    ErbalT.new(h).render(t)
-  end
+    def self.render_from_hash(t, h)
+        ErbalT.new(h).render(t)
+    end
 
-  def render(template)
-    ERB.new(template).result(binding)
-  end
+    def render(template)
+        ERB.new(template).result(binding)
+    end
 end
 
 def render(template, klass, property=nil)
-	erb = File.open(template).read
-	if property.nil?
-		ErbalT::render_from_hash(erb, { klass: klass })
-	else
-		ErbalT::render_from_hash(erb, { klass: klass, property: property })
-	end
+    erb = File.open(template).read
+    if property.nil?
+        ErbalT::render_from_hash(erb, { klass: klass })
+    else
+        ErbalT::render_from_hash(erb, { klass: klass, property: property })
+    end
 end
 
 def objc_code_generator(klasses)
@@ -121,6 +99,8 @@ def add_superklass_relation(table)
     table.each do |first_klass|
         table.each do |second_klass|
             if is_superklass(first_klass.name, second_klass.name)
+                # subklass's superklass property is nil or the new superklass is more closer than
+                # original one.
                 second_klass.superklass = first_klass if second_klass.superklass.nil? || 
                     is_superklass(second_klass.superklass.name, first_klass.name)
             end
