@@ -143,3 +143,8 @@ handle_method(table)
 
 group = objc_code_generator(table)
 File.write File.join('project', 'project.json'), group.to_json
+
+pbxproj_file_path = '../../DKNightVersion.xcodeproj/project.pbxproj'
+json_file_path = 'project/project.json'
+
+system "python project/project.py #{pbxproj_file_path} #{json_file_path}"
