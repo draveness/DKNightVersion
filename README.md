@@ -8,7 +8,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 
 # Demo
 
-![](./DKNightVersion.gif)
+![](images/DKNightVersion.gif)
 
 # Installation with CocoaPods
 
@@ -69,7 +69,56 @@ It's pretty easy to swich theme between night and normal mode.
 
 There is a json file in `Generator` folder named `property.json`, you can change the color in it, which will cuz the default color changing to the color you want.
 
+```
+{
+    "UIView": 
+    { 
+        "backgroundColor": "0x343434",
+        "tintColor": "0xffffff"
+    },
+    "UILabel":
+    {
+        "textColor": "0x5d5d5d"
+    },
+    "UINavigationBar":
+    {
+        "barTintColor": "0x444444"
+    },
+    "UIButton":
+    {
+        "titleColor": "0x5F80AC"
+    },
+    "UIScrollView":
+    {
+        "backgroundColor": "0x343434"
+    },
+    "UITableView":
+    {
+        "backgroundColor": "0x343434",
+        "separatorColor": "0x313131"
+    },
+    "UITableViewCell":
+    {
+        "backgroundColor": "0x343434" 
+    } 
+}
+```
+
 And run `ruby generator.rb` in terminal. If you add new color property, drag the new file to proper place, and then everything works well.
+
+This command will remove `UIKit` folder automatically. And you are supposed to drag them to proper place.
+
+#### Step 1. Find UIKit folder
+
+Find the `UIKit` folder. It should generate in `Pods/DKNightVersion/Pod/Classes/UIKit`
+
+#### Step 2. Drag folder to workspace
+
+![](images/add_file.png)
+
+### Step 3. Select target
+
+![](images/target.png)
 
 ## Using default night version
 
