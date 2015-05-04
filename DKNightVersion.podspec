@@ -26,8 +26,4 @@ Pod::Spec.new do |s|
     ss.dependency 'DKNightVersion/Core'
   end
 
-  s.subspec 'Generator' do |ss|
-    ss.resources = "Pod/Generator/**"
-  end
-
 end
