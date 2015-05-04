@@ -7,54 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		026243D189F213EFC9FD6F75 /* UIButton+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 24E84D89AE25ADB164924F39 /* UIButton+NightVersion.m */; };
-		1506408E9D16DDED30B44BE7 /* UILabel+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 4B784D66BAF4B3C706D68613 /* UILabel+NightVersion.m */; };
-		183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m */ = {isa = PBXBuildFile; fileRef = FB07456696CF7B837ED4B8D6 /* UINavigationBar+NightVersion.m */; };
-		186AC51B1AF7C4EC0095ED95 /* UINavigationBar+Animation.m */ = {isa = PBXBuildFile; fileRef = 186AC51A1AF7C4EC0095ED95 /* UINavigationBar+Animation.m */; };
-		187E6D541AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
-		189854BC1ADD5B550050568B /* main.m */ = {isa = PBXBuildFile; fileRef = 189854BB1ADD5B550050568B /* main.m */; };
-		189854BF1ADD5B550050568B /* AppDelegate.m */ = {isa = PBXBuildFile; fileRef = 189854BE1ADD5B550050568B /* AppDelegate.m */; };
-		189854C11ADD5B550050568B /* Images.xcassets */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
-		189854C41ADD5B550050568B /* LaunchScreen.xib */ = {isa = PBXBuildFile; fileRef = 189854C21ADD5B550050568B /* LaunchScreen.xib */; };
-		189854D01ADD5B560050568B /* DKNightVersionTests.m */ = {isa = PBXBuildFile; fileRef = 189854CF1ADD5B560050568B /* DKNightVersionTests.m */; };
-		189854E81ADD5BCE0050568B /* RootViewController.m */ = {isa = PBXBuildFile; fileRef = 189854E71ADD5BCE0050568B /* RootViewController.m */; };
-		18A41E391AE019F000042CF4 /* DKNightVersionManager.m */ = {isa = PBXBuildFile; fileRef = 18A41E241AE019F000042CF4 /* DKNightVersionManager.m */; };
-		18B441331AF32FA900A4BB5D /* TableViewCell.m */ = {isa = PBXBuildFile; fileRef = 18B441321AF32FA900A4BB5D /* TableViewCell.m */; };
-		19C247A7A8EE505BF50A7086 /* UIView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = 69804FDD96F197A1F622A5AC /* UIView+BackgroundColor.m */; };
-		19CB4972A1EAE8920C36E35A /* UITableView+SeparatorColor.m */ = {isa = PBXBuildFile; fileRef = DCDC4FF6A58B52B26A093C21 /* UITableView+SeparatorColor.m */; };
-		2776409089515FEC3951FDE5 /* UITableView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = BC2C4172A084E9B34D4CEFBC /* UITableView+NightVersion.m */; };
-		2B72472AABEBF18D5EA11660 /* UIView+TintColor.m */ = {isa = PBXBuildFile; fileRef = F11A4F4FA9E0CA8A8A4FD529 /* UIView+TintColor.m */; };
-		33844CFE9784266027545552 /* UITableViewCell+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 436345899D3886E31509891E /* UITableViewCell+NightVersion.m */; };
-		339546DD89CCB356329C1DC4 /* UIButton+TitleColor.m */ = {isa = PBXBuildFile; fileRef = 28D3487CBC4A72966E6FB597 /* UIButton+TitleColor.m */; };
-		375341FCBEE4714FBCADE3DA /* UINavigationBar+BarTintColor.m */ = {isa = PBXBuildFile; fileRef = 3B934C2692EF84F463472D7E /* UINavigationBar+BarTintColor.m */; };
-		3F45487AB9BB8C81B13082FB /* UITableView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = D9F847A48FD1E813C633BF18 /* UITableView+BackgroundColor.m */; };
-		459847008CD864286726818E /* UINavigationBar+NightVersion.m */ = {isa = PBXBuildFile; fileRef = FB07456696CF7B837ED4B8D6 /* UINavigationBar+NightVersion.m */; };
-		4D0F4FA9B549FE6978D73F7C /* UILabel+TextColor.m */ = {isa = PBXBuildFile; fileRef = 563340298A9674B7A5EC70C3 /* UILabel+TextColor.m */; };
-		502A4D11B47A6EE6ADAB8A51 /* UIView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = 69804FDD96F197A1F622A5AC /* UIView+BackgroundColor.m */; };
-		70FA4CEF894154AE07A36DFF /* UIScrollView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = FC5548C5AF5C71F09AB073B5 /* UIScrollView+BackgroundColor.m */; };
-		A9554641AC818A8F312CC04A /* UITableViewCell+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 436345899D3886E31509891E /* UITableViewCell+NightVersion.m */; };
-		AA1E43FB8A1C243CC7C5BEF1 /* UITableViewCell+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = 82674E84ADACD8CA6F281FCC /* UITableViewCell+BackgroundColor.m */; };
-		AE504B9E8F1DFAAF9BFF1D0D /* UIButton+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 24E84D89AE25ADB164924F39 /* UIButton+NightVersion.m */; };
-		B4F64EDA87D7D78E3E866CA9 /* UIScrollView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = D2954539BCECF95DB4014854 /* UIScrollView+NightVersion.m */; };
-		C0584185BA2ECB12E88707B7 /* UIScrollView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = D2954539BCECF95DB4014854 /* UIScrollView+NightVersion.m */; };
-		C6DE404DAB3F34429013D138 /* UIView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 80174B8C804547BB7D43324E /* UIView+NightVersion.m */; };
-		CA97457C91A7D35E53B2E243 /* UIButton+TitleColor.m */ = {isa = PBXBuildFile; fileRef = 28D3487CBC4A72966E6FB597 /* UIButton+TitleColor.m */; };
-		D73749CFA9B069DE869C10B0 /* UILabel+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 4B784D66BAF4B3C706D68613 /* UILabel+NightVersion.m */; };
-		D7D64613BC61EDC443ADE332 /* UIScrollView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = FC5548C5AF5C71F09AB073B5 /* UIScrollView+BackgroundColor.m */; };
-		D86C4616BDBC3036A6287BA2 /* UITableView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = BC2C4172A084E9B34D4CEFBC /* UITableView+NightVersion.m */; };
-		D8C947B1832E5237DD2C7B88 /* UITableViewCell+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = 82674E84ADACD8CA6F281FCC /* UITableViewCell+BackgroundColor.m */; };
-		DC244182A6B5D01F3C68E423 /* UIView+NightVersion.m */ = {isa = PBXBuildFile; fileRef = 80174B8C804547BB7D43324E /* UIView+NightVersion.m */; };
-		DE4D4147B105496DE1503209 /* UILabel+TextColor.m */ = {isa = PBXBuildFile; fileRef = 563340298A9674B7A5EC70C3 /* UILabel+TextColor.m */; };
-		DFC747369A6E9B97F7B94938 /* UITableView+BackgroundColor.m */ = {isa = PBXBuildFile; fileRef = D9F847A48FD1E813C633BF18 /* UITableView+BackgroundColor.m */; };
-		EDD74A55B6B5B29030B1EE0D /* UITableView+SeparatorColor.m */ = {isa = PBXBuildFile; fileRef = DCDC4FF6A58B52B26A093C21 /* UITableView+SeparatorColor.m */; };
-		F2A445C593D663E690B462C9 /* UINavigationBar+BarTintColor.m */ = {isa = PBXBuildFile; fileRef = 3B934C2692EF84F463472D7E /* UINavigationBar+BarTintColor.m */; };
-		FD0447F59C12AA35AB43FB59 /* UIView+TintColor.m */ = {isa = PBXBuildFile; fileRef = F11A4F4FA9E0CA8A8A4FD529 /* UIView+TintColor.m */; };
+		026243D189F213EFC9FD6F75 /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E84D89AE25ADB164924F39 /* UIButton+NightVersion.m */; };
+		1506408E9D16DDED30B44BE7 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B784D66BAF4B3C706D68613 /* UILabel+NightVersion.m */; };
+		183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FB07456696CF7B837ED4B8D6 /* UINavigationBar+NightVersion.m */; };
+		186AC51E1AF7DB8E0095ED95 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC51D1AF7DB8E0095ED95 /* UINavigationBar+Animation.m */; };
+		187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
+		189854BC1ADD5B550050568B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BB1ADD5B550050568B /* main.m */; };
+		189854BF1ADD5B550050568B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BE1ADD5B550050568B /* AppDelegate.m */; };
+		189854C11ADD5B550050568B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
+		189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189854C21ADD5B550050568B /* LaunchScreen.xib */; };
+		189854D01ADD5B560050568B /* DKNightVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854CF1ADD5B560050568B /* DKNightVersionTests.m */; };
+		189854E81ADD5BCE0050568B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E71ADD5BCE0050568B /* RootViewController.m */; };
+		18A41E391AE019F000042CF4 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A41E241AE019F000042CF4 /* DKNightVersionManager.m */; };
+		18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441321AF32FA900A4BB5D /* TableViewCell.m */; };
+		19C247A7A8EE505BF50A7086 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69804FDD96F197A1F622A5AC /* UIView+BackgroundColor.m */; };
+		19CB4972A1EAE8920C36E35A /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDC4FF6A58B52B26A093C21 /* UITableView+SeparatorColor.m */; };
+		2776409089515FEC3951FDE5 /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C4172A084E9B34D4CEFBC /* UITableView+NightVersion.m */; };
+		2B72472AABEBF18D5EA11660 /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A4F4FA9E0CA8A8A4FD529 /* UIView+TintColor.m */; };
+		33844CFE9784266027545552 /* UITableViewCell+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 436345899D3886E31509891E /* UITableViewCell+NightVersion.m */; };
+		339546DD89CCB356329C1DC4 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3487CBC4A72966E6FB597 /* UIButton+TitleColor.m */; };
+		375341FCBEE4714FBCADE3DA /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B934C2692EF84F463472D7E /* UINavigationBar+BarTintColor.m */; };
+		3F45487AB9BB8C81B13082FB /* UITableView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F847A48FD1E813C633BF18 /* UITableView+BackgroundColor.m */; };
+		459847008CD864286726818E /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FB07456696CF7B837ED4B8D6 /* UINavigationBar+NightVersion.m */; };
+		4D0F4FA9B549FE6978D73F7C /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 563340298A9674B7A5EC70C3 /* UILabel+TextColor.m */; };
+		502A4D11B47A6EE6ADAB8A51 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69804FDD96F197A1F622A5AC /* UIView+BackgroundColor.m */; };
+		70FA4CEF894154AE07A36DFF /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5548C5AF5C71F09AB073B5 /* UIScrollView+BackgroundColor.m */; };
+		A9554641AC818A8F312CC04A /* UITableViewCell+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 436345899D3886E31509891E /* UITableViewCell+NightVersion.m */; };
+		AA1E43FB8A1C243CC7C5BEF1 /* UITableViewCell+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 82674E84ADACD8CA6F281FCC /* UITableViewCell+BackgroundColor.m */; };
+		AE504B9E8F1DFAAF9BFF1D0D /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E84D89AE25ADB164924F39 /* UIButton+NightVersion.m */; };
+		B4F64EDA87D7D78E3E866CA9 /* UIScrollView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D2954539BCECF95DB4014854 /* UIScrollView+NightVersion.m */; };
+		C0584185BA2ECB12E88707B7 /* UIScrollView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D2954539BCECF95DB4014854 /* UIScrollView+NightVersion.m */; };
+		C6DE404DAB3F34429013D138 /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 80174B8C804547BB7D43324E /* UIView+NightVersion.m */; };
+		CA97457C91A7D35E53B2E243 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3487CBC4A72966E6FB597 /* UIButton+TitleColor.m */; };
+		D73749CFA9B069DE869C10B0 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B784D66BAF4B3C706D68613 /* UILabel+NightVersion.m */; };
+		D7D64613BC61EDC443ADE332 /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5548C5AF5C71F09AB073B5 /* UIScrollView+BackgroundColor.m */; };
+		D86C4616BDBC3036A6287BA2 /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C4172A084E9B34D4CEFBC /* UITableView+NightVersion.m */; };
+		D8C947B1832E5237DD2C7B88 /* UITableViewCell+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 82674E84ADACD8CA6F281FCC /* UITableViewCell+BackgroundColor.m */; };
+		DC244182A6B5D01F3C68E423 /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 80174B8C804547BB7D43324E /* UIView+NightVersion.m */; };
+		DE4D4147B105496DE1503209 /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 563340298A9674B7A5EC70C3 /* UILabel+TextColor.m */; };
+		DFC747369A6E9B97F7B94938 /* UITableView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F847A48FD1E813C633BF18 /* UITableView+BackgroundColor.m */; };
+		EDD74A55B6B5B29030B1EE0D /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDC4FF6A58B52B26A093C21 /* UITableView+SeparatorColor.m */; };
+		F2A445C593D663E690B462C9 /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B934C2692EF84F463472D7E /* UINavigationBar+BarTintColor.m */; };
+		FD0447F59C12AA35AB43FB59 /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A4F4FA9E0CA8A8A4FD529 /* UIView+TintColor.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		189854CA1ADD5B560050568B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189854AE1ADD5B550050568B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 189854B51ADD5B550050568B;
+			remoteInfo = DKNightVersion;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14FE4540BB6873EE32C44B9F /* UIButton+NightVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIButton+NightVersion.h"; path = "./Pod/Classes/UIKit/UIButton/UIButton+NightVersion.h"; sourceTree = SOURCE_ROOT; };
-		186AC5191AF7C4EC0095ED95 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Animation.h"; sourceTree = "<group>"; };
-		186AC51A1AF7C4EC0095ED95 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Animation.m"; sourceTree = "<group>"; };
+		186AC51C1AF7DB8E0095ED95 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Pod/Classes/Helper/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
+		186AC51D1AF7DB8E0095ED95 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Pod/Classes/Helper/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
 		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
 		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,14 +153,14 @@
 		186AC5181AF7C4D60095ED95 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				186AC5191AF7C4EC0095ED95 /* UINavigationBar+Animation.h */,
-				186AC51A1AF7C4EC0095ED95 /* UINavigationBar+Animation.m */,
+				186AC51C1AF7DB8E0095ED95 /* UINavigationBar+Animation.h */,
+				186AC51D1AF7DB8E0095ED95 /* UINavigationBar+Animation.m */,
 			);
 			name = Helper;
 			path = Pod/Helper;
 			sourceTree = SOURCE_ROOT;
 		};
-		189854AD1ADD5B550050568B /*  */ = {
+		189854AD1ADD5B550050568B = {
 			isa = PBXGroup;
 			children = (
 				189854B81ADD5B550050568B /* DKNightVersion */,
@@ -217,12 +227,9 @@
 		18A41E211AE019F000042CF4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				186AC5181AF7C4D60095ED95 /* Helper */,
 				18A41E251AE019F000042CF4 /* DKNightVersion.h */,
+				186AC5181AF7C4D60095ED95 /* Helper */,
 				18A41E221AE019F000042CF4 /* Core */,
-				45FE4248BB0DBC4FDEE1F108,
-				42FB4AEB9728D36A8F7383AB,
-				FDD74138AC225A76A8F8DAC7,
 				B5BD4ACBB3DCDF2BAF6AEC69 /* UIKit */,
 			);
 			path = Classes;
@@ -350,7 +357,7 @@
 			name = DKNightVersion;
 			productName = DKNightVersion;
 			productReference = 189854B61ADD5B550050568B /* DKNightVersion.app */;
-			productType = com.apple.product-type.application;
+			productType = "com.apple.product-type.application";
 		};
 		189854C81ADD5B560050568B /* DKNightVersionTests */ = {
 			isa = PBXNativeTarget;
@@ -363,17 +370,17 @@
 			buildRules = (
 			);
 			dependencies = (
-				189854CB1ADD5B560050568B /* Target */,
+				189854CB1ADD5B560050568B /* PBXTargetDependency */,
 			);
 			name = DKNightVersionTests;
 			productName = DKNightVersionTests;
 			productReference = 189854C91ADD5B560050568B /* DKNightVersionTests.xctest */;
-			productType = com.apple.product-type.bundle.unit-test;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		189854AE1ADD5B550050568B /* Project Object */ = {
+		189854AE1ADD5B550050568B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
@@ -384,11 +391,11 @@
 					};
 					189854C81ADD5B560050568B = {
 						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 189854B51ADD5B550050568B /* DKNightVersion */;
+						TestTargetID = 189854B51ADD5B550050568B;
 					};
 				};
 			};
-			buildConfigurationList = 189854B11ADD5B550050568B /* Build configuration list for PBXNativeTarget "TARGET_NAME" */;
+			buildConfigurationList = 189854B11ADD5B550050568B /* Build configuration list for PBXProject "DKNightVersion" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -396,7 +403,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 189854AD1ADD5B550050568B /*  */;
+			mainGroup = 189854AD1ADD5B550050568B;
 			productRefGroup = 189854B71ADD5B550050568B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,8 +419,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189854C41ADD5B550050568B /* LaunchScreen.xib */,
-				189854C11ADD5B550050568B /* Images.xcassets */,
+				189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */,
+				189854C11ADD5B550050568B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,77 +438,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A41E391AE019F000042CF4 /* DKNightVersionManager.m */,
-				18B441331AF32FA900A4BB5D /* TableViewCell.m */,
-				189854BF1ADD5B550050568B /* AppDelegate.m */,
-				189854E81ADD5BCE0050568B /* RootViewController.m */,
-				187E6D541AEEA4C80004CFE4 /* SuccViewController.m */,
-				186AC51B1AF7C4EC0095ED95 /* UINavigationBar+Animation.m */,
-				189854BC1ADD5B550050568B /* main.m */,
-				60CB44FFA20A9128D5AA5244,
-				9ED9447191622BB043D2F23C,
-				4EFB424BBB3BB42B918542A9,
-				D6794E38BF4745CD5F38C51D,
-				1D934BEEA67BCF366BE2D583,
-				78A24D14A7786BB88F825654,
-				39FA4778824AF69B8EB5F84C,
-				4D6C4EFF8465DBE171FBFE12,
-				E6B141B19497916018ED1FAD,
-				D04A4350AB703880B4265B6E,
-				8681412BBDAD3E5737901723,
-				80A9443DB3254491ECC7ADE3,
-				6BB74CBEA3C2E00C28C56711,
-				18674DE0B66B152544F82D84,
-				499B47D2B0B2354B8C2CFC1F,
-				471E4186BA4D2955E29A1394,
-				60A046F4B557243C40BA14D0,
-				FE134575B018F6E24BCD74F4,
-				048D4B39B278019776B549D5,
-				075E438A95A0AEB9343B6056,
-				C30A48AA87414CB6A6B14845,
-				B5AD4006974612EB6642C061,
-				0CF04A04B3F606AA3EA78E00,
-				0B154CCD82816AF4114AAE3E,
-				25D24C5CA849AA351FC86EFB,
-				700F4AE0A6F8F18B166DCFBA,
-				5FD546FB93C61FA37ACC2E57,
-				EB244F2191B41EB4074E02CC,
-				C5B74744BABD83570A5C1908,
-				4E6E424BB877C54E457A4AEA,
-				586A44BCBB46335A3D727823,
-				2B6D46178435D55C175093BD,
-				9B79447C84C2190BFEBDB943,
-				823741599519023C1963D3F1,
-				0E4C441983376FC9CA6CF95C,
-				294B4AAB8DA1FFE79AD5CC37,
-				028E42488584B6BF39909201,
-				468E46A09BDBE3FA3038D093,
-				B1E849AC979737B0DD96301A,
-				9CC347B3BE8C2179DDC1C57D,
-				56E8417E8328AF873C463788,
-				77E540FFA3F049DAEA0B899D,
-				2E4A4C47BAC7FA722CD6EA38,
-				15A747D8BBB9B15CF9F8B40B,
-				BF7941F7B4FEE7D52BB04339,
-				75314D5B868F2502483DB6F3,
-				7BB44A0EB071CD2541B560F4,
-				460B401D81692BE26517279B,
-				459847008CD864286726818E /* UINavigationBar+NightVersion.m */,
-				F2A445C593D663E690B462C9 /* UINavigationBar+BarTintColor.m */,
-				C0584185BA2ECB12E88707B7 /* UIScrollView+NightVersion.m */,
-				70FA4CEF894154AE07A36DFF /* UIScrollView+BackgroundColor.m */,
-				AE504B9E8F1DFAAF9BFF1D0D /* UIButton+NightVersion.m */,
-				CA97457C91A7D35E53B2E243 /* UIButton+TitleColor.m */,
-				1506408E9D16DDED30B44BE7 /* UILabel+NightVersion.m */,
-				DE4D4147B105496DE1503209 /* UILabel+TextColor.m */,
-				2776409089515FEC3951FDE5 /* UITableView+NightVersion.m */,
-				DFC747369A6E9B97F7B94938 /* UITableView+BackgroundColor.m */,
-				19CB4972A1EAE8920C36E35A /* UITableView+SeparatorColor.m */,
-				33844CFE9784266027545552 /* UITableViewCell+NightVersion.m */,
-				D8C947B1832E5237DD2C7B88 /* UITableViewCell+BackgroundColor.m */,
-				DC244182A6B5D01F3C68E423 /* UIView+NightVersion.m */,
-				19C247A7A8EE505BF50A7086 /* UIView+BackgroundColor.m */,
-				FD0447F59C12AA35AB43FB59 /* UIView+TintColor.m */,
+				18A41E391AE019F000042CF4 /* DKNightVersionManager.m in Sources */,
+				18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */,
+				189854BF1ADD5B550050568B /* AppDelegate.m in Sources */,
+				189854E81ADD5BCE0050568B /* RootViewController.m in Sources */,
+				186AC51E1AF7DB8E0095ED95 /* UINavigationBar+Animation.m in Sources */,
+				187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */,
+				189854BC1ADD5B550050568B /* main.m in Sources */,
+				459847008CD864286726818E /* UINavigationBar+NightVersion.m in Sources */,
+				F2A445C593D663E690B462C9 /* UINavigationBar+BarTintColor.m in Sources */,
+				C0584185BA2ECB12E88707B7 /* UIScrollView+NightVersion.m in Sources */,
+				70FA4CEF894154AE07A36DFF /* UIScrollView+BackgroundColor.m in Sources */,
+				AE504B9E8F1DFAAF9BFF1D0D /* UIButton+NightVersion.m in Sources */,
+				CA97457C91A7D35E53B2E243 /* UIButton+TitleColor.m in Sources */,
+				1506408E9D16DDED30B44BE7 /* UILabel+NightVersion.m in Sources */,
+				DE4D4147B105496DE1503209 /* UILabel+TextColor.m in Sources */,
+				2776409089515FEC3951FDE5 /* UITableView+NightVersion.m in Sources */,
+				DFC747369A6E9B97F7B94938 /* UITableView+BackgroundColor.m in Sources */,
+				19CB4972A1EAE8920C36E35A /* UITableView+SeparatorColor.m in Sources */,
+				33844CFE9784266027545552 /* UITableViewCell+NightVersion.m in Sources */,
+				D8C947B1832E5237DD2C7B88 /* UITableViewCell+BackgroundColor.m in Sources */,
+				DC244182A6B5D01F3C68E423 /* UIView+NightVersion.m in Sources */,
+				19C247A7A8EE505BF50A7086 /* UIView+BackgroundColor.m in Sources */,
+				FD0447F59C12AA35AB43FB59 /* UIView+TintColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,27 +468,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189854D01ADD5B560050568B /* DKNightVersionTests.m */,
-				183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m */,
-				375341FCBEE4714FBCADE3DA /* UINavigationBar+BarTintColor.m */,
-				B4F64EDA87D7D78E3E866CA9 /* UIScrollView+NightVersion.m */,
-				D7D64613BC61EDC443ADE332 /* UIScrollView+BackgroundColor.m */,
-				026243D189F213EFC9FD6F75 /* UIButton+NightVersion.m */,
-				339546DD89CCB356329C1DC4 /* UIButton+TitleColor.m */,
-				D73749CFA9B069DE869C10B0 /* UILabel+NightVersion.m */,
-				4D0F4FA9B549FE6978D73F7C /* UILabel+TextColor.m */,
-				D86C4616BDBC3036A6287BA2 /* UITableView+NightVersion.m */,
-				3F45487AB9BB8C81B13082FB /* UITableView+BackgroundColor.m */,
-				EDD74A55B6B5B29030B1EE0D /* UITableView+SeparatorColor.m */,
-				A9554641AC818A8F312CC04A /* UITableViewCell+NightVersion.m */,
-				AA1E43FB8A1C243CC7C5BEF1 /* UITableViewCell+BackgroundColor.m */,
-				C6DE404DAB3F34429013D138 /* UIView+NightVersion.m */,
-				502A4D11B47A6EE6ADAB8A51 /* UIView+BackgroundColor.m */,
-				2B72472AABEBF18D5EA11660 /* UIView+TintColor.m */,
+				189854D01ADD5B560050568B /* DKNightVersionTests.m in Sources */,
+				183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m in Sources */,
+				375341FCBEE4714FBCADE3DA /* UINavigationBar+BarTintColor.m in Sources */,
+				B4F64EDA87D7D78E3E866CA9 /* UIScrollView+NightVersion.m in Sources */,
+				D7D64613BC61EDC443ADE332 /* UIScrollView+BackgroundColor.m in Sources */,
+				026243D189F213EFC9FD6F75 /* UIButton+NightVersion.m in Sources */,
+				339546DD89CCB356329C1DC4 /* UIButton+TitleColor.m in Sources */,
+				D73749CFA9B069DE869C10B0 /* UILabel+NightVersion.m in Sources */,
+				4D0F4FA9B549FE6978D73F7C /* UILabel+TextColor.m in Sources */,
+				D86C4616BDBC3036A6287BA2 /* UITableView+NightVersion.m in Sources */,
+				3F45487AB9BB8C81B13082FB /* UITableView+BackgroundColor.m in Sources */,
+				EDD74A55B6B5B29030B1EE0D /* UITableView+SeparatorColor.m in Sources */,
+				A9554641AC818A8F312CC04A /* UITableViewCell+NightVersion.m in Sources */,
+				AA1E43FB8A1C243CC7C5BEF1 /* UITableViewCell+BackgroundColor.m in Sources */,
+				C6DE404DAB3F34429013D138 /* UIView+NightVersion.m in Sources */,
+				502A4D11B47A6EE6ADAB8A51 /* UIView+BackgroundColor.m in Sources */,
+				2B72472AABEBF18D5EA11660 /* UIView+TintColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		189854CB1ADD5B560050568B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 189854B51ADD5B550050568B /* DKNightVersion */;
+			targetProxy = 189854CA1ADD5B560050568B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		189854C21ADD5B550050568B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189854C31ADD5B550050568B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		189854D11ADD5B560050568B /* Debug */ = {
@@ -551,7 +529,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf-with-dsym;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -594,7 +572,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf-with-dsym;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -674,7 +652,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		189854B11ADD5B550050568B /* Build configuration list for PBXNativeTarget "TARGET_NAME" */ = {
+		189854B11ADD5B550050568B /* Build configuration list for PBXProject "DKNightVersion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				189854D11ADD5B560050568B /* Debug */,
@@ -702,35 +680,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin PBXTargetDependency section */
-		189854CB1ADD5B560050568B /* Target */ = {
-			isa = PBXTargetDependency;
-			target = 189854B51ADD5B550050568B /* DKNightVersion */;
-			targetProxy = 189854CA1ADD5B560050568B /* Containe */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		189854C21ADD5B550050568B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				189854C31ADD5B550050568B /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin PBXContainerItemProxy section */
-		189854CA1ADD5B560050568B /* Containe */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 189854AE1ADD5B550050568B /* Project Object */;
-			proxyType = 1;
-			remoteGlobalIDString = 189854B51ADD5B550050568B /* DKNightVersion */;
-			remoteInfo = DKNightVersion;
-		};
-/* End PBXContainerItemProxy section */
 	};
-	rootObject = 189854AE1ADD5B550050568B /* Project Object */;
+	rootObject = 189854AE1ADD5B550050568B /* Project object */;
 }
