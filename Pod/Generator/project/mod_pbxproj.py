@@ -949,6 +949,8 @@ class XcodeProject(PBXDict):
                     self.objects.remove(key)
                     if PBXSBP[0].has_build_file(key):
                         PBXSBP[0].remove_build_file(key)
+                    if len(PBXRBP) == 0:
+                        continue
                     if PBXRBP[0].has_build_file(key):
                         PBXRBP[0].remove_build_file(key)
             if recursive:

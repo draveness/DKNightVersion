@@ -28,7 +28,7 @@ def render(template, klass, property=nil)
     end
 end
 
-def objc_code_generator(klasses)
+def objc_code_generator(klasses, p='.')
     groups = {}
 
 	template_folder = File.join('.', 'template')
@@ -46,7 +46,7 @@ def objc_code_generator(klasses)
 		FileUtils.rm_rf(subfolder_path)
 		FileUtils.mkdir_p(subfolder_path)
 
-        path = File.join('Pod', 'Classes', 'UIKit', klass.name)
+        path = File.join(p, 'Pod', 'Classes', 'UIKit', klass.name)
         groups[klass.name] = []
         groups[klass.name] << File.join(path, klass.nightversion_header_name)
         groups[klass.name] << File.join(path, klass.nightversion_imp_name)
@@ -141,10 +141,13 @@ table = parse_json('property.json')
 add_superklass_relation(table)
 handle_method(table)
 
-group = objc_code_generator(table)
+pbxproj_file_path = find_pbxproj('.')
+basename = File.basename(find_xcodeproj('.'))
+production = basename.start_with?('Pod')
+path = if production then 'DKNightVersion' else '.' end
+group = objc_code_generator(table, path)
 File.write File.join('project', 'project.json'), group.to_json
 
-pbxproj_file_path = find_pbxproj('.')
 json_file_path = 'project/project.json'
 
-system "python project/project.py #{pbxproj_file_path} #{json_file_path}"
+system "python project/project.py #{pbxproj_file_path} #{json_file_path} #{production}"
