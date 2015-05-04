@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DKNightVersion"
-  s.version      = "0.5.2"
+  s.version      = "0.5.3"
   s.summary      = "A light weight framework adding night version to your app on iOS."
   s.description  = <<-DESC
                    A longer description of DKNightVersion in Markdown format.
@@ -18,16 +18,16 @@ Pod::Spec.new do |s|
   s.source_files = "Pod/Classes/DKNightVersion.h"
 
   s.subspec 'Core' do |ss|
-      ss.source_files = "Pod/Classes/Core/**"
+    ss.source_files = "Pod/Classes/Core/*.{h,m}"
   end
 
   s.subspec 'UIKit' do |ss|
-      ss.source_files = "Pod/Classes/UIKit/**/*"
-      ss.dependency 'DKNightVersion/Core'
+    ss.source_files = "Pod/Classes/UIKit/**/*.{h,m}"
+    ss.dependency 'DKNightVersion/Core'
   end
 
   s.subspec 'Generator' do |ss|
-    ss.resources = "Pod/Generator/**/*"
+    ss.resources = "Pod/Generator/**"
   end
 
 end
