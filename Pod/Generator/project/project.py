@@ -25,7 +25,7 @@ project = XcodeProject.Load(pbxproj_file_path)
 project.remove_group_by_name('UIKit', True)
 project.save()
 
-if !production:
+if production == False:
     if production:
         main_group = project.get_groups_by_name('DKNightVersion')[0]
         uikit_group = project.get_or_create_group('UIKit', None, main_group)
