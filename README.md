@@ -8,7 +8,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 
 # Demo
 
-![](images/DKNightVersion.gif)
+![](./images/DKNightVersion.gif)
 
 # Installation with CocoaPods
 
@@ -114,11 +114,11 @@ Find the `UIKit` folder. It should generate in `Pods/DKNightVersion/Pod/Classes/
 
 #### Step 2. Drag folder to workspace
 
-![](images/add_file.png)
+![](./images/add_file.png)
 
 ### Step 3. Select target
 
-![](images/target.png)
+![](./images/target.png)
 
 ## Using default night version
 
