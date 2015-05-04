@@ -2,7 +2,6 @@
 
 require 'fileutils'
 require 'erb'
-require 'yaml'
 require 'ostruct'
 require 'json'
 
