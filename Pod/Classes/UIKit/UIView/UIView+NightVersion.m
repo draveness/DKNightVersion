@@ -21,8 +21,7 @@
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
         
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-        NSLog(@"%@", self.normalBackgroundColor);
-
+        
         [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         
     }];
