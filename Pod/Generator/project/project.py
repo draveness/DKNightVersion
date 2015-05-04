@@ -20,11 +20,9 @@ def to_bool(value):
 pbxproj_file_path = sys.argv[1]
 json_file_path = sys.argv[2]
 production = to_bool(sys.argv[3])
-print production
+
 project = XcodeProject.Load(pbxproj_file_path)
-
 project.remove_group_by_name('UIKit', True)
-
 project.save()
 
 if production:
