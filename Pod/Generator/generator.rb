@@ -7,6 +7,7 @@ require 'json'
 
 require_relative 'model/objc_property'
 require_relative 'model/objc_class'
+require_relative 'helper/dir'
 
 class ErbalT < OpenStruct
     def self.render_from_hash(t, h)
@@ -143,7 +144,7 @@ handle_method(table)
 group = objc_code_generator(table)
 File.write File.join('project', 'project.json'), group.to_json
 
-pbxproj_file_path = '../../DKNightVersion.xcodeproj/project.pbxproj'
+pbxproj_file_path = find_pbxproj('.')
 json_file_path = 'project/project.json'
 
 system "python project/project.py #{pbxproj_file_path} #{json_file_path}"
