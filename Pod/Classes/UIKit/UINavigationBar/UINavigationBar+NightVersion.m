@@ -12,6 +12,7 @@
 #import "DKNightVersionManager.h"
 #import "UIView+NightVersion.h"
 
+#import "UINavigationBar+Animation.h"
 
 @implementation UINavigationBar (NightVersion)
 
@@ -19,7 +20,7 @@
 
 - (void)changeColor {
     
-    [self setBarTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor];
+    [self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor duration:DKNightVersionAnimationDuration];
     
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
         

@@ -11,6 +11,7 @@
 #import "<%= klass.name %>+NightVersion.h"
 #import "DKNightVersionManager.h"
 <% if klass.all_superklass_name %><% klass.all_superklass_name.reverse.each do |name| %><%= "#import \"#{name}+NightVersion.h\"\n" %><% end %><% end %>
+<% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' %><%= '#import "UINavigationBar+Animation.h"' %><% end %><% end %>
 
 @implementation <%= klass.name %> (NightVersion)
 
@@ -18,7 +19,7 @@
 
 - (void)changeColor {
     <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' %>
-    <%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+    <%= "[self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name} duration:DKNightVersionAnimationDuration];" %>
     <% end %><% end %>
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
         <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %>
