@@ -27,7 +27,6 @@
     navigationLabel.textAlignment = NSTextAlignmentCenter;
     navigationLabel.nightTextColor = [UIColor whiteColor];
     self.navigationItem.titleView = navigationLabel;
-//    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
 }
 
 
