@@ -150,4 +150,4 @@ File.write File.join('project', 'project.json'), group.to_json
 
 json_file_path = 'project/project.json'
 
-system "python project/project.py #{pbxproj_file_path} #{json_file_path} #{production}" if !production
+system "python project/project.py #{pbxproj_file_path} #{json_file_path} #{production}"
