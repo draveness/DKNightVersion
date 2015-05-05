@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => s.version }
   s.source_files = "Classes/DKNightVersion.h"
+  s.resources = "Rakefile"
 
   s.subspec 'Core' do |ss|
     ss.source_files = "Classes/Core/*.{h,m}"
