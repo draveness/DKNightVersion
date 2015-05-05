@@ -10,15 +10,15 @@
 		01B5403BA24D634FDC18926C /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 760740E09C36622E96EE805B /* UIView+BackgroundColor.m */; };
 		11DC4DF2A13E1B05E2E05134 /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = AC524B2E9014FE4D0B34EB22 /* UIView+NightVersion.m */; };
 		186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */; };
-		187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
-		189854BC1ADD5B550050568B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BB1ADD5B550050568B /* main.m */; };
-		189854BF1ADD5B550050568B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BE1ADD5B550050568B /* AppDelegate.m */; };
-		189854C11ADD5B550050568B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
-		189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189854C21ADD5B550050568B /* LaunchScreen.xib */; };
-		189854E81ADD5BCE0050568B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E71ADD5BCE0050568B /* RootViewController.m */; };
-		18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441321AF32FA900A4BB5D /* TableViewCell.m */; };
 		18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */; };
 		18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */; };
+		18D228941AF8BB6200872BF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228931AF8BB6200872BF1 /* AppDelegate.m */; };
+		18D2289B1AF8BB6800872BF1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228961AF8BB6800872BF1 /* RootViewController.m */; };
+		18D2289C1AF8BB6800872BF1 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228981AF8BB6800872BF1 /* SuccViewController.m */; };
+		18D2289D1AF8BB6800872BF1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289A1AF8BB6800872BF1 /* TableViewCell.m */; };
+		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
+		18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A51AF8BB8D00872BF1 /* Images.xcassets */; };
+		18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */; };
 		1F634F38A7DE152A5B5E8F92 /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBF4AD2A8D5E3DF677D9713 /* UIScrollView+BackgroundColor.m */; };
 		29084443B2F3461DD2599AE8 /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EF4BFC9CB79061B68B94BE /* UINavigationBar+BarTintColor.m */; };
 		2FB544C9B71CA4FA56255306 /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D363460AB940DC9304CF1CAA /* UITableView+NightVersion.m */; };
@@ -67,26 +67,26 @@
 		0E73430D979756839125513E /* UINavigationBar+NightVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+NightVersion.m"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.m"; sourceTree = SOURCE_ROOT; };
 		10EA430881342CF6C21538B3 /* UITableViewCell+BackgroundColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BackgroundColor.h"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+BackgroundColor.h"; sourceTree = SOURCE_ROOT; };
 		186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManagerTest.m; sourceTree = "<group>"; };
-		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
-		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		189854BA1ADD5B550050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189854BB1ADD5B550050568B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		189854BD1ADD5B550050568B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		189854BE1ADD5B550050568B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		189854C01ADD5B550050568B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		189854C31ADD5B550050568B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189854E61ADD5BCE0050568B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		189854E71ADD5BCE0050568B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		18B441311AF32FA900A4BB5D /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		18B441321AF32FA900A4BB5D /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		18D2288B1AF8BA4F00872BF1 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Classes/Helper/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
 		18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Classes/Helper/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
 		18D2288E1AF8BA7100872BF1 /* DKNightVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DKNightVersion.h; path = Classes/DKNightVersion.h; sourceTree = SOURCE_ROOT; };
 		18D2288F1AF8BA8700872BF1 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKNightVersionManager.h; path = Classes/Core/DKNightVersionManager.h; sourceTree = SOURCE_ROOT; };
 		18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKNightVersionManager.m; path = Classes/Core/DKNightVersionManager.m; sourceTree = SOURCE_ROOT; };
+		18D228921AF8BB6200872BF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Demo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		18D228931AF8BB6200872BF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Demo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		18D228951AF8BB6800872BF1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Demo/RootViewController.h; sourceTree = SOURCE_ROOT; };
+		18D228961AF8BB6800872BF1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Demo/RootViewController.m; sourceTree = SOURCE_ROOT; };
+		18D228971AF8BB6800872BF1 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccViewController.h; path = Demo/SuccViewController.h; sourceTree = SOURCE_ROOT; };
+		18D228981AF8BB6800872BF1 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccViewController.m; path = Demo/SuccViewController.m; sourceTree = SOURCE_ROOT; };
+		18D228991AF8BB6800872BF1 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = Demo/TableViewCell.h; sourceTree = SOURCE_ROOT; };
+		18D2289A1AF8BB6800872BF1 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = Demo/TableViewCell.m; sourceTree = SOURCE_ROOT; };
+		18D2289E1AF8BB7800872BF1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Demo/Info.plist; sourceTree = SOURCE_ROOT; };
+		18D2289F1AF8BB7800872BF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = SOURCE_ROOT; };
+		18D228A31AF8BB8500872BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Demo/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		18D228A51AF8BB8D00872BF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Demo/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		25574F98AEDE62E36C84CE60 /* UILabel+TextColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TextColor.m"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.m"; sourceTree = SOURCE_ROOT; };
 		26C34874AE06DAB62C256BFB /* UIButton+TitleColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIButton+TitleColor.h"; path = "./Classes/UIKit/UIButton/UIButton+TitleColor.h"; sourceTree = SOURCE_ROOT; };
 		33FB430EA6DF4459E3F9F09C /* UITableView+BackgroundColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UITableView+BackgroundColor.h"; path = "./Classes/UIKit/UITableView/UITableView+BackgroundColor.h"; sourceTree = SOURCE_ROOT; };
@@ -149,14 +149,14 @@
 		180CDCA91AECC17F00164D1F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				189854BD1ADD5B550050568B /* AppDelegate.h */,
-				189854BE1ADD5B550050568B /* AppDelegate.m */,
-				189854E61ADD5BCE0050568B /* RootViewController.h */,
-				189854E71ADD5BCE0050568B /* RootViewController.m */,
-				187E6D521AEEA4C80004CFE4 /* SuccViewController.h */,
-				187E6D531AEEA4C80004CFE4 /* SuccViewController.m */,
-				18B441311AF32FA900A4BB5D /* TableViewCell.h */,
-				18B441321AF32FA900A4BB5D /* TableViewCell.m */,
+				18D228921AF8BB6200872BF1 /* AppDelegate.h */,
+				18D228931AF8BB6200872BF1 /* AppDelegate.m */,
+				18D228951AF8BB6800872BF1 /* RootViewController.h */,
+				18D228961AF8BB6800872BF1 /* RootViewController.m */,
+				18D228971AF8BB6800872BF1 /* SuccViewController.h */,
+				18D228981AF8BB6800872BF1 /* SuccViewController.m */,
+				18D228991AF8BB6800872BF1 /* TableViewCell.h */,
+				18D2289A1AF8BB6800872BF1 /* TableViewCell.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 			children = (
 				180CDCA91AECC17F00164D1F /* Demo */,
 				18A41E201AE019F000042CF4 /* Pod */,
-				189854C01ADD5B550050568B /* Images.xcassets */,
-				189854C21ADD5B550050568B /* LaunchScreen.xib */,
+				18D228A51AF8BB8D00872BF1 /* Images.xcassets */,
+				18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */,
 				189854B91ADD5B550050568B /* Supporting Files */,
 			);
 			path = DKNightVersion;
@@ -204,8 +204,8 @@
 		189854B91ADD5B550050568B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				189854BA1ADD5B550050568B /* Info.plist */,
-				189854BB1ADD5B550050568B /* main.m */,
+				18D2289E1AF8BB7800872BF1 /* Info.plist */,
+				18D2289F1AF8BB7800872BF1 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -419,8 +419,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */,
-				189854C11ADD5B550050568B /* Images.xcassets in Resources */,
+				18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */,
+				18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,12 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */,
-				189854BF1ADD5B550050568B /* AppDelegate.m in Sources */,
-				189854E81ADD5BCE0050568B /* RootViewController.m in Sources */,
-				187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */,
+				18D2289C1AF8BB6800872BF1 /* SuccViewController.m in Sources */,
 				18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */,
-				189854BC1ADD5B550050568B /* main.m in Sources */,
 				C5724AF79185A1426C371448 /* UINavigationBar+NightVersion.m in Sources */,
 				29084443B2F3461DD2599AE8 /* UINavigationBar+BarTintColor.m in Sources */,
 				EC0B4A569C448FDAB1E6BB8D /* UIScrollView+NightVersion.m in Sources */,
@@ -452,12 +448,16 @@
 				7B52439F86BD1DA580F7DBE1 /* UIButton+NightVersion.m in Sources */,
 				5F684F619416A5613F31BE03 /* UIButton+TitleColor.m in Sources */,
 				30A3468A86BE595A390705FD /* UILabel+NightVersion.m in Sources */,
+				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
+				18D2289B1AF8BB6800872BF1 /* RootViewController.m in Sources */,
 				65344737A21BBEC7E41CEC66 /* UILabel+TextColor.m in Sources */,
 				959F46CAA71887A47793313F /* UITableView+NightVersion.m in Sources */,
 				A237436AB724CF25BAB59F1C /* UITableView+BackgroundColor.m in Sources */,
 				820D4BA69280F0F91C00046A /* UITableView+SeparatorColor.m in Sources */,
 				310B40409E2D6685E3276131 /* UITableViewCell+NightVersion.m in Sources */,
 				4A474973835BDC0E27E05ADE /* UITableViewCell+BackgroundColor.m in Sources */,
+				18D2289D1AF8BB6800872BF1 /* TableViewCell.m in Sources */,
+				18D228941AF8BB6200872BF1 /* AppDelegate.m in Sources */,
 				11DC4DF2A13E1B05E2E05134 /* UIView+NightVersion.m in Sources */,
 				01B5403BA24D634FDC18926C /* UIView+BackgroundColor.m in Sources */,
 				FE514555B37852D14B533FA0 /* UIView+TintColor.m in Sources */,
@@ -499,10 +499,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		189854C21ADD5B550050568B /* LaunchScreen.xib */ = {
+		18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				189854C31ADD5B550050568B /* Base */,
+				18D228A31AF8BB8500872BF1 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DKNightVersion/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -607,7 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DKNightVersion/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
