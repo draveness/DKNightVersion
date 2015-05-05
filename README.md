@@ -104,7 +104,7 @@ There is a json file in `Generator` folder named `property.json`, you can change
 }
 ```
 
-And run `ruby generator.rb` in terminal. If you add new color property, drag the new file to proper place, and then everything works well.
+And run `rake` in terminal. If you add new color property, drag the new file to proper place, and then everything works well.
 
 This command will remove `UIKit` folder automatically. And you are supposed to drag them to proper place.
 
