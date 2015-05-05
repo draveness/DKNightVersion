@@ -28,6 +28,6 @@ task :default do
     puts
     puts
     puts "    You are supposed to drag files just generated to your workspace".yellow
-    puts "    If you don't know how to do that, click https://github.com/Draveness/DKNightVersion and follow the tutorial"
+    puts "    If you don't know how to do that, goto https://github.com/Draveness/DKNightVersion and follow the tutorial"
     puts
 end
