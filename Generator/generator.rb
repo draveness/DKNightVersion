@@ -46,7 +46,7 @@ def objc_code_generator(klasses, p='.')
 		FileUtils.rm_rf(subfolder_path)
 		FileUtils.mkdir_p(subfolder_path)
 
-        path = File.join(p, 'Pod', 'Classes', 'UIKit', klass.name)
+        path = File.join(p, 'Classes', 'UIKit', klass.name)
         groups[klass.name] = []
         groups[klass.name] << File.join(path, klass.nightversion_header_name)
         groups[klass.name] << File.join(path, klass.nightversion_imp_name)
