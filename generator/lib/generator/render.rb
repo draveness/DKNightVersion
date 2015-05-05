@@ -50,9 +50,9 @@ def objc_code_generator(klasses, p='.')
 
         nightversion_header_file_path = File.join(subfolder_path, klass.nightversion_header_name)
         nightversion_imp_file_path    = File.join(subfolder_path, klass.nightversion_imp_name)
-        puts "[Generate] Generating #{nightversion_header_file_path} file  "
+        puts "[Generate] Generating #{nightversion_header_file_path}"
 		File.write nightversion_header_file_path, render(nightversion_header, klass)
-        puts "[Generate] Generating #{nightversion_imp_file_path} file  "
+        puts "[Generate] Generating #{nightversion_imp_file_path}"
 		File.write nightversion_imp_file_path,    render(nightversion_imp,    klass)
 
 		klass.properties.each do |property|
@@ -65,14 +65,14 @@ def objc_code_generator(klasses, p='.')
             color_imp_file_path    = File.join(subfolder_path, klass.color_imp_name(property))
 
 			if !klass.superklass || !superklass_has_property
-                puts "[Generate] Generating #{color_header_file_path} file  "
+                puts "[Generate] Generating #{color_header_file_path}"
 				File.write color_header_file_path, render(color_header, klass, property)
-                puts "[Generate] Generating #{color_imp_file_path} file  "
+                puts "[Generate] Generating #{color_imp_file_path}"
 				File.write color_imp_file_path,    render(color_imp,    klass, property)
 			elsif superklass_has_property
-                puts "[Generate] Generating #{color_header_file_path} file  "
+                puts "[Generate] Generating #{color_header_file_path}"
 				File.write color_header_file_path, render(color_simply_header, klass, property)
-                puts "[Generate] Generating #{color_imp_file_path} file  "
+                puts "[Generate] Generating #{color_imp_file_path}"
 				File.write color_imp_file_path,    render(color_simply_imp,    klass, property)
 			end
 		end
