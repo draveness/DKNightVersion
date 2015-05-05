@@ -11,12 +11,12 @@
 		1506408E9D16DDED30B44BE7 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B784D66BAF4B3C706D68613 /* UILabel+NightVersion.m */; };
 		183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FB07456696CF7B837ED4B8D6 /* UINavigationBar+NightVersion.m */; };
 		186AC51E1AF7DB8E0095ED95 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC51D1AF7DB8E0095ED95 /* UINavigationBar+Animation.m */; };
+		186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */; };
 		187E6D541AEEA4C80004CFE4 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6D531AEEA4C80004CFE4 /* SuccViewController.m */; };
 		189854BC1ADD5B550050568B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BB1ADD5B550050568B /* main.m */; };
 		189854BF1ADD5B550050568B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854BE1ADD5B550050568B /* AppDelegate.m */; };
 		189854C11ADD5B550050568B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189854C01ADD5B550050568B /* Images.xcassets */; };
 		189854C41ADD5B550050568B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189854C21ADD5B550050568B /* LaunchScreen.xib */; };
-		189854D01ADD5B560050568B /* DKNightVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854CF1ADD5B560050568B /* DKNightVersionTests.m */; };
 		189854E81ADD5BCE0050568B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189854E71ADD5BCE0050568B /* RootViewController.m */; };
 		18A41E391AE019F000042CF4 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A41E241AE019F000042CF4 /* DKNightVersionManager.m */; };
 		18B441331AF32FA900A4BB5D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B441321AF32FA900A4BB5D /* TableViewCell.m */; };
@@ -65,6 +65,7 @@
 		14FE4540BB6873EE32C44B9F /* UIButton+NightVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIButton+NightVersion.h"; path = "./Pod/Classes/UIKit/UIButton/UIButton+NightVersion.h"; sourceTree = SOURCE_ROOT; };
 		186AC51C1AF7DB8E0095ED95 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Pod/Classes/Helper/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
 		186AC51D1AF7DB8E0095ED95 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Pod/Classes/Helper/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
+		186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManagerTest.m; sourceTree = "<group>"; };
 		187E6D521AEEA4C80004CFE4 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
 		187E6D531AEEA4C80004CFE4 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +77,6 @@
 		189854C31ADD5B550050568B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189854CF1ADD5B560050568B /* DKNightVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionTests.m; sourceTree = "<group>"; };
 		189854E61ADD5BCE0050568B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		189854E71ADD5BCE0050568B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		18A41E231AE019F000042CF4 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		189854CC1ADD5B560050568B /* DKNightVersionTests */ = {
 			isa = PBXGroup;
 			children = (
-				189854CF1ADD5B560050568B /* DKNightVersionTests.m */,
+				186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */,
 				189854CD1ADD5B560050568B /* Supporting Files */,
 			);
 			path = DKNightVersionTests;
@@ -468,7 +468,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189854D01ADD5B560050568B /* DKNightVersionTests.m in Sources */,
 				183849E4BEE8D8AE7788D258 /* UINavigationBar+NightVersion.m in Sources */,
 				375341FCBEE4714FBCADE3DA /* UINavigationBar+BarTintColor.m in Sources */,
 				B4F64EDA87D7D78E3E866CA9 /* UIScrollView+NightVersion.m in Sources */,
@@ -480,6 +479,7 @@
 				D86C4616BDBC3036A6287BA2 /* UITableView+NightVersion.m in Sources */,
 				3F45487AB9BB8C81B13082FB /* UITableView+BackgroundColor.m in Sources */,
 				EDD74A55B6B5B29030B1EE0D /* UITableView+SeparatorColor.m in Sources */,
+				186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */,
 				A9554641AC818A8F312CC04A /* UITableViewCell+NightVersion.m in Sources */,
 				AA1E43FB8A1C243CC7C5BEF1 /* UITableViewCell+BackgroundColor.m in Sources */,
 				C6DE404DAB3F34429013D138 /* UIView+NightVersion.m in Sources */,
@@ -618,7 +618,7 @@
 		189854D71ADD5B560050568B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DKNightVersion.app/DKNightVersion";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -630,14 +630,14 @@
 				INFOPLIST_FILE = DKNightVersionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKNightVersion.app/DKNightVersion";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
 		};
 		189854D81ADD5B560050568B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DKNightVersion.app/DKNightVersion";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -645,7 +645,7 @@
 				INFOPLIST_FILE = DKNightVersionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DKNightVersion.app/DKNightVersion";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
