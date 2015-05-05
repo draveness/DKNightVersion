@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Generator' do |ss|
-    ss.resources = "Pod/Generator/**"
+    ss.resources = "Generator/**"
   end
 
 end
