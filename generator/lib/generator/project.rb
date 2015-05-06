@@ -3,24 +3,17 @@ require 'json'
 
 def add_files_to_project(path, json_path)
     production = File.basename(path).start_with?('Pod')
-    j = JSON.parse File.read(json_path)
+    json = JSON.parse File.read(json_path)
     project = Xcodeproj::Project.open(path)
-    target = if production
-                 project.targets.reduce(project.targets.first) do |init, t| 
-                     if t.to_s.include? 'DKNightVersion' 
-                         init = t
-                     end
-                 end
-             else 
-                 project.targets.first
-             end
+    target = get_target(project, production)
     
-    group_path = if production 
-                     'Pods/DKNightVersion/UIKit' 
-                 else
-                     'DKNightVersion/Pod/Classes/UIKit'
-                 end
-    j.each do |group, files|
+    group_path = get_group_name(production)
+    uikit_group = project.main_group.find_subpath(group_path, true)
+    uikit_group.clear
+
+    clear_target(target)
+
+    json.each do |group, files|
         new_group = project.main_group.find_subpath(File.join(group_path, group), true)
         new_group.set_source_tree('SOURCE_ROOT')
         file_refs = []
@@ -31,13 +24,47 @@ def add_files_to_project(path, json_path)
             end
         end
         file_refs.each do |file_ref|
-            unless target.resources_build_phase.files_references.include?(file_ref)
-              target.add_file_references([file_ref])
-            end
+            target.add_file_references([file_ref])
         end
         
     end
     project.save
 end
 
+def get_target(project, production)
+    if production
+        project.targets.reduce(project.targets.first) do |init, t| 
+            if t.to_s.include? 'DKNightVersion' 
+                init = t
+            end
+        end
+    else 
+        project.targets.first
+    end
+end
 
+def get_group_name(production)
+    if production 
+        'Pods/DKNightVersion/UIKit' 
+    else
+        'DKNightVersion/Pod/Classes/UIKit'
+    end
+end
+
+def should_remove(file_name)
+    /UI[a-zA-Z]+\+(?:[a-zA-Z]+?Color|NightVersion)\.[hm]/.match(file_name)
+end
+
+def clear_target(target)
+    target.source_build_phase.files_references.each do |file_ref|
+        puts file_ref.inspect
+        if should_remove(file_ref.name)
+            target.source_build_phase.remove_file_reference(file_ref)
+        end
+    end
+    target.headers_build_phase.files_references.each do |file_ref|
+        if should_remove(file_ref.name)
+            target.headers_build_phase.remove_file_reference(file_ref)
+        end
+    end
+end
