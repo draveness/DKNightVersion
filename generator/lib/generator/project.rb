@@ -57,7 +57,6 @@ end
 
 def clear_target(target)
     target.source_build_phase.files_references.each do |file_ref|
-        puts file_ref.inspect
         if should_remove(file_ref.name)
             target.source_build_phase.remove_file_reference(file_ref)
         end
