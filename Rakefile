@@ -9,20 +9,20 @@ task :default do
     add_superklass_relation(table)
     puts "[Parse] Fix method setter and getter".green
     handle_method(table)
-    pbxproj_file_path = find_pbxproj('.')
-    basename = File.basename(find_xcodeproj('.'))
+    xcode_proj_file = find_xcodeproj('.')
+    basename = File.basename(xcode_proj_file)
     production = basename.start_with?('Pod')
     puts "[Generate] Start to generates UIKit files".yellow
     path = if production then 'DKNightVersion' else '.' end
     group = objc_code_generator(table, path)
-    File.write File.join('generator', 'lib', 'generator', 'project', 'project.json'), group.to_json
+    json_file_path = File.join('generator', 'lib', 'generator', 'json', 'project.json')
+    File.write json_file_path, group.to_json
 
-    json_file_path = File.join('generator', 'lib', 'generator', 'project', 'project.json')
-    python_file = File.join('generator', 'lib', 'generator', 'project', 'project.py')
+    #python_file = File.join('generator', 'lib', 'generator', 'project', 'project.py')
     puts "[Link] Find pbxproj file path".yellow
-    puts "[Link] pbxproj is at '#{pbxproj_file_path}'".green
+    puts "[Link] pbxproj is at '#{xcode_proj_file}'".green
     puts "[Link] Linking to xcodeproj".yellow
-    system "python #{python_file} #{pbxproj_file_path} #{json_file_path} #{production}"
+    add_files_to_project(xcode_proj_file, json_file_path)
 
     puts "[DKNightVersion] has already generate all files for you!".green
     puts
