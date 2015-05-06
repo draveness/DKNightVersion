@@ -16,8 +16,13 @@ def add_files_to_project(path, json_path)
                 file_refs << file_ref
             end
         end
-        target.add_file_references(file_refs)
-        puts target.source_build_phase.files.first.inspect
+        #target.add_file_references(file_refs)
+        file_refs.each do |file_ref|
+            unless target.resources_build_phase.files_references.include?(file_ref)
+              target.add_file_references([file_ref])
+            end
+        end
+        
     end
     project.save
 end
