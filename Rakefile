@@ -25,9 +25,9 @@ task :default do
     add_files_to_project(xcode_proj_file, json_file_path)
 
     puts "[DKNightVersion] has already generate all files for you!".green
-    puts
-    puts
-    puts "    You are supposed to drag files just generated to your workspace".yellow
-    puts "    If you don't know how to do that, goto https://github.com/Draveness/DKNightVersion and follow the tutorial"
-    puts
+    #puts
+    #puts
+    #puts "    You are supposed to drag files just generated to your workspace".yellow
+    #puts "    If you don't know how to do that, goto https://github.com/Draveness/DKNightVersion and follow the tutorial"
+    #puts
 end
