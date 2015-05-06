@@ -57,12 +57,12 @@ end
 
 def clear_target(target)
     target.source_build_phase.files_references.each do |file_ref|
-        if should_remove(file_ref.name)
+        if file_ref != nil && should_remove(file_ref.name)
             target.source_build_phase.remove_file_reference(file_ref)
         end
     end
     target.headers_build_phase.files_references.each do |file_ref|
-        if should_remove(file_ref.name)
+        if file_ref != nil && should_remove(file_ref.name)
             target.headers_build_phase.remove_file_reference(file_ref)
         end
     end
