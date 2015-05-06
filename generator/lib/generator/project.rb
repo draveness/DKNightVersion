@@ -9,6 +9,7 @@ def add_files_to_project(path, json_path)
     group_path = 'DKNightVersion/Pod/Classes/UIKit'
     j.each do |group, files|
         new_group = project.main_group.find_subpath(File.join(group_path, group), true)
+        new_group.set_source_tree('SOURCE_ROOT')
         file_refs = []
         files.each do |f|
             unless new_group.find_file_by_path(f) 
