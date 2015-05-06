@@ -104,21 +104,9 @@ There is a json file in `Generator` folder named `property.json`, you can change
 }
 ```
 
-And run `rake` in terminal. If you add new color property, drag the new file to proper place, and then everything works well.
+And run `rake` in terminal under folder `Pods/DKNightVersion`.
 
-This command will remove `UIKit` folder automatically. And you are supposed to drag them to proper place.
-
-#### Step 1. Find UIKit folder
-
-Find the `UIKit` folder. It should generate in `Pods/DKNightVersion/Pod/Classes/UIKit`
-
-#### Step 2. Drag folder to workspace
-
-![](./images/add_file.png)
-
-### Step 3. Select target
-
-![](./images/target.png)
+This command will automatically do everything for you.
 
 ## Using default night version
 
