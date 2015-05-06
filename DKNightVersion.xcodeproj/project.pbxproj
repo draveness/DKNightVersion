@@ -144,7 +144,7 @@
 				CF27D7F42867EF6325400E3F /* UITableViewCell+BackgroundColor.m */,
 			);
 			name = UITableViewCell;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		18063F361AF9C0C500A06A04 /* Pod */ = {
 			isa = PBXGroup;
@@ -265,7 +265,7 @@
 				BA08E292B805FDF959AB5AF8 /* UILabel+TextColor.m */,
 			);
 			name = UILabel;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		8585D29AC10EB0067DD110AE /* UIKit */ = {
 			isa = PBXGroup;
@@ -290,7 +290,7 @@
 				5666E6FB10C7847EC9C2BFE2 /* UINavigationBar+BarTintColor.m */,
 			);
 			name = UINavigationBar;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		BEE23BB64D0AD794D56A779A /* UITableView */ = {
 			isa = PBXGroup;
@@ -303,7 +303,7 @@
 				B9893FE61D5099ABF7050F18 /* UITableView+SeparatorColor.m */,
 			);
 			name = UITableView;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CAB3A38FFD86D744AFF9C2A5 /* UIScrollView */ = {
 			isa = PBXGroup;
@@ -314,7 +314,7 @@
 				D6E5762A23437C0269E3D81F /* UIScrollView+BackgroundColor.m */,
 			);
 			name = UIScrollView;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		EA8C12D89C83E0211CE630F0 /* UIView */ = {
 			isa = PBXGroup;
@@ -327,7 +327,7 @@
 				52EF31C2358D5CE4D0D28D33 /* UIView+TintColor.m */,
 			);
 			name = UIView;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		F5D3A808A0562953DE75DD00 /* UIButton */ = {
 			isa = PBXGroup;
@@ -338,7 +338,7 @@
 				EF0508B67B6181E3D875FC10 /* UIButton+TitleColor.m */,
 			);
 			name = UIButton;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
