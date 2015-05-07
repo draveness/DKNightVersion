@@ -6,7 +6,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 
 ![Version](https://img.shields.io/badge/pod-%20v0.6.0%20-686eff.svg)
 [![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
-![MIT License](https://img.shields.io/cocoapods/l/DKNightVersion.svg)
+![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
 # Demo
