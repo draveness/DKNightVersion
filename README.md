@@ -4,8 +4,9 @@ DKNightVersion is a light weight framework. It's mainly built through `objc/runt
 
 The most delightful feature of DKNightVersion is that it appends one more property `nightColor` to frequently-used UIKit components and provides you a default night mode theme. It is easily-used and well-designed. Hope you have a great joy to use DKNightVersion to integrate night mode in your Apps.
 
+![Version](https://img.shields.io/badge/pod-%20v0.6.0%20-686eff.svg)
 [![Build Status](https://travis-ci.org/Draveness/DKNightVersion.png)](https://travis-ci.org/Draveness/DKNightVersion)
-![MIT License](https://img.shields.io/badge/license-%20MIT%20license%20-blue.svg)
+![MIT License](https://img.shields.io/cocoapods/l/DKNightVersion.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
 # Demo
