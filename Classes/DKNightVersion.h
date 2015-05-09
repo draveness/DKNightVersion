@@ -16,6 +16,7 @@
 #import "UITableView+NightVersion.h"
 #import "UITableViewCell+NightVersion.h"
 #import "UINavigationBar+NightVersion.h"
+#import "UITabBar+NightVersion.h"
 #import "UIButton+NightVersion.h"
 
 #endif

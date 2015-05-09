@@ -27,7 +27,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
 
-
 @property (nonatomic, assign) BOOL useDefaultNightColor;
 
 @end

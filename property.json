@@ -12,6 +12,10 @@
     {
         "barTintColor": "0x444444"
     },
+    "UITabBar":
+    {
+        "barTintColor": "0x444444"
+    },
     "UIButton":
     {
         "titleColor": "0x5F80AC"
