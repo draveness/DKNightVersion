@@ -1,21 +1,22 @@
 {
-    "UIView": 
+    "UIView":
     [
         "UILabel",
         "UIControl",
         "UINavigationBar",
+        "UITabBar",
         "UIScrollView",
         "UITableViewCell",
         "UIImageView",
         "UIProgressView"
     ],
-    "UIControl": 
+    "UIControl":
     [
         "UIButton",
         "UITextField",
         "UISwitch"
     ],
-    "UIScrollView": 
+    "UIScrollView":
     [
         "UITableView"
     ]
