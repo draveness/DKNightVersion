@@ -13,7 +13,7 @@ NSString *const DKNightVersionDawnComingNotification = @"DKNightVersionDawnComin
 
 CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
-@protocol DKNightVersionSwichColorProtocol <NSObject>
+@protocol DKNightVersionChangeColorProtocol <NSObject>
 
 - (void)changeColor;
 - (NSArray *)subviews;
@@ -69,7 +69,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     [self changeColor:[[UIApplication sharedApplication].delegate.window.subviews firstObject]];
 }
 
-- (void)changeColor:(id <DKNightVersionSwichColorProtocol>)object {
+- (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {
     if ([object respondsToSelector:@selector(changeColor)]) {
         [object changeColor];
     }
