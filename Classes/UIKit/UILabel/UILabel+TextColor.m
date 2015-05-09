@@ -68,7 +68,8 @@ static char *normalTextColorKey;
 }
 
 - (UIColor *)defaultNightTextColor {
-    if ([self isMemberOfClass:[UILabel class]]) { 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UILabel class]] && ![NSStringFromClass(self.class) hasPrefix:@"UI"]; 
+    if ([self isMemberOfClass:[UILabel class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0x5d5d5d);
     } else {
         UIColor *resultColor = self.normalTextColor ?: [UIColor clearColor];

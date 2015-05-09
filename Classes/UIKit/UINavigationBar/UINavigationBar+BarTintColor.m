@@ -68,7 +68,8 @@ static char *normalBarTintColorKey;
 }
 
 - (UIColor *)defaultNightBarTintColor {
-    if ([self isMemberOfClass:[UINavigationBar class]]) { 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UINavigationBar class]] && ![NSStringFromClass(self.class) hasPrefix:@"UI"]; 
+    if ([self isMemberOfClass:[UINavigationBar class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0x444444);
     } else {
         UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];

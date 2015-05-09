@@ -68,7 +68,8 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)defaultNightTintColor {
-    if ([self isMemberOfClass:[UIView class]]) { 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UIView class]] && ![NSStringFromClass(self.class) hasPrefix:@"UI"]; 
+    if ([self isMemberOfClass:[UIView class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0xffffff);
     } else {
         UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];

@@ -68,7 +68,8 @@ static char *normalTitleColorKey;
 }
 
 - (UIColor *)defaultNightTitleColor {
-    if ([self isMemberOfClass:[UIButton class]]) { 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UIButton class]] && ![NSStringFromClass(self.class) hasPrefix:@"UI"]; 
+    if ([self isMemberOfClass:[UIButton class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0x5F80AC);
     } else {
         UIColor *resultColor = self.normalTitleColor ?: [UIColor clearColor];
