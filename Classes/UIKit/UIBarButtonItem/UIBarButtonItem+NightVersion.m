@@ -18,13 +18,14 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
+    
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
-        [self changeColor];
+        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+        
     }];
 }
 
 - (void)changeColor {
-    
     [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
     
 }

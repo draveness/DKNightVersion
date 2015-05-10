@@ -20,13 +20,15 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
+    
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
-        [self changeColor];
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+        [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
+        
     }];
 }
 
 - (void)changeColor {
-    
     [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
     [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
     

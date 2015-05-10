@@ -18,15 +18,16 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
+    <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' && klass.name == 'UINavigationBar' %><%= "[self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name} duration:DKNightVersionAnimationDuration];" %><% end %><% end %>
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
-        [self changeColor];
+        <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+        <% end %><% end %>
     }];
 }
 
 - (void)changeColor {
-    <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' && klass.name == 'UINavigationBar' %><%= "[self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name} duration:DKNightVersionAnimationDuration];" %><% end %><% end %>
-    <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
-    <% end %><% end %>
+    <% klass.all_properties.each do |property| %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+    <% end %>
 }
 
 @end
