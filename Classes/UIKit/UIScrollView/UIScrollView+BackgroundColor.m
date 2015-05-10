@@ -16,7 +16,7 @@
 @implementation UIScrollView (BackgroundColor)
 
 - (UIColor *)defaultNightBackgroundColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UIScrollView class]] && ![NSStringFromClass(self.class) hasPrefix:@"UI"]; 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UIScrollView class]] && ![NSStringFromClass(self.class) containsString:@"UI"]; 
     if ([self isMemberOfClass:[UIScrollView class]] || notUIKitSubclass)  { 
         return UIColorFromRGB(0x343434);
     } else {

@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "SuccViewController.h"
+#import "PresentingViewController.h"
 #import "DKNightVersion.h"
 #import "TableViewCell.h"
 
@@ -71,7 +72,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self push];
+
+    if (indexPath.row == 0) {
+        [self push];
+    } else {
+        [self.navigationController presentViewController:[[PresentingViewController alloc] init] animated:YES completion:nil];
+    }
 }
 
 @end
