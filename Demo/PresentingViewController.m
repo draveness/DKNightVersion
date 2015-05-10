@@ -23,7 +23,6 @@
     [button setFrame:self.view.frame];
     button.center = self.view.center;
     [button setTitle:@"Back" forState:UIControlStateNormal];
-    [button setTintColor:[UIColor blueColor]];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
 
     CGRect rect = CGRectMake(100, 100, 120, 80);
@@ -42,7 +41,7 @@
     [day setTitle:@"Dawn Comes" forState:UIControlStateNormal];
     [day addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
 
-    NSLog(@"%@", self.view.class);
+    NSLog(@"%@", self.view);
 
 
     [self.view addSubview:button];

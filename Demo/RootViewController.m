@@ -60,7 +60,7 @@
         [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
     } else {
         [cell.button setTitle:@"Dawn Comes" forState:UIControlStateNormal];
-        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
+//        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
     }
 
     return cell;
@@ -76,7 +76,9 @@
     if (indexPath.row == 0) {
         [self push];
     } else {
-        [self.navigationController presentViewController:[[PresentingViewController alloc] init] animated:YES completion:nil];
+        PresentingViewController *vc = [[PresentingViewController alloc] init];
+        self.modalPresentationStyle = UIModalPresentationNone;
+        [self.navigationController presentViewController:vc animated:YES completion:nil];
     }
 }
 
