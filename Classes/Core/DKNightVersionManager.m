@@ -11,7 +11,7 @@
 NSString *const DKNightVersionNightFallingNotification = @"DKNightVersionNightFallingNotification";
 NSString *const DKNightVersionDawnComingNotification = @"DKNightVersionDawnComingNotification";
 
-CGFloat const DKNightVersionAnimationDuration = 0.0f;
+CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
 @protocol DKNightVersionChangeColorProtocol <NSObject>
 

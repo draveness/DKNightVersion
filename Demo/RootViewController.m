@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
     navigationLabel.text = @"DKNightVersion";
     navigationLabel.textAlignment = NSTextAlignmentCenter;
