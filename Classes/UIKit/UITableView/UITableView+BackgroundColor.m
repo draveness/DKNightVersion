@@ -8,7 +8,7 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UITableView+backgroundColor.h"
+#import "UITableView+BackgroundColor.h"
 #import "DKNightVersionManager.h"
 #import "UIView+backgroundColor.h"
 #import "UIScrollView+backgroundColor.h"

@@ -1,6 +1,6 @@
 //
-//  UIView+TintColor.m
-//  UIView+TintColor
+//  UIBarButtonItem+TintColor.m
+//  UIBarButtonItem+TintColor
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,11 +8,11 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UIView+TintColor.h"
+#import "UIBarButtonItem+TintColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
-@interface UIView ()
+@interface UIBarButtonItem ()
 
 @property (nonatomic, strong) UIColor *normalTintColor;
 
@@ -21,7 +21,7 @@
 static char *nightTintColorKey;
 static char *normalTintColorKey;
 
-@implementation UIView (TintColor)
+@implementation UIBarButtonItem (TintColor)
 
 + (void)load {
     static dispatch_once_t onceToken;                                              
@@ -68,8 +68,8 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)defaultNightTintColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UIView class]] && ![NSStringFromClass(self.class) containsString:@"UI"]; 
-    if ([self isMemberOfClass:[UIView class]] || notUIKitSubclass) { 
+    BOOL notUIKitSubclass = [self isKindOfClass:[UIBarButtonItem class]] && ![NSStringFromClass(self.class) containsString:@"UI"]; 
+    if ([self isMemberOfClass:[UIBarButtonItem class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0xffffff);
     } else {
         UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];

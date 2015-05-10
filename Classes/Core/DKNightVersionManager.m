@@ -65,8 +65,8 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
         return;
     }
     _themeVersion = themeVersion;
-    UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    [self changeColor:window.subviews.firstObject];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [self changeColor:window.subviews.lastObject];
 }
 
 - (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {

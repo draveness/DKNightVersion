@@ -8,7 +8,7 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UINavigationBar+barTintColor.h"
+#import "UINavigationBar+BarTintColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 

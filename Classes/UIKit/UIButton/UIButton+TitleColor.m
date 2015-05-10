@@ -8,7 +8,7 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "UIButton+titleColor.h"
+#import "UIButton+TitleColor.h"
 #import "DKNightVersionManager.h"
 #import "objc/runtime.h"
 
@@ -72,7 +72,7 @@ static char *normalTitleColorKey;
     if ([self isMemberOfClass:[UIButton class]] || notUIKitSubclass) { 
         return UIColorFromRGB(0x5F80AC);
     } else {
-        UIColor *resultColor = self.normalTitleColor ?: [UIColor clearColor];
+        UIColor *resultColor = self.normalTitleColor ?: [UIColor whiteColor];
         return resultColor;
     }
 }

@@ -8,7 +8,7 @@
 //  in this file, you are supposed to update the ruby code, run it and 
 //  test it. And finally open a pull request.
 
-#import "<%= klass.name %>+<%= property.name %>.h"
+#import "<%= klass.name %>+<%= property.cap_name %>.h"
 #import "DKNightVersionManager.h"
 <% if klass.all_superklass_name %><% klass.all_superklass_name.reverse.each do |name| %><%= "#import \"#{name}+#{property.name}.h\"\n" %><% end %><% end %>
 

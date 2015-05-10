@@ -28,6 +28,11 @@
     navigationLabel.textAlignment = NSTextAlignmentCenter;
     navigationLabel.nightTextColor = [UIColor whiteColor];
     self.navigationItem.titleView = navigationLabel;
+
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
+    item.tintColor = [UIColor redColor];
+    self.navigationItem.leftBarButtonItem = item;
+    NSLog(@"%@", NSClassFromString(@"UINavigationButton").superclass.superclass);
 }
 
 
@@ -41,6 +46,10 @@
 
 - (void)push {
     [self.navigationController pushViewController:[[SuccViewController alloc] init] animated:YES];
+}
+
+- (void)present {
+    [self presentViewController:[[PresentingViewController alloc] init] animated:YES completion:nil];
 }
 
 #pragma mark - UITableView Delegate & DataSource
@@ -72,14 +81,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
-    if (indexPath.row == 0) {
-        [self push];
-    } else {
-        PresentingViewController *vc = [[PresentingViewController alloc] init];
-        self.modalPresentationStyle = UIModalPresentationNone;
-        [self.navigationController presentViewController:vc animated:YES completion:nil];
-    }
+    [self push];
 }
 
 @end
