@@ -53,8 +53,6 @@
 
 - (void)hook_viewWillAppear:(BOOL)animated {
     [self hook_viewWillAppear:animated];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-//    [DKNightVersionManager changeColor:window];
     [DKNightVersionManager changeColor:self.view];
 }
 
@@ -63,27 +61,5 @@
     [self.navigationItem.rightBarButtonItem changeColor];
     [self.navigationItem.backBarButtonItem changeColor];
 }
-
-//- (void)changeColor:(id)object {
-//    if ([object respondsToSelector:@selector(changeColor)]) {
-//        [object changeColor];
-//    }
-//    if ([object respondsToSelector:@selector(subviews)]) {
-//        if (![object subviews]) {
-//            // Basic case, do nothing.
-//            return;
-//        } else {
-//            for (id subview in [object subviews]) {
-//                // recursice darken all the subviews of current view.
-//                [self changeColor:subview];
-//                if ([subview respondsToSelector:@selector(changeColor)]) {
-//                    [subview changeColor];
-//                }
-//            }
-//        }
-//    }
-//}
-
-
 
 @end

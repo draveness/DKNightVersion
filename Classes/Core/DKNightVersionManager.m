@@ -16,6 +16,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 @protocol DKNightVersionChangeColorProtocol <NSObject>
 
 - (void)changeColor;
+- (void)changeColorWithDuration:(CGFloat)duration;
 - (NSArray *)subviews;
 
 @end
@@ -66,7 +67,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     }
     _themeVersion = themeVersion;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [self.class changeColor:window.subviews.lastObject];
+    [self.class changeColor:window.subviews.lastObject withDuration:DKNightVersionAnimationDuration];
 }
 
 + (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {
@@ -88,6 +89,27 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
         }
     }
 }
+
++ (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object withDuration:(CGFloat)duration {
+    if ([object respondsToSelector:@selector(changeColorWithDuration:)]) {
+        [object changeColorWithDuration:duration];
+    }
+    if ([object respondsToSelector:@selector(subviews)]) {
+        if (![object subviews]) {
+            // Basic case, do nothing.
+            return;
+        } else {
+            for (id subview in [object subviews]) {
+                // recursice darken all the subviews of current view.
+                [self changeColor:subview withDuration:duration];
+                if ([subview respondsToSelector:@selector(changeColorWithDuration:)]) {
+                    [subview changeColorWithDuration:duration];
+                }
+            }
+        }
+    }
+}
+
 
 + (BOOL)useDefaultNightColor {
     return self.sharedNightVersionManager.useDefaultNightColor;

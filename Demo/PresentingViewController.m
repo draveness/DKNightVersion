@@ -45,8 +45,8 @@
 
 
     [self.view addSubview:button];
-    [self.view addSubview:night];
-    [self.view addSubview:day];
+//    [self.view addSubview:night];
+//    [self.view addSubview:day];
 }
 
 - (void)back {
