@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A28BE644817DEC2F8598BA8 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FF146F5A7E235D22F0B0D19A /* UILabel+NightVersion.m */; };
-		0E39A9C92F77F1020F5960C7 /* UIBarButtonItem+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47E4EDA8EA0CC567C52EE4 /* UIBarButtonItem+TintColor.m */; };
-		125A604D3D8AF9E5F1C9887C /* UITabBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3735F2639A9B7071E8C0DF20 /* UITabBar+BarTintColor.m */; };
-		12E526266457D0EACEA5B0B4 /* UIBarButtonItem+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 237F48C0B03E0BD2ED727336 /* UIBarButtonItem+NightVersion.h */; };
-		15812BA7914A58916A95A30D /* UITabBar+BarTintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3263A98A0B6FA47AD223F356 /* UITabBar+BarTintColor.h */; };
+		018764CD6A479CA6460B747E /* UINavigationBar+BarTintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F6F270812DF0578FE703EB2 /* UINavigationBar+BarTintColor.h */; };
+		0630518D230D4C18E0110079 /* UITabBar+BarTintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE5B405144984FC987D6A59 /* UITabBar+BarTintColor.h */; };
+		063682490C6268A2B8535D26 /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCA251E99E24354082B6635 /* UIView+TintColor.m */; };
 		1816313E1AFE549A00A20423 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 1816313D1AFE549A00A20423 /* property.json */; };
 		182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 182BCC231AFF199A0095BF9C /* PresentingViewController.h */; };
 		182BCC261AFF199A0095BF9C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BCC241AFF199A0095BF9C /* PresentingViewController.m */; };
@@ -27,41 +25,43 @@
 		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
 		18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A51AF8BB8D00872BF1 /* Images.xcassets */; };
 		18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */; };
-		1B52D3106249B12D8823667F /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6C83B598F9708E5076BED /* UINavigationBar+BarTintColor.m */; };
-		1CB6B347AD9B3C539B2E92B6 /* UITableView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C86CF2C8A6E76A188AD503FD /* UITableView+BackgroundColor.h */; };
-		1D836BBD82A0B62A7C69D13A /* UITableView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B89E589CC8A8DE0BE0C0F /* UITableView+BackgroundColor.m */; };
-		3B0D3E38441528AD5421F8FD /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F876AE3F3B14CE5CB30304 /* UIButton+NightVersion.m */; };
-		3BE3F0E0E87BBD59158E49A3 /* UITableView+SeparatorColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FB06151A2FB11446CA1EBF23 /* UITableView+SeparatorColor.h */; };
-		3EEABBA80A07E6E63CF30E6D /* UIButton+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3A96E8A79D27A0BB71346B /* UIButton+NightVersion.h */; };
-		3FCDCFBDB4A78A89936ECCD9 /* UINavigationBar+BarTintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA4D67D8447A6C665661FB5 /* UINavigationBar+BarTintColor.h */; };
-		458D5FF4407022C7D9340530 /* UILabel+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D75DA29EEE06F120A9E2004F /* UILabel+NightVersion.h */; };
-		47290382041F6900D28905C5 /* UIView+TintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C84B0B7538A06AFC6E750B19 /* UIView+TintColor.h */; };
-		476B6D8862E1DD342817C5DE /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D19A05F3735DC19DEACEA5 /* UIScrollView+BackgroundColor.m */; };
-		511D066FCD0F4FE76779C9A0 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D420640115D527EF5B5DE /* UIButton+TitleColor.m */; };
-		5A14706AB869C7BCA8EC3BD8 /* UITableViewCell+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AB291E077157387323862F /* UITableViewCell+NightVersion.h */; };
-		5D967670610C1690F231F783 /* UIBarButtonItem+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A147CAD87D5AAFAEDFB2FAD /* UIBarButtonItem+NightVersion.m */; };
-		611BD16BC7C11DF4A1324D58 /* UIView+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 611AB4D5F4B28B9C81647937 /* UIView+TintColor.m */; };
-		6669768EEAF0C90FA3C1E88C /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D004C70597AF3934BB37C3D8 /* UIView+NightVersion.m */; };
-		66D43A2E424B22E8800473E3 /* UINavigationBar+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 510686BA38CC33121F314F55 /* UINavigationBar+NightVersion.h */; };
-		6E16DCD931FD2279C1470060 /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 389930964C24AA86298E3F19 /* UITableView+NightVersion.m */; };
-		7049A351C3CAB451DD2A9503 /* UITabBar+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 373C95CD2D9D15D1823B7C67 /* UITabBar+NightVersion.h */; };
-		7750AA752776459ABDCCFC88 /* UIScrollView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C5ADFA9725C03EC28855E /* UIScrollView+NightVersion.m */; };
-		78E9765635DCCF6741011879 /* UITableViewCell+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA8E13A9C8FFFC56C754CBF /* UITableViewCell+BackgroundColor.h */; };
-		93A6CD9E8E590AA39C0F2673 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0304B510A775A6F84181089D /* UIView+BackgroundColor.m */; };
-		9507A689BCC392778BB30C58 /* UIView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 575EFA63473F3CB8425A4515 /* UIView+NightVersion.h */; };
-		9E88FF7A12529A719690ED30 /* UITableView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F8D461483F7C8C34DF13AE /* UITableView+NightVersion.h */; };
-		A15F6C1BC61CDA00C5F0F340 /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EFB7C5DE3F4F8FF765C18A /* UINavigationBar+NightVersion.m */; };
-		A928F9BB0F03AD95A9B26889 /* UITabBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEECC84DD5BE180B2B2A294 /* UITabBar+NightVersion.m */; };
-		AFE39DDF89C0FB447A6B4E2B /* UILabel+TextColor.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3F4DD3D2C6242A24E95A03 /* UILabel+TextColor.h */; };
-		AFE8C70C7690FB8B4F300FCB /* UIScrollView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4AA8DF435E278AED697E6A /* UIScrollView+NightVersion.h */; };
-		B45029F7DF940CB7E168576A /* UITableViewCell+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 691A6B3DE339EB44981E457D /* UITableViewCell+BackgroundColor.m */; };
-		C4998BADBEE08BC29A162833 /* UIView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E5F8217B4E61BCEF176BCE /* UIView+BackgroundColor.h */; };
-		C630AFB3EF1F386A5FAE6F61 /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7EA91633CBD6B260C6AA5 /* UILabel+TextColor.m */; };
-		C6A49EEA02DA0B1EEB561259 /* UIButton+TitleColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 188CB3C1D662757F73F1A3E2 /* UIButton+TitleColor.h */; };
-		CDE76B7801779822F02DFA0A /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C19D099E3AEBEA6C29DDE2 /* UITableView+SeparatorColor.m */; };
-		D2C7BD301D7E0A79ABBC5266 /* UIScrollView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 868982F516ADF46D449632A5 /* UIScrollView+BackgroundColor.h */; };
-		EE1F5E9BACE4D68FBA35417B /* UITableViewCell+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 91933C472F02BFDD4C338C57 /* UITableViewCell+NightVersion.m */; };
-		FD1AA8EC9D1154E1BFB48F2D /* UIBarButtonItem+TintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C9172FE85C3FE512126FB9E1 /* UIBarButtonItem+TintColor.h */; };
+		1A3A59B941C368268C8DB903 /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A031B14EE941163CE7FE2FF4 /* UINavigationBar+BarTintColor.m */; };
+		204C0189924C43C3FA258993 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BD0ADBC3E214943A22DF23 /* UIView+BackgroundColor.m */; };
+		20DB517C16509855F4D60A31 /* UITabBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAC824FFE02848B11482EA /* UITabBar+NightVersion.m */; };
+		2372B4F110B4F2AD3914F1F2 /* UIView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FAD0E387BDECF321AC8A6B /* UIView+BackgroundColor.h */; };
+		243C22441DEF4D68EBF5A13B /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A3726F464232D2C578C769 /* UIButton+TitleColor.m */; };
+		2DEC27B1FB9F09156502E5BD /* UIScrollView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FABCCDC7DD36D9340AF158C /* UIScrollView+NightVersion.m */; };
+		2FCC8D7270283D82174B250A /* UITabBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AD03BF4F3B2EC97A2E98290D /* UITabBar+BarTintColor.m */; };
+		319BEAD28E4C40E43EA486EA /* UIButton+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = A897205D6B7937281C4941F9 /* UIButton+NightVersion.h */; };
+		4917BB45D1E13D14F8EDA8F4 /* UITableViewCell+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AECFF46E62FA7457F4A5FB88 /* UITableViewCell+BackgroundColor.m */; };
+		49319E4D784B1A325E0D15AF /* UIScrollView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABDDD3BAE5481649BBD28AC /* UIScrollView+BackgroundColor.h */; };
+		4A413A8E6697CC9692CFD32C /* UITableViewCell+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A1347A0298B7981798831DCB /* UITableViewCell+NightVersion.m */; };
+		5212E4D889D0C4BDC404ACEB /* UIBarButtonItem+TintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4905687FE8F1AD2EE0234BF7 /* UIBarButtonItem+TintColor.h */; };
+		5EF1A4416D7F8A50E5D2AD26 /* UINavigationBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6224E671309F478A8D73DB /* UINavigationBar+NightVersion.m */; };
+		698D6DF8A4740791C731F5A9 /* UITableView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C347FF77A7B27C9FA6DFA1 /* UITableView+BackgroundColor.m */; };
+		6DBEFC19CC61971550416DEC /* UILabel+TextColor.h in Headers */ = {isa = PBXBuildFile; fileRef = A22FDDC44B6F7687D2DBBAB1 /* UILabel+TextColor.h */; };
+		6E50AA5B99202F790BCF8B3B /* UIButton+TitleColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E371D99FFDC7B841841BFC4 /* UIButton+TitleColor.h */; };
+		6E99A438F1F2668891FA7513 /* UITableViewCell+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C89E8509998D4D5A3FD3A84 /* UITableViewCell+BackgroundColor.h */; };
+		75F0ACFFFB48A7E19D143F6E /* UIScrollView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BD31C524C1ED01A467BC7C /* UIScrollView+NightVersion.h */; };
+		78BE2C6EAAE70604253669BF /* UITableView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDE6F7270A1D5CFC1E3C719 /* UITableView+NightVersion.m */; };
+		7BEE14ECA822AAFF57C66614 /* UITabBar+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0E3E05C926D65683ED44F0 /* UITabBar+NightVersion.h */; };
+		7BEFE4AA58E4A8A257C765FC /* UIBarButtonItem+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE8AC38BA413A63A8DB1316 /* UIBarButtonItem+NightVersion.h */; };
+		8672C7DCD67821BA94EF00DC /* UITableView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 90ECC44F7C23ACB7C88D128B /* UITableView+BackgroundColor.h */; };
+		97CDC2CDA5D4A9E0A225A351 /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2EEAB071DAD3C5F414D4A /* UIView+NightVersion.m */; };
+		AEA9D96D93F4C200E902DB83 /* UIBarButtonItem+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E0B6F1944B1DF491AFA97D /* UIBarButtonItem+NightVersion.m */; };
+		AEBC2A4628A4A2D7EE1FB49C /* UITableView+SeparatorColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D7912A735F47EDD9969BA7 /* UITableView+SeparatorColor.h */; };
+		B032D7617F22F5D458402205 /* UITableViewCell+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7392773006337C88B385FD8E /* UITableViewCell+NightVersion.h */; };
+		B95267218055F98FFA3569FB /* UINavigationBar+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E7BFE3A10C89D8B4604BF1 /* UINavigationBar+NightVersion.h */; };
+		BC5E61DFA2F922B3A73B30DA /* UIButton+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5454D5FC17EE3A95808425 /* UIButton+NightVersion.m */; };
+		BD9437DFD1EFCCB3DBF22FF5 /* UILabel+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 039B9D6A9521AE3690E5EBA1 /* UILabel+NightVersion.h */; };
+		BFE679C689372F6C06465B8A /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B44397CBDFF48B59F1C5662E /* UITableView+SeparatorColor.m */; };
+		C04FC1C903307A127845CF96 /* UIView+TintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 033870AAD038EE6C5E2B7C18 /* UIView+TintColor.h */; };
+		C074C8F69C2ED1754EC0282A /* UIBarButtonItem+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F56C0F7479519BB8B517462 /* UIBarButtonItem+TintColor.m */; };
+		C24F2ED6A61E9BD7218A54F4 /* UIScrollView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B6929C3D35880BAAFF46CA /* UIScrollView+BackgroundColor.m */; };
+		DE331E7F30D1FD30384180B3 /* UILabel+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0CFBA89B4AA558394AF09 /* UILabel+NightVersion.m */; };
+		E0DFAB284FF794F73F256660 /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8EE856EB362AE475BA927D /* UILabel+TextColor.m */; };
+		F94A6E5E54FA93C32F73490A /* UIView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E34706B9A0F215651FF8EF6 /* UIView+NightVersion.h */; };
+		FA490A1A2B5D71CB82D91278 /* UITableView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 28135B05BCCDDB4E55DB45C5 /* UITableView+NightVersion.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,16 +75,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0304B510A775A6F84181089D /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BackgroundColor.m"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.m"; sourceTree = "<group>"; };
-		0BEECC84DD5BE180B2B2A294 /* UITabBar+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+NightVersion.m"; path = "./Classes/UIKit/UITabBar/UITabBar+NightVersion.m"; sourceTree = "<group>"; };
-		17D19A05F3735DC19DEACEA5 /* UIScrollView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+BackgroundColor.m"; path = "./Classes/UIKit/UIScrollView/UIScrollView+BackgroundColor.m"; sourceTree = "<group>"; };
+		033870AAD038EE6C5E2B7C18 /* UIView+TintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TintColor.h"; path = "./Classes/UIKit/UIView/UIView+TintColor.h"; sourceTree = "<group>"; };
+		039B9D6A9521AE3690E5EBA1 /* UILabel+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+NightVersion.h"; path = "./Classes/UIKit/UILabel/UILabel+NightVersion.h"; sourceTree = "<group>"; };
+		0B0E3E05C926D65683ED44F0 /* UITabBar+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+NightVersion.h"; path = "./Classes/UIKit/UITabBar/UITabBar+NightVersion.h"; sourceTree = "<group>"; };
+		0B5454D5FC17EE3A95808425 /* UIButton+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+NightVersion.m"; path = "./Classes/UIKit/UIButton/UIButton+NightVersion.m"; sourceTree = "<group>"; };
+		0DB2EEAB071DAD3C5F414D4A /* UIView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+NightVersion.m"; path = "./Classes/UIKit/UIView/UIView+NightVersion.m"; sourceTree = "<group>"; };
+		0E34706B9A0F215651FF8EF6 /* UIView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+NightVersion.h"; path = "./Classes/UIKit/UIView/UIView+NightVersion.h"; sourceTree = "<group>"; };
 		1816313D1AFE549A00A20423 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = SOURCE_ROOT; };
 		182BCC231AFF199A0095BF9C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresentingViewController.h; path = Demo/PresentingViewController.h; sourceTree = SOURCE_ROOT; };
 		182BCC241AFF199A0095BF9C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresentingViewController.m; path = Demo/PresentingViewController.m; sourceTree = SOURCE_ROOT; };
 		186313301AFF4C6900249AD7 /* UIViewController+ChangeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChangeColor.h"; sourceTree = "<group>"; };
 		186313311AFF4C6900249AD7 /* UIViewController+ChangeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChangeColor.m"; sourceTree = "<group>"; };
 		186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManagerTest.m; sourceTree = "<group>"; };
-		188CB3C1D662757F73F1A3E2 /* UIButton+TitleColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TitleColor.h"; path = "./Classes/UIKit/UIButton/UIButton+TitleColor.h"; sourceTree = "<group>"; };
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,42 +107,40 @@
 		18D2289F1AF8BB7800872BF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = SOURCE_ROOT; };
 		18D228A31AF8BB8500872BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Demo/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		18D228A51AF8BB8D00872BF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Demo/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		1BA8E13A9C8FFFC56C754CBF /* UITableViewCell+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BackgroundColor.h"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+BackgroundColor.h"; sourceTree = "<group>"; };
-		237F48C0B03E0BD2ED727336 /* UIBarButtonItem+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+NightVersion.h"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+NightVersion.h"; sourceTree = "<group>"; };
-		3263A98A0B6FA47AD223F356 /* UITabBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+BarTintColor.h"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.h"; sourceTree = "<group>"; };
-		3735F2639A9B7071E8C0DF20 /* UITabBar+BarTintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+BarTintColor.m"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.m"; sourceTree = "<group>"; };
-		373C95CD2D9D15D1823B7C67 /* UITabBar+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+NightVersion.h"; path = "./Classes/UIKit/UITabBar/UITabBar+NightVersion.h"; sourceTree = "<group>"; };
-		389930964C24AA86298E3F19 /* UITableView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+NightVersion.m"; path = "./Classes/UIKit/UITableView/UITableView+NightVersion.m"; sourceTree = "<group>"; };
-		3F4AA8DF435E278AED697E6A /* UIScrollView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+NightVersion.h"; path = "./Classes/UIKit/UIScrollView/UIScrollView+NightVersion.h"; sourceTree = "<group>"; };
-		4A147CAD87D5AAFAEDFB2FAD /* UIBarButtonItem+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+NightVersion.m"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+NightVersion.m"; sourceTree = "<group>"; };
-		510686BA38CC33121F314F55 /* UINavigationBar+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+NightVersion.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.h"; sourceTree = "<group>"; };
-		524B89E589CC8A8DE0BE0C0F /* UITableView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BackgroundColor.m"; path = "./Classes/UIKit/UITableView/UITableView+BackgroundColor.m"; sourceTree = "<group>"; };
-		56F876AE3F3B14CE5CB30304 /* UIButton+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+NightVersion.m"; path = "./Classes/UIKit/UIButton/UIButton+NightVersion.m"; sourceTree = "<group>"; };
-		575EFA63473F3CB8425A4515 /* UIView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+NightVersion.h"; path = "./Classes/UIKit/UIView/UIView+NightVersion.h"; sourceTree = "<group>"; };
-		5AE7EA91633CBD6B260C6AA5 /* UILabel+TextColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TextColor.m"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.m"; sourceTree = "<group>"; };
-		5C9D420640115D527EF5B5DE /* UIButton+TitleColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TitleColor.m"; path = "./Classes/UIKit/UIButton/UIButton+TitleColor.m"; sourceTree = "<group>"; };
-		611AB4D5F4B28B9C81647937 /* UIView+TintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TintColor.m"; path = "./Classes/UIKit/UIView/UIView+TintColor.m"; sourceTree = "<group>"; };
-		691A6B3DE339EB44981E457D /* UITableViewCell+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BackgroundColor.m"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+BackgroundColor.m"; sourceTree = "<group>"; };
-		868982F516ADF46D449632A5 /* UIScrollView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+BackgroundColor.h"; path = "./Classes/UIKit/UIScrollView/UIScrollView+BackgroundColor.h"; sourceTree = "<group>"; };
-		8DA4D67D8447A6C665661FB5 /* UINavigationBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+BarTintColor.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+BarTintColor.h"; sourceTree = "<group>"; };
-		91933C472F02BFDD4C338C57 /* UITableViewCell+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+NightVersion.m"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+NightVersion.m"; sourceTree = "<group>"; };
-		91EFB7C5DE3F4F8FF765C18A /* UINavigationBar+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+NightVersion.m"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.m"; sourceTree = "<group>"; };
-		A7AB291E077157387323862F /* UITableViewCell+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+NightVersion.h"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+NightVersion.h"; sourceTree = "<group>"; };
-		A7E5F8217B4E61BCEF176BCE /* UIView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BackgroundColor.h"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.h"; sourceTree = "<group>"; };
-		B9C19D099E3AEBEA6C29DDE2 /* UITableView+SeparatorColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SeparatorColor.m"; path = "./Classes/UIKit/UITableView/UITableView+SeparatorColor.m"; sourceTree = "<group>"; };
-		BB3F4DD3D2C6242A24E95A03 /* UILabel+TextColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+TextColor.h"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.h"; sourceTree = "<group>"; };
-		C57C5ADFA9725C03EC28855E /* UIScrollView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+NightVersion.m"; path = "./Classes/UIKit/UIScrollView/UIScrollView+NightVersion.m"; sourceTree = "<group>"; };
-		C84B0B7538A06AFC6E750B19 /* UIView+TintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TintColor.h"; path = "./Classes/UIKit/UIView/UIView+TintColor.h"; sourceTree = "<group>"; };
-		C86CF2C8A6E76A188AD503FD /* UITableView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BackgroundColor.h"; path = "./Classes/UIKit/UITableView/UITableView+BackgroundColor.h"; sourceTree = "<group>"; };
-		C9172FE85C3FE512126FB9E1 /* UIBarButtonItem+TintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+TintColor.h"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+TintColor.h"; sourceTree = "<group>"; };
-		CE47E4EDA8EA0CC567C52EE4 /* UIBarButtonItem+TintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+TintColor.m"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+TintColor.m"; sourceTree = "<group>"; };
-		D004C70597AF3934BB37C3D8 /* UIView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+NightVersion.m"; path = "./Classes/UIKit/UIView/UIView+NightVersion.m"; sourceTree = "<group>"; };
-		D75DA29EEE06F120A9E2004F /* UILabel+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+NightVersion.h"; path = "./Classes/UIKit/UILabel/UILabel+NightVersion.h"; sourceTree = "<group>"; };
-		DBC6C83B598F9708E5076BED /* UINavigationBar+BarTintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+BarTintColor.m"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+BarTintColor.m"; sourceTree = "<group>"; };
-		DF3A96E8A79D27A0BB71346B /* UIButton+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+NightVersion.h"; path = "./Classes/UIKit/UIButton/UIButton+NightVersion.h"; sourceTree = "<group>"; };
-		E6F8D461483F7C8C34DF13AE /* UITableView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+NightVersion.h"; path = "./Classes/UIKit/UITableView/UITableView+NightVersion.h"; sourceTree = "<group>"; };
-		FB06151A2FB11446CA1EBF23 /* UITableView+SeparatorColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SeparatorColor.h"; path = "./Classes/UIKit/UITableView/UITableView+SeparatorColor.h"; sourceTree = "<group>"; };
-		FF146F5A7E235D22F0B0D19A /* UILabel+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+NightVersion.m"; path = "./Classes/UIKit/UILabel/UILabel+NightVersion.m"; sourceTree = "<group>"; };
+		1ABDDD3BAE5481649BBD28AC /* UIScrollView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+BackgroundColor.h"; path = "./Classes/UIKit/UIScrollView/UIScrollView+BackgroundColor.h"; sourceTree = "<group>"; };
+		1C89E8509998D4D5A3FD3A84 /* UITableViewCell+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BackgroundColor.h"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+BackgroundColor.h"; sourceTree = "<group>"; };
+		27D7912A735F47EDD9969BA7 /* UITableView+SeparatorColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SeparatorColor.h"; path = "./Classes/UIKit/UITableView/UITableView+SeparatorColor.h"; sourceTree = "<group>"; };
+		28135B05BCCDDB4E55DB45C5 /* UITableView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+NightVersion.h"; path = "./Classes/UIKit/UITableView/UITableView+NightVersion.h"; sourceTree = "<group>"; };
+		29E0B6F1944B1DF491AFA97D /* UIBarButtonItem+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+NightVersion.m"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+NightVersion.m"; sourceTree = "<group>"; };
+		2F6F270812DF0578FE703EB2 /* UINavigationBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+BarTintColor.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+BarTintColor.h"; sourceTree = "<group>"; };
+		2FABCCDC7DD36D9340AF158C /* UIScrollView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+NightVersion.m"; path = "./Classes/UIKit/UIScrollView/UIScrollView+NightVersion.m"; sourceTree = "<group>"; };
+		4905687FE8F1AD2EE0234BF7 /* UIBarButtonItem+TintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+TintColor.h"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+TintColor.h"; sourceTree = "<group>"; };
+		4C6224E671309F478A8D73DB /* UINavigationBar+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+NightVersion.m"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.m"; sourceTree = "<group>"; };
+		4F56C0F7479519BB8B517462 /* UIBarButtonItem+TintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+TintColor.m"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+TintColor.m"; sourceTree = "<group>"; };
+		55E7BFE3A10C89D8B4604BF1 /* UINavigationBar+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+NightVersion.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.h"; sourceTree = "<group>"; };
+		5DCA251E99E24354082B6635 /* UIView+TintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TintColor.m"; path = "./Classes/UIKit/UIView/UIView+TintColor.m"; sourceTree = "<group>"; };
+		7392773006337C88B385FD8E /* UITableViewCell+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+NightVersion.h"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+NightVersion.h"; sourceTree = "<group>"; };
+		7BE8AC38BA413A63A8DB1316 /* UIBarButtonItem+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+NightVersion.h"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+NightVersion.h"; sourceTree = "<group>"; };
+		90ECC44F7C23ACB7C88D128B /* UITableView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BackgroundColor.h"; path = "./Classes/UIKit/UITableView/UITableView+BackgroundColor.h"; sourceTree = "<group>"; };
+		9AE5B405144984FC987D6A59 /* UITabBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+BarTintColor.h"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.h"; sourceTree = "<group>"; };
+		9E371D99FFDC7B841841BFC4 /* UIButton+TitleColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TitleColor.h"; path = "./Classes/UIKit/UIButton/UIButton+TitleColor.h"; sourceTree = "<group>"; };
+		A031B14EE941163CE7FE2FF4 /* UINavigationBar+BarTintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+BarTintColor.m"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+BarTintColor.m"; sourceTree = "<group>"; };
+		A1347A0298B7981798831DCB /* UITableViewCell+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+NightVersion.m"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+NightVersion.m"; sourceTree = "<group>"; };
+		A22FDDC44B6F7687D2DBBAB1 /* UILabel+TextColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+TextColor.h"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.h"; sourceTree = "<group>"; };
+		A897205D6B7937281C4941F9 /* UIButton+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+NightVersion.h"; path = "./Classes/UIKit/UIButton/UIButton+NightVersion.h"; sourceTree = "<group>"; };
+		ABDE6F7270A1D5CFC1E3C719 /* UITableView+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+NightVersion.m"; path = "./Classes/UIKit/UITableView/UITableView+NightVersion.m"; sourceTree = "<group>"; };
+		AD03BF4F3B2EC97A2E98290D /* UITabBar+BarTintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+BarTintColor.m"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.m"; sourceTree = "<group>"; };
+		AECFF46E62FA7457F4A5FB88 /* UITableViewCell+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BackgroundColor.m"; path = "./Classes/UIKit/UITableViewCell/UITableViewCell+BackgroundColor.m"; sourceTree = "<group>"; };
+		B0BD0ADBC3E214943A22DF23 /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BackgroundColor.m"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.m"; sourceTree = "<group>"; };
+		B44397CBDFF48B59F1C5662E /* UITableView+SeparatorColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SeparatorColor.m"; path = "./Classes/UIKit/UITableView/UITableView+SeparatorColor.m"; sourceTree = "<group>"; };
+		B8A3726F464232D2C578C769 /* UIButton+TitleColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TitleColor.m"; path = "./Classes/UIKit/UIButton/UIButton+TitleColor.m"; sourceTree = "<group>"; };
+		BFBAC824FFE02848B11482EA /* UITabBar+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+NightVersion.m"; path = "./Classes/UIKit/UITabBar/UITabBar+NightVersion.m"; sourceTree = "<group>"; };
+		C6B6929C3D35880BAAFF46CA /* UIScrollView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+BackgroundColor.m"; path = "./Classes/UIKit/UIScrollView/UIScrollView+BackgroundColor.m"; sourceTree = "<group>"; };
+		D1C0CFBA89B4AA558394AF09 /* UILabel+NightVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+NightVersion.m"; path = "./Classes/UIKit/UILabel/UILabel+NightVersion.m"; sourceTree = "<group>"; };
+		D4BD31C524C1ED01A467BC7C /* UIScrollView+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+NightVersion.h"; path = "./Classes/UIKit/UIScrollView/UIScrollView+NightVersion.h"; sourceTree = "<group>"; };
+		DF8EE856EB362AE475BA927D /* UILabel+TextColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TextColor.m"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.m"; sourceTree = "<group>"; };
+		E7FAD0E387BDECF321AC8A6B /* UIView+BackgroundColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BackgroundColor.h"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.h"; sourceTree = "<group>"; };
+		F7C347FF77A7B27C9FA6DFA1 /* UITableView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BackgroundColor.m"; path = "./Classes/UIKit/UITableView/UITableView+BackgroundColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,15 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		001996B4318F42E03A51E9B1 /* UIButton */ = {
+		0C6553F3B8EB5545B62A0D4A /* UITabBar */ = {
 			isa = PBXGroup;
 			children = (
-				DF3A96E8A79D27A0BB71346B /* UIButton+NightVersion.h */,
-				56F876AE3F3B14CE5CB30304 /* UIButton+NightVersion.m */,
-				188CB3C1D662757F73F1A3E2 /* UIButton+TitleColor.h */,
-				5C9D420640115D527EF5B5DE /* UIButton+TitleColor.m */,
+				0B0E3E05C926D65683ED44F0 /* UITabBar+NightVersion.h */,
+				BFBAC824FFE02848B11482EA /* UITabBar+NightVersion.m */,
+				9AE5B405144984FC987D6A59 /* UITabBar+BarTintColor.h */,
+				AD03BF4F3B2EC97A2E98290D /* UITabBar+BarTintColor.m */,
 			);
-			name = UIButton;
+			name = UITabBar;
 			sourceTree = SOURCE_ROOT;
 		};
 		18063F361AF9C0C500A06A04 /* Pod */ = {
@@ -304,112 +304,112 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		2B67D93A0ADE48CC0E58BD8E /* UIKit */ = {
+		26C0539233E47BF8BFEA3991 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				FACABDE409A3D583B58F5F3F /* UIView */,
-				4A1780B8DAB7A38B8F86BC95 /* UILabel */,
-				E7711A61CC5B7B6DCB7385BA /* UINavigationBar */,
-				C655BC031A44969F79191309 /* UITabBar */,
-				001996B4318F42E03A51E9B1 /* UIButton */,
-				9F717616A32A3A890FE465AE /* UIBarButtonItem */,
-				9952C4F872B09B92A89F7C65 /* UIScrollView */,
-				8DBC5DAA83604FCDA941B866 /* UITableView */,
-				7AC06007606BD00C9C83A844 /* UITableViewCell */,
-			);
-			name = UIKit;
-			sourceTree = "<group>";
-		};
-		4A1780B8DAB7A38B8F86BC95 /* UILabel */ = {
-			isa = PBXGroup;
-			children = (
-				D75DA29EEE06F120A9E2004F /* UILabel+NightVersion.h */,
-				FF146F5A7E235D22F0B0D19A /* UILabel+NightVersion.m */,
-				BB3F4DD3D2C6242A24E95A03 /* UILabel+TextColor.h */,
-				5AE7EA91633CBD6B260C6AA5 /* UILabel+TextColor.m */,
-			);
-			name = UILabel;
-			sourceTree = SOURCE_ROOT;
-		};
-		7AC06007606BD00C9C83A844 /* UITableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				A7AB291E077157387323862F /* UITableViewCell+NightVersion.h */,
-				91933C472F02BFDD4C338C57 /* UITableViewCell+NightVersion.m */,
-				1BA8E13A9C8FFFC56C754CBF /* UITableViewCell+BackgroundColor.h */,
-				691A6B3DE339EB44981E457D /* UITableViewCell+BackgroundColor.m */,
-			);
-			name = UITableViewCell;
-			sourceTree = SOURCE_ROOT;
-		};
-		8DBC5DAA83604FCDA941B866 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				E6F8D461483F7C8C34DF13AE /* UITableView+NightVersion.h */,
-				389930964C24AA86298E3F19 /* UITableView+NightVersion.m */,
-				C86CF2C8A6E76A188AD503FD /* UITableView+BackgroundColor.h */,
-				524B89E589CC8A8DE0BE0C0F /* UITableView+BackgroundColor.m */,
-				FB06151A2FB11446CA1EBF23 /* UITableView+SeparatorColor.h */,
-				B9C19D099E3AEBEA6C29DDE2 /* UITableView+SeparatorColor.m */,
+				28135B05BCCDDB4E55DB45C5 /* UITableView+NightVersion.h */,
+				ABDE6F7270A1D5CFC1E3C719 /* UITableView+NightVersion.m */,
+				90ECC44F7C23ACB7C88D128B /* UITableView+BackgroundColor.h */,
+				F7C347FF77A7B27C9FA6DFA1 /* UITableView+BackgroundColor.m */,
+				27D7912A735F47EDD9969BA7 /* UITableView+SeparatorColor.h */,
+				B44397CBDFF48B59F1C5662E /* UITableView+SeparatorColor.m */,
 			);
 			name = UITableView;
 			sourceTree = SOURCE_ROOT;
 		};
-		9952C4F872B09B92A89F7C65 /* UIScrollView */ = {
+		2B67D93A0ADE48CC0E58BD8E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				3F4AA8DF435E278AED697E6A /* UIScrollView+NightVersion.h */,
-				C57C5ADFA9725C03EC28855E /* UIScrollView+NightVersion.m */,
-				868982F516ADF46D449632A5 /* UIScrollView+BackgroundColor.h */,
-				17D19A05F3735DC19DEACEA5 /* UIScrollView+BackgroundColor.m */,
+				EAA31BD63B05933E86219D32 /* UIView */,
+				883F87DB66B757DB179D5639 /* UILabel */,
+				78BF97F287B0AFB32D214874 /* UINavigationBar */,
+				0C6553F3B8EB5545B62A0D4A /* UITabBar */,
+				62C57E3E0AB28969A31EB943 /* UIButton */,
+				FEDEEDFEFC7644E79773C9A1 /* UIBarButtonItem */,
+				7CFC8E526A16933E8B595B4F /* UIScrollView */,
+				26C0539233E47BF8BFEA3991 /* UITableView */,
+				F8572D539FF3D7988E87FEE1 /* UITableViewCell */,
 			);
-			name = UIScrollView;
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		62C57E3E0AB28969A31EB943 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				A897205D6B7937281C4941F9 /* UIButton+NightVersion.h */,
+				0B5454D5FC17EE3A95808425 /* UIButton+NightVersion.m */,
+				9E371D99FFDC7B841841BFC4 /* UIButton+TitleColor.h */,
+				B8A3726F464232D2C578C769 /* UIButton+TitleColor.m */,
+			);
+			name = UIButton;
 			sourceTree = SOURCE_ROOT;
 		};
-		9F717616A32A3A890FE465AE /* UIBarButtonItem */ = {
+		78BF97F287B0AFB32D214874 /* UINavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				237F48C0B03E0BD2ED727336 /* UIBarButtonItem+NightVersion.h */,
-				4A147CAD87D5AAFAEDFB2FAD /* UIBarButtonItem+NightVersion.m */,
-				C9172FE85C3FE512126FB9E1 /* UIBarButtonItem+TintColor.h */,
-				CE47E4EDA8EA0CC567C52EE4 /* UIBarButtonItem+TintColor.m */,
-			);
-			name = UIBarButtonItem;
-			sourceTree = SOURCE_ROOT;
-		};
-		C655BC031A44969F79191309 /* UITabBar */ = {
-			isa = PBXGroup;
-			children = (
-				373C95CD2D9D15D1823B7C67 /* UITabBar+NightVersion.h */,
-				0BEECC84DD5BE180B2B2A294 /* UITabBar+NightVersion.m */,
-				3263A98A0B6FA47AD223F356 /* UITabBar+BarTintColor.h */,
-				3735F2639A9B7071E8C0DF20 /* UITabBar+BarTintColor.m */,
-			);
-			name = UITabBar;
-			sourceTree = SOURCE_ROOT;
-		};
-		E7711A61CC5B7B6DCB7385BA /* UINavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				510686BA38CC33121F314F55 /* UINavigationBar+NightVersion.h */,
-				91EFB7C5DE3F4F8FF765C18A /* UINavigationBar+NightVersion.m */,
-				8DA4D67D8447A6C665661FB5 /* UINavigationBar+BarTintColor.h */,
-				DBC6C83B598F9708E5076BED /* UINavigationBar+BarTintColor.m */,
+				55E7BFE3A10C89D8B4604BF1 /* UINavigationBar+NightVersion.h */,
+				4C6224E671309F478A8D73DB /* UINavigationBar+NightVersion.m */,
+				2F6F270812DF0578FE703EB2 /* UINavigationBar+BarTintColor.h */,
+				A031B14EE941163CE7FE2FF4 /* UINavigationBar+BarTintColor.m */,
 			);
 			name = UINavigationBar;
 			sourceTree = SOURCE_ROOT;
 		};
-		FACABDE409A3D583B58F5F3F /* UIView */ = {
+		7CFC8E526A16933E8B595B4F /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				575EFA63473F3CB8425A4515 /* UIView+NightVersion.h */,
-				D004C70597AF3934BB37C3D8 /* UIView+NightVersion.m */,
-				A7E5F8217B4E61BCEF176BCE /* UIView+BackgroundColor.h */,
-				0304B510A775A6F84181089D /* UIView+BackgroundColor.m */,
-				C84B0B7538A06AFC6E750B19 /* UIView+TintColor.h */,
-				611AB4D5F4B28B9C81647937 /* UIView+TintColor.m */,
+				D4BD31C524C1ED01A467BC7C /* UIScrollView+NightVersion.h */,
+				2FABCCDC7DD36D9340AF158C /* UIScrollView+NightVersion.m */,
+				1ABDDD3BAE5481649BBD28AC /* UIScrollView+BackgroundColor.h */,
+				C6B6929C3D35880BAAFF46CA /* UIScrollView+BackgroundColor.m */,
+			);
+			name = UIScrollView;
+			sourceTree = SOURCE_ROOT;
+		};
+		883F87DB66B757DB179D5639 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				039B9D6A9521AE3690E5EBA1 /* UILabel+NightVersion.h */,
+				D1C0CFBA89B4AA558394AF09 /* UILabel+NightVersion.m */,
+				A22FDDC44B6F7687D2DBBAB1 /* UILabel+TextColor.h */,
+				DF8EE856EB362AE475BA927D /* UILabel+TextColor.m */,
+			);
+			name = UILabel;
+			sourceTree = SOURCE_ROOT;
+		};
+		EAA31BD63B05933E86219D32 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0E34706B9A0F215651FF8EF6 /* UIView+NightVersion.h */,
+				0DB2EEAB071DAD3C5F414D4A /* UIView+NightVersion.m */,
+				E7FAD0E387BDECF321AC8A6B /* UIView+BackgroundColor.h */,
+				B0BD0ADBC3E214943A22DF23 /* UIView+BackgroundColor.m */,
+				033870AAD038EE6C5E2B7C18 /* UIView+TintColor.h */,
+				5DCA251E99E24354082B6635 /* UIView+TintColor.m */,
 			);
 			name = UIView;
+			sourceTree = SOURCE_ROOT;
+		};
+		F8572D539FF3D7988E87FEE1 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7392773006337C88B385FD8E /* UITableViewCell+NightVersion.h */,
+				A1347A0298B7981798831DCB /* UITableViewCell+NightVersion.m */,
+				1C89E8509998D4D5A3FD3A84 /* UITableViewCell+BackgroundColor.h */,
+				AECFF46E62FA7457F4A5FB88 /* UITableViewCell+BackgroundColor.m */,
+			);
+			name = UITableViewCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		FEDEEDFEFC7644E79773C9A1 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8AC38BA413A63A8DB1316 /* UIBarButtonItem+NightVersion.h */,
+				29E0B6F1944B1DF491AFA97D /* UIBarButtonItem+NightVersion.m */,
+				4905687FE8F1AD2EE0234BF7 /* UIBarButtonItem+TintColor.h */,
+				4F56C0F7479519BB8B517462 /* UIBarButtonItem+TintColor.m */,
+			);
+			name = UIBarButtonItem;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -421,26 +421,26 @@
 			files = (
 				182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */,
 				186313321AFF4C6900249AD7 /* UIViewController+ChangeColor.h in Headers */,
-				9507A689BCC392778BB30C58 /* UIView+NightVersion.h in Headers */,
-				C4998BADBEE08BC29A162833 /* UIView+BackgroundColor.h in Headers */,
-				47290382041F6900D28905C5 /* UIView+TintColor.h in Headers */,
-				458D5FF4407022C7D9340530 /* UILabel+NightVersion.h in Headers */,
-				AFE39DDF89C0FB447A6B4E2B /* UILabel+TextColor.h in Headers */,
-				66D43A2E424B22E8800473E3 /* UINavigationBar+NightVersion.h in Headers */,
-				3FCDCFBDB4A78A89936ECCD9 /* UINavigationBar+BarTintColor.h in Headers */,
-				7049A351C3CAB451DD2A9503 /* UITabBar+NightVersion.h in Headers */,
-				15812BA7914A58916A95A30D /* UITabBar+BarTintColor.h in Headers */,
-				3EEABBA80A07E6E63CF30E6D /* UIButton+NightVersion.h in Headers */,
-				C6A49EEA02DA0B1EEB561259 /* UIButton+TitleColor.h in Headers */,
-				12E526266457D0EACEA5B0B4 /* UIBarButtonItem+NightVersion.h in Headers */,
-				FD1AA8EC9D1154E1BFB48F2D /* UIBarButtonItem+TintColor.h in Headers */,
-				AFE8C70C7690FB8B4F300FCB /* UIScrollView+NightVersion.h in Headers */,
-				D2C7BD301D7E0A79ABBC5266 /* UIScrollView+BackgroundColor.h in Headers */,
-				9E88FF7A12529A719690ED30 /* UITableView+NightVersion.h in Headers */,
-				1CB6B347AD9B3C539B2E92B6 /* UITableView+BackgroundColor.h in Headers */,
-				3BE3F0E0E87BBD59158E49A3 /* UITableView+SeparatorColor.h in Headers */,
-				5A14706AB869C7BCA8EC3BD8 /* UITableViewCell+NightVersion.h in Headers */,
-				78E9765635DCCF6741011879 /* UITableViewCell+BackgroundColor.h in Headers */,
+				F94A6E5E54FA93C32F73490A /* UIView+NightVersion.h in Headers */,
+				2372B4F110B4F2AD3914F1F2 /* UIView+BackgroundColor.h in Headers */,
+				C04FC1C903307A127845CF96 /* UIView+TintColor.h in Headers */,
+				BD9437DFD1EFCCB3DBF22FF5 /* UILabel+NightVersion.h in Headers */,
+				6DBEFC19CC61971550416DEC /* UILabel+TextColor.h in Headers */,
+				B95267218055F98FFA3569FB /* UINavigationBar+NightVersion.h in Headers */,
+				018764CD6A479CA6460B747E /* UINavigationBar+BarTintColor.h in Headers */,
+				7BEE14ECA822AAFF57C66614 /* UITabBar+NightVersion.h in Headers */,
+				0630518D230D4C18E0110079 /* UITabBar+BarTintColor.h in Headers */,
+				319BEAD28E4C40E43EA486EA /* UIButton+NightVersion.h in Headers */,
+				6E50AA5B99202F790BCF8B3B /* UIButton+TitleColor.h in Headers */,
+				7BEFE4AA58E4A8A257C765FC /* UIBarButtonItem+NightVersion.h in Headers */,
+				5212E4D889D0C4BDC404ACEB /* UIBarButtonItem+TintColor.h in Headers */,
+				75F0ACFFFB48A7E19D143F6E /* UIScrollView+NightVersion.h in Headers */,
+				49319E4D784B1A325E0D15AF /* UIScrollView+BackgroundColor.h in Headers */,
+				FA490A1A2B5D71CB82D91278 /* UITableView+NightVersion.h in Headers */,
+				8672C7DCD67821BA94EF00DC /* UITableView+BackgroundColor.h in Headers */,
+				AEBC2A4628A4A2D7EE1FB49C /* UITableView+SeparatorColor.h in Headers */,
+				B032D7617F22F5D458402205 /* UITableViewCell+NightVersion.h in Headers */,
+				6E99A438F1F2668891FA7513 /* UITableViewCell+BackgroundColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,26 +581,26 @@
 				18D2289D1AF8BB6800872BF1 /* TableViewCell.m in Sources */,
 				18D228941AF8BB6200872BF1 /* AppDelegate.m in Sources */,
 				182BCC261AFF199A0095BF9C /* PresentingViewController.m in Sources */,
-				6669768EEAF0C90FA3C1E88C /* UIView+NightVersion.m in Sources */,
-				93A6CD9E8E590AA39C0F2673 /* UIView+BackgroundColor.m in Sources */,
-				611BD16BC7C11DF4A1324D58 /* UIView+TintColor.m in Sources */,
-				0A28BE644817DEC2F8598BA8 /* UILabel+NightVersion.m in Sources */,
-				C630AFB3EF1F386A5FAE6F61 /* UILabel+TextColor.m in Sources */,
-				A15F6C1BC61CDA00C5F0F340 /* UINavigationBar+NightVersion.m in Sources */,
-				1B52D3106249B12D8823667F /* UINavigationBar+BarTintColor.m in Sources */,
-				A928F9BB0F03AD95A9B26889 /* UITabBar+NightVersion.m in Sources */,
-				125A604D3D8AF9E5F1C9887C /* UITabBar+BarTintColor.m in Sources */,
-				3B0D3E38441528AD5421F8FD /* UIButton+NightVersion.m in Sources */,
-				511D066FCD0F4FE76779C9A0 /* UIButton+TitleColor.m in Sources */,
-				5D967670610C1690F231F783 /* UIBarButtonItem+NightVersion.m in Sources */,
-				0E39A9C92F77F1020F5960C7 /* UIBarButtonItem+TintColor.m in Sources */,
-				7750AA752776459ABDCCFC88 /* UIScrollView+NightVersion.m in Sources */,
-				476B6D8862E1DD342817C5DE /* UIScrollView+BackgroundColor.m in Sources */,
-				6E16DCD931FD2279C1470060 /* UITableView+NightVersion.m in Sources */,
-				1D836BBD82A0B62A7C69D13A /* UITableView+BackgroundColor.m in Sources */,
-				CDE76B7801779822F02DFA0A /* UITableView+SeparatorColor.m in Sources */,
-				EE1F5E9BACE4D68FBA35417B /* UITableViewCell+NightVersion.m in Sources */,
-				B45029F7DF940CB7E168576A /* UITableViewCell+BackgroundColor.m in Sources */,
+				97CDC2CDA5D4A9E0A225A351 /* UIView+NightVersion.m in Sources */,
+				204C0189924C43C3FA258993 /* UIView+BackgroundColor.m in Sources */,
+				063682490C6268A2B8535D26 /* UIView+TintColor.m in Sources */,
+				DE331E7F30D1FD30384180B3 /* UILabel+NightVersion.m in Sources */,
+				E0DFAB284FF794F73F256660 /* UILabel+TextColor.m in Sources */,
+				5EF1A4416D7F8A50E5D2AD26 /* UINavigationBar+NightVersion.m in Sources */,
+				1A3A59B941C368268C8DB903 /* UINavigationBar+BarTintColor.m in Sources */,
+				20DB517C16509855F4D60A31 /* UITabBar+NightVersion.m in Sources */,
+				2FCC8D7270283D82174B250A /* UITabBar+BarTintColor.m in Sources */,
+				BC5E61DFA2F922B3A73B30DA /* UIButton+NightVersion.m in Sources */,
+				243C22441DEF4D68EBF5A13B /* UIButton+TitleColor.m in Sources */,
+				AEA9D96D93F4C200E902DB83 /* UIBarButtonItem+NightVersion.m in Sources */,
+				C074C8F69C2ED1754EC0282A /* UIBarButtonItem+TintColor.m in Sources */,
+				2DEC27B1FB9F09156502E5BD /* UIScrollView+NightVersion.m in Sources */,
+				C24F2ED6A61E9BD7218A54F4 /* UIScrollView+BackgroundColor.m in Sources */,
+				78BE2C6EAAE70604253669BF /* UITableView+NightVersion.m in Sources */,
+				698D6DF8A4740791C731F5A9 /* UITableView+BackgroundColor.m in Sources */,
+				BFE679C689372F6C06465B8A /* UITableView+SeparatorColor.m in Sources */,
+				4A413A8E6697CC9692CFD32C /* UITableViewCell+NightVersion.m in Sources */,
+				4917BB45D1E13D14F8EDA8F4 /* UITableViewCell+BackgroundColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
