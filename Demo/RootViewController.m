@@ -60,7 +60,7 @@
         [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
     } else {
         [cell.button setTitle:@"Dawn Comes" forState:UIControlStateNormal];
-//        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
+        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
     }
 
     return cell;
