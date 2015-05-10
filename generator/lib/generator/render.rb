@@ -35,12 +35,12 @@ def objc_code_generator(klasses, p='.')
 	color_simply_imp    = File.join(template_folder, 'color_simply.m.erb')
 	nightversion_header = File.join(template_folder, 'nightversion.h.erb')
 	nightversion_imp    = File.join(template_folder, 'nightversion.m.erb')
-	
+
 	relative_path = File.join('Classes', 'UIKit')
+	FileUtils.rm_rf(relative_path)
 	FileUtils.mkdir_p(relative_path)
 	klasses.each do |klass|
 		subfolder_path = File.join(relative_path, klass.name)
-		FileUtils.rm_rf(subfolder_path)
 		FileUtils.mkdir_p(subfolder_path)
 
         path = File.join(p, 'Classes', 'UIKit', klass.name)
@@ -82,11 +82,11 @@ end
 
 def has_property(klass, name)
     while klass
-	    klass.properties.each do |property|
-	    	if property.name == name
-	    		return property
-	    	end
-	    end
+        klass.properties.each do |property|
+            if property.name == name
+                return property
+            end
+        end
         klass = klass.superklass
     end
 	return nil
