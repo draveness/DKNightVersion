@@ -28,6 +28,20 @@
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
+
+        originalSelector = @selector(viewWillAppear:);
+        swizzledSelector = @selector(hook_viewWillAppear:);
+        originalMethod = class_getInstanceMethod(class, originalSelector);
+        swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+        didAddMethod =
+        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        if (didAddMethod){
+            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+
+
     });
 }
 
@@ -37,12 +51,39 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeColor) name:DKNightVersionDawnComingNotification object:nil];
 }
 
+- (void)hook_viewWillAppear:(BOOL)animated {
+    [self hook_viewWillAppear:animated];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//    [DKNightVersionManager changeColor:window];
+    [DKNightVersionManager changeColor:self.view];
+}
+
 - (void)changeColor {
     [self.navigationItem.leftBarButtonItem changeColor];
     [self.navigationItem.rightBarButtonItem changeColor];
     [self.navigationItem.backBarButtonItem changeColor];
-
 }
+
+//- (void)changeColor:(id)object {
+//    if ([object respondsToSelector:@selector(changeColor)]) {
+//        [object changeColor];
+//    }
+//    if ([object respondsToSelector:@selector(subviews)]) {
+//        if (![object subviews]) {
+//            // Basic case, do nothing.
+//            return;
+//        } else {
+//            for (id subview in [object subviews]) {
+//                // recursice darken all the subviews of current view.
+//                [self changeColor:subview];
+//                if ([subview respondsToSelector:@selector(changeColor)]) {
+//                    [subview changeColor];
+//                }
+//            }
+//        }
+//    }
+//}
+
 
 
 @end

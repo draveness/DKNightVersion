@@ -11,7 +11,7 @@
 NSString *const DKNightVersionNightFallingNotification = @"DKNightVersionNightFallingNotification";
 NSString *const DKNightVersionDawnComingNotification = @"DKNightVersionDawnComingNotification";
 
-CGFloat const DKNightVersionAnimationDuration = 0.3f;
+CGFloat const DKNightVersionAnimationDuration = 0.0f;
 
 @protocol DKNightVersionChangeColorProtocol <NSObject>
 
@@ -66,10 +66,10 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     }
     _themeVersion = themeVersion;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [self changeColor:window.subviews.lastObject];
+    [self.class changeColor:window.subviews.lastObject];
 }
 
-- (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {
++ (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {
     if ([object respondsToSelector:@selector(changeColor)]) {
         [object changeColor];
     }

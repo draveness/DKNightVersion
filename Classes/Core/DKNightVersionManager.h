@@ -40,6 +40,8 @@ extern CGFloat const DKNightVersionAnimationDuration;
  */
 + (void)dawnComing;
 
++ (void)changeColor:(id)object;
+
 /**
  *  Use default night color or not, default is YES, set it use setUseDefaultNightColor: method
  *

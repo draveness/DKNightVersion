@@ -20,8 +20,9 @@
 
 - (void)changeColor {
     
-    [self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor duration:DKNightVersionAnimationDuration];
-    
+//    [self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor duration:DKNightVersionAnimationDuration];
+    [self setBarTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor];
+
     [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
         
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
