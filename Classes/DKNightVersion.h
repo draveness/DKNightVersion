@@ -18,6 +18,7 @@
 #import "UINavigationBar+NightVersion.h"
 #import "UITabBar+NightVersion.h"
 #import "UIButton+NightVersion.h"
+#import "UIBarButtonItem+NightVersion.h"
 #import "UIViewController+ChangeColor.h"
 
 

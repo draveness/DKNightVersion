@@ -25,13 +25,8 @@
 }
 
 - (void)changeColor {
-    
     [self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBarTintColor : self.normalBarTintColor duration:DKNightVersionAnimationDuration];
-    
-
-    
     [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-    
     [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
     
 }

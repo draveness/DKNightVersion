@@ -54,6 +54,7 @@
 - (void)hook_viewWillAppear:(BOOL)animated {
     [self hook_viewWillAppear:animated];
     [DKNightVersionManager changeColor:self.view];
+    [self changeColor];
 }
 
 - (void)changeColor {
