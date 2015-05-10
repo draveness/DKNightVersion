@@ -20,6 +20,12 @@ Pod::Spec.new do |s|
     ss.source_files = "Classes/Core/*.{h,m}"
   end
 
+  s.subspec 'Manual' do |ss|
+    ss.source_files = "Classes/Manual/*.{h,m}"
+    ss.dependency 'DKNightVersion/Core'
+    ss.dependency 'DKNightVersion/UIKit'
+  end
+
   s.subspec 'UIKit' do |ss|
     ss.source_files = "Classes/UIKit/**/*.{h,m}"
     ss.dependency 'DKNightVersion/Core'

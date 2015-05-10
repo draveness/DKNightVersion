@@ -20,6 +20,10 @@
     {
         "titleColor": "0x5F80AC"
     },
+    "UIBarButtonItem":
+    {
+        "tintColor": "0xffffff"
+    },
     "UIScrollView":
     {
         "backgroundColor": "0x343434"
