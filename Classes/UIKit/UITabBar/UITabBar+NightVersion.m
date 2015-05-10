@@ -20,7 +20,7 @@
 
 - (void)changeColorWithDuration:(CGFloat)duration {
     
-    [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
+    [UIView animateWithDuration:duration animations:^{
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
         [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
         

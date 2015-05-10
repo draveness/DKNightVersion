@@ -21,7 +21,7 @@
 
 - (void)changeColorWithDuration:(CGFloat)duration {
     
-    [UIView animateWithDuration:DKNightVersionAnimationDuration animations:^{
+    [UIView animateWithDuration:duration animations:^{
         [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
         [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
         
