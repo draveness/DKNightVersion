@@ -42,7 +42,7 @@ static char *normalTitleColorKey;
 }
 
 - (void)hook_setTitleColor:(UIColor*)titleColor forState:(UIControlState)state {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normalTitleColor) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalTitleColor:titleColor];
     }
     [self hook_setTitleColor:titleColor forState:UIControlStateNormal];

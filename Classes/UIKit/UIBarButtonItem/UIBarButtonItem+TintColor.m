@@ -42,7 +42,7 @@ static char *normalTintColorKey;
 }
 
 - (void)hook_setTintColor:(UIColor*)tintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normalTintColor) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalTintColor:tintColor];
     }
     [self hook_setTintColor:tintColor];

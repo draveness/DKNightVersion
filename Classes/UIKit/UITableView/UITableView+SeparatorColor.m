@@ -42,7 +42,7 @@ static char *normalSeparatorColorKey;
 }
 
 - (void)hook_setSeparatorColor:(UIColor*)separatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normalSeparatorColor) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalSeparatorColor:separatorColor];
     }
     [self hook_setSeparatorColor:separatorColor];

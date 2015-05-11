@@ -42,7 +42,7 @@ static char *normalBackgroundColorKey;
 }
 
 - (void)hook_setBackgroundColor:(UIColor*)backgroundColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normalBackgroundColor) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalBackgroundColor:backgroundColor];
     }
     [self hook_setBackgroundColor:backgroundColor];

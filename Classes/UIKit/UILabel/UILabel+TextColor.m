@@ -42,7 +42,7 @@ static char *normalTextColorKey;
 }
 
 - (void)hook_setTextColor:(UIColor*)textColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normalTextColor) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormalTextColor:textColor];
     }
     [self hook_setTextColor:textColor];

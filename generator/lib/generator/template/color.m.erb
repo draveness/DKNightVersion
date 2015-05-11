@@ -42,7 +42,7 @@ static char *normal<%= property.cap_name %>Key;
 }
 
 - (void)hook_<%= property.setter %> {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal || !self.normal<%= property.cap_name %>) {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
         [self setNormal<%= property.cap_name %>:<%= property.name %>];
     }
     [self hook_<%= property.set_color_method(property.name) %>];
