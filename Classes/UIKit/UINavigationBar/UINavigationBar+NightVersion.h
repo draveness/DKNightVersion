@@ -10,6 +10,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UINavigationBar+BarTintColor.h"
+#import "UINavigationBar+TintColor.h"
 
 
 @interface UINavigationBar (NightVersion)

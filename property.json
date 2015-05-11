@@ -10,7 +10,8 @@
     },
     "UINavigationBar":
     {
-        "barTintColor": "0x444444"
+        "barTintColor": "0x444444",
+        "tintColor": "0xffffff"
     },
     "UITabBar":
     {
