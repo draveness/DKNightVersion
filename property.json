@@ -1,8 +1,7 @@
 {
     "UIView": 
     { 
-        "backgroundColor": "0x343434",
-        "tintColor": "0xffffff"
+        "backgroundColor": "0x343434"
     },
     "UILabel":
     {

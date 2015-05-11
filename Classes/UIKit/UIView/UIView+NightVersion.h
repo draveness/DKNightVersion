@@ -10,7 +10,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+BackgroundColor.h"
-#import "UIView+TintColor.h"
 
 
 @interface UIView (NightVersion)

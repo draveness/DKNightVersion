@@ -22,10 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-}
-
-- (void)back {
-    [self.navigationController popViewControllerAnimated:YES];
+    self.navigationController.navigationBar.nightTintColor = [UIColor redColor];
 }
 
 @end
