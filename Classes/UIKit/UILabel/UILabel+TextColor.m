@@ -49,7 +49,7 @@ static char *normalTextColorKey;
 }
 
 - (UIColor *)nightTextColor {
-    return objc_getAssociatedObject(self, &nightTextColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTextColor :self.textColor);
+    return objc_getAssociatedObject(self, &nightTextColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTextColor : self.textColor);
 }
 
 - (void)setNightTextColor:(UIColor *)nightTextColor {

@@ -49,7 +49,7 @@ static char *normalSeparatorColorKey;
 }
 
 - (UIColor *)nightSeparatorColor {
-    return objc_getAssociatedObject(self, &nightSeparatorColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightSeparatorColor :self.separatorColor);
+    return objc_getAssociatedObject(self, &nightSeparatorColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightSeparatorColor : self.separatorColor);
 }
 
 - (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
