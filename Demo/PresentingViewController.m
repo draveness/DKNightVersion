@@ -42,12 +42,10 @@
     [day setTitle:@"Dawn Comes" forState:UIControlStateNormal];
     [day addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
 
-    NSLog(@"%@", self.view);
-
 
     [self.view addSubview:button];
-    [self.view addSubview:night];
-    [self.view addSubview:day];
+//    [self.view addSubview:night];
+//    [self.view addSubview:day];
 }
 
 - (void)back {

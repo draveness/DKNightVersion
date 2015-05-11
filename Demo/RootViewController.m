@@ -31,7 +31,6 @@
     self.navigationItem.titleView = navigationLabel;
 
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
-    item.tintColor = [UIColor redColor];
     self.navigationItem.leftBarButtonItem = item;
 }
 

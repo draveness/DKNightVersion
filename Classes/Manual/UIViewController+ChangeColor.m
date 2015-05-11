@@ -40,24 +40,22 @@
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
-
-
     });
 }
 
 - (void)hook_viewDidLoad {
-    [self hook_viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeColor) name:DKNightVersionNightFallingNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeColor) name:DKNightVersionDawnComingNotification object:nil];
+    [self hook_viewDidLoad];
 }
 
 - (void)hook_viewWillAppear:(BOOL)animated {
     [self hook_viewWillAppear:animated];
-    [DKNightVersionManager changeColor:self.view];
     [self changeColor];
 }
 
 - (void)changeColor {
+    [DKNightVersionManager changeColor:self.view];
     [self.navigationItem.leftBarButtonItem changeColor];
     [self.navigationItem.rightBarButtonItem changeColor];
     [self.navigationItem.backBarButtonItem changeColor];
