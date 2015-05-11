@@ -20,7 +20,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.6.0"
+pod "DKNightVersion", "~> 0.6.1"
 ```
 
 ## Usage
@@ -152,6 +152,4 @@ DKNightVersion is available under the MIT license. See the LICENSE file for more
 
 # Todo
 
-- Add more color support
-- Test
 - Documentation
