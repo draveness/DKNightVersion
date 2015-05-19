@@ -10,7 +10,6 @@ def add_files_to_project(path, json_path)
     group_path = get_group_name(production)
     uikit_group = project.main_group.find_subpath(group_path, true)
     uikit_group.clear
-
     clear_target(target)
 
     json.each do |group, files|
@@ -34,6 +33,7 @@ end
 def get_target(project, production)
     if production
         project.targets.reduce(project.targets.first) do |init, t| 
+            puts "[Find] Find target #{t}"
             if t.to_s.include? 'DKNightVersion' 
                 init = t
             end
