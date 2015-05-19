@@ -111,7 +111,7 @@ There is a json file in `Generator` folder named `property.json`, you can change
 
 And run `rake` in terminal under folder `Pods/DKNightVersion`.
 
-> This ruby script is based on the Cocoapods components [`Xcodeproj`](https://github.com/CocoaPods/Xcodeproj). If there is no method error, you should install it first or run `bundle install` in `DKNightVersion` folder.
+> This ruby script is based on the Cocoapods components [`Xcodeproj`](https://github.com/CocoaPods/Xcodeproj). If there is a  NoMethodError, you should install it first or run `bundle install` in `DKNightVersion` folder.
 
 This command will automatically do everything for you.
 
