@@ -111,6 +111,8 @@ There is a json file in `Generator` folder named `property.json`, you can change
 
 And run `rake` in terminal under folder `Pods/DKNightVersion`.
 
+> This ruby script is based on the Cocoapods components [`Xcodeproj`](https://github.com/CocoaPods/Xcodeproj). If there is no method error, you should install it first or run `bundle install` in `DKNightVersion` folder.
+
 This command will automatically do everything for you.
 
 ## Using default night version
@@ -139,9 +141,7 @@ DKNightVersionManager will pick the proper color following these two rules.
 
 # Contribute
 
-if there is a bug, you can either fix it and open a pull request or open a issue.
-
-If you want some new features, read the documentation and fork this repo.
+Feel free to open an issue or pull request, if you need help or there is a bug.
 
 # Contact
 
