@@ -7,6 +7,7 @@
 //
 
 #import "TableViewCell.h"
+#import "DKNightVersion.h"
 
 @interface TableViewCell ()
 
@@ -21,6 +22,7 @@
         self.label.text = @"DKNightVersion is a light wei-ght framework adding night   version to your iOS app.";
         self.label.textColor = [UIColor darkGrayColor];
         self.label.lineBreakMode = NSLineBreakByCharWrapping;
+        self.nightBackgroundColor = UIColorFromRGB(0x343434);
         [self.contentView addSubview:self.label];
 
         CGRect rect = CGRectMake(250, 10, 120, 80);

@@ -68,8 +68,9 @@ static char *normalBarTintColorKey;
 }
 
 - (UIColor *)defaultNightBarTintColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UITabBar class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    if ([self isMemberOfClass:[UITabBar class]] || notUIKitSubclass) {
+    //BOOL notUIKitSubclass = [self isKindOfClass:[UITabBar class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[UITabBar class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[UITabBar class]]) {
         return UIColorFromRGB(0x444444);
     } else {
         UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];

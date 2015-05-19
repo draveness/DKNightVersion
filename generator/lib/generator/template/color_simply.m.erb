@@ -15,8 +15,9 @@
 @implementation <%= klass.name %> (<%= property.cap_name %>)
 
 - (UIColor *)defaultNight<%= property.cap_name %> {
-    BOOL notUIKitSubclass = [self isKindOfClass:[<%= klass.name %> class]] && ![NSStringFromClass(self.class) containsString:@"UI"]; 
-    if ([self isMemberOfClass:[<%= klass.name %> class]] || notUIKitSubclass)  { 
+    //BOOL notUIKitSubclass = [self isKindOfClass:[<%= klass.name %> class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[<%= klass.name %> class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[<%= klass.name %> class]]) {
         return <% if property.default_color %><%= "UIColorFromRGB(#{property.default_color})" %><% else %><%= 'self.normal' + property.cap_name %><% end %>;
     } else {
         UIColor *resultColor = self.normal<%= property.cap_name %> ?: [UIColor clearColor];

@@ -68,8 +68,9 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)defaultNightTintColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UIBarButtonItem class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    if ([self isMemberOfClass:[UIBarButtonItem class]] || notUIKitSubclass) {
+    //BOOL notUIKitSubclass = [self isKindOfClass:[UIBarButtonItem class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[UIBarButtonItem class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[UIBarButtonItem class]]) {
         return UIColorFromRGB(0xffffff);
     } else {
         UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];

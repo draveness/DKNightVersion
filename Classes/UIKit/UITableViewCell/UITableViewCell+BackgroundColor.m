@@ -16,8 +16,9 @@
 @implementation UITableViewCell (BackgroundColor)
 
 - (UIColor *)defaultNightBackgroundColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UITableViewCell class]] && ![NSStringFromClass(self.class) containsString:@"UI"]; 
-    if ([self isMemberOfClass:[UITableViewCell class]] || notUIKitSubclass)  { 
+    //BOOL notUIKitSubclass = [self isKindOfClass:[UITableViewCell class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[UITableViewCell class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[UITableViewCell class]]) {
         return UIColorFromRGB(0x343434);
     } else {
         UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];

@@ -68,8 +68,9 @@ static char *normalSeparatorColorKey;
 }
 
 - (UIColor *)defaultNightSeparatorColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UITableView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    if ([self isMemberOfClass:[UITableView class]] || notUIKitSubclass) {
+    //BOOL notUIKitSubclass = [self isKindOfClass:[UITableView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[UITableView class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[UITableView class]]) {
         return UIColorFromRGB(0x313131);
     } else {
         UIColor *resultColor = self.normalSeparatorColor ?: [UIColor clearColor];

@@ -68,8 +68,9 @@ static char *normalBackgroundColorKey;
 }
 
 - (UIColor *)defaultNightBackgroundColor {
-    BOOL notUIKitSubclass = [self isKindOfClass:[UIView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    if ([self isMemberOfClass:[UIView class]] || notUIKitSubclass) {
+    //BOOL notUIKitSubclass = [self isKindOfClass:[UIView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
+    //if ([self isMemberOfClass:[UIView class]] || notUIKitSubclass) {
+    if ([self isMemberOfClass:[UIView class]]) {
         return UIColorFromRGB(0x343434);
     } else {
         UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
