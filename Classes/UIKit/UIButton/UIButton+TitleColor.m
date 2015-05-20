@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightTitleColor) defaultNightTitleColor = UIColorFromRGB(0x5F80AC);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightTitleColor {
-    if ([self isMemberOfClass:[UIButton class]]) {
-        return UIColorFromRGB(0x5F80AC);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UIButton class]] ? UIColorFromRGB(0x5F80AC) : nil;
 }
 
 @end

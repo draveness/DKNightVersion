@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightTextColor) defaultNightTextColor = UIColorFromRGB(0x5d5d5d);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightTextColor {
-    if ([self isMemberOfClass:[UILabel class]]) {
-        return UIColorFromRGB(0x5d5d5d);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UILabel class]] ? UIColorFromRGB(0x5d5d5d) : nil;
 }
 
 @end

@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightBackgroundColor) defaultNightBackgroundColor = UIColorFromRGB(0x343434);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightBackgroundColor {
-    if ([self isMemberOfClass:[UIView class]]) {
-        return UIColorFromRGB(0x343434);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UIView class]] ? UIColorFromRGB(0x343434) : nil;
 }
 
 @end

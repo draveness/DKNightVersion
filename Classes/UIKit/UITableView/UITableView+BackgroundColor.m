@@ -17,12 +17,7 @@
 @implementation UITableView (BackgroundColor)
 
 - (UIColor *)defaultNightBackgroundColor {
-    if (!defaultNightBackgroundColor) defaultNightBackgroundColor = UIColorFromRGB(0x343434);
-    if ([self isMemberOfClass:[UITableView class]]) {
-        return UIColorFromRGB(0x343434);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UITableView class]] ? UIColorFromRGB(0x343434) : nil;
 }
 
 @end

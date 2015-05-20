@@ -16,12 +16,7 @@
 @implementation UIScrollView (BackgroundColor)
 
 - (UIColor *)defaultNightBackgroundColor {
-    if (!defaultNightBackgroundColor) defaultNightBackgroundColor = UIColorFromRGB(0x343434);
-    if ([self isMemberOfClass:[UIScrollView class]]) {
-        return UIColorFromRGB(0x343434);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UIScrollView class]] ? UIColorFromRGB(0x343434) : nil;
 }
 
 @end

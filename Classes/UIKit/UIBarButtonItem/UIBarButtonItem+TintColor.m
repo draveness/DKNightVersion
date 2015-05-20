@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightTintColor) defaultNightTintColor = UIColorFromRGB(0xffffff);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightTintColor {
-    if ([self isMemberOfClass:[UIBarButtonItem class]]) {
-        return UIColorFromRGB(0xffffff);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UIBarButtonItem class]] ? UIColorFromRGB(0xffffff) : nil;
 }
 
 @end

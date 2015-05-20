@@ -10,9 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-static UIColor *defaultNightBackgroundColor;
-
-
 @interface UIView (BackgroundColor)
 
 /**

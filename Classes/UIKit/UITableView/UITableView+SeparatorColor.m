@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightSeparatorColor) defaultNightSeparatorColor = UIColorFromRGB(0x313131);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightSeparatorColor {
-    if ([self isMemberOfClass:[UITableView class]]) {
-        return UIColorFromRGB(0x313131);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UITableView class]] ? UIColorFromRGB(0x313131) : nil;
 }
 
 @end

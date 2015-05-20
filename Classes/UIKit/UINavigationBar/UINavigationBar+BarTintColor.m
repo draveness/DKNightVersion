@@ -36,7 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-    if (!defaultNightBarTintColor) defaultNightBarTintColor = UIColorFromRGB(0x444444);
+
 
 }
 
@@ -71,11 +71,7 @@
 }
 
 - (UIColor *)defaultNightBarTintColor {
-    if ([self isMemberOfClass:[UINavigationBar class]]) {
-        return UIColorFromRGB(0x444444);
-    } else {
-        return nil;
-    }
+    return [self isMemberOfClass:[UINavigationBar class]] ? UIColorFromRGB(0x444444) : nil;
 }
 
 @end
