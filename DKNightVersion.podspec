@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Helper' do |ss|
     ss.source_files = "Classes/Helper/*.{h,m}"
+    ss.dependency 'DKNightVersion/Core'
   end
   
   s.subspec 'Generator' do |ss|
