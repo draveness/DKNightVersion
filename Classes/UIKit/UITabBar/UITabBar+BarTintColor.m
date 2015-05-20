@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightBarTintColor {
-    return objc_getAssociatedObject(self, @selector(nightBarTintColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBarTintColor : self.barTintColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBarTintColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightBarTintColor) {
+        return self.defaultNightBarTintColor;
+    } else {
+        UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UITabBar class]]) {
         return UIColorFromRGB(0x444444);
     } else {
-        UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];
-        return resultColor;
+        return nil;
     }
 }
 

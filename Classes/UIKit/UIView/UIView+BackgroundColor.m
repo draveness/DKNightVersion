@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightBackgroundColor {
-    return objc_getAssociatedObject(self, @selector(nightBackgroundColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBackgroundColor : self.backgroundColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBackgroundColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightBackgroundColor) {
+        return self.defaultNightBackgroundColor;
+    } else {
+        UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UIView class]]) {
         return UIColorFromRGB(0x343434);
     } else {
-        UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
-        return resultColor;
+        return nil;
     }
 }
 

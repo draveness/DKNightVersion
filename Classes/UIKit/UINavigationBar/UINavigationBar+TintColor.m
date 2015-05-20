@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightTintColor {
-    return objc_getAssociatedObject(self, @selector(nightTintColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTintColor : self.tintColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTintColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTintColor) {
+        return self.defaultNightTintColor;
+    } else {
+        UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightTintColor:(UIColor *)nightTintColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UINavigationBar class]]) {
         return UIColorFromRGB(0xffffff);
     } else {
-        UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];
-        return resultColor;
+        return nil;
     }
 }
 

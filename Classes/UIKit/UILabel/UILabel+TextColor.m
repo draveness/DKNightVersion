@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightTextColor {
-    return objc_getAssociatedObject(self, @selector(nightTextColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTextColor : self.textColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTextColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTextColor) {
+        return self.defaultNightTextColor;
+    } else {
+        UIColor *resultColor = self.normalTextColor ?: [UIColor clearColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightTextColor:(UIColor *)nightTextColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UILabel class]]) {
         return UIColorFromRGB(0x5d5d5d);
     } else {
-        UIColor *resultColor = self.normalTextColor ?: [UIColor clearColor];
-        return resultColor;
+        return nil;
     }
 }
 

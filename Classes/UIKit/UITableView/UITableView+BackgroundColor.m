@@ -22,8 +22,7 @@
     if ([self isMemberOfClass:[UITableView class]]) {
         return UIColorFromRGB(0x343434);
     } else {
-        UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
-        return resultColor;
+        return nil;
     }
 }
 

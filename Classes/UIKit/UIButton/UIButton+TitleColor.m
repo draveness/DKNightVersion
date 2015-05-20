@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightTitleColor {
-    return objc_getAssociatedObject(self, @selector(nightTitleColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTitleColor : self.currentTitleColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTitleColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTitleColor) {
+        return self.defaultNightTitleColor;
+    } else {
+        UIColor *resultColor = self.normalTitleColor ?: [UIColor whiteColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightTitleColor:(UIColor *)nightTitleColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UIButton class]]) {
         return UIColorFromRGB(0x5F80AC);
     } else {
-        UIColor *resultColor = self.normalTitleColor ?: [UIColor whiteColor];
-        return resultColor;
+        return nil;
     }
 }
 

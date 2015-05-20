@@ -46,7 +46,15 @@
 }
 
 - (UIColor *)nightSeparatorColor {
-    return objc_getAssociatedObject(self, @selector(nightSeparatorColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightSeparatorColor : self.separatorColor);
+    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightSeparatorColor));
+    if (nightColor) {
+        return nightColor;
+    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightSeparatorColor) {
+        return self.defaultNightSeparatorColor;
+    } else {
+        UIColor *resultColor = self.normalSeparatorColor ?: [UIColor clearColor];
+        return resultColor;
+    }
 }
 
 - (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
@@ -70,8 +78,7 @@
     if ([self isMemberOfClass:[UITableView class]]) {
         return UIColorFromRGB(0x313131);
     } else {
-        UIColor *resultColor = self.normalSeparatorColor ?: [UIColor clearColor];
-        return resultColor;
+        return nil;
     }
 }
 
