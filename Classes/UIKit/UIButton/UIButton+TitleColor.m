@@ -36,8 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-
-
+    [DKNightVersionManager addClassToSet:self.class];
 }
 
 - (void)hook_setTitleColor:(UIColor*)titleColor forState:(UIControlState)state {

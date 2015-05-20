@@ -36,8 +36,7 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
-
-
+    [DKNightVersionManager addClassToSet:self.class];
 }
 
 - (void)hook_setSeparatorColor:(UIColor*)separatorColor {

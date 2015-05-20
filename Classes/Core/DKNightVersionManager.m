@@ -42,7 +42,9 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.useDefaultNightColor = NO;
-        instance.respondClasseses = [[NSMutableSet alloc] initWithObjects:@"UIView", @"UILabel", @"UINavigationBar", @"UITabBar", @"UIButton", @"UIBarButtonItem", @"UIScrollView", @"UITableView", @"UITableViewCell", nil];
+//        instance.respondClasseses = [[NSMutableSet alloc] initWithObjects:@"UIView", @"UILabel", @"UINavigationBar", @"UITabBar", @"UIButton", @"UIBarButtonItem", @"UIScrollView", @"UITableView", @"UITableViewCell", nil];
+        instance.respondClasseses = [[NSMutableSet alloc] init];
+
     });
     return instance;
 }

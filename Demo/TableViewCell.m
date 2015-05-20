@@ -17,7 +17,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [DKNightVersionManager addShouldChangeClass:self.class];
+        [DKNightVersionManager addClassToSet:self.class];
         self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 230, 80)];
         self.label.numberOfLines = 0;
         self.label.text = @"DKNightVersion is a light wei-ght framework adding night   version to your iOS app.";
