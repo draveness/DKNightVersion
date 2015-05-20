@@ -13,7 +13,7 @@
 
 + (BOOL)shouldChangeColor:(id)object {
     __block BOOL shouldChangeColor = NO;
-    [[DKNightVersionManager shouldChangeClasses] enumerateObjectsUsingBlock:^(NSString *klassString, BOOL *stop) {
+    [[DKNightVersionManager respondClasseses] enumerateObjectsUsingBlock:^(NSString *klassString, BOOL *stop) {
         Class klass = NSClassFromString(klassString);
         if ([object isMemberOfClass:klass]) {
             shouldChangeColor = YES;

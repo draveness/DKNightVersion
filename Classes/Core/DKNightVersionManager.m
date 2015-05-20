@@ -30,7 +30,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
 @property (nonatomic, assign) BOOL useDefaultNightColor;
 
-@property (nonatomic, strong) NSMutableSet *shouldChangeClassArray;
+@property (nonatomic, strong) NSMutableSet *respondClasseses;
 
 @end
 
@@ -42,7 +42,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.useDefaultNightColor = NO;
-        instance.shouldChangeClassArray = [[NSMutableSet alloc] initWithObjects:@"UIView", @"UILabel", @"UINavigationBar", @"UITabBar", @"UIButton", @"UIBarButtonItem", @"UIScrollView", @"UITableView", @"UITableViewCell", nil];
+        instance.respondClasseses = [[NSMutableSet alloc] initWithObjects:@"UIView", @"UILabel", @"UINavigationBar", @"UITabBar", @"UIButton", @"UIBarButtonItem", @"UIScrollView", @"UITableView", @"UITableViewCell", nil];
     });
     return instance;
 }
@@ -128,16 +128,21 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     [self.sharedNightVersionManager setUseDefaultNightColor:use];
 }
 
-+ (void)addShouldChangeClass:(Class)klass {
-    [self.sharedNightVersionManager.shouldChangeClassArray addObject:NSStringFromClass(klass)];
+@end
+
+@implementation DKNightVersionManager (RespondClasses)
+
+
++ (void)addClassToSet:(Class)klass {
+    [self.sharedNightVersionManager.respondClasseses addObject:NSStringFromClass(klass)];
 }
 
-+ (void)removeShouldChangeClass:(Class)klass {
-    [self.sharedNightVersionManager.shouldChangeClassArray removeObject:NSStringFromClass(klass)];
++ (void)removeClassFromSet:(Class)klass {
+    [self.sharedNightVersionManager.respondClasseses removeObject:NSStringFromClass(klass)];
 }
 
-+ (NSMutableSet *)shouldChangeClasses {
-    return self.sharedNightVersionManager.shouldChangeClassArray;
++ (NSMutableSet *)respondClasseses {
+    return self.sharedNightVersionManager.respondClasseses;
 }
 
 @end

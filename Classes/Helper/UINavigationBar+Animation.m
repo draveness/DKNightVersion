@@ -13,6 +13,9 @@ CGFloat const stepDuration = 0.01;
 @implementation UINavigationBar (Animation)
 
 - (void)animateNavigationBarToColor:(UIColor *)toColor duration:(NSTimeInterval)duration {
+    if (!self.barTintColor || !toColor) {
+        return;
+    }
     UIColor *barDefaultColor = [UIColor colorWithRed:0.973 green:0.973 blue:0.973 alpha:1.0];
 
     UIColor *barTintColor = self.barTintColor ? : barDefaultColor;
