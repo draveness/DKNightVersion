@@ -16,6 +16,6 @@
 
 - (void)changeColor;
 
-- (void)changeColorWithDuration:(CGFloat)duratio;
+- (void)changeColorWithDuration:(CGFloat)duration;
 
 @end
