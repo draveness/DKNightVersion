@@ -31,6 +31,7 @@
 - (void)changeColor {
     if ([DKNightVersionUtility shouldChangeColor:self]) {
         [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+        
     }
 }
 

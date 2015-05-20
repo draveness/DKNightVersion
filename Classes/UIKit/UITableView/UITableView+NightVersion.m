@@ -33,7 +33,9 @@
 
 - (void)changeColor {
     if ([DKNightVersionUtility shouldChangeColor:self]) {
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];[self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+        [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
+        
     }
 }
 
