@@ -70,6 +70,27 @@ It's pretty easy to swich theme between night and normal mode.
 
 `nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
+## RespondClasses
+
+If you want your own class changing color while switch theme.
+
+You are supposed to add it to `respondClasseses` set. In the new version, in order to prevent subclass inheritance superclass's night color, I add `respondClasseses` set.
+
+Use `addClassToSet:` or `removeClassToSet:` method to deal with it.
+
+```
+[DKNightVersionManager addClassToSet:self.class];
+[DKNightVersionManager removeClassToSet:self.class];
+```
+
+If you don't add your own classes to this set, `DKNightVersionManager` will prevent it from changing color when switch theme.
+
+Use `respondClasseses` to get all respond classes which will change color when `nightFalling` or `dawnComing`.
+
+```
+NSSet *set = [DKNightVersionManager respondClasseses];
+```
+
 ### JSON
 
 There is a json file in `Generator` folder named `property.json`, you can change the color in it, which will cuz the default color changing to the color you want.

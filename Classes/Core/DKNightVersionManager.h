@@ -81,6 +81,6 @@ extern CGFloat const DKNightVersionAnimationDuration;
  *
  *  @return A bunch of string for class which will change color when switch theme
  */
-+ (NSMutableSet *)respondClasseses;
++ (NSSet *)respondClasseses;
 
 @end
