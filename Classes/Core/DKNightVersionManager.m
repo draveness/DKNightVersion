@@ -143,7 +143,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 }
 
 + (NSSet *)respondClasseses {
-    return self.sharedNightVersionManager.respondClasseses;
+    return [self.sharedNightVersionManager.respondClasseses copy];
 }
 
 @end
