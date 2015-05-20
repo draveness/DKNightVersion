@@ -18,9 +18,6 @@
 
 @end
 
-static char *nightBackgroundColorKey;
-static char *normalBackgroundColorKey;
-
 @implementation UIView (BackgroundColor)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normalBackgroundColorKey;
 }
 
 - (UIColor *)nightBackgroundColor {
-    return objc_getAssociatedObject(self, &nightBackgroundColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBackgroundColor : self.backgroundColor);
+    return objc_getAssociatedObject(self, @selector(nightBackgroundColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBackgroundColor : self.backgroundColor);
 }
 
 - (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self setBackgroundColor:nightBackgroundColor];
     }
-    objc_setAssociatedObject(self, &nightBackgroundColorKey, nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightBackgroundColor), nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalBackgroundColor {
-    return objc_getAssociatedObject(self, &normalBackgroundColorKey);
+    return objc_getAssociatedObject(self, @selector(normalBackgroundColor));
 }
 
 - (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
-    objc_setAssociatedObject(self, &normalBackgroundColorKey, normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normalBackgroundColor), normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNightBackgroundColor {

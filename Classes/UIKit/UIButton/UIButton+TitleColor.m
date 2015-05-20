@@ -18,9 +18,6 @@
 
 @end
 
-static char *nightTitleColorKey;
-static char *normalTitleColorKey;
-
 @implementation UIButton (TitleColor)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normalTitleColorKey;
 }
 
 - (UIColor *)nightTitleColor {
-    return objc_getAssociatedObject(self, &nightTitleColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTitleColor : self.currentTitleColor);
+    return objc_getAssociatedObject(self, @selector(nightTitleColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTitleColor : self.currentTitleColor);
 }
 
 - (void)setNightTitleColor:(UIColor *)nightTitleColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
     }
-    objc_setAssociatedObject(self, &nightTitleColorKey, nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightTitleColor), nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalTitleColor {
-    return objc_getAssociatedObject(self, &normalTitleColorKey);
+    return objc_getAssociatedObject(self, @selector(normalTitleColor));
 }
 
 - (void)setNormalTitleColor:(UIColor *)normalTitleColor {
-    objc_setAssociatedObject(self, &normalTitleColorKey, normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normalTitleColor), normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNightTitleColor {

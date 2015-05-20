@@ -18,9 +18,6 @@
 
 @end
 
-static char *nightTintColorKey;
-static char *normalTintColorKey;
-
 @implementation UIBarButtonItem (TintColor)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normalTintColorKey;
 }
 
 - (UIColor *)nightTintColor {
-    return objc_getAssociatedObject(self, &nightTintColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTintColor : self.tintColor);
+    return objc_getAssociatedObject(self, @selector(nightTintColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightTintColor : self.tintColor);
 }
 
 - (void)setNightTintColor:(UIColor *)nightTintColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self setTintColor:nightTintColor];
     }
-    objc_setAssociatedObject(self, &nightTintColorKey, nightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightTintColor), nightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalTintColor {
-    return objc_getAssociatedObject(self, &normalTintColorKey)?: [UIColor blueColor];
+    return objc_getAssociatedObject(self, @selector(normalTintColor))?: [UIColor blueColor];
 }
 
 - (void)setNormalTintColor:(UIColor *)normalTintColor {
-    objc_setAssociatedObject(self, &normalTintColorKey, normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normalTintColor), normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNightTintColor {

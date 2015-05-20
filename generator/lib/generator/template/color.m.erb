@@ -18,9 +18,6 @@
 
 @end
 
-static char *night<%= property.cap_name %>Key;
-static char *normal<%= property.cap_name %>Key;
-
 @implementation <%= klass.name %> (<%= property.cap_name %>)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normal<%= property.cap_name %>Key;
 }
 
 - (UIColor *)night<%= property.cap_name %> {
-    return objc_getAssociatedObject(self, &night<%= property.cap_name %>Key) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNight<%= property.cap_name %> : self.<%= property.getter %>);
+    return objc_getAssociatedObject(self, @selector(night<%= property.cap_name %>)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNight<%= property.cap_name %> : self.<%= property.getter %>);
 }
 
 - (void)setNight<%= property.cap_name %>:(UIColor *)night<%= property.cap_name %> {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self <%= property.set_color_method("night" + property.cap_name) %>];
     }
-    objc_setAssociatedObject(self, &night<%= property.cap_name %>Key, night<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(night<%= property.cap_name %>), night<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normal<%= property.cap_name %> {
-    return objc_getAssociatedObject(self, &normal<%= property.cap_name %>Key)<% if klass.name == 'UIBarButtonItem' && property.name == 'tintColor' %><%= '?: [UIColor blueColor]' %><% end %>;
+    return objc_getAssociatedObject(self, @selector(normal<%= property.cap_name %>))<% if klass.name == 'UIBarButtonItem' && property.name == 'tintColor' %><%= '?: [UIColor blueColor]' %><% end %>;
 }
 
 - (void)setNormal<%= property.cap_name %>:(UIColor *)normal<%= property.cap_name %> {
-    objc_setAssociatedObject(self, &normal<%= property.cap_name %>Key, normal<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normal<%= property.cap_name %>), normal<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNight<%= property.cap_name %> {

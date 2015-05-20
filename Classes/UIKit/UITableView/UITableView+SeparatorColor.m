@@ -18,9 +18,6 @@
 
 @end
 
-static char *nightSeparatorColorKey;
-static char *normalSeparatorColorKey;
-
 @implementation UITableView (SeparatorColor)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normalSeparatorColorKey;
 }
 
 - (UIColor *)nightSeparatorColor {
-    return objc_getAssociatedObject(self, &nightSeparatorColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightSeparatorColor : self.separatorColor);
+    return objc_getAssociatedObject(self, @selector(nightSeparatorColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightSeparatorColor : self.separatorColor);
 }
 
 - (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self setSeparatorColor:nightSeparatorColor];
     }
-    objc_setAssociatedObject(self, &nightSeparatorColorKey, nightSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightSeparatorColor), nightSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalSeparatorColor {
-    return objc_getAssociatedObject(self, &normalSeparatorColorKey);
+    return objc_getAssociatedObject(self, @selector(normalSeparatorColor));
 }
 
 - (void)setNormalSeparatorColor:(UIColor *)normalSeparatorColor {
-    objc_setAssociatedObject(self, &normalSeparatorColorKey, normalSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normalSeparatorColor), normalSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNightSeparatorColor {

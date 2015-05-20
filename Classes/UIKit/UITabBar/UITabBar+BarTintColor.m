@@ -18,9 +18,6 @@
 
 @end
 
-static char *nightBarTintColorKey;
-static char *normalBarTintColorKey;
-
 @implementation UITabBar (BarTintColor)
 
 + (void)load {
@@ -49,22 +46,22 @@ static char *normalBarTintColorKey;
 }
 
 - (UIColor *)nightBarTintColor {
-    return objc_getAssociatedObject(self, &nightBarTintColorKey) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBarTintColor : self.barTintColor);
+    return objc_getAssociatedObject(self, @selector(nightBarTintColor)) ? : ([DKNightVersionManager useDefaultNightColor] ? self.defaultNightBarTintColor : self.barTintColor);
 }
 
 - (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [self setBarTintColor:nightBarTintColor];
     }
-    objc_setAssociatedObject(self, &nightBarTintColorKey, nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightBarTintColor), nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)normalBarTintColor {
-    return objc_getAssociatedObject(self, &normalBarTintColorKey);
+    return objc_getAssociatedObject(self, @selector(normalBarTintColor));
 }
 
 - (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
-    objc_setAssociatedObject(self, &normalBarTintColorKey, normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)defaultNightBarTintColor {

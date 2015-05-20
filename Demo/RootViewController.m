@@ -27,11 +27,12 @@
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
     navigationLabel.text = @"DKNightVersion";
     navigationLabel.textAlignment = NSTextAlignmentCenter;
-//    navigationLabel.nightTextColor = [UIColor whiteColor];
+    navigationLabel.nightTextColor = [UIColor whiteColor];
     self.navigationItem.titleView = navigationLabel;
 
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
     self.navigationItem.leftBarButtonItem = item;
+    [DKNightVersionManager setUseDefaultNightColor:YES];
 }
 
 
