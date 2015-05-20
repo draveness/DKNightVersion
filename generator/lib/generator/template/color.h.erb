@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNight<%= property.cap_name %>;
+
+
 @interface <%= klass.name %> (<%= property.cap_name %>)
 
 /**
@@ -21,6 +24,5 @@
  *  <%= klass.name %> <%= property.cap_name %> in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normal<%= property.cap_name %>;
-
 
 @end

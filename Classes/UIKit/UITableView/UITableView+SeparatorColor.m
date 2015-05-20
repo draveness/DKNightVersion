@@ -36,12 +36,12 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
+    if (!defaultNightSeparatorColor) defaultNightSeparatorColor = UIColorFromRGB(0x313131);
+
 }
 
 - (void)hook_setSeparatorColor:(UIColor*)separatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalSeparatorColor:separatorColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalSeparatorColor:separatorColor];
     [self hook_setSeparatorColor:separatorColor];
 }
 
@@ -58,9 +58,7 @@
 }
 
 - (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setSeparatorColor:nightSeparatorColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setSeparatorColor:nightSeparatorColor];
     objc_setAssociatedObject(self, @selector(nightSeparatorColor), nightSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -73,8 +71,6 @@
 }
 
 - (UIColor *)defaultNightSeparatorColor {
-    //BOOL notUIKitSubclass = [self isKindOfClass:[UITableView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    //if ([self isMemberOfClass:[UITableView class]] || notUIKitSubclass) {
     if ([self isMemberOfClass:[UITableView class]]) {
         return UIColorFromRGB(0x313131);
     } else {

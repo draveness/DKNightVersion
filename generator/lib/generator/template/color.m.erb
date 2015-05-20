@@ -36,12 +36,12 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
+    <% if property.default_color %>if (!defaultNight<%= property.cap_name %>) defaultNight<%= property.cap_name %> = <%= "UIColorFromRGB(#{property.default_color})" %><% end %>;
+
 }
 
 - (void)hook_<%= property.setter %> {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormal<%= property.cap_name %>:<%= property.name %>];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormal<%= property.cap_name %>:<%= property.name %>];
     [self hook_<%= property.set_color_method(property.name) %>];
 }
 
@@ -58,9 +58,7 @@
 }
 
 - (void)setNight<%= property.cap_name %>:(UIColor *)night<%= property.cap_name %> {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self <%= property.set_color_method("night" + property.cap_name) %>];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self <%= property.set_color_method("night" + property.cap_name) %>];
     objc_setAssociatedObject(self, @selector(night<%= property.cap_name %>), night<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -73,8 +71,6 @@
 }
 
 - (UIColor *)defaultNight<%= property.cap_name %> {
-    //BOOL notUIKitSubclass = [self isKindOfClass:[<%= klass.name %> class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    //if ([self isMemberOfClass:[<%= klass.name %> class]] || notUIKitSubclass) {
     if ([self isMemberOfClass:[<%= klass.name %> class]]) {
         return <% if property.default_color %><%= "UIColorFromRGB(#{property.default_color})" %><% else %><%= 'self.normal' + property.cap_name %><% end %>;
     } else {

@@ -10,6 +10,7 @@
 
 #import "UIScrollView+NightVersion.h"
 #import "DKNightVersionManager.h"
+#import "DKNightVersionUtility.h"
 #import "UIView+NightVersion.h"
 
 
@@ -19,16 +20,19 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
-    
-    [UIView animateWithDuration:duration animations:^{
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
         
-    }];
+        [UIView animateWithDuration:duration animations:^{
+            [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+            
+        }];
+    }
 }
 
 - (void)changeColor {
-    [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-    
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+    }
 }
 
 @end

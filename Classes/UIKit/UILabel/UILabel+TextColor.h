@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNightTextColor;
+
+
 @interface UILabel (TextColor)
 
 /**
@@ -21,6 +24,5 @@
  *  UILabel TextColor in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normalTextColor;
-
 
 @end

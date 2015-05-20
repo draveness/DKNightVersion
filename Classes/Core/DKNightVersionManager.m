@@ -30,6 +30,8 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
 @property (nonatomic, assign) BOOL useDefaultNightColor;
 
+@property (nonatomic, strong) NSMutableSet *shouldChangeClassArray;
+
 @end
 
 @implementation DKNightVersionManager
@@ -40,13 +42,13 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.useDefaultNightColor = NO;
+        instance.shouldChangeClassArray = [[NSMutableSet alloc] initWithObjects:@"UIView", @"UILabel", @"UINavigationBar", @"UITabBar", @"UIButton", @"UIBarButtonItem", @"UIScrollView", @"UITableView", @"UITableViewCell", nil];
     });
     return instance;
 }
 
 + (void)nightFalling {
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNight;
-    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionNightFallingNotification object:nil];
     if ([self useDefaultNightColor]) {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
@@ -54,7 +56,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
 + (void)dawnComing {
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNormal;
-    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionDawnComingNotification object:nil];
     if ([self useDefaultNightColor]) {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
@@ -72,6 +73,11 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     _themeVersion = themeVersion;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [self.class changeColor:window.subviews.lastObject withDuration:DKNightVersionAnimationDuration];
+    if (themeVersion == DKThemeVersionNight) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionNightFallingNotification object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionDawnComingNotification object:nil];
+    }
 }
 
 + (void)changeColor:(id <DKNightVersionChangeColorProtocol>)object {
@@ -114,13 +120,24 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     }
 }
 
-
 + (BOOL)useDefaultNightColor {
     return self.sharedNightVersionManager.useDefaultNightColor;
 }
 
 + (void)setUseDefaultNightColor:(BOOL)use {
     [self.sharedNightVersionManager setUseDefaultNightColor:use];
+}
+
++ (void)addShouldChangeClass:(Class)klass {
+    [self.sharedNightVersionManager.shouldChangeClassArray addObject:NSStringFromClass(klass)];
+}
+
++ (void)removeShouldChangeClass:(Class)klass {
+    [self.sharedNightVersionManager.shouldChangeClassArray removeObject:NSStringFromClass(klass)];
+}
+
++ (NSMutableSet *)shouldChangeClasses {
+    return self.sharedNightVersionManager.shouldChangeClassArray;
 }
 
 @end

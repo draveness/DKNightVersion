@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNightSeparatorColor;
+
+
 @interface UITableView (SeparatorColor)
 
 /**
@@ -21,6 +24,5 @@
  *  UITableView SeparatorColor in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normalSeparatorColor;
-
 
 @end

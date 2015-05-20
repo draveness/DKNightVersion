@@ -36,12 +36,12 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
+    if (!defaultNightBackgroundColor) defaultNightBackgroundColor = UIColorFromRGB(0x343434);
+
 }
 
 - (void)hook_setBackgroundColor:(UIColor*)backgroundColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalBackgroundColor:backgroundColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalBackgroundColor:backgroundColor];
     [self hook_setBackgroundColor:backgroundColor];
 }
 
@@ -58,9 +58,7 @@
 }
 
 - (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setBackgroundColor:nightBackgroundColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setBackgroundColor:nightBackgroundColor];
     objc_setAssociatedObject(self, @selector(nightBackgroundColor), nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -73,8 +71,6 @@
 }
 
 - (UIColor *)defaultNightBackgroundColor {
-    //BOOL notUIKitSubclass = [self isKindOfClass:[UIView class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    //if ([self isMemberOfClass:[UIView class]] || notUIKitSubclass) {
     if ([self isMemberOfClass:[UIView class]]) {
         return UIColorFromRGB(0x343434);
     } else {

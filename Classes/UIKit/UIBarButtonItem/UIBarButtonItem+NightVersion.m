@@ -10,6 +10,7 @@
 
 #import "UIBarButtonItem+NightVersion.h"
 #import "DKNightVersionManager.h"
+#import "DKNightVersionUtility.h"
 
 
 
@@ -18,16 +19,19 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
-    
-    [UIView animateWithDuration:duration animations:^{
-        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
         
-    }];
+        [UIView animateWithDuration:duration animations:^{
+            [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+            
+        }];
+    }
 }
 
 - (void)changeColor {
-    [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
-    
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
+        [self setTintColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTintColor : self.normalTintColor];
+    }
 }
 
 @end

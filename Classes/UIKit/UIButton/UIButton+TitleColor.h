@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNightTitleColor;
+
+
 @interface UIButton (TitleColor)
 
 /**
@@ -21,6 +24,5 @@
  *  UIButton TitleColor in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normalTitleColor;
-
 
 @end

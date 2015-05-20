@@ -29,7 +29,6 @@
     UIButton *night = [[UIButton alloc] initWithFrame:rect];
     night.titleLabel.font = [UIFont systemFontOfSize:20];
     [night setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
-    NSLog(@"%@", night.normalTitleColor);
 
     rect = CGRectMake(100, 200, 120, 80);
     UIButton *day = [[UIButton alloc] initWithFrame:rect];

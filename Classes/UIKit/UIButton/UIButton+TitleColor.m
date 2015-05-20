@@ -36,12 +36,12 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
+    if (!defaultNightTitleColor) defaultNightTitleColor = UIColorFromRGB(0x5F80AC);
+
 }
 
 - (void)hook_setTitleColor:(UIColor*)titleColor forState:(UIControlState)state {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalTitleColor:titleColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalTitleColor:titleColor];
     [self hook_setTitleColor:titleColor forState:UIControlStateNormal];
 }
 
@@ -58,9 +58,7 @@
 }
 
 - (void)setNightTitleColor:(UIColor *)nightTitleColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
     objc_setAssociatedObject(self, @selector(nightTitleColor), nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -73,8 +71,6 @@
 }
 
 - (UIColor *)defaultNightTitleColor {
-    //BOOL notUIKitSubclass = [self isKindOfClass:[UIButton class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    //if ([self isMemberOfClass:[UIButton class]] || notUIKitSubclass) {
     if ([self isMemberOfClass:[UIButton class]]) {
         return UIColorFromRGB(0x5F80AC);
     } else {

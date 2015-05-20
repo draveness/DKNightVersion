@@ -36,12 +36,12 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);        
         }
     });
+    if (!defaultNightBarTintColor) defaultNightBarTintColor = UIColorFromRGB(0x444444);
+
 }
 
 - (void)hook_setBarTintColor:(UIColor*)barTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setNormalBarTintColor:barTintColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalBarTintColor:barTintColor];
     [self hook_setBarTintColor:barTintColor];
 }
 
@@ -58,9 +58,7 @@
 }
 
 - (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        [self setBarTintColor:nightBarTintColor];
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setBarTintColor:nightBarTintColor];
     objc_setAssociatedObject(self, @selector(nightBarTintColor), nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -73,8 +71,6 @@
 }
 
 - (UIColor *)defaultNightBarTintColor {
-    //BOOL notUIKitSubclass = [self isKindOfClass:[UITabBar class]] && ![NSStringFromClass(self.class) containsString:@"UI"];
-    //if ([self isMemberOfClass:[UITabBar class]] || notUIKitSubclass) {
     if ([self isMemberOfClass:[UITabBar class]]) {
         return UIColorFromRGB(0x444444);
     } else {

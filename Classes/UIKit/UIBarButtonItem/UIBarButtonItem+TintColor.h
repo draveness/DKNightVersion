@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNightTintColor;
+
+
 @interface UIBarButtonItem (TintColor)
 
 /**
@@ -21,6 +24,5 @@
  *  UIBarButtonItem TintColor in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normalTintColor;
-
 
 @end

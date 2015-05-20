@@ -56,5 +56,9 @@ extern CGFloat const DKNightVersionAnimationDuration;
  */
 + (void)setUseDefaultNightColor:(BOOL)use;
 
++ (void)addShouldChangeClass:(Class)klass;
++ (void)removeShouldChangeClass:(Class)klass;
++ (NSMutableSet *)shouldChangeClasses;
+
 
 @end

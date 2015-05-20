@@ -10,6 +10,7 @@
 
 #import "UILabel+NightVersion.h"
 #import "DKNightVersionManager.h"
+#import "DKNightVersionUtility.h"
 #import "UIView+NightVersion.h"
 
 
@@ -19,18 +20,20 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
-    
-    [UIView animateWithDuration:duration animations:^{
-        [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
         
-    }];
+        [UIView animateWithDuration:duration animations:^{
+            [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
+            [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+            
+        }];
+    }
 }
 
 - (void)changeColor {
-    [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];
-    [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
-    
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
+        [self setTextColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightTextColor : self.normalTextColor];[self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
+    }
 }
 
 @end

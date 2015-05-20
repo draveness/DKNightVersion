@@ -10,6 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
+static UIColor *defaultNightTintColor;
+
+
 @interface UINavigationBar (TintColor)
 
 /**
@@ -21,6 +24,5 @@
  *  UINavigationBar TintColor in normal version.
  */
 @property (nonatomic, strong, readonly) UIColor *normalTintColor;
-
 
 @end

@@ -10,6 +10,7 @@
 
 #import "<%= klass.name %>+NightVersion.h"
 #import "DKNightVersionManager.h"
+#import "DKNightVersionUtility.h"
 <% if klass.all_superklass_name %><% klass.all_superklass_name.reverse.each do |name| %><%= "#import \"#{name}+NightVersion.h\"\n" %><% end %><% end %>
 <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' %><%= '#import "UINavigationBar+Animation.h"' %><% end %><% end %>
 
@@ -18,16 +19,19 @@
 #pragma mark - ChangeColor
 
 - (void)changeColorWithDuration:(CGFloat)duration {
-    <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' && klass.name == 'UINavigationBar' %><%= "[self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name} duration:duration];" %><% end %><% end %>
-    [UIView animateWithDuration:duration animations:^{
-        <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
-        <% end %><% end %>
-    }];
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
+        <% klass.all_properties.each do |property| %><% if property.name == 'barTintColor' && klass.name == 'UINavigationBar' %><%= "[self animateNavigationBarToColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name} duration:duration];" %><% end %><% end %>
+        [UIView animateWithDuration:duration animations:^{
+            <% klass.all_properties.each do |property| %><% if property.name != 'barTintColor' %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
+            <% end %><% end %>
+        }];
+    }
 }
 
 - (void)changeColor {
-    <% klass.all_properties.each do |property| %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %>
-    <% end %>
+    if ([DKNightVersionUtility shouldChangeColor:self]) {
+        <% klass.all_properties.each do |property| %><%= "[self #{property.set_color_method("([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.night#{property.cap_name} : self.normal#{property.cap_name}")}];" %><% end %>
+    }
 }
 
 @end
