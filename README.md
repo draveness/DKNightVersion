@@ -152,13 +152,14 @@ Optionally, turn off the default night mode and set it on your own is also suppo
 
 DKNightVersionManager will pick the proper color following these two rules.
 
-1. `useDefaultNightColor == YES` (The default behavior)
 
-		nightColor > defaultNightColor > normalColor
-
-2. `useDefaultNightColor == NO`
+1. `useDefaultNightColor == NO` (The default behavior)
 
 		nightColor > normalColor
+
+2. `useDefaultNightColor == YES` 
+
+		nightColor > defaultNightColor > normalColor
 
 # Contribute
 
