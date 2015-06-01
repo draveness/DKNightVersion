@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class ObjcProperty
-	attr_accessor :name, :type, :getter, :setter, :parameter, :default_color
+	attr_accessor :name, :type, :getter, :setter, :parameter
 
 	def initialize args
         args.each do |k,v|

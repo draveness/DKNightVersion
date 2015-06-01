@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBarTintColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightBarTintColor) {
-        return self.defaultNightBarTintColor;
     } else {
         UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
     objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightBarTintColor {
-    return [self isMemberOfClass:[UITabBar class]] ? UIColorFromRGB(0x444444) : nil;
 }
 
 @end

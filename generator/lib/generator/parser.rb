@@ -5,8 +5,8 @@ require_relative 'model/objc_class'
 
 def parse_json(file)
     property_json = JSON.parse File.read(file)
-    property_json.map do |klass, colors|
-        ObjcClass.new(klass, colors.map { |color, value| ObjcProperty.new(name: color, default_color: value) })
+    property_json.map do |klass, properties|
+        ObjcClass.new(klass, properties.map { |property| ObjcProperty.new(name: property) })
     end
 end
 

@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightSeparatorColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightSeparatorColor) {
-        return self.defaultNightSeparatorColor;
     } else {
         UIColor *resultColor = self.normalSeparatorColor ?: [UIColor clearColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalSeparatorColor:(UIColor *)normalSeparatorColor {
     objc_setAssociatedObject(self, @selector(normalSeparatorColor), normalSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightSeparatorColor {
-    return [self isMemberOfClass:[UITableView class]] ? UIColorFromRGB(0x313131) : nil;
 }
 
 @end

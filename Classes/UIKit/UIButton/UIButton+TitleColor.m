@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTitleColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTitleColor) {
-        return self.defaultNightTitleColor;
     } else {
         UIColor *resultColor = self.normalTitleColor ?: [UIColor whiteColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalTitleColor:(UIColor *)normalTitleColor {
     objc_setAssociatedObject(self, @selector(normalTitleColor), normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightTitleColor {
-    return [self isMemberOfClass:[UIButton class]] ? UIColorFromRGB(0x5F80AC) : nil;
 }
 
 @end

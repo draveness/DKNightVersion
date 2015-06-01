@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTintColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTintColor) {
-        return self.defaultNightTintColor;
     } else {
         UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalTintColor:(UIColor *)normalTintColor {
     objc_setAssociatedObject(self, @selector(normalTintColor), normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightTintColor {
-    return [self isMemberOfClass:[UINavigationBar class]] ? UIColorFromRGB(0xffffff) : nil;
 }
 
 @end

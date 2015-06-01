@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTextColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightTextColor) {
-        return self.defaultNightTextColor;
     } else {
         UIColor *resultColor = self.normalTextColor ?: [UIColor clearColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalTextColor:(UIColor *)normalTextColor {
     objc_setAssociatedObject(self, @selector(normalTextColor), normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightTextColor {
-    return [self isMemberOfClass:[UILabel class]] ? UIColorFromRGB(0x5d5d5d) : nil;
 }
 
 @end

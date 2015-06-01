@@ -47,14 +47,14 @@ extern CGFloat const DKNightVersionAnimationDuration;
  *
  *  @return Use default night color or not, default is YES
  */
-+ (BOOL)useDefaultNightColor;
+//+ (BOOL)useDefaultNightColor;
 
 /**
  *  Set whether or not use default night color
  *
  *  @param use Bool value to set whether to use default color
  */
-+ (void)setUseDefaultNightColor:(BOOL)use;
+//+ (void)setUseDefaultNightColor:(BOOL)use;
 
 @end
 

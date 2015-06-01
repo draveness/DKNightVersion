@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBackgroundColor));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNightBackgroundColor) {
-        return self.defaultNightBackgroundColor;
     } else {
         UIColor *resultColor = self.normalBackgroundColor ?: [UIColor clearColor];
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
     objc_setAssociatedObject(self, @selector(normalBackgroundColor), normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNightBackgroundColor {
-    return [self isMemberOfClass:[UIView class]] ? UIColorFromRGB(0x343434) : nil;
 }
 
 @end

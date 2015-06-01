@@ -48,8 +48,6 @@
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(night<%= property.cap_name %>));
     if (nightColor) {
         return nightColor;
-    } else if ([DKNightVersionManager useDefaultNightColor] && self.defaultNight<%= property.cap_name %>) {
-        return self.defaultNight<%= property.cap_name %>;
     } else {
         UIColor *resultColor = self.normal<%= property.cap_name %> ?: <% if property.name == 'tintColor' || property.name == 'titleColor' %><%= '[UIColor whiteColor]' %><% else %><%= '[UIColor clearColor]' %><% end %>;
         return resultColor;
@@ -67,10 +65,6 @@
 
 - (void)setNormal<%= property.cap_name %>:(UIColor *)normal<%= property.cap_name %> {
     objc_setAssociatedObject(self, @selector(normal<%= property.cap_name %>), normal<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor *)defaultNight<%= property.cap_name %> {
-    return [self isMemberOfClass:[<%= klass.name %> class]] ? <% if property.default_color %><%= "UIColorFromRGB(#{property.default_color})" %><% else %><%= 'self.normal' + property.cap_name %><% end %> : nil;
 }
 
 @end

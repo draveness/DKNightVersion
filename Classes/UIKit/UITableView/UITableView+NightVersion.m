@@ -12,7 +12,6 @@
 #import "DKNightVersionManager.h"
 #import "DKNightVersionUtility.h"
 #import "UIView+NightVersion.h"
-#import "UIScrollView+NightVersion.h"
 
 
 
@@ -24,8 +23,8 @@
     if ([DKNightVersionUtility shouldChangeColor:self]) {
         
         [UIView animateWithDuration:duration animations:^{
-            [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
             [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
+            [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
             
         }];
     }
@@ -33,8 +32,8 @@
 
 - (void)changeColor {
     if ([DKNightVersionUtility shouldChangeColor:self]) {
-        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
         [self setSeparatorColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightSeparatorColor : self.normalSeparatorColor];
+        [self setBackgroundColor:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) ? self.nightBackgroundColor : self.normalBackgroundColor];
         
     }
 }

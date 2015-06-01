@@ -1,40 +1,31 @@
 {
     "UIView": 
-    { 
-        "backgroundColor": "0x343434"
-    },
+    [
+        "backgroundColor"
+    ],
     "UILabel":
-    {
-        "textColor": "0x5d5d5d"
-    },
+    [ 
+        "textColor"
+    ],
     "UINavigationBar":
-    {
-        "barTintColor": "0x444444",
-        "tintColor": "0xffffff"
-    },
+    [ 
+        "barTintColor",
+        "tintColor"
+    ],
     "UITabBar":
-    {
-        "barTintColor": "0x444444"
-    },
+    [ 
+        "barTintColor"
+    ],
     "UIButton":
-    {
-        "titleColor": "0x5F80AC"
-    },
+    [ 
+        "titleColor"
+    ],
     "UIBarButtonItem":
-    {
-        "tintColor": "0xffffff"
-    },
-    "UIScrollView":
-    {
-        "backgroundColor": "0x343434"
-    },
+    [ 
+        "tintColor"
+    ],
     "UITableView":
-    {
-        "backgroundColor": "0x343434",
-        "separatorColor": "0x313131"
-    },
-    "UITableViewCell":
-    {
-        "backgroundColor": "0x343434" 
-    } 
+    [ 
+        "separatorColor"
+    ]
 }
