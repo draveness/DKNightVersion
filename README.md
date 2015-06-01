@@ -132,9 +132,11 @@ This command will automatically do everything for you.
 
 ## Picking Color
 
-DKNightVersionManager will pick the proper color following these two rules.
+DKNightVersionManager will pick the proper color following this rule.
 
-		nightColor > normalColor
+```
+nightColor > normalColor
+```
 
 But I suggest to assign every UIKit component a night color to prevent errors.
 
