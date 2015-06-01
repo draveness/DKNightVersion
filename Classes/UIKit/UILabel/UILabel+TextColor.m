@@ -44,6 +44,10 @@
     [self hook_setTextColor:textColor];
 }
 
+- (void)saveNormalColor {
+    self.normalTextColor = self.textColor;
+}
+
 - (UIColor *)nightTextColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTextColor));
     if (nightColor) {

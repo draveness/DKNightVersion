@@ -44,6 +44,10 @@
     [self hook_setTitleColor:titleColor forState:UIControlStateNormal];
 }
 
+- (void)saveNormalColor {
+    self.normalTitleColor = self.currentTitleColor;
+}
+
 - (UIColor *)nightTitleColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTitleColor));
     if (nightColor) {

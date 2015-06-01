@@ -27,26 +27,7 @@
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     button.nightTitleColor = [UIColor whiteColor];
 
-//    CGRect rect = CGRectMake(100, 100, 120, 80);
-//    UIButton *night = [[UIButton alloc] initWithFrame:rect];
-//    night.titleLabel.font = [UIFont systemFontOfSize:20];
-//    [night setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
-//
-//    rect = CGRectMake(100, 200, 120, 80);
-//    UIButton *day = [[UIButton alloc] initWithFrame:rect];
-//    day.titleLabel.font = [UIFont systemFontOfSize:20];
-//    [day setTitleColor:[UIColor colorWithRed:0.478 green:0.651 blue:0.988 alpha:1.0] forState:UIControlStateNormal];
-//
-//    [night setTitle:@"Night Falls" forState:UIControlStateNormal];
-//    [night addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
-//
-//    [day setTitle:@"Dawn Comes" forState:UIControlStateNormal];
-//    [day addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
-
-
     [self.view addSubview:button];
-//    [self.view addSubview:night];
-//    [self.view addSubview:day];
 }
 
 - (void)back {

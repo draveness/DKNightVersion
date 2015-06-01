@@ -9,7 +9,7 @@
 #import "UIViewController+ChangeColor.h"
 #import "DKNightVersionManager.h"
 #import "UIBarButtonItem+NightVersion.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @implementation UIViewController (ChangeColor)
 

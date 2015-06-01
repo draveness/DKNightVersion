@@ -44,6 +44,10 @@
     [self hook_setBarTintColor:barTintColor];
 }
 
+- (void)saveNormalColor {
+    self.normalBarTintColor = self.barTintColor;
+}
+
 - (UIColor *)nightBarTintColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBarTintColor));
     if (nightColor) {

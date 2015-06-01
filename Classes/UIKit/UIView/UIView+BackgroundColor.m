@@ -44,6 +44,10 @@
     [self hook_setBackgroundColor:backgroundColor];
 }
 
+- (void)saveNormalColor {
+    self.normalBackgroundColor = self.backgroundColor;
+}
+
 - (UIColor *)nightBackgroundColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBackgroundColor));
     if (nightColor) {
