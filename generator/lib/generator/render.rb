@@ -31,8 +31,6 @@ def objc_code_generator(klasses, p='.')
 	template_folder = File.join('generator', 'lib', 'generator', 'template')
 	color_header        = File.join(template_folder, 'color.h.erb')
 	color_imp           = File.join(template_folder, 'color.m.erb')
-	color_simply_header = File.join(template_folder, 'color_simply.h.erb')
-	color_simply_imp    = File.join(template_folder, 'color_simply.m.erb')
 	nightversion_header = File.join(template_folder, 'nightversion.h.erb')
 	nightversion_imp    = File.join(template_folder, 'nightversion.m.erb')
 
@@ -64,17 +62,10 @@ def objc_code_generator(klasses, p='.')
             color_header_file_path = File.join(subfolder_path, klass.color_header_name(property))
             color_imp_file_path    = File.join(subfolder_path, klass.color_imp_name(property))
 
-			if !klass.superklass || !superklass_has_property
-                puts "[Generate] Generating #{color_header_file_path}"
-				File.write color_header_file_path, render(color_header, klass, property)
-                puts "[Generate] Generating #{color_imp_file_path}"
-				File.write color_imp_file_path,    render(color_imp,    klass, property)
-			elsif superklass_has_property
-                puts "[Generate] Generating #{color_header_file_path}"
-				File.write color_header_file_path, render(color_simply_header, klass, property)
-                puts "[Generate] Generating #{color_imp_file_path}"
-				File.write color_imp_file_path,    render(color_simply_imp,    klass, property)
-			end
+            puts "[Generate] Generating #{color_header_file_path}"
+            File.write color_header_file_path, render(color_header, klass, property)
+            puts "[Generate] Generating #{color_imp_file_path}"
+            File.write color_imp_file_path,    render(color_imp,    klass, property)
 		end
 	end
     groups
