@@ -28,8 +28,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
 
-@property (nonatomic, assign) BOOL useDefaultNightColor;
-
 @property (nonatomic, strong) NSMutableSet *respondClasseses;
 
 @end
@@ -41,7 +39,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     static DKNightVersionManager *instance;
     dispatch_once(&once, ^{
         instance = [self new];
-        instance.useDefaultNightColor = NO;
         instance.respondClasseses = [[NSMutableSet alloc] init];
 
     });
@@ -50,16 +47,12 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
 
 + (void)nightFalling {
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNight;
-    if ([self useDefaultNightColor]) {
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 + (void)dawnComing {
     self.sharedNightVersionManager.themeVersion = DKThemeVersionNormal;
-    if ([self useDefaultNightColor]) {
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    }
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 + (DKThemeVersion)currentThemeVersion {
@@ -119,14 +112,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
             }
         }
     }
-}
-
-+ (BOOL)useDefaultNightColor {
-    return self.sharedNightVersionManager.useDefaultNightColor;
-}
-
-+ (void)setUseDefaultNightColor:(BOOL)use {
-    [self.sharedNightVersionManager setUseDefaultNightColor:use];
 }
 
 @end
