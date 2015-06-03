@@ -69,7 +69,7 @@ It's pretty easy to swich theme between night and normal mode.
 
 If you want your own class changing color while switch theme.
 
-You are supposed to add it to `respondClasseses` set. In the new version, in order to prevent subclass inheritance superclass's night color, I add `respondClasseses` set.
+**You must add it to `respondClasseses` set**. In the new version, in order to prevent subclass inheritance superclass's night color, I add `respondClasseses` set.
 
 Use `addClassToSet:` or `removeClassToSet:` method to deal with it.
 
