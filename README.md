@@ -151,7 +151,7 @@ DKNightVersion doesn't support xib now. I am working on it.
 # Contact
 
 - Powered by [Draveness](http://github.com/draveness)
-- Personal website [DeltaX](http://deltax.me)
+- Personal website [DeltaX](http://draveness.me)
 
 # License
 
