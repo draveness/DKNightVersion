@@ -51,14 +51,6 @@
     }
 }
 
-- (void)nightFalls {
-    [DKNightVersionManager nightFalling];
-}
-
-- (void)dawnComes {
-    [DKNightVersionManager dawnComing];
-}
-
 - (void)push {
     [self.navigationController pushViewController:[[SuccViewController alloc] init] animated:YES];
 }
@@ -79,13 +71,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//    if (indexPath.row % 2 == 0) {
-//        [cell.button setTitle:@"Night Falls" forState:UIControlStateNormal];
-//        [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
-//    } else {
-//        [cell.button setTitle:@"Dawn Comes" forState:UIControlStateNormal];
-//        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
-//    }
 
     return cell;
 }

@@ -29,14 +29,6 @@
     XCTAssert(themeVersion == DKThemeVersionNormal, @"DKNightVersionManager default theme version should be DKThemeVersionNormal");
 }
 
-- (void)testManagerUseDefaultThemeVersion {
-    BOOL useDefaultThemeVersion = [DKNightVersionManager useDefaultNightColor];
-    XCTAssertTrue(useDefaultThemeVersion, @"DKNightVersionManager use default theme version should be true");
-    [DKNightVersionManager setUseDefaultNightColor:NO];
-    useDefaultThemeVersion = [DKNightVersionManager useDefaultNightColor];
-    XCTAssertFalse(useDefaultThemeVersion, @"After changing,  use default theme version should be false");
-}
-
 - (void)testDawnComing {
     [DKNightVersionManager dawnComing];
     DKThemeVersion themeVersion = [DKNightVersionManager currentThemeVersion];
