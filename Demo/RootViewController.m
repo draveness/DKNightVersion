@@ -36,9 +36,7 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
     self.navigationItem.leftBarButtonItem = item;
     self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
-//    [DKNightVersionManager setUseDefaultNightColor:YES];
 }
-
 
 - (void)nightFalls {
     [DKNightVersionManager nightFalling];
