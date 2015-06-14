@@ -36,6 +36,19 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
     self.navigationItem.leftBarButtonItem = item;
     self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
+
+    item = [[UIBarButtonItem alloc] initWithTitle:@"Change" style:UIBarButtonItemStylePlain target:self action:@selector(change)];
+    self.navigationItem.rightBarButtonItem = item;
+    self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
+
+}
+
+- (void)change {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        [DKNightVersionManager dawnComing];
+    } else {
+        [DKNightVersionManager nightFalling];
+    }
 }
 
 - (void)nightFalls {
@@ -57,7 +70,7 @@
 #pragma mark - UITableView Delegate & DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 20;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -66,13 +79,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (indexPath.row % 2 == 0) {
-        [cell.button setTitle:@"Night Falls" forState:UIControlStateNormal];
-        [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
-    } else {
-        [cell.button setTitle:@"Dawn Comes" forState:UIControlStateNormal];
-        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
-    }
+//    if (indexPath.row % 2 == 0) {
+//        [cell.button setTitle:@"Night Falls" forState:UIControlStateNormal];
+//        [cell.button addTarget:self action:@selector(nightFalls) forControlEvents:UIControlEventTouchUpInside];
+//    } else {
+//        [cell.button setTitle:@"Dawn Comes" forState:UIControlStateNormal];
+//        [cell.button addTarget:self action:@selector(dawnComes) forControlEvents:UIControlEventTouchUpInside];
+//    }
 
     return cell;
 }
