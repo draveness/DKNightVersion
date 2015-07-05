@@ -148,13 +148,12 @@ Feel free to open an issue or pull request, if you need help or there is a bug.
 
 # More
 
-DKNightVersion doesn't support xib now. I am working on it.
+- ImageView support
 
 # Contact
 
 - Powered by [Draveness](http://github.com/draveness)
 - Personal website [DeltaX](http://draveness.me)
-
 
 # Todo
 
