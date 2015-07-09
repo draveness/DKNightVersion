@@ -9,6 +9,13 @@
 #import "UIImageView+NightImage.h"
 #import <objc/runtime.h>
 
+@interface UIView ()
+
+@property (nonatomic, strong) UIColor *normalImage;
+
+@end
+
+
 @implementation UIImageView (NightImage)
 
 - (UIImage *)nightImage {
