@@ -50,4 +50,8 @@
     objc_setAssociatedObject(self, @selector(nightImage), nightImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (void)changeColor {
+    [self setImage:([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) ? self.normalImage : self.nightImage];
+}
+
 @end

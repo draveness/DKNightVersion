@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UIImage *nightImage;
 
+- (void)changeColor;
+
 @end
