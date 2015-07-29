@@ -12,7 +12,7 @@
 
 @interface UIView ()
 
-@property (nonatomic, strong) UIColor *normalImage;
+@property (nonatomic, strong) UIImage *normalImage;
 
 @end
 
@@ -38,9 +38,7 @@
 }
 
 - (void)hook_setImage:(UIImage *)image {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-
-    }
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalImage:image];
     [self hook_setImage:image];
 }
 
