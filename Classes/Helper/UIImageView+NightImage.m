@@ -38,7 +38,8 @@
 }
 
 - (void)hook_setImage:(UIImage *)image {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalImage:image];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal)
+        [self setNormalImage:image];
     [self hook_setImage:image];
 }
 
@@ -48,6 +49,14 @@
 
 - (void)setNightImage:(UIImage *)nightImage {
     objc_setAssociatedObject(self, @selector(nightImage), nightImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIImage *)normalImage {
+    return objc_getAssociatedObject(self, @selector(normalImage));
+}
+
+- (void)setNormalImage:(UIImage *)normalImage {
+    objc_setAssociatedObject(self, @selector(normalImage), normalImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)changeColor {
