@@ -2,7 +2,7 @@
 //  UINavigationBar+Animation.h
 //  DKNightVersion
 //
-//  Created by apple on 15/5/4.
+//  Created by Draveness on 15/5/4.
 //  Copyright (c) 2015年 DeltaX. All rights reserved.
 //
 

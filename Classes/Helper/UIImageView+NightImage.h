@@ -2,7 +2,7 @@
 //  UIImageView+NightImage.h
 //  DKNightVersion
 //
-//  Created by apple on 15/6/27.
+//  Created by Draveness on 15/6/27.
 //  Copyright (c) 2015年 DeltaX. All rights reserved.
 //
 
