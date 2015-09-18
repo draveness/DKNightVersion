@@ -27,8 +27,6 @@
 		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
 		18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A51AF8BB8D00872BF1 /* Images.xcassets */; };
 		18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D228A21AF8BB8500872BF1 /* LaunchScreen.xib */; };
-		18E673651B3E7A8A005D7741 /* UIImageView+NightImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 18E673631B3E7A8A005D7741 /* UIImageView+NightImage.h */; };
-		18E673661B3E7A8A005D7741 /* UIImageView+NightImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E673641B3E7A8A005D7741 /* UIImageView+NightImage.m */; };
 		1C90409DF698C8F155927423 /* UITabBar+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F56696A62F53D91DA6827 /* UITabBar+NightVersion.m */; };
 		1D0DBC8C19631A74B753C06D /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 39467B05878FBA6EB3108813 /* UIButton+TitleColor.m */; };
 		1DD9D137263646473994C12B /* UITableView+NightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3928F3DDC77E260BEB949B42 /* UITableView+NightVersion.h */; };
@@ -100,8 +98,6 @@
 		18D2289F1AF8BB7800872BF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = SOURCE_ROOT; };
 		18D228A31AF8BB8500872BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Demo/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		18D228A51AF8BB8D00872BF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Demo/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		18E673631B3E7A8A005D7741 /* UIImageView+NightImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+NightImage.h"; path = "Classes/Helper/UIImageView+NightImage.h"; sourceTree = SOURCE_ROOT; };
-		18E673641B3E7A8A005D7741 /* UIImageView+NightImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+NightImage.m"; path = "Classes/Helper/UIImageView+NightImage.m"; sourceTree = SOURCE_ROOT; };
 		207201E533BF2F131CF98920 /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BackgroundColor.m"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.m"; sourceTree = "<group>"; };
 		2AD13693859B9758C262536D /* UITabBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+BarTintColor.h"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.h"; sourceTree = "<group>"; };
 		34B476D563EF5BFE20383E83 /* UINavigationBar+NightVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+NightVersion.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+NightVersion.h"; sourceTree = "<group>"; };
@@ -189,8 +185,6 @@
 				18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */,
 				1811DEBB1B0C6EE9000B18E5 /* DKNightVersionUtility.h */,
 				1811DEBC1B0C6EE9000B18E5 /* DKNightVersionUtility.m */,
-				18E673631B3E7A8A005D7741 /* UIImageView+NightImage.h */,
-				18E673641B3E7A8A005D7741 /* UIImageView+NightImage.m */,
 			);
 			name = Helper;
 			path = Pod/Helper;
@@ -386,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */,
-				18E673651B3E7A8A005D7741 /* UIImageView+NightImage.h in Headers */,
 				18CC76F91B0091C1004D9172 /* UIViewController+ChangeColor.h in Headers */,
 				1811DEBD1B0C6EE9000B18E5 /* DKNightVersionUtility.h in Headers */,
 				D1051805A52E07D2C9D3F564 /* UIView+NightVersion.h in Headers */,
@@ -538,7 +531,6 @@
 				18D2289C1AF8BB6800872BF1 /* SuccViewController.m in Sources */,
 				18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */,
 				18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */,
-				18E673661B3E7A8A005D7741 /* UIImageView+NightImage.m in Sources */,
 				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
 				18CC76FA1B0091C1004D9172 /* UIViewController+ChangeColor.m in Sources */,
 				18D2289B1AF8BB6800872BF1 /* RootViewController.m in Sources */,
