@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+Night.h"
+#import "DKNightVersionManager.h"
 #import <objc/runtime.h>
 
 @interface NSObject ()
