@@ -36,7 +36,7 @@
     self.navigationItem.rightBarButtonItem = item;
 
     @weakify(self);
-    [self addColorChangedBlock:^(id view) {
+    [self addColorChangedBlock:^{
         @strongify(self);
         self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.tableView.nightSeparatorColor = UIColorFromRGB(0x313131);
