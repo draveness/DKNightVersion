@@ -19,7 +19,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.8.1"
+pod "DKNightVersion", "~> 0.9.0"
 ```
 
 ## Usage
@@ -67,7 +67,7 @@ It's pretty easy to swich theme between night and normal mode.
 
 `nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
-## RespondClasses
+## RespondClasses (Deprecated)
 
 If you want your own class changing color while switch theme.
 
