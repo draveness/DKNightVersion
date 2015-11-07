@@ -14,8 +14,6 @@
 
 @interface UINavigationBar ()
 
-@property (nonatomic, strong) UIColor *normalTintColor;
-
 @end
 
 @implementation UINavigationBar (TintColor)

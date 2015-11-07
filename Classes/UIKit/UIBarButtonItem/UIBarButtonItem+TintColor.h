@@ -20,6 +20,6 @@
 /**
  *  UIBarButtonItem TintColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalTintColor;
+@property (nonatomic, strong) UIColor *normalTintColor;
 
 @end

@@ -20,6 +20,6 @@
 /**
  *  UITableView SeparatorColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalSeparatorColor;
+@property (nonatomic, strong) UIColor *normalSeparatorColor;
 
 @end

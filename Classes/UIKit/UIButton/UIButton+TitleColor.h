@@ -20,6 +20,6 @@
 /**
  *  UIButton TitleColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalTitleColor;
+@property (nonatomic, strong) UIColor *normalTitleColor;
 
 @end

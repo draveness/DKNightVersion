@@ -20,6 +20,6 @@
 /**
  *  UILabel TextColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalTextColor;
+@property (nonatomic, strong) UIColor *normalTextColor;
 
 @end

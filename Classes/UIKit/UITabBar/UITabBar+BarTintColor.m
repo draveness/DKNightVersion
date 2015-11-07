@@ -14,8 +14,6 @@
 
 @interface UITabBar ()
 
-@property (nonatomic, strong) UIColor *normalBarTintColor;
-
 @end
 
 @implementation UITabBar (BarTintColor)

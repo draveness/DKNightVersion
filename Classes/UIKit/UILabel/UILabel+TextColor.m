@@ -14,8 +14,6 @@
 
 @interface UILabel ()
 
-@property (nonatomic, strong) UIColor *normalTextColor;
-
 @end
 
 @implementation UILabel (TextColor)

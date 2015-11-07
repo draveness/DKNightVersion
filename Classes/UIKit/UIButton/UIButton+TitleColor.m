@@ -14,8 +14,6 @@
 
 @interface UIButton ()
 
-@property (nonatomic, strong) UIColor *normalTitleColor;
-
 @end
 
 @implementation UIButton (TitleColor)

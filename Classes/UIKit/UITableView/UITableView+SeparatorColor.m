@@ -14,8 +14,6 @@
 
 @interface UITableView ()
 
-@property (nonatomic, strong) UIColor *normalSeparatorColor;
-
 @end
 
 @implementation UITableView (SeparatorColor)

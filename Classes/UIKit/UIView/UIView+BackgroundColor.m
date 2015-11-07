@@ -14,8 +14,6 @@
 
 @interface UIView ()
 
-@property (nonatomic, strong) UIColor *normalBackgroundColor;
-
 @end
 
 @implementation UIView (BackgroundColor)

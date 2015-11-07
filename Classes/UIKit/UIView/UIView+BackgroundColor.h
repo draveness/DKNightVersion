@@ -20,6 +20,6 @@
 /**
  *  UIView BackgroundColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalBackgroundColor;
+@property (nonatomic, strong) UIColor *normalBackgroundColor;
 
 @end

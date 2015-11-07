@@ -20,6 +20,6 @@
 /**
  *  UITabBar BarTintColor in normal version.
  */
-@property (nonatomic, strong, readonly) UIColor *normalBarTintColor;
+@property (nonatomic, strong) UIColor *normalBarTintColor;
 
 @end

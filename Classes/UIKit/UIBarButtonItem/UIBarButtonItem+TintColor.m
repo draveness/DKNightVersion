@@ -14,8 +14,6 @@
 
 @interface UIBarButtonItem ()
 
-@property (nonatomic, strong) UIColor *normalTintColor;
-
 @end
 
 @implementation UIBarButtonItem (TintColor)
