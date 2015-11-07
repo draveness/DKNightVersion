@@ -25,7 +25,7 @@
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-        self.view.normalBackgroundColor = [UIColor redColor];
+        self.view.normalBackgroundColor = [UIColor whiteColor];
         self.view.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.navigationController.navigationBar.nightTintColor = [UIColor redColor];
     }];
