@@ -5,4 +5,4 @@ before_install:
     - locale
 
 script:
-    - pod lib lint 
+    #    - pod lib lint 
