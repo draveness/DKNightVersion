@@ -24,22 +24,27 @@
     [super viewDidLoad];
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
-    self.tableView.nightSeparatorColor = UIColorFromRGB(0x313131);
     UILabel *navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 375, 44)];
     navigationLabel.text = @"DKNightVersion";
     navigationLabel.textAlignment = NSTextAlignmentCenter;
-    navigationLabel.nightTextColor = [UIColor whiteColor];
     self.navigationItem.titleView = navigationLabel;
-    self.navigationController.navigationBar.nightBarTintColor = UIColorFromRGB(0x444444);
 
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
     self.navigationItem.leftBarButtonItem = item;
-    self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
 
     item = [[UIBarButtonItem alloc] initWithTitle:@"Change" style:UIBarButtonItemStylePlain target:self action:@selector(change)];
     self.navigationItem.rightBarButtonItem = item;
-    self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
+
+    @weakify(self);
+    [self addColorChangedBlock:^(id view) {
+        @strongify(self);
+        self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.tableView.nightSeparatorColor = UIColorFromRGB(0x313131);
+        navigationLabel.nightTextColor = [UIColor whiteColor];
+        self.navigationController.navigationBar.nightBarTintColor = UIColorFromRGB(0x444444);
+        self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
+        self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
+    }];
 
 }
 

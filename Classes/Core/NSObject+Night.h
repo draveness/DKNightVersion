@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^DKNightVersionColorChangedBlock)(id view);
+typedef void(^DKNightVersionColorChangedBlock)();
 
 @interface NSObject (Night)
 

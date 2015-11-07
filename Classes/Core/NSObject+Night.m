@@ -18,27 +18,10 @@
 
 @implementation NSObject (Night)
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class class = [self class];
-        SEL originalSelector = @selector(init);
-        SEL swizzledSelector = @selector(night_init);
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        BOOL didAddMethod =
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
-    });
-}
-
 - (void)night_updateColor {
     [self.blocks enumerateObjectsUsingBlock:^(DKNightVersionColorChangedBlock  _Nonnull block, NSUInteger idx, BOOL * _Nonnull stop) {
-        block(self);
+        [UIView animateWithDuration:DKNightVersionAnimationDuration
+                         animations:block];
     }];
 }
 
@@ -46,6 +29,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionNightFallingNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionDawnComingNotification object:nil];
     [self.blocks addObject:[block copy]];
+    block();
 }
 
 - (NSMutableArray<DKNightVersionColorChangedBlock> *)blocks {

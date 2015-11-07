@@ -20,42 +20,26 @@
 
 @implementation <%= klass.name %> (<%= property.cap_name %>)
 
-+ (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(<%= property.setter_selector_name %>);                                  
-        SEL swizzledSelector = @selector(hook_<%= property.setter_selector_name %>);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
-    [DKNightVersionManager addClassToSet:self.class];
-}
-
-- (void)hook_<%= property.setter %> {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormal<%= property.cap_name %>:<%= property.name %>];
-    [self hook_<%= property.set_color_method(property.name) %>];
-}
-
 - (UIColor *)night<%= property.cap_name %> {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(night<%= property.cap_name %>));
     if (nightColor) {
         return nightColor;
+    } else if (self.normal<%= property.cap_name %>) {
+        return self.normal<%= property.cap_name %>;
     } else {
-        UIColor *resultColor = self.normal<%= property.cap_name %> ?: <% if property.name == 'tintColor' || property.name == 'titleColor' %><%= '[UIColor whiteColor]' %><% else %><%= '[UIColor clearColor]' %><% end %>;
-        return resultColor;
+        return self.<%= property.getter %>;
     }
 }
 
 - (void)setNight<%= property.cap_name %>:(UIColor *)night<%= property.cap_name %> {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self <%= property.set_color_method("night" + property.cap_name) %>];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        if (!self.normal<%= property.cap_name %>) {
+            self.normal<%= property.cap_name %> = self.<%= property.getter %>;
+        }
+        [self <%= property.set_color_method("night" + property.cap_name) %>];
+    } else {
+        [self <%= property.set_color_method("self.normal" + property.cap_name) %>];
+    }
     objc_setAssociatedObject(self, @selector(night<%= property.cap_name %>), night<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -64,6 +48,11 @@
 }
 
 - (void)setNormal<%= property.cap_name %>:(UIColor *)normal<%= property.cap_name %> {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+        [self <%= property.set_color_method("normal" + property.cap_name) %>];
+    } else {
+        [self <%= property.set_color_method("self.night" + property.cap_name) %>];
+    }
     objc_setAssociatedObject(self, @selector(normal<%= property.cap_name %>), normal<%= property.cap_name %>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

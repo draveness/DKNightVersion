@@ -17,17 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.nightBackgroundColor = UIColorFromRGB(0x343434);
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:self.view.frame];
     button.center = self.view.center;
     [button setTitle:@"Back" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    button.nightTitleColor = [UIColor whiteColor];
 
     [self.view addSubview:button];
+
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        button.nightTitleColor = [UIColor whiteColor];
+    }];
 }
 
 - (void)back {

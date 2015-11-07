@@ -20,46 +20,26 @@
 
 @implementation UITabBar (BarTintColor)
 
-+ (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(setBarTintColor:);                                  
-        SEL swizzledSelector = @selector(hook_setBarTintColor:);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
-    [DKNightVersionManager addClassToSet:self.class];
-}
-
-- (void)hook_setBarTintColor:(UIColor*)barTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalBarTintColor:barTintColor];
-    [self hook_setBarTintColor:barTintColor];
-}
-
-- (void)saveNormalColor {
-    self.normalBarTintColor = self.barTintColor;
-}
-
 - (UIColor *)nightBarTintColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBarTintColor));
     if (nightColor) {
         return nightColor;
+    } else if (self.normalBarTintColor) {
+        return self.normalBarTintColor;
     } else {
-        UIColor *resultColor = self.normalBarTintColor ?: [UIColor clearColor];
-        return resultColor;
+        return self.barTintColor;
     }
 }
 
 - (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setBarTintColor:nightBarTintColor];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        if (!self.normalBarTintColor) {
+            self.normalBarTintColor = self.barTintColor;
+        }
+        [self setBarTintColor:nightBarTintColor];
+    } else {
+        [self setBarTintColor:self.normalBarTintColor];
+    }
     objc_setAssociatedObject(self, @selector(nightBarTintColor), nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -68,6 +48,11 @@
 }
 
 - (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+        [self setBarTintColor:normalBarTintColor];
+    } else {
+        [self setBarTintColor:self.nightBarTintColor];
+    }
     objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

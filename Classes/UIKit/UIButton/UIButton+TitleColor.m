@@ -20,46 +20,26 @@
 
 @implementation UIButton (TitleColor)
 
-+ (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(setTitleColor:forState:);                                  
-        SEL swizzledSelector = @selector(hook_setTitleColor:forState:);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
-    [DKNightVersionManager addClassToSet:self.class];
-}
-
-- (void)hook_setTitleColor:(UIColor*)titleColor forState:(UIControlState)state {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalTitleColor:titleColor];
-    [self hook_setTitleColor:titleColor forState:UIControlStateNormal];
-}
-
-- (void)saveNormalColor {
-    self.normalTitleColor = self.currentTitleColor;
-}
-
 - (UIColor *)nightTitleColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTitleColor));
     if (nightColor) {
         return nightColor;
+    } else if (self.normalTitleColor) {
+        return self.normalTitleColor;
     } else {
-        UIColor *resultColor = self.normalTitleColor ?: [UIColor whiteColor];
-        return resultColor;
+        return self.currentTitleColor;
     }
 }
 
 - (void)setNightTitleColor:(UIColor *)nightTitleColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        if (!self.normalTitleColor) {
+            self.normalTitleColor = self.currentTitleColor;
+        }
+        [self setTitleColor:nightTitleColor forState:UIControlStateNormal];
+    } else {
+        [self setTitleColor:self.normalTitleColor forState:UIControlStateNormal];
+    }
     objc_setAssociatedObject(self, @selector(nightTitleColor), nightTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -68,6 +48,11 @@
 }
 
 - (void)setNormalTitleColor:(UIColor *)normalTitleColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+        [self setTitleColor:normalTitleColor forState:UIControlStateNormal];
+    } else {
+        [self setTitleColor:self.nightTitleColor forState:UIControlStateNormal];
+    }
     objc_setAssociatedObject(self, @selector(normalTitleColor), normalTitleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

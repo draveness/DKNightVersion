@@ -20,46 +20,26 @@
 
 @implementation UINavigationBar (TintColor)
 
-+ (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(setTintColor:);                                  
-        SEL swizzledSelector = @selector(hook_setTintColor:);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
-    [DKNightVersionManager addClassToSet:self.class];
-}
-
-- (void)hook_setTintColor:(UIColor*)tintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalTintColor:tintColor];
-    [self hook_setTintColor:tintColor];
-}
-
-- (void)saveNormalColor {
-    self.normalTintColor = self.tintColor;
-}
-
 - (UIColor *)nightTintColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTintColor));
     if (nightColor) {
         return nightColor;
+    } else if (self.normalTintColor) {
+        return self.normalTintColor;
     } else {
-        UIColor *resultColor = self.normalTintColor ?: [UIColor whiteColor];
-        return resultColor;
+        return self.tintColor;
     }
 }
 
 - (void)setNightTintColor:(UIColor *)nightTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setTintColor:nightTintColor];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        if (!self.normalTintColor) {
+            self.normalTintColor = self.tintColor;
+        }
+        [self setTintColor:nightTintColor];
+    } else {
+        [self setTintColor:self.normalTintColor];
+    }
     objc_setAssociatedObject(self, @selector(nightTintColor), nightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -68,6 +48,11 @@
 }
 
 - (void)setNormalTintColor:(UIColor *)normalTintColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+        [self setTintColor:normalTintColor];
+    } else {
+        [self setTintColor:self.nightTintColor];
+    }
     objc_setAssociatedObject(self, @selector(normalTintColor), normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

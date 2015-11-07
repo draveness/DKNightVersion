@@ -17,13 +17,11 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [DKNightVersionManager addClassToSet:self.class];
         self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 230, 80)];
         self.label.numberOfLines = 0;
         self.label.text = @"DKNightVersion is a light wei-ght framework adding night   version to your iOS app.";
         self.label.textColor = [UIColor darkGrayColor];
         self.label.lineBreakMode = NSLineBreakByCharWrapping;
-        self.nightBackgroundColor = UIColorFromRGB(0x343434);
         [self.contentView addSubview:self.label];
 
         CGRect rect = CGRectMake(250, 10, 120, 80);
@@ -33,6 +31,12 @@
 
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.button];
+
+        @weakify(self);
+        [self addColorChangedBlock:^() {
+            @strongify(self);
+            self.nightBackgroundColor = UIColorFromRGB(0x343434);
+        }];
     }
     return self;
 }

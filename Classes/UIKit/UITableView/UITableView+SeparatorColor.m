@@ -20,46 +20,26 @@
 
 @implementation UITableView (SeparatorColor)
 
-+ (void)load {
-    static dispatch_once_t onceToken;                                              
-    dispatch_once(&onceToken, ^{                                                   
-        Class class = [self class];                                                
-        SEL originalSelector = @selector(setSeparatorColor:);                                  
-        SEL swizzledSelector = @selector(hook_setSeparatorColor:);                                 
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);  
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);  
-        BOOL didAddMethod =                                                        
-        class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));                   
-        if (didAddMethod){
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));           
-        } else {                                                                   
-            method_exchangeImplementations(originalMethod, swizzledMethod);        
-        }
-    });
-    [DKNightVersionManager addClassToSet:self.class];
-}
-
-- (void)hook_setSeparatorColor:(UIColor*)separatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) [self setNormalSeparatorColor:separatorColor];
-    [self hook_setSeparatorColor:separatorColor];
-}
-
-- (void)saveNormalColor {
-    self.normalSeparatorColor = self.separatorColor;
-}
-
 - (UIColor *)nightSeparatorColor {
     UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightSeparatorColor));
     if (nightColor) {
         return nightColor;
+    } else if (self.normalSeparatorColor) {
+        return self.normalSeparatorColor;
     } else {
-        UIColor *resultColor = self.normalSeparatorColor ?: [UIColor clearColor];
-        return resultColor;
+        return self.separatorColor;
     }
 }
 
 - (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) [self setSeparatorColor:nightSeparatorColor];
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
+        if (!self.normalSeparatorColor) {
+            self.normalSeparatorColor = self.separatorColor;
+        }
+        [self setSeparatorColor:nightSeparatorColor];
+    } else {
+        [self setSeparatorColor:self.normalSeparatorColor];
+    }
     objc_setAssociatedObject(self, @selector(nightSeparatorColor), nightSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -68,6 +48,11 @@
 }
 
 - (void)setNormalSeparatorColor:(UIColor *)normalSeparatorColor {
+    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+        [self setSeparatorColor:normalSeparatorColor];
+    } else {
+        [self setSeparatorColor:self.nightSeparatorColor];
+    }
     objc_setAssociatedObject(self, @selector(normalSeparatorColor), normalSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
