@@ -20,8 +20,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
  */
 @property (nonatomic, assign) DKThemeVersion themeVersion;
 
-@property (nonatomic, strong) NSMutableSet *respondClasseses;
-
 @end
 
 @implementation DKNightVersionManager

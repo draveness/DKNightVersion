@@ -43,6 +43,10 @@
 
 - (void)setBlocks:(NSMutableArray<DKNightVersionColorChangedBlock> *)blocks {
     objc_setAssociatedObject(self, @selector(blocks), blocks, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (blocks == nil) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
+    }
 }
 
 @end
