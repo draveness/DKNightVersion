@@ -29,8 +29,6 @@ CGFloat const DKNightVersionAnimationDuration = 0.3f;
     static DKNightVersionManager *instance;
     dispatch_once(&once, ^{
         instance = [self new];
-        instance.respondClasseses = [[NSMutableSet alloc] init];
-
     });
     return instance;
 }
