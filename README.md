@@ -43,9 +43,9 @@ Assign the night mode color you want to the `UIKit` component like this:
 ```
 @weakify(self);
 [self addColorChangedBlock:^{
-@strongify(self);
-self.tableView.normalBackgroundColor = UIColorFromRGB(0xffffff);
-self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
+    @strongify(self);
+    self.tableView.normalBackgroundColor = UIColorFromRGB(0xffffff);
+    self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
 }];
 
 ```
