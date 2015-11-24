@@ -19,7 +19,7 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 ## Podfile
 
 ```
-pod "DKNightVersion", "~> 0.9.0"
+pod "DKNightVersion", "~> 0.9.1"
 ```
 
 ## Usage
