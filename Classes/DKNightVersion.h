@@ -19,6 +19,8 @@
 #import "UITabBar+BarTintColor.h"
 #import "UITableView+SeparatorColor.h"
 #import "UIBarButtonItem+TintColor.h"
+#import "UITextField+TextColor.h"
+#import "UITextView+TextColor.h"
 
 #endif
 

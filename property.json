@@ -27,5 +27,13 @@
     "UITableView":
     [ 
         "separatorColor"
+    ],
+    "UITextView":
+    [
+        "textColor"
+    ],
+    "UITextField":
+    [
+        "textColor"
     ]
 }
