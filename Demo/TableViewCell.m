@@ -35,7 +35,7 @@
         @weakify(self);
         [self addColorChangedBlock:^() {
             @strongify(self);
-            self.nightBackgroundColor = UIColorFromRGB(0x343434);
+            self.nightBackgroundColor = DKColorFromRGB(0x343434);
         }];
     }
     return self;

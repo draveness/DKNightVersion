@@ -38,10 +38,10 @@
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-        self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
-        self.tableView.nightSeparatorColor = UIColorFromRGB(0x313131);
+        self.tableView.nightBackgroundColor = DKColorFromRGB(0x343434);
+        self.tableView.nightSeparatorColor = DKColorFromRGB(0x313131);
         navigationLabel.nightTextColor = [UIColor whiteColor];
-        self.navigationController.navigationBar.nightBarTintColor = UIColorFromRGB(0x444444);
+        self.navigationController.navigationBar.nightBarTintColor = DKColorFromRGB(0x444444);
         self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
         self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
     }];
