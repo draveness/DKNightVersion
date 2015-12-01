@@ -24,5 +24,5 @@ task :default do
     puts "[Link] Linking to xcodeproj".yellow
     add_files_to_project(xcode_proj_file, json_file_path)
 
-    puts "[DKNightVersion] has already generate all files for you!".green
+    puts "[DKNightVersion] has already generate all files".green
 end
