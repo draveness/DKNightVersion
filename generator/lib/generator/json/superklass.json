@@ -14,10 +14,12 @@
     [
         "UIButton",
         "UITextField",
-        "UISwitch"
+        "UISwitch",
+        "UISegmentedControl"
     ],
     "UIScrollView":
     [
-        "UITableView"
+        "UITableView",
+        "UITextView"
     ]
 }

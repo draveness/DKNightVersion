@@ -35,5 +35,9 @@
     "UITextField":
     [
         "textColor"
+    ],
+    "UISegmentedControl":
+    [
+        "tintColor"
     ]
 }
