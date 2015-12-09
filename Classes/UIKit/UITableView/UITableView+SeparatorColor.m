@@ -24,9 +24,9 @@
 
 - (void)setSeparatorColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    SEL sel = NSSelectorFromString(setSeparatorColor:(UIColor*)separatorColor);
+    SEL sel = NSSelectorFromString(setSeparatorColor:);
     [self performSelector:sel withObject:picker()];
-    [self.pickers setValue:picker forKey:setSeparatorColor:(UIColor*)separatorColor];
+    [self.pickers setValue:picker forKey:setSeparatorColor:];
 }
 
 

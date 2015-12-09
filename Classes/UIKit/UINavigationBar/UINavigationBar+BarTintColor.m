@@ -24,9 +24,9 @@
 
 - (void)setBarTintColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    SEL sel = NSSelectorFromString(setBarTintColor:(UIColor*)barTintColor);
+    SEL sel = NSSelectorFromString(setBarTintColor:);
     [self performSelector:sel withObject:picker()];
-    [self.pickers setValue:picker forKey:setBarTintColor:(UIColor*)barTintColor];
+    [self.pickers setValue:picker forKey:setBarTintColor:];
 }
 
 

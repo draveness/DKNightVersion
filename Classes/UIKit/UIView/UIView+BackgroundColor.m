@@ -24,9 +24,9 @@
 
 - (void)setBackgroundColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    SEL sel = NSSelectorFromString(setBackgroundColor:(UIColor*)backgroundColor);
+    SEL sel = NSSelectorFromString(setBackgroundColor:);
     [self performSelector:sel withObject:picker()];
-    [self.pickers setValue:picker forKey:setBackgroundColor:(UIColor*)backgroundColor];
+    [self.pickers setValue:picker forKey:setBackgroundColor:];
 }
 
 

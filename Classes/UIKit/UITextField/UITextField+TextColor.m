@@ -24,9 +24,9 @@
 
 - (void)setTextColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    SEL sel = NSSelectorFromString(setTextColor:(UIColor*)textColor);
+    SEL sel = NSSelectorFromString(setTextColor:);
     [self performSelector:sel withObject:picker()];
-    [self.pickers setValue:picker forKey:setTextColor:(UIColor*)textColor];
+    [self.pickers setValue:picker forKey:setTextColor:];
 }
 
 
