@@ -11,6 +11,4 @@
 
 @interface NSObject (Night)
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
-
 @end
