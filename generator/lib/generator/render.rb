@@ -36,7 +36,6 @@ def objc_code_generator(klasses, p='.')
     FileUtils.rm_rf(relative_path)
     FileUtils.mkdir_p(relative_path)
     klasses.each do |klass|
-
         groups << File.join(relative_path, klass.header_name)
         groups << File.join(relative_path, klass.imp_name)
 
