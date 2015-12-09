@@ -16,10 +16,10 @@
     [ 
         "barTintColor"
     ],
-    "UIButton":
+/*    "UIButton":
     [ 
         "titleColor"
-    ],
+    ],*/
     "UIBarButtonItem":
     [ 
         "tintColor"

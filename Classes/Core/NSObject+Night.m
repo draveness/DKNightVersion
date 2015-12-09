@@ -27,7 +27,6 @@
 }
 
 - (NSMutableDictionary<NSString *,DKColorPicker> *)pickers {
-
     NSMutableDictionary<NSString *, DKColorPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
         pickers = [[NSMutableDictionary alloc] init];
@@ -37,7 +36,6 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionDawnComingNotification object:nil];
     }
     return pickers;
-
 }
 
 - (void)night_updateColor {
