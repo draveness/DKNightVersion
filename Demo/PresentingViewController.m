@@ -33,6 +33,7 @@
     [self.view addSubview:switchButton];
 
     self.view.backgroundColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
+//    [button ]
 
 //    @weakify(self);
 //    [self addColorChangedBlock:^{

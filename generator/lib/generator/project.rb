@@ -6,25 +6,26 @@ def add_files_to_project(path, json_path)
     json = JSON.parse File.read(json_path)
     project = Xcodeproj::Project.open(path)
     target = get_target(project, production)
-    
+
     group_path = get_group_name(production)
     uikit_group = project.main_group.find_subpath(group_path, true)
     uikit_group.clear
+    uikit_group.set_source_tree('SOURCE_ROOT')
     clear_target(target)
 
     file_refs = []
-    json.each do |file|
-        unless uikit_group.find_file_by_path(file)
-            file_ref = uikit_group.new_reference(file)
+    json.each do |f|
+        unless uikit_group.find_file_by_path(f)
+            file_ref = uikit_group.new_reference(f)
             file_refs << file_ref
         end
     end
-    file_refs.each do |file_ref|
-        target.add_file_references([file_ref])
-    end
+
+    target.add_file_references(file_refs)
 
     project.save
 end
+
 
 def get_target(project, production)
     if production

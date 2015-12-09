@@ -12,6 +12,7 @@
 #import "DKColor.h"
 #import "DKNightVersionManager.h"
 #import "NSObject+Night.h"
+#import "UIButton+Night.h"
 #import "UIView+BackgroundColor.h"
 #import "UILabel+TextColor.h"
 #import "UINavigationBar+BarTintColor.h"
