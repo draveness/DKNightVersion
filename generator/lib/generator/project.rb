@@ -12,21 +12,17 @@ def add_files_to_project(path, json_path)
     uikit_group.clear
     clear_target(target)
 
-    json.each do |group, files|
-        new_group = project.main_group.find_subpath(File.join(group_path, group), true)
-        new_group.set_source_tree('SOURCE_ROOT')
-        file_refs = []
-        files.each do |f|
-            unless new_group.find_file_by_path(f) 
-                file_ref = new_group.new_reference(f)
-                file_refs << file_ref
-            end
+    file_refs = []
+    json.each do |file|
+        unless uikit_group.find_file_by_path(file)
+            file_ref = uikit_group.new_reference(file)
+            file_refs << file_ref
         end
-        file_refs.each do |file_ref|
-            target.add_file_references([file_ref])
-        end
-        
     end
+    file_refs.each do |file_ref|
+        target.add_file_references([file_ref])
+    end
+
     project.save
 end
 

@@ -26,7 +26,7 @@ def render(template, klass, property=nil)
 end
 
 def objc_code_generator(klasses, p='.')
-    groups = {}
+    groups = []
 
 	template_folder = File.join('generator', 'lib', 'generator', 'template')
 	color_header        = File.join(template_folder, 'color.h.erb')
@@ -36,18 +36,13 @@ def objc_code_generator(klasses, p='.')
 	FileUtils.rm_rf(relative_path)
 	FileUtils.mkdir_p(relative_path)
 	klasses.each do |klass|
-		subfolder_path = File.join(relative_path, klass.name)
-		FileUtils.mkdir_p(subfolder_path)
-
-        path = File.join(p, 'Classes', 'UIKit', klass.name)
-        groups[klass.name] = []
 
 		klass.properties.each do |property|
-            groups[klass.name] << File.join(path, klass.color_header_name(property))
-            groups[klass.name] << File.join(path, klass.color_imp_name(property))
+            groups << File.join(relative_path, klass.color_header_name(property))
+            groups << File.join(relative_path, klass.color_imp_name(property))
 
-            color_header_file_path = File.join(subfolder_path, klass.color_header_name(property))
-            color_imp_file_path    = File.join(subfolder_path, klass.color_imp_name(property))
+            color_header_file_path = File.join(relative_path, klass.color_header_name(property))
+            color_imp_file_path    = File.join(relative_path, klass.color_imp_name(property))
 
             puts "[Generate] Generating #{color_header_file_path}"
             File.write color_header_file_path, render(color_header, klass, property)
