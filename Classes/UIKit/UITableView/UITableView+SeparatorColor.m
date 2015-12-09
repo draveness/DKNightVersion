@@ -25,7 +25,7 @@
 - (void)setSeparatorColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.separatorColor = picker();
-    [self.pickers setValue:picker forKey:setSeparatorColor:];
+    [self.pickers setValue:picker forKey:@"setSeparatorColor:"];
 }
 
 

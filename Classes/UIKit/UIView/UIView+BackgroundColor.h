@@ -9,6 +9,7 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
+#import "NSObject+Night.h"
 
 @interface UIView (BackgroundColor)
 

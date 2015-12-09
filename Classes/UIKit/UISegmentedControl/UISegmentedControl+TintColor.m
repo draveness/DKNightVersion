@@ -25,7 +25,7 @@
 - (void)setTintColorPicker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
-    [self.pickers setValue:picker forKey:setTintColor:];
+    [self.pickers setValue:picker forKey:@"setTintColor:"];
 }
 
 

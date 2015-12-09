@@ -18,11 +18,11 @@
 
 @implementation <%= klass.name %> (<%= property.cap_name %>)
 
-- (UIColor *(^)(void))<%= property.name %>Picker {
+- (DKColorPicker)<%= property.name %>Picker {
     return objc_getAssociatedObject(self, @selector(<%= property.name %>Picker));
 }
 
-- (void)set<%= property.cap_name %>Picker:(UIColor *(^)(void))picker {
+- (void)set<%= property.cap_name %>Picker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(<%= property.name %>Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.<%= property.getter %> = picker();
     [self.pickers setValue:picker forKey:@"<%= property.setter %>"];

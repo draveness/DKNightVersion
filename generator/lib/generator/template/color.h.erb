@@ -9,9 +9,10 @@
 //  test it. And finally open a pull request.
 
 #import <UIKit/UIKit.h>
+#import "NSObject+Night.h"
 
 @interface <%= klass.name %> (<%= property.cap_name %>)
 
-@property (nonatomic, copy) UIColor *(^<%= property.name %>Picker)(void);
+@property (nonatomic, copy) DKColorPicker *<%= property.name %>Picker;
 
 @end
