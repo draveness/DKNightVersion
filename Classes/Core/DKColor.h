@@ -11,32 +11,33 @@
 
 @interface DKColor : NSObject
 
-- (DKColorPicker)pickerWithUIColor:(UIColor *)color;
++ (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor;
 
 + (DKColorPicker)pickerWithUIColor:(UIColor *)color;
 
-- (DKColorPicker)blackColor;
-
-- (DKColorPicker)lightGrayColor;
-
-- (DKColorPicker)grayColor;
-
-- (DKColorPicker)greenColor;
-
-- (DKColorPicker)cyanColor;
-
-- (DKColorPicker)magentaColor;
-
-- (DKColorPicker)purpleColor;
-
-- (DKColorPicker)clearColor;
-
++ (DKColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
 + (DKColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
-
++ (DKColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
 + (DKColorPicker)colorWithCGColor:(CGColorRef)cgColor;
-
++ (DKColorPicker)colorWithPatternImage:(UIImage *)image;
 #if __has_include(<CoreImage/CoreImage.h>)
 + (DKColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
 #endif
+
++ (DKColorPicker)blackColor;
++ (DKColorPicker)darkGrayColor;
++ (DKColorPicker)lightGrayColor;
++ (DKColorPicker)whiteColor;
++ (DKColorPicker)grayColor;
++ (DKColorPicker)redColor;
++ (DKColorPicker)greenColor;
++ (DKColorPicker)blueColor;
++ (DKColorPicker)cyanColor;
++ (DKColorPicker)yellowColor;
++ (DKColorPicker)magentaColor;
++ (DKColorPicker)orangeColor;
++ (DKColorPicker)purpleColor;
++ (DKColorPicker)brownColor;
++ (DKColorPicker)clearColor;
 
 @end

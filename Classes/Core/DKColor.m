@@ -10,9 +10,9 @@
 
 @implementation DKColor
 
-- (DKColorPicker)pickerWithUIColor:(UIColor *)color {
++ (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor {
     return ^() {
-        return color;
+        return [DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal ? normalColor : nightColor;
     };
 }
 
@@ -22,63 +22,63 @@
     };
 }
 
-- (DKColorPicker)blackColor {
++ (DKColorPicker)blackColor {
     return [self pickerWithUIColor:[UIColor blackColor]];
 }
 
-- (DKColorPicker)darkGrayColor {
++ (DKColorPicker)darkGrayColor {
     return [self pickerWithUIColor:[UIColor darkGrayColor]];
 }
 
-- (DKColorPicker)lightGrayColor {
++ (DKColorPicker)lightGrayColor {
     return [self pickerWithUIColor:[UIColor lightGrayColor]];
 }
 
-- (DKColorPicker)whiteColor {
++ (DKColorPicker)whiteColor {
     return [self pickerWithUIColor:[UIColor whiteColor]];
 }
 
-- (DKColorPicker)grayColor {
++ (DKColorPicker)grayColor {
     return [self pickerWithUIColor:[UIColor grayColor]];
 }
 
-- (DKColorPicker)redColor {
++ (DKColorPicker)redColor {
     return [self pickerWithUIColor:[UIColor redColor]];
 }
 
-- (DKColorPicker)greenColor {
++ (DKColorPicker)greenColor {
     return [self pickerWithUIColor:[UIColor greenColor]];
 }
 
-- (DKColorPicker)blueColor {
++ (DKColorPicker)blueColor {
     return [self pickerWithUIColor:[UIColor blueColor]];
 }
 
-- (DKColorPicker)cyanColor {
++ (DKColorPicker)cyanColor {
     return [self pickerWithUIColor:[UIColor cyanColor]];
 }
 
-- (DKColorPicker)yellowColor {
++ (DKColorPicker)yellowColor {
     return [self pickerWithUIColor:[UIColor yellowColor]];
 }
 
-- (DKColorPicker)magentaColor {
++ (DKColorPicker)magentaColor {
     return [self pickerWithUIColor:[UIColor magentaColor]];
 }
 
-- (DKColorPicker)orangeColor {
++ (DKColorPicker)orangeColor {
     return [self pickerWithUIColor:[UIColor orangeColor]];
 }
 
-- (DKColorPicker)purpleColor {
++ (DKColorPicker)purpleColor {
     return [self pickerWithUIColor:[UIColor purpleColor]];
 }
 
-- (DKColorPicker)brownColor {
++ (DKColorPicker)brownColor {
     return [self pickerWithUIColor:[UIColor brownColor]];
 }
 
-- (DKColorPicker)clearColor {
++ (DKColorPicker)clearColor {
     return [self pickerWithUIColor:[UIColor clearColor]];
 }
 
