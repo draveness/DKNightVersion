@@ -39,7 +39,8 @@
 - (void)night_updateColor {
     [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
-        [self performSelector:sel withObject:picker()];
+        UIColor *resultColor = picker();
+        [self performSelector:sel withObject:resultColor];
     }];
 }
 

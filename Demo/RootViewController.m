@@ -35,16 +35,21 @@
     item = [[UIBarButtonItem alloc] initWithTitle:@"Change" style:UIBarButtonItemStylePlain target:self action:@selector(change)];
     self.navigationItem.rightBarButtonItem = item;
 
-    @weakify(self);
-    [self addColorChangedBlock:^{
-        @strongify(self);
-        self.tableView.nightBackgroundColor = DKColorFromRGB(0x343434);
-        self.tableView.nightSeparatorColor = DKColorFromRGB(0x313131);
-        navigationLabel.nightTextColor = [UIColor whiteColor];
-        self.navigationController.navigationBar.nightBarTintColor = DKColorFromRGB(0x444444);
-        self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
-        self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
-    }];
+
+    self.view.backgroundColorPicker = ^() {
+        return [DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal ? [UIColor redColor] : [UIColor greenColor];
+    };
+
+//    @weakify(self);
+//    [self addColorChangedBlock:^{
+//        @strongify(self);
+//        self.tableView.nightBackgroundColor = DKColorFromRGB(0x343434);
+//        self.tableView.nightSeparatorColor = DKColorFromRGB(0x313131);
+//        navigationLabel.nightTextColor = [UIColor whiteColor];
+//        self.navigationController.navigationBar.nightBarTintColor = DKColorFromRGB(0x444444);
+//        self.navigationItem.leftBarButtonItem.nightTintColor = [UIColor whiteColor];
+//        self.navigationItem.rightBarButtonItem.nightTintColor = [UIColor whiteColor];
+//    }];
 
 }
 
@@ -67,7 +72,7 @@
 #pragma mark - UITableView Delegate & DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

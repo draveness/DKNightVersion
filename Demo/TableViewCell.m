@@ -32,11 +32,11 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.button];
 
-        @weakify(self);
-        [self addColorChangedBlock:^() {
-            @strongify(self);
-            self.nightBackgroundColor = DKColorFromRGB(0x343434);
-        }];
+//        @weakify(self);
+//        [self addColorChangedBlock:^() {
+//            @strongify(self);
+//            self.nightBackgroundColor = DKColorFromRGB(0x343434);
+//        }];
     }
     return self;
 }
