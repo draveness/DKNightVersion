@@ -12,7 +12,6 @@
 		182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 182BCC231AFF199A0095BF9C /* PresentingViewController.h */; };
 		182BCC261AFF199A0095BF9C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BCC241AFF199A0095BF9C /* PresentingViewController.m */; };
 		186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */; };
-		18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */; };
 		18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */; };
 		18D228941AF8BB6200872BF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228931AF8BB6200872BF1 /* AppDelegate.m */; };
 		18D2289B1AF8BB6800872BF1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228961AF8BB6800872BF1 /* RootViewController.m */; };
@@ -28,6 +27,10 @@
 		54E8717C14D2D72C3731369C /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FD0E7974B6E7C250B3AFD1 /* UIView+BackgroundColor.m */; };
 		729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */; };
 		729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */; };
+		72B53CD41C1840AD0059F6A1 /* UINavigationBar+Animation.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CD21C1840AD0059F6A1 /* UINavigationBar+Animation.h */; };
+		72B53CD51C1840AD0059F6A1 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CD31C1840AD0059F6A1 /* UINavigationBar+Animation.m */; };
+		72B53CD81C1840DC0059F6A1 /* UIButton+TitleColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CD61C1840DC0059F6A1 /* UIButton+TitleColor.h */; };
+		72B53CD91C1840DC0059F6A1 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CD71C1840DC0059F6A1 /* UIButton+TitleColor.m */; };
 		72BBA6A31C181B9600262693 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6931C181B9600262693 /* method.json */; };
 		72BBA6A41C181B9600262693 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6941C181B9600262693 /* project.json */; };
 		72BBA6A51C181B9600262693 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6951C181B9600262693 /* superklass.json */; };
@@ -79,8 +82,6 @@
 		189854B61ADD5B550050568B /* DKNightVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKNightVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854C91ADD5B560050568B /* DKNightVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DKNightVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189854CE1ADD5B560050568B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18D2288B1AF8BA4F00872BF1 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Classes/Helper/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
-		18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Classes/Helper/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
 		18D2288E1AF8BA7100872BF1 /* DKNightVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DKNightVersion.h; path = Classes/DKNightVersion.h; sourceTree = SOURCE_ROOT; };
 		18D2288F1AF8BA8700872BF1 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKNightVersionManager.h; path = Classes/Core/DKNightVersionManager.h; sourceTree = SOURCE_ROOT; };
 		18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKNightVersionManager.m; path = Classes/Core/DKNightVersionManager.m; sourceTree = SOURCE_ROOT; };
@@ -104,6 +105,10 @@
 		674BAB3118F3F90ECCE83F38 /* UINavigationBar+BarTintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+BarTintColor.h"; path = "./Classes/UIKit/UINavigationBar/UINavigationBar+BarTintColor.h"; sourceTree = "<group>"; };
 		729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Night.h"; path = "Classes/Core/NSObject+Night.h"; sourceTree = SOURCE_ROOT; };
 		729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Night.m"; path = "Classes/Core/NSObject+Night.m"; sourceTree = SOURCE_ROOT; };
+		72B53CD21C1840AD0059F6A1 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Classes/Manual/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
+		72B53CD31C1840AD0059F6A1 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Classes/Manual/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
+		72B53CD61C1840DC0059F6A1 /* UIButton+TitleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+TitleColor.h"; path = "Classes/Core/UIButton+TitleColor.h"; sourceTree = SOURCE_ROOT; };
+		72B53CD71C1840DC0059F6A1 /* UIButton+TitleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TitleColor.m"; path = "Classes/Core/UIButton+TitleColor.m"; sourceTree = SOURCE_ROOT; };
 		72BBA6931C181B9600262693 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
 		72BBA6941C181B9600262693 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
 		72BBA6951C181B9600262693 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
@@ -182,16 +187,6 @@
 			name = MetaData;
 			sourceTree = "<group>";
 		};
-		186AC5181AF7C4D60095ED95 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				18D2288B1AF8BA4F00872BF1 /* UINavigationBar+Animation.h */,
-				18D2288C1AF8BA4F00872BF1 /* UINavigationBar+Animation.m */,
-			);
-			name = Helper;
-			path = Pod/Helper;
-			sourceTree = SOURCE_ROOT;
-		};
 		189854AD1ADD5B550050568B = {
 			isa = PBXGroup;
 			children = (
@@ -255,7 +250,7 @@
 				18D2288E1AF8BA7100872BF1 /* DKNightVersion.h */,
 				18A41E221AE019F000042CF4 /* Core */,
 				2B67D93A0ADE48CC0E58BD8E /* UIKit */,
-				186AC5181AF7C4D60095ED95 /* Helper */,
+				72B53CD11C1840630059F6A1 /* Manual */,
 				1816313C1AFE549000A20423 /* MetaData */,
 			);
 			name = Classes;
@@ -335,6 +330,18 @@
 			);
 			name = UIView;
 			sourceTree = SOURCE_ROOT;
+		};
+		72B53CD11C1840630059F6A1 /* Manual */ = {
+			isa = PBXGroup;
+			children = (
+				72B53CD21C1840AD0059F6A1 /* UINavigationBar+Animation.h */,
+				72B53CD31C1840AD0059F6A1 /* UINavigationBar+Animation.m */,
+				72B53CD61C1840DC0059F6A1 /* UIButton+TitleColor.h */,
+				72B53CD71C1840DC0059F6A1 /* UIButton+TitleColor.m */,
+			);
+			name = Manual;
+			path = ../../DKNightVersion;
+			sourceTree = "<group>";
 		};
 		72BBA68F1C181B9600262693 /* generator */ = {
 			isa = PBXGroup;
@@ -441,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72BBA6BB1C182E1000262693 /* DKColor.h in Headers */,
+				72B53CD41C1840AD0059F6A1 /* UINavigationBar+Animation.h in Headers */,
 				182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */,
 				729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */,
 				F7C774065BDCB524A1DA6C24 /* UIView+BackgroundColor.h in Headers */,
@@ -448,6 +456,7 @@
 				1937A51116E10500D5F50546 /* UINavigationBar+BarTintColor.h in Headers */,
 				DC1EDF66E9E203F35029D226 /* UINavigationBar+TintColor.h in Headers */,
 				8EEE755AC97BCEAD8E8C1BFB /* UITabBar+BarTintColor.h in Headers */,
+				72B53CD81C1840DC0059F6A1 /* UIButton+TitleColor.h in Headers */,
 				DCDFBB41EBA088C489FDA32E /* UIBarButtonItem+TintColor.h in Headers */,
 				502A25B400683704D6C851D3 /* UITableView+SeparatorColor.h in Headers */,
 				C5EE7EA719A22CCAA7DCA631 /* UITextView+TextColor.h in Headers */,
@@ -596,8 +605,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B53CD51C1840AD0059F6A1 /* UINavigationBar+Animation.m in Sources */,
 				18D2289C1AF8BB6800872BF1 /* SuccViewController.m in Sources */,
-				18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */,
 				72BBA6BC1C182E1000262693 /* DKColor.m in Sources */,
 				18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */,
 				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
@@ -605,6 +614,7 @@
 				18D2289D1AF8BB6800872BF1 /* TableViewCell.m in Sources */,
 				18D228941AF8BB6200872BF1 /* AppDelegate.m in Sources */,
 				182BCC261AFF199A0095BF9C /* PresentingViewController.m in Sources */,
+				72B53CD91C1840DC0059F6A1 /* UIButton+TitleColor.m in Sources */,
 				729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */,
 				54E8717C14D2D72C3731369C /* UIView+BackgroundColor.m in Sources */,
 				BE9C55E580EC19C8FA4DE055 /* UILabel+TextColor.m in Sources */,
