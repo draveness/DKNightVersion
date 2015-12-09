@@ -18,11 +18,11 @@
 
 @implementation UIView (BackgroundColor)
 
-- (UIColor *(^)(void))backgroundColorPicker {
+- (DKColorPicker)backgroundColorPicker {
     return objc_getAssociatedObject(self, @selector(backgroundColorPicker));
 }
 
-- (void)setBackgroundColorPicker:(UIColor *(^)(void))picker {
+- (void)setBackgroundColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker();
     [self.pickers setValue:picker forKey:@"setBackgroundColor:"];

@@ -18,11 +18,11 @@
 
 @implementation UITabBar (BarTintColor)
 
-- (UIColor *(^)(void))barTintColorPicker {
+- (DKColorPicker)barTintColorPicker {
     return objc_getAssociatedObject(self, @selector(barTintColorPicker));
 }
 
-- (void)setBarTintColorPicker:(UIColor *(^)(void))picker {
+- (void)setBarTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker();
     [self.pickers setValue:picker forKey:@"setBarTintColor:"];

@@ -18,11 +18,11 @@
 
 @implementation UITextField (TextColor)
 
-- (UIColor *(^)(void))textColorPicker {
+- (DKColorPicker)textColorPicker {
     return objc_getAssociatedObject(self, @selector(textColorPicker));
 }
 
-- (void)setTextColorPicker:(UIColor *(^)(void))picker {
+- (void)setTextColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker();
     [self.pickers setValue:picker forKey:@"setTextColor:"];

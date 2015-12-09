@@ -18,7 +18,7 @@
 
 @implementation UIBarButtonItem (TintColor)
 
-- (UIColor *(^)(void))tintColorPicker {
+- (DKColorPicker)tintColorPicker {
     return objc_getAssociatedObject(self, @selector(tintColorPicker));
 }
 

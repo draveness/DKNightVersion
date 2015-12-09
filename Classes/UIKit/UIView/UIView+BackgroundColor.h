@@ -13,6 +13,6 @@
 
 @interface UIView (BackgroundColor)
 
-@property (nonatomic, copy) UIColor *(^backgroundColorPicker)(void);
+@property (nonatomic, copy) DKColorPicker *backgroundColorPicker;
 
 @end

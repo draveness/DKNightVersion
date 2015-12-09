@@ -13,6 +13,6 @@
 
 @interface UINavigationBar (BarTintColor)
 
-@property (nonatomic, copy) UIColor *(^barTintColorPicker)(void);
+@property (nonatomic, copy) DKColorPicker *barTintColorPicker;
 
 @end

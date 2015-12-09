@@ -13,6 +13,6 @@
 
 @interface UINavigationBar (TintColor)
 
-@property (nonatomic, copy) UIColor *(^tintColorPicker)(void);
+@property (nonatomic, copy) DKColorPicker *tintColorPicker;
 
 @end

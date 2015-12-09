@@ -13,6 +13,6 @@
 
 @interface UITableView (SeparatorColor)
 
-@property (nonatomic, copy) UIColor *(^separatorColorPicker)(void);
+@property (nonatomic, copy) DKColorPicker *separatorColorPicker;
 
 @end
