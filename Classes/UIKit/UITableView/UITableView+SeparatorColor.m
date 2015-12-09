@@ -18,40 +18,16 @@
 
 @implementation UITableView (SeparatorColor)
 
-- (UIColor *)nightSeparatorColor {
-    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightSeparatorColor));
-    if (nightColor) {
-        return nightColor;
-    } else if (self.normalSeparatorColor) {
-        return self.normalSeparatorColor;
-    } else {
-        return self.separatorColor;
-    }
+- (UIColor *(^)(void))separatorColorPicker {
+    return objc_getAssociatedObject(self, @selector(separatorColorPicker));
 }
 
-- (void)setNightSeparatorColor:(UIColor *)nightSeparatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        if (!self.normalSeparatorColor) {
-            self.normalSeparatorColor = self.separatorColor;
-        }
-        [self setSeparatorColor:nightSeparatorColor];
-    } else {
-        [self setSeparatorColor:self.normalSeparatorColor];
-    }
-    objc_setAssociatedObject(self, @selector(nightSeparatorColor), nightSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setSeparatorColorPicker:(UIColor *(^)(void))picker {
+    objc_setAssociatedObject(self, @selector(separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    SEL sel = NSSelectorFromString(setSeparatorColor:(UIColor*)separatorColor);
+    [self performSelector:sel withObject:picker()];
+    [self.pickers setValue:picker forKey:setSeparatorColor:(UIColor*)separatorColor];
 }
 
-- (UIColor *)normalSeparatorColor {
-    return objc_getAssociatedObject(self, @selector(normalSeparatorColor));
-}
-
-- (void)setNormalSeparatorColor:(UIColor *)normalSeparatorColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setSeparatorColor:normalSeparatorColor];
-    } else {
-        [self setSeparatorColor:self.nightSeparatorColor];
-    }
-    objc_setAssociatedObject(self, @selector(normalSeparatorColor), normalSeparatorColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end

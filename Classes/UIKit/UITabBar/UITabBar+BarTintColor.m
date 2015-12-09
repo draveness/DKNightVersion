@@ -18,40 +18,16 @@
 
 @implementation UITabBar (BarTintColor)
 
-- (UIColor *)nightBarTintColor {
-    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBarTintColor));
-    if (nightColor) {
-        return nightColor;
-    } else if (self.normalBarTintColor) {
-        return self.normalBarTintColor;
-    } else {
-        return self.barTintColor;
-    }
+- (UIColor *(^)(void))barTintColorPicker {
+    return objc_getAssociatedObject(self, @selector(barTintColorPicker));
 }
 
-- (void)setNightBarTintColor:(UIColor *)nightBarTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        if (!self.normalBarTintColor) {
-            self.normalBarTintColor = self.barTintColor;
-        }
-        [self setBarTintColor:nightBarTintColor];
-    } else {
-        [self setBarTintColor:self.normalBarTintColor];
-    }
-    objc_setAssociatedObject(self, @selector(nightBarTintColor), nightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setBarTintColorPicker:(UIColor *(^)(void))picker {
+    objc_setAssociatedObject(self, @selector(barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    SEL sel = NSSelectorFromString(setBarTintColor:(UIColor*)barTintColor);
+    [self performSelector:sel withObject:picker()];
+    [self.pickers setValue:picker forKey:setBarTintColor:(UIColor*)barTintColor];
 }
 
-- (UIColor *)normalBarTintColor {
-    return objc_getAssociatedObject(self, @selector(normalBarTintColor));
-}
-
-- (void)setNormalBarTintColor:(UIColor *)normalBarTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setBarTintColor:normalBarTintColor];
-    } else {
-        [self setBarTintColor:self.nightBarTintColor];
-    }
-    objc_setAssociatedObject(self, @selector(normalBarTintColor), normalBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end

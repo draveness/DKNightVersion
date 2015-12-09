@@ -12,14 +12,6 @@
 
 @interface UINavigationBar (BarTintColor)
 
-/**
- * Set this property when switch to night version uinavigationbar BarTintColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightBarTintColor;
-
-/**
- *  UINavigationBar BarTintColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalBarTintColor;
+@property (nonatomic, copy) UIColor *(^barTintColorPicker)(void);
 
 @end

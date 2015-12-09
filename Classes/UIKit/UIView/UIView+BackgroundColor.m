@@ -18,40 +18,16 @@
 
 @implementation UIView (BackgroundColor)
 
-- (UIColor *)nightBackgroundColor {
-    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightBackgroundColor));
-    if (nightColor) {
-        return nightColor;
-    } else if (self.normalBackgroundColor) {
-        return self.normalBackgroundColor;
-    } else {
-        return self.backgroundColor;
-    }
+- (UIColor *(^)(void))backgroundColorPicker {
+    return objc_getAssociatedObject(self, @selector(backgroundColorPicker));
 }
 
-- (void)setNightBackgroundColor:(UIColor *)nightBackgroundColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        if (!self.normalBackgroundColor) {
-            self.normalBackgroundColor = self.backgroundColor;
-        }
-        [self setBackgroundColor:nightBackgroundColor];
-    } else {
-        [self setBackgroundColor:self.normalBackgroundColor];
-    }
-    objc_setAssociatedObject(self, @selector(nightBackgroundColor), nightBackgroundColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setBackgroundColorPicker:(UIColor *(^)(void))picker {
+    objc_setAssociatedObject(self, @selector(backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    SEL sel = NSSelectorFromString(setBackgroundColor:(UIColor*)backgroundColor);
+    [self performSelector:sel withObject:picker()];
+    [self.pickers setValue:picker forKey:setBackgroundColor:(UIColor*)backgroundColor];
 }
 
-- (UIColor *)normalBackgroundColor {
-    return objc_getAssociatedObject(self, @selector(normalBackgroundColor));
-}
-
-- (void)setNormalBackgroundColor:(UIColor *)normalBackgroundColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setBackgroundColor:normalBackgroundColor];
-    } else {
-        [self setBackgroundColor:self.nightBackgroundColor];
-    }
-    objc_setAssociatedObject(self, @selector(normalBackgroundColor), normalBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end

@@ -12,14 +12,6 @@
 
 @interface UIBarButtonItem (TintColor)
 
-/**
- * Set this property when switch to night version uibarbuttonitem TintColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightTintColor;
-
-/**
- *  UIBarButtonItem TintColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalTintColor;
+@property (nonatomic, copy) UIColor *(^tintColorPicker)(void);
 
 @end

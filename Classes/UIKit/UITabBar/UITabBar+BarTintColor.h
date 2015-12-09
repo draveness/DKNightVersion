@@ -12,14 +12,6 @@
 
 @interface UITabBar (BarTintColor)
 
-/**
- * Set this property when switch to night version uitabbar BarTintColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightBarTintColor;
-
-/**
- *  UITabBar BarTintColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalBarTintColor;
+@property (nonatomic, copy) UIColor *(^barTintColorPicker)(void);
 
 @end

@@ -12,14 +12,6 @@
 
 @interface UITextField (TextColor)
 
-/**
- * Set this property when switch to night version uitextfield TextColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightTextColor;
-
-/**
- *  UITextField TextColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalTextColor;
+@property (nonatomic, copy) UIColor *(^textColorPicker)(void);
 
 @end

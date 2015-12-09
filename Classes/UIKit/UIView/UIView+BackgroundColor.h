@@ -12,14 +12,6 @@
 
 @interface UIView (BackgroundColor)
 
-/**
- * Set this property when switch to night version uiview BackgroundColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightBackgroundColor;
-
-/**
- *  UIView BackgroundColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalBackgroundColor;
+@property (nonatomic, copy) UIColor *(^backgroundColorPicker)(void);
 
 @end

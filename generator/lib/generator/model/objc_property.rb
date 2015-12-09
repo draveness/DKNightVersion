@@ -8,7 +8,7 @@ class ObjcProperty
            instance_variable_set("@#{k}", v) unless v.nil?
         end
         @type   ||= "UIColor *"
-		@setter ||= "set#{cap_name}:(UIColor*)#{name}"
+		@setter ||= "set#{cap_name}:"
 		@getter ||= "#{name}"
   	end
 	

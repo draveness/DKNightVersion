@@ -12,14 +12,6 @@
 
 @interface UISegmentedControl (TintColor)
 
-/**
- * Set this property when switch to night version uisegmentedcontrol TintColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightTintColor;
-
-/**
- *  UISegmentedControl TintColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalTintColor;
+@property (nonatomic, copy) UIColor *(^tintColorPicker)(void);
 
 @end

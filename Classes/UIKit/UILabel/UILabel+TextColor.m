@@ -18,40 +18,16 @@
 
 @implementation UILabel (TextColor)
 
-- (UIColor *)nightTextColor {
-    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTextColor));
-    if (nightColor) {
-        return nightColor;
-    } else if (self.normalTextColor) {
-        return self.normalTextColor;
-    } else {
-        return self.textColor;
-    }
+- (UIColor *(^)(void))textColorPicker {
+    return objc_getAssociatedObject(self, @selector(textColorPicker));
 }
 
-- (void)setNightTextColor:(UIColor *)nightTextColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        if (!self.normalTextColor) {
-            self.normalTextColor = self.textColor;
-        }
-        [self setTextColor:nightTextColor];
-    } else {
-        [self setTextColor:self.normalTextColor];
-    }
-    objc_setAssociatedObject(self, @selector(nightTextColor), nightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setTextColorPicker:(UIColor *(^)(void))picker {
+    objc_setAssociatedObject(self, @selector(textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    SEL sel = NSSelectorFromString(setTextColor:(UIColor*)textColor);
+    [self performSelector:sel withObject:picker()];
+    [self.pickers setValue:picker forKey:setTextColor:(UIColor*)textColor];
 }
 
-- (UIColor *)normalTextColor {
-    return objc_getAssociatedObject(self, @selector(normalTextColor));
-}
-
-- (void)setNormalTextColor:(UIColor *)normalTextColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setTextColor:normalTextColor];
-    } else {
-        [self setTextColor:self.nightTextColor];
-    }
-    objc_setAssociatedObject(self, @selector(normalTextColor), normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end

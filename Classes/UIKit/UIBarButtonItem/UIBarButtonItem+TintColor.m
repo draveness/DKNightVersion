@@ -18,40 +18,16 @@
 
 @implementation UIBarButtonItem (TintColor)
 
-- (UIColor *)nightTintColor {
-    UIColor *nightColor = objc_getAssociatedObject(self, @selector(nightTintColor));
-    if (nightColor) {
-        return nightColor;
-    } else if (self.normalTintColor) {
-        return self.normalTintColor;
-    } else {
-        return self.tintColor;
-    }
+- (UIColor *(^)(void))tintColorPicker {
+    return objc_getAssociatedObject(self, @selector(tintColorPicker));
 }
 
-- (void)setNightTintColor:(UIColor *)nightTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
-        if (!self.normalTintColor) {
-            self.normalTintColor = self.tintColor;
-        }
-        [self setTintColor:nightTintColor];
-    } else {
-        [self setTintColor:self.normalTintColor];
-    }
-    objc_setAssociatedObject(self, @selector(nightTintColor), nightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setTintColorPicker:(UIColor *(^)(void))picker {
+    objc_setAssociatedObject(self, @selector(tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    SEL sel = NSSelectorFromString(setTintColor:(UIColor*)tintColor);
+    [self performSelector:sel withObject:picker()];
+    [self.pickers setValue:picker forKey:setTintColor:(UIColor*)tintColor];
 }
 
-- (UIColor *)normalTintColor {
-    return objc_getAssociatedObject(self, @selector(normalTintColor))?: [UIColor blueColor];
-}
-
-- (void)setNormalTintColor:(UIColor *)normalTintColor {
-    if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
-        [self setTintColor:normalTintColor];
-    } else {
-        [self setTintColor:self.nightTintColor];
-    }
-    objc_setAssociatedObject(self, @selector(normalTintColor), normalTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end

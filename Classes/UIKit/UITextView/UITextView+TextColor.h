@@ -12,14 +12,6 @@
 
 @interface UITextView (TextColor)
 
-/**
- * Set this property when switch to night version uitextview TextColor turns to this color.
- */
-@property (nonatomic, strong) UIColor *nightTextColor;
-
-/**
- *  UITextView TextColor in normal version.
- */
-@property (nonatomic, strong) UIColor *normalTextColor;
+@property (nonatomic, copy) UIColor *(^textColorPicker)(void);
 
 @end
