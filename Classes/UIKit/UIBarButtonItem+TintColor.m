@@ -20,12 +20,12 @@
 
 @implementation UIBarButtonItem (TintColor)
 
-- (DKColorPicker)tintColorPicker {
-    return objc_getAssociatedObject(self, @selector(tintColorPicker));
+- (DKColorPicker)dk_tintColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
 }
 
-- (void)setTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_tintColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];
 }

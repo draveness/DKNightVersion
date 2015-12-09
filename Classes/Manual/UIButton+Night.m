@@ -7,6 +7,7 @@
 //
 
 #import "UIButton+Night.h"
+#import <objc/runtime.h>
 
 @interface UIButton ()
 
@@ -32,13 +33,11 @@
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSDictionary<NSString *, DKColorPicker> *dictionary = (NSDictionary *)obj;
             [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
-                SEL sel = NSSelectorFromString(selector);
                 UIColor *resultColor = picker();
                 UIControlState state = [key integerValue];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [self performSelector:sel withObject:resultColor withObject:@(state)];
-#pragma clang diagnostic pop
+                if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleColor:forState:))]) {
+                    [self setTitleColor:resultColor forState:state];
+                }
             }];
         } else {
             SEL sel = NSSelectorFromString(key);

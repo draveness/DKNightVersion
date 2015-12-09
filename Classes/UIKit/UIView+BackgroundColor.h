@@ -13,6 +13,6 @@
 
 @interface UIView (BackgroundColor)
 
-@property (nonatomic, copy) DKColorPicker backgroundColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_backgroundColorPicker;
 
 @end

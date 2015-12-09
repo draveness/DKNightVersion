@@ -20,12 +20,12 @@
 
 @implementation UIView (BackgroundColor)
 
-- (DKColorPicker)backgroundColorPicker {
-    return objc_getAssociatedObject(self, @selector(backgroundColorPicker));
+- (DKColorPicker)dk_backgroundColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_backgroundColorPicker));
 }
 
-- (void)setBackgroundColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_backgroundColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBackgroundColor:"];
 }

@@ -13,6 +13,6 @@
 
 @interface UITabBar (BarTintColor)
 
-@property (nonatomic, copy) DKColorPicker barTintColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
 
 @end

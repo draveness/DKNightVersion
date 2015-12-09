@@ -20,12 +20,12 @@
 
 @implementation UITableView (SeparatorColor)
 
-- (DKColorPicker)separatorColorPicker {
-    return objc_getAssociatedObject(self, @selector(separatorColorPicker));
+- (DKColorPicker)dk_separatorColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_separatorColorPicker));
 }
 
-- (void)setSeparatorColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_separatorColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.separatorColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setSeparatorColor:"];
 }

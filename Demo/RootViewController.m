@@ -36,12 +36,12 @@
     self.navigationItem.rightBarButtonItem = item;
 
 
-    self.tableView.backgroundColorPicker =  [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
-    self.tableView.separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor lightGrayColor] nightColor:DKColorFromRGB(0x313131)];
-    navigationLabel.textColorPicker = [DKColor pickerWithNormalColor:[UIColor blackColor] nightColor:[UIColor whiteColor]];
-    self.navigationController.navigationBar.barTintColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x444444)];
-    self.navigationItem.leftBarButtonItem.tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]];
-    self.navigationItem.rightBarButtonItem.tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]];
+    self.tableView.dk_backgroundColorPicker =  [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
+    self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor lightGrayColor] nightColor:DKColorFromRGB(0x313131)];
+    navigationLabel.dk_textColorPicker = [DKColor pickerWithNormalColor:[UIColor blackColor] nightColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.dk_barTintColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x444444)];
+    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem.dk_tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]];
 
 }
 

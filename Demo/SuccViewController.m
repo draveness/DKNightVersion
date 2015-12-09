@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
-    self.navigationController.navigationBar.tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor redColor]];
+    self.view.dk_backgroundColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
+    self.navigationController.navigationBar.dk_tintColorPicker = [DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor redColor]];
 }
 
 @end

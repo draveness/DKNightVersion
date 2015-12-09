@@ -32,19 +32,10 @@
     [self.view addSubview:button];
     [self.view addSubview:switchButton];
 
-    self.view.backgroundColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
-//    [button ]
+    self.view.dk_backgroundColorPicker = [DKColor pickerWithNormalColor:[UIColor whiteColor] nightColor:DKColorFromRGB(0x343434)];
+    [button dk_setTitleColorPicker:[DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    [switchButton dk_setTitleColorPicker:[DKColor pickerWithNormalColor:[UIColor blueColor] nightColor:[UIColor whiteColor]] forState:UIControlStateNormal];
 
-//    @weakify(self);
-//    [self addColorChangedBlock:^{
-//        @strongify(self);
-//        self.view.normalBackgroundColor = [UIColor whiteColor];
-//        self.view.nightBackgroundColor = DKColorFromRGB(0x343434);
-//        button.normalTitleColor = [UIColor blueColor];
-//        button.nightTitleColor = [UIColor whiteColor];
-//        switchButton.normalTitleColor = [UIColor blueColor];
-//        switchButton.nightTitleColor = [UIColor whiteColor];
-//    }];
 }
 
 - (void)back {

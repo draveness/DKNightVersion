@@ -20,12 +20,12 @@
 
 @implementation UINavigationBar (BarTintColor)
 
-- (DKColorPicker)barTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(barTintColorPicker));
+- (DKColorPicker)dk_barTintColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_barTintColorPicker));
 }
 
-- (void)setBarTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_barTintColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBarTintColor:"];
 }

@@ -20,12 +20,12 @@
 
 @implementation UILabel (TextColor)
 
-- (DKColorPicker)textColorPicker {
-    return objc_getAssociatedObject(self, @selector(textColorPicker));
+- (DKColorPicker)dk_textColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
 }
 
-- (void)setTextColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_textColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }
