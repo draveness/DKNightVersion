@@ -13,6 +13,6 @@
 
 @interface UIBarButtonItem (TintColor)
 
-@property (nonatomic, copy) DKColorPicker *tintColorPicker;
+@property (nonatomic, copy) DKColorPicker tintColorPicker;
 
 @end
