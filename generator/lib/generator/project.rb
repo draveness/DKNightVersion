@@ -49,7 +49,8 @@ def get_group_name(production)
 end
 
 def should_remove(file_name)
-    /UI[a-zA-Z]+\+(?:[a-zA-Z]+?Color|Night)\.[hm]/.match(file_name)
+    return false if file_name.match('UIButton')
+    /UI[a-zA-Z]+\+(?:[a-zA-Z]+?|Night)\.[hm]/.match(file_name)
 end
 
 def clear_target(target)
