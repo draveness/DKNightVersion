@@ -42,5 +42,39 @@
     "UIControl":
     [
         "tintColor"
+    ],
+    "UIToolBar":
+    [
+        "barTintColor"    
+    ],
+    "UITableViewCell":
+    [
+        "textColor",
+        "selectedTextColor"
+    ],
+    "UISwitch":
+    [
+        "onTintColor",
+        "thumbTintColor"
+    ],
+    "UISlider":
+    [
+        "minimumTrackTintColor",
+        "maximumTrackTintColor",
+        "thumbTintColor"
+    ],
+    "UISearchBar":
+    [
+        "barTintColor"
+    ],
+    "UIProgressView":
+    [
+        "progressTintColor",
+        "trackTintColor"
+    ],
+    "UIPageControl":
+    [
+        "pageIndicatorTintColor",
+        "currentPageIndicatorTintColor"
     ]
 }

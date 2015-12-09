@@ -22,6 +22,8 @@
 #import "UITextField+Night.h"
 #import "UITextView+Night.h"
 #import "UIControl+Night.h"
+#import "UIToolBar+Night.h"
+#import "UITableViewCell+Night.h"
 
 #endif
 
