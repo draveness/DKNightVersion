@@ -1,6 +1,6 @@
 //
-//  UITableView+SeparatorColor.m
-//  UITableView+SeparatorColor
+//  UITableView+Night.m
+//  UITableView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,9 +8,9 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UITableView+SeparatorColor.h"
+#import "UITableView+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @interface UITableView ()
 
@@ -18,7 +18,8 @@
 
 @end
 
-@implementation UITableView (SeparatorColor)
+@implementation UITableView (Night)
+
 
 - (DKColorPicker)dk_separatorColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_separatorColorPicker));

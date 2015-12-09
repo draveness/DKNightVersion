@@ -8,19 +8,19 @@ require_relative 'xcodeproj'
 
 class ErbalT < OpenStruct
     def self.render_from_hash(t, h)
-        ErbalT.new(h).render(t)
-    end
+    ErbalT.new(h).render(t)
+end
 
-    def render(template)
-        ERB.new(template).result(binding)
-    end
+def render(template)
+    ERB.new(template).result(binding)
+end
 end
 
 def render(template, klass, property=nil)
     erb = File.open(template).read
     if property.nil?
         ErbalT::render_from_hash(erb, { klass: klass })
-    else
+        else
         ErbalT::render_from_hash(erb, { klass: klass, property: property })
     end
 end
@@ -28,28 +28,26 @@ end
 def objc_code_generator(klasses, p='.')
     groups = []
 
-	template_folder = File.join('generator', 'lib', 'generator', 'template')
-	color_header        = File.join(template_folder, 'color.h.erb')
-	color_imp           = File.join(template_folder, 'color.m.erb')
+    template_folder = File.join('generator', 'lib', 'generator', 'template')
+    color_header        = File.join(template_folder, 'color.h.erb')
+    color_imp           = File.join(template_folder, 'color.m.erb')
 
-	relative_path = File.join('Classes', 'UIKit')
-	FileUtils.rm_rf(relative_path)
-	FileUtils.mkdir_p(relative_path)
-	klasses.each do |klass|
+    relative_path = File.join('Classes', 'UIKit')
+    FileUtils.rm_rf(relative_path)
+    FileUtils.mkdir_p(relative_path)
+    klasses.each do |klass|
 
-		klass.properties.each do |property|
-            groups << File.join(relative_path, klass.color_header_name(property))
-            groups << File.join(relative_path, klass.color_imp_name(property))
+        groups << File.join(relative_path, klass.header_name)
+        groups << File.join(relative_path, klass.imp_name)
 
-            color_header_file_path = File.join(relative_path, klass.color_header_name(property))
-            color_imp_file_path    = File.join(relative_path, klass.color_imp_name(property))
+        header_file_path = File.join(relative_path, klass.header_name)
+        imp_file_path    = File.join(relative_path, klass.imp_name)
 
-            puts "[Generate] Generating #{color_header_file_path}"
-            File.write color_header_file_path, render(color_header, klass, property)
-            puts "[Generate] Generating #{color_imp_file_path}"
-            File.write color_imp_file_path,    render(color_imp,    klass, property)
-		end
-	end
+        puts "[Generate] Generating #{header_file_path}"
+        File.write header_file_path, render(color_header, klass)
+        puts "[Generate] Generating #{imp_file_path}"
+        File.write imp_file_path,    render(color_imp,    klass)
+    end
     groups
 end
 
@@ -62,22 +60,7 @@ def has_property(klass, name)
         end
         klass = klass.superklass
     end
-	return nil
+    return nil
 end
 
 
-#table = parse_json('./property.json')
-#add_superklass_relation(table)
-#handle_method(table)
-
-#pbxproj_file_path = find_pbxproj('.')
-#basename = File.basename(find_xcodeproj('.'))
-#production = basename.start_with?('Pod')
-#path = if production then 'DKNightVersion' else '.' end
-#objc_code_generator(table, path)
-#group = objc_code_generator(table, path)
-#File.write File.join('project', 'project.json'), group.to_json
-
-#json_file_path = 'project/project.json'
-
-#system "python project/project.py #{pbxproj_file_path} #{json_file_path} #{production}"

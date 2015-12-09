@@ -1,6 +1,6 @@
 //
-//  UINavigationBar+TintColor.m
-//  UINavigationBar+TintColor
+//  UIBarButtonItem+Night.m
+//  UIBarButtonItem+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,17 +8,18 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UINavigationBar+TintColor.h"
+#import "UIBarButtonItem+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
-@interface UINavigationBar ()
+@interface UIBarButtonItem ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
 
 @end
 
-@implementation UINavigationBar (TintColor)
+@implementation UIBarButtonItem (Night)
+
 
 - (DKColorPicker)dk_tintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));

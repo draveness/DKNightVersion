@@ -1,6 +1,6 @@
 //
-//  UILabel+TextColor.h
-//  UILabel+TextColor
+//  UISegmentedControl+Night.h
+//  UISegmentedControl+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UILabel (TextColor)
+@interface UISegmentedControl (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_textColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_tintColorPicker;
 
 @end

@@ -1,6 +1,6 @@
 //
-//  UIView+BackgroundColor.h
-//  UIView+BackgroundColor
+//  UINavigationBar+Night.h
+//  UINavigationBar+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,9 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UIView (BackgroundColor)
+@interface UINavigationBar (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_backgroundColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_tintColorPicker;
 
 @end

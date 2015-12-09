@@ -1,6 +1,6 @@
 //
-//  UITabBar+BarTintColor.m
-//  UITabBar+BarTintColor
+//  UITabBar+Night.m
+//  UITabBar+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,9 +8,9 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UITabBar+BarTintColor.h"
+#import "UITabBar+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @interface UITabBar ()
 
@@ -18,7 +18,8 @@
 
 @end
 
-@implementation UITabBar (BarTintColor)
+@implementation UITabBar (Night)
+
 
 - (DKColorPicker)dk_barTintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_barTintColorPicker));

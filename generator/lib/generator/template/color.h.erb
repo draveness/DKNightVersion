@@ -1,6 +1,6 @@
 //
-//  <%= klass.name %>+<%= property.cap_name %>.h
-//  <%= klass.name %>+<%= property.cap_name %>
+//  <%= klass.name %>+Night.h
+//  <%= klass.name %>+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface <%= klass.name %> (<%= property.cap_name %>)
+@interface <%= klass.name %> (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_<%= property.name %>Picker;
-
+<% klass.properties.each do |property| %><%= "@property (nonatomic, copy) DKColorPicker dk_#{property.name}Picker;\n"%><% end %>
 @end

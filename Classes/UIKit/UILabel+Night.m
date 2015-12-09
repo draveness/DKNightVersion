@@ -1,6 +1,6 @@
 //
-//  UILabel+TextColor.m
-//  UILabel+TextColor
+//  UILabel+Night.m
+//  UILabel+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,9 +8,9 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UILabel+TextColor.h"
+#import "UILabel+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @interface UILabel ()
 
@@ -18,7 +18,8 @@
 
 @end
 
-@implementation UILabel (TextColor)
+@implementation UILabel (Night)
+
 
 - (DKColorPicker)dk_textColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_textColorPicker));

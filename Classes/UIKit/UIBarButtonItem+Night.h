@@ -1,6 +1,6 @@
 //
-//  UINavigationBar+TintColor.h
-//  UINavigationBar+TintColor
+//  UIBarButtonItem+Night.h
+//  UIBarButtonItem+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UINavigationBar (TintColor)
+@interface UIBarButtonItem (Night)
 
 @property (nonatomic, copy) DKColorPicker dk_tintColorPicker;
 

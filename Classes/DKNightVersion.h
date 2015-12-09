@@ -13,15 +13,14 @@
 #import "DKNightVersionManager.h"
 #import "NSObject+Night.h"
 #import "UIButton+Night.h"
-#import "UIView+BackgroundColor.h"
-#import "UILabel+TextColor.h"
-#import "UINavigationBar+BarTintColor.h"
-#import "UINavigationBar+TintColor.h"
-#import "UITabBar+BarTintColor.h"
-#import "UITableView+SeparatorColor.h"
-#import "UIBarButtonItem+TintColor.h"
-#import "UITextField+TextColor.h"
-#import "UITextView+TextColor.h"
+#import "UIView+Night.h"
+#import "UILabel+Night.h"
+#import "UINavigationBar+Night.h"
+#import "UITabBar+Night.h"
+#import "UITableView+Night.h"
+#import "UIBarButtonItem+Night.h"
+#import "UITextField+Night.h"
+#import "UITextView+Night.h"
 
 #endif
 

@@ -1,6 +1,6 @@
 //
-//  UITextField+TextColor.h
-//  UITextField+TextColor
+//  UITableView+Night.h
+//  UITableView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UITextField (TextColor)
+@interface UITableView (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_textColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_separatorColorPicker;
 
 @end

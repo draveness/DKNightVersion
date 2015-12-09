@@ -1,6 +1,6 @@
 //
-//  UISegmentedControl+TintColor.m
-//  UISegmentedControl+TintColor
+//  UISegmentedControl+Night.m
+//  UISegmentedControl+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,9 +8,9 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UISegmentedControl+TintColor.h"
+#import "UISegmentedControl+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @interface UISegmentedControl ()
 
@@ -18,7 +18,8 @@
 
 @end
 
-@implementation UISegmentedControl (TintColor)
+@implementation UISegmentedControl (Night)
+
 
 - (DKColorPicker)dk_tintColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));

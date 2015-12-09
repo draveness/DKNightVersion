@@ -1,6 +1,6 @@
 //
-//  UIView+BackgroundColor.m
-//  UIView+BackgroundColor
+//  UIView+Night.m
+//  UIView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,9 +8,9 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UIView+BackgroundColor.h"
+#import "UIView+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
 @interface UIView ()
 
@@ -18,7 +18,8 @@
 
 @end
 
-@implementation UIView (BackgroundColor)
+@implementation UIView (Night)
+
 
 - (DKColorPicker)dk_backgroundColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_backgroundColorPicker));

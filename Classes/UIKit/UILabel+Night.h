@@ -1,6 +1,6 @@
 //
-//  UINavigationBar+BarTintColor.h
-//  UINavigationBar+BarTintColor
+//  UILabel+Night.h
+//  UILabel+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UINavigationBar (BarTintColor)
+@interface UILabel (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_textColorPicker;
 
 @end

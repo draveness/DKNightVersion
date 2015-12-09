@@ -1,6 +1,6 @@
 //
-//  UITextView+TextColor.h
-//  UITextView+TextColor
+//  UITextView+Night.h
+//  UITextView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UITextView (TextColor)
+@interface UITextView (Night)
 
 @property (nonatomic, copy) DKColorPicker dk_textColorPicker;
 

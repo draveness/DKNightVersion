@@ -30,6 +30,14 @@ class ObjcClass
 		file_name(property) + '.m'
 	end
 
+    def header_name
+        "#{name}+Night.h"
+    end
+
+    def imp_name
+        "#{name}+Night.m"
+    end
+
     def all_properties
         p = properties.dup
         name = p.map { |property| property.name }

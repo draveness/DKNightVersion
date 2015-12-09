@@ -1,6 +1,6 @@
 //
-//  UITextField+TextColor.m
-//  UITextField+TextColor
+//  UITextView+Night.m
+//  UITextView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,17 +8,18 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UITextField+TextColor.h"
+#import "UITextView+Night.h"
 #import "DKNightVersionManager.h"
-#import "objc/runtime.h"
+#import <objc/runtime.h>
 
-@interface UITextField ()
+@interface UITextView ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
 
 @end
 
-@implementation UITextField (TextColor)
+@implementation UITextView (Night)
+
 
 - (DKColorPicker)dk_textColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_textColorPicker));

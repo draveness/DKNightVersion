@@ -1,6 +1,6 @@
 //
-//  UITabBar+BarTintColor.h
-//  UITabBar+BarTintColor
+//  UIView+Night.h
+//  UIView+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UITabBar (BarTintColor)
+@interface UIView (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_backgroundColorPicker;
 
 @end

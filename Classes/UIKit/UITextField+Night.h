@@ -1,6 +1,6 @@
 //
-//  UISegmentedControl+TintColor.h
-//  UISegmentedControl+TintColor
+//  UITextField+Night.h
+//  UITextField+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UISegmentedControl (TintColor)
+@interface UITextField (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_tintColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_textColorPicker;
 
 @end
