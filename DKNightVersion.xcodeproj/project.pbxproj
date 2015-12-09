@@ -35,6 +35,20 @@
 		6DCF54B8FF1611C7C6F1670D /* UITabBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EC69DB817452097BAE57E0 /* UITabBar+BarTintColor.m */; };
 		729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */; };
 		729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */; };
+		72BBA6A31C181B9600262693 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6931C181B9600262693 /* method.json */; };
+		72BBA6A41C181B9600262693 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6941C181B9600262693 /* project.json */; };
+		72BBA6A51C181B9600262693 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6951C181B9600262693 /* superklass.json */; };
+		72BBA6A61C181B9600262693 /* objc_class.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6971C181B9600262693 /* objc_class.rb */; };
+		72BBA6A71C181B9600262693 /* objc_property.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6981C181B9600262693 /* objc_property.rb */; };
+		72BBA6A81C181B9600262693 /* parser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6991C181B9600262693 /* parser.rb */; };
+		72BBA6A91C181B9600262693 /* project.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA69A1C181B9600262693 /* project.rb */; };
+		72BBA6AA1C181B9600262693 /* render.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA69B1C181B9600262693 /* render.rb */; };
+		72BBA6AB1C181B9600262693 /* color.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA69D1C181B9600262693 /* color.h.erb */; };
+		72BBA6AC1C181B9600262693 /* color.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA69E1C181B9600262693 /* color.m.erb */; };
+		72BBA6AD1C181B9600262693 /* nightversion.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA69F1C181B9600262693 /* nightversion.h.erb */; };
+		72BBA6AE1C181B9600262693 /* nightversion.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A01C181B9600262693 /* nightversion.m.erb */; };
+		72BBA6AF1C181B9600262693 /* xcodeproj.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A11C181B9600262693 /* xcodeproj.rb */; };
+		72BBA6B01C181B9600262693 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A21C181B9600262693 /* generator.rb */; };
 		73F0699EC450D5FDBB7C5D61 /* UITextView+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 785801F46601D9DD20F63DB3 /* UITextView+TextColor.m */; };
 		8CD49F824826840206B017DA /* UITabBar+BarTintColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DE46FF86241CD9D2666BEE /* UITabBar+BarTintColor.h */; };
 		953E0B104A6A80EA9AC3831E /* UIView+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FCE80644D301582C48169D7 /* UIView+BackgroundColor.h */; };
@@ -91,6 +105,20 @@
 		61EC69DB817452097BAE57E0 /* UITabBar+BarTintColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+BarTintColor.m"; path = "./Classes/UIKit/UITabBar/UITabBar+BarTintColor.m"; sourceTree = "<group>"; };
 		729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Night.h"; path = "Classes/Core/NSObject+Night.h"; sourceTree = SOURCE_ROOT; };
 		729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Night.m"; path = "Classes/Core/NSObject+Night.m"; sourceTree = SOURCE_ROOT; };
+		72BBA6931C181B9600262693 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
+		72BBA6941C181B9600262693 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
+		72BBA6951C181B9600262693 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
+		72BBA6971C181B9600262693 /* objc_class.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_class.rb; sourceTree = "<group>"; };
+		72BBA6981C181B9600262693 /* objc_property.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_property.rb; sourceTree = "<group>"; };
+		72BBA6991C181B9600262693 /* parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = parser.rb; sourceTree = "<group>"; };
+		72BBA69A1C181B9600262693 /* project.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = project.rb; sourceTree = "<group>"; };
+		72BBA69B1C181B9600262693 /* render.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = render.rb; sourceTree = "<group>"; };
+		72BBA69D1C181B9600262693 /* color.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.h.erb; sourceTree = "<group>"; };
+		72BBA69E1C181B9600262693 /* color.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.m.erb; sourceTree = "<group>"; };
+		72BBA69F1C181B9600262693 /* nightversion.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.h.erb; sourceTree = "<group>"; };
+		72BBA6A01C181B9600262693 /* nightversion.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.m.erb; sourceTree = "<group>"; };
+		72BBA6A11C181B9600262693 /* xcodeproj.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xcodeproj.rb; sourceTree = "<group>"; };
+		72BBA6A21C181B9600262693 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
 		785801F46601D9DD20F63DB3 /* UITextView+TextColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+TextColor.m"; path = "./Classes/UIKit/UITextView/UITextView+TextColor.m"; sourceTree = "<group>"; };
 		7925A2A97C63925286E903FA /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BackgroundColor.m"; path = "./Classes/UIKit/UIView/UIView+BackgroundColor.m"; sourceTree = "<group>"; };
 		84BF2E3E6155DBB6E706C3F8 /* UITableView+SeparatorColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SeparatorColor.m"; path = "./Classes/UIKit/UITableView/UITableView+SeparatorColor.m"; sourceTree = "<group>"; };
@@ -189,6 +217,7 @@
 		189854B81ADD5B550050568B /* DKNightVersion */ = {
 			isa = PBXGroup;
 			children = (
+				72BBA68F1C181B9600262693 /* generator */,
 				180CDCA91AECC17F00164D1F /* Demo */,
 				18063F361AF9C0C500A06A04 /* Pod */,
 				18D228A51AF8BB8D00872BF1 /* Images.xcassets */,
@@ -320,6 +349,67 @@
 			);
 			name = UIBarButtonItem;
 			sourceTree = SOURCE_ROOT;
+		};
+		72BBA68F1C181B9600262693 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA6901C181B9600262693 /* lib */,
+			);
+			path = generator;
+			sourceTree = SOURCE_ROOT;
+		};
+		72BBA6901C181B9600262693 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA6911C181B9600262693 /* generator */,
+				72BBA6A21C181B9600262693 /* generator.rb */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		72BBA6911C181B9600262693 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA6921C181B9600262693 /* json */,
+				72BBA6961C181B9600262693 /* model */,
+				72BBA6991C181B9600262693 /* parser.rb */,
+				72BBA69A1C181B9600262693 /* project.rb */,
+				72BBA69B1C181B9600262693 /* render.rb */,
+				72BBA69C1C181B9600262693 /* template */,
+				72BBA6A11C181B9600262693 /* xcodeproj.rb */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		72BBA6921C181B9600262693 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA6931C181B9600262693 /* method.json */,
+				72BBA6941C181B9600262693 /* project.json */,
+				72BBA6951C181B9600262693 /* superklass.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		72BBA6961C181B9600262693 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA6971C181B9600262693 /* objc_class.rb */,
+				72BBA6981C181B9600262693 /* objc_property.rb */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		72BBA69C1C181B9600262693 /* template */ = {
+			isa = PBXGroup;
+			children = (
+				72BBA69D1C181B9600262693 /* color.h.erb */,
+				72BBA69E1C181B9600262693 /* color.m.erb */,
+				72BBA69F1C181B9600262693 /* nightversion.h.erb */,
+				72BBA6A01C181B9600262693 /* nightversion.m.erb */,
+			);
+			path = template;
+			sourceTree = "<group>";
 		};
 		8A3DEEE15FBF109116F23CB5 /* UITextField */ = {
 			isa = PBXGroup;
@@ -470,8 +560,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BBA6A31C181B9600262693 /* method.json in Resources */,
+				72BBA6AD1C181B9600262693 /* nightversion.h.erb in Resources */,
+				72BBA6A61C181B9600262693 /* objc_class.rb in Resources */,
 				18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */,
+				72BBA6AE1C181B9600262693 /* nightversion.m.erb in Resources */,
+				72BBA6AB1C181B9600262693 /* color.h.erb in Resources */,
+				72BBA6AA1C181B9600262693 /* render.rb in Resources */,
+				72BBA6A51C181B9600262693 /* superklass.json in Resources */,
+				72BBA6A71C181B9600262693 /* objc_property.rb in Resources */,
+				72BBA6B01C181B9600262693 /* generator.rb in Resources */,
+				72BBA6A81C181B9600262693 /* parser.rb in Resources */,
+				72BBA6A41C181B9600262693 /* project.json in Resources */,
+				72BBA6A91C181B9600262693 /* project.rb in Resources */,
+				72BBA6AF1C181B9600262693 /* xcodeproj.rb in Resources */,
 				18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */,
+				72BBA6AC1C181B9600262693 /* color.m.erb in Resources */,
 				1816313E1AFE549A00A20423 /* property.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
