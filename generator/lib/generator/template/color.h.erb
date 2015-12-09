@@ -12,14 +12,6 @@
 
 @interface <%= klass.name %> (<%= property.cap_name %>)
 
-/**
- * Set this property when switch to night version <%= klass.name.downcase %> <%= property.cap_name %> turns to this color.
- */
-@property (nonatomic, strong) UIColor *night<%= property.cap_name %>;
-
-/**
- *  <%= klass.name %> <%= property.cap_name %> in normal version.
- */
-@property (nonatomic, strong) UIColor *normal<%= property.cap_name %>;
+@property (nonatomic, copy) UIColor *(^<%= property.name %>Picker)(void);
 
 @end

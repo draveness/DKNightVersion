@@ -38,7 +38,7 @@
     } else {
         [self setBackgroundColor:self.normalBackgroundColor];
     }
-    objc_setAssociatedObject(self, @selector(nightBackgroundColor), nightBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(nightBackgroundColor), nightBackgroundColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (UIColor *)normalBackgroundColor {
