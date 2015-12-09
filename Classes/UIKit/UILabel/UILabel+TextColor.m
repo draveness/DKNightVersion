@@ -14,6 +14,8 @@
 
 @interface UILabel ()
 
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+
 @end
 
 @implementation UILabel (TextColor)
@@ -25,7 +27,7 @@
 - (void)setTextColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker();
-    [self.pickers setValue:picker forKey:@"setTextColor:"];
+    [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }
 
 

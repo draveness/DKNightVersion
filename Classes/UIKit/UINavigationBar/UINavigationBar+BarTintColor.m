@@ -14,6 +14,8 @@
 
 @interface UINavigationBar ()
 
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+
 @end
 
 @implementation UINavigationBar (BarTintColor)
@@ -25,7 +27,7 @@
 - (void)setBarTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker();
-    [self.pickers setValue:picker forKey:@"setBarTintColor:"];
+    [self.pickers setValue:[picker copy] forKey:@"setBarTintColor:"];
 }
 
 
