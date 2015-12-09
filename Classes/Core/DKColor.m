@@ -10,6 +10,12 @@
 
 @implementation DKColor
 
+DKColorPicker DKColorPickerFromColor(UIColor *normalColor, UIColor *nightColor) {
+    return ^() {
+        return [DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal ? normalColor : nightColor;
+    };
+}
+
 + (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor {
     return ^() {
         return [DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal ? normalColor : nightColor;
