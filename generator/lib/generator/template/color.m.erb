@@ -25,7 +25,7 @@
 - (void)set<%= property.cap_name %>Picker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(<%= property.name %>Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.<%= property.getter %> = picker();
-    [self.pickers setValue:picker forKey:<%= property.setter %>];
+    [self.pickers setValue:picker forKey:@"<%= property.setter %>"];
 }
 
 
