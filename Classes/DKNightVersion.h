@@ -21,6 +21,7 @@
 #import "UIBarButtonItem+Night.h"
 #import "UITextField+Night.h"
 #import "UITextView+Night.h"
+#import "UIControl+Night.h"
 
 #endif
 

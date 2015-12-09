@@ -1,6 +1,6 @@
 //
-//  UISegmentedControl+Night.m
-//  UISegmentedControl+Night
+//  UIControl+Night.m
+//  UIControl+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,17 +8,17 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UISegmentedControl+Night.h"
+#import "UIControl+Night.h"
 #import "DKNightVersionManager.h"
 #import <objc/runtime.h>
 
-@interface UISegmentedControl ()
+@interface UIControl ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
 
 @end
 
-@implementation UISegmentedControl (Night)
+@implementation UIControl (Night)
 
 
 - (DKColorPicker)dk_tintColorPicker {

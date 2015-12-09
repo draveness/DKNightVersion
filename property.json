@@ -1,11 +1,14 @@
 {
     "UIView": 
     [
-        "backgroundColor"
+        "backgroundColor",
+        "tintColor"
     ],
     "UILabel":
     [ 
-        "textColor"
+        "textColor",
+        "shadowColor",
+        "highlightedTextColor"
     ],
     "UINavigationBar":
     [ 
@@ -36,7 +39,7 @@
     [
         "textColor"
     ],
-    "UISegmentedControl":
+    "UIControl":
     [
         "tintColor"
     ]

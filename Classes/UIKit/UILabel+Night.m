@@ -31,5 +31,25 @@
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }
 
+- (DKColorPicker)dk_shadowColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_shadowColorPicker));
+}
+
+- (void)setDk_shadowColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_shadowColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    self.shadowColor = picker();
+    [self.pickers setValue:[picker copy] forKey:@"setShadowColor:"];
+}
+
+- (DKColorPicker)dk_highlightedTextColorPicker {
+    return objc_getAssociatedObject(self, @selector(dk_highlightedTextColorPicker));
+}
+
+- (void)setDk_highlightedTextColorPicker:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_highlightedTextColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    self.highlightedTextColor = picker();
+    [self.pickers setValue:[picker copy] forKey:@"setHighlightedTextColor:"];
+}
+
 
 @end

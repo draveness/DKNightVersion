@@ -14,5 +14,7 @@
 @interface UILabel (Night)
 
 @property (nonatomic, copy) DKColorPicker dk_textColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_shadowColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_highlightedTextColorPicker;
 
 @end
