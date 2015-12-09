@@ -19,13 +19,13 @@
 @implementation <%= klass.name %> (<%= property.cap_name %>)
 
 - (UIColor *(^)(void))<%= property.name %>Picker {
-    return objc_getAssociatedObject(self, @selector(<%= property.name %>Picker);
+    return objc_getAssociatedObject(self, @selector(<%= property.name %>Picker));
 }
 
 - (void)set<%= property.cap_name %>Picker:(UIColor *(^)(void))picker {
     objc_setAssociatedObject(self, @selector(<%= property.name %>Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-SEL sel = NSSelectorFromString(<%= property.setter %>);
-[self performSelector:sel withObject:picker()];
+    SEL sel = NSSelectorFromString(<%= property.setter %>);
+    [self performSelector:sel withObject:picker()];
     [self.pickers setValue:picker forKey:<%= property.setter %>];
 }
 
