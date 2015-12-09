@@ -15,6 +15,8 @@ typedef NS_ENUM(NSUInteger, DKThemeVersion) {
     DKThemeVersionNight
 };
 
+typedef UIColor *(^DKColorPicker)(void);
+
 extern NSString *const DKNightVersionNightFallingNotification;
 extern NSString *const DKNightVersionDawnComingNotification;
 

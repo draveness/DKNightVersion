@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef UIColor *(^DKColorPicker)(void);
+#import "DKNightVersionManager.h"
 
 @interface NSObject (Night)
 

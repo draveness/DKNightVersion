@@ -44,6 +44,8 @@
 		72BBA6AE1C181B9600262693 /* nightversion.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A01C181B9600262693 /* nightversion.m.erb */; };
 		72BBA6AF1C181B9600262693 /* xcodeproj.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A11C181B9600262693 /* xcodeproj.rb */; };
 		72BBA6B01C181B9600262693 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6A21C181B9600262693 /* generator.rb */; };
+		72BBA6BB1C182E1000262693 /* DKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 72BBA6B91C182E1000262693 /* DKColor.h */; };
+		72BBA6BC1C182E1000262693 /* DKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BBA6BA1C182E1000262693 /* DKColor.m */; };
 		739D22B3D914E1E2A294DF0A /* UITextView+TextColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E15F7807C2A7109D132C2C6B /* UITextView+TextColor.h */; };
 		7736AEEE8EDB8111FCCDC5D8 /* UISegmentedControl+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6E780180A2153C78E1CFC /* UISegmentedControl+TintColor.m */; };
 		7C87FA335FD24C3EA76547C0 /* UITextView+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C026C83B0FD823BAD4DF54 /* UITextView+TextColor.m */; };
@@ -116,6 +118,8 @@
 		72BBA6A01C181B9600262693 /* nightversion.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.m.erb; sourceTree = "<group>"; };
 		72BBA6A11C181B9600262693 /* xcodeproj.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xcodeproj.rb; sourceTree = "<group>"; };
 		72BBA6A21C181B9600262693 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		72BBA6B91C182E1000262693 /* DKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKColor.h; path = Classes/Core/DKColor.h; sourceTree = SOURCE_ROOT; };
+		72BBA6BA1C182E1000262693 /* DKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKColor.m; path = Classes/Core/DKColor.m; sourceTree = SOURCE_ROOT; };
 		78E4993078F9023C1B4A615A /* UITextField+TextColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+TextColor.h"; path = "./Classes/UIKit/UITextField/UITextField+TextColor.h"; sourceTree = "<group>"; };
 		7DD6340D73DB5B95721A62DF /* UILabel+TextColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TextColor.m"; path = "./Classes/UIKit/UILabel/UILabel+TextColor.m"; sourceTree = "<group>"; };
 		9379300A6D88C75BEC32259A /* UIBarButtonItem+TintColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+TintColor.h"; path = "./Classes/UIKit/UIBarButtonItem/UIBarButtonItem+TintColor.h"; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */,
 				729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */,
 				729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */,
+				72BBA6B91C182E1000262693 /* DKColor.h */,
+				72BBA6BA1C182E1000262693 /* DKColor.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BBA6BB1C182E1000262693 /* DKColor.h in Headers */,
 				182BCC251AFF199A0095BF9C /* PresentingViewController.h in Headers */,
 				729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */,
 				C921F35B8AABF4DFC7FEAA84 /* UIView+BackgroundColor.h in Headers */,
@@ -599,6 +606,7 @@
 			files = (
 				18D2289C1AF8BB6800872BF1 /* SuccViewController.m in Sources */,
 				18D2288D1AF8BA4F00872BF1 /* UINavigationBar+Animation.m in Sources */,
+				72BBA6BC1C182E1000262693 /* DKColor.m in Sources */,
 				18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */,
 				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
 				18D2289B1AF8BB6800872BF1 /* RootViewController.m in Sources */,
