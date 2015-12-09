@@ -14,7 +14,6 @@
 #import "UIView+BackgroundColor.h"
 #import "UILabel+TextColor.h"
 #import "UINavigationBar+BarTintColor.h"
-#import "UIButton+TitleColor.h"
 #import "UINavigationBar+TintColor.h"
 #import "UITabBar+BarTintColor.h"
 #import "UITableView+SeparatorColor.h"

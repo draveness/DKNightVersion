@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^DKNightVersionColorChangedBlock)(void);
-
 typedef UIColor *(^DKColorPicker)(void);
 
 @interface NSObject (Night)
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
-
-- (void)addColorChangedBlock:(DKNightVersionColorChangedBlock)block;
 
 @end

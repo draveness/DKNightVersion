@@ -12,8 +12,6 @@
 
 @interface NSObject ()
 
-@property (nonatomic, strong) NSMutableArray<DKNightVersionColorChangedBlock> *blocks;
-
 @end
 
 @implementation NSObject (Night)
