@@ -13,6 +13,6 @@
 
 @interface UITextField (TextColor)
 
-@property (nonatomic, copy) DKColorPicker *textColorPicker;
+@property (nonatomic, copy) DKColorPicker textColorPicker;
 
 @end
