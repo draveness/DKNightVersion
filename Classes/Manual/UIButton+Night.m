@@ -35,18 +35,24 @@
             [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
                 UIColor *resultColor = picker();
                 UIControlState state = [key integerValue];
-                if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleColor:forState:))]) {
-                    [self setTitleColor:resultColor forState:state];
-                }
+                [UIView animateWithDuration:DKNightVersionAnimationDuration
+                                 animations:^{
+                                     if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleColor:forState:))]) {
+                                         [self setTitleColor:resultColor forState:state];
+                                     }
+                                 }];
             }];
         } else {
             SEL sel = NSSelectorFromString(key);
             DKColorPicker picker = (DKColorPicker)obj;
             UIColor *resultColor = picker();
+            [UIView animateWithDuration:DKNightVersionAnimationDuration
+                             animations:^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [self performSelector:sel withObject:resultColor];
+                                 [self performSelector:sel withObject:resultColor];
 #pragma clang diagnostic pop
+                             }];
 
         }
     }];

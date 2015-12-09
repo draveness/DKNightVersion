@@ -41,10 +41,13 @@
     [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
         UIColor *resultColor = picker();
+        [UIView animateWithDuration:DKNightVersionAnimationDuration
+                         animations:^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:sel withObject:resultColor];
+                             [self performSelector:sel withObject:resultColor];
 #pragma clang diagnostic pop
+                         }];
     }];
 }
 
