@@ -24,6 +24,12 @@
 #import "UIControl+Night.h"
 #import "UIToolBar+Night.h"
 #import "UITableViewCell+Night.h"
+#import "UIPageControl+Night.h"
+#import "UIProgressView+Night.h"
+#import "UISearchBar+Night.h"
+#import "UISlider+Night.h"
+#import "UISwitch+Night.h"
+
 
 #endif
 
