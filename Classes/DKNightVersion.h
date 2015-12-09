@@ -9,6 +9,7 @@
 #ifndef DKNightVerision_DKNightVersion_h
 #define DKNightVerision_DKNightVersion_h
 
+#import "DKColor.h"
 #import "DKNightVersionManager.h"
 #import "NSObject+Night.h"
 #import "UIView+BackgroundColor.h"
