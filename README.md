@@ -37,18 +37,15 @@ Just add one line of code in your precompiled header, or import it where you nee
 
 ## Using night color
 
-DKNightVersion is based on property `nightColor`, such as `nightBackgroundColor` `nightTextColor` and etc.
+DKNightVersion is based on picker `nightColor`, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc.
 
-Assign the night mode color you want to the `UIKit` component like this:
+Assign the night mode color picker you want to the `UIKit` component like this:
 
-```
-@weakify(self);
-[self addColorChangedBlock:^{
-    @strongify(self);
-    self.tableView.normalBackgroundColor = UIColorFromRGB(0xffffff);
-    self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
-}];
-
+```objectivec
+self.tableView.dk_backgroundColorPicker =  [DKColor pickerWithNormalColor:[UIColor whiteColor]
+                                                               nightColor:DKColorFromRGB(0x343434)];
+self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor lightGrayColor]
+                                                             nightColor:DKColorFromRGB(0x313131)];
 ```
 
 ## Using DKNightVersionManager change theme
@@ -73,59 +70,9 @@ It's pretty easy to swich theme between night and normal mode.
 
 `nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
-### JSON
-
-There is a json file in `Generator` folder named `property.json`, you can add more color property, which will add night color to the corresponding property you want.
-
-```
-{
-    "UIView": 
-    [
-        "backgroundColor"
-    ],
-    "UILabel":
-    [ 
-        "textColor"
-    ],
-    "UINavigationBar":
-    [ 
-        "barTintColor",
-        "tintColor"
-    ],
-    "UITabBar":
-    [ 
-        "barTintColor"
-    ],
-    "UIButton":
-    [ 
-        "titleColor"
-    ],
-    "UIBarButtonItem":
-    [ 
-        "tintColor"
-    ],
-    "UITableView":
-    [ 
-        "separatorColor"
-    ]
-}
-```
-
-And run `rake` in terminal under folder `Pods/DKNightVersion` if you are using Cocoapods.
-
-> This ruby script is based on the Cocoapods components [`Xcodeproj`](https://github.com/CocoaPods/Xcodeproj). If there is a  NoMethodError, you should install it first or run `bundle install` in `DKNightVersion` folder.
-
-This command will automatically do everything for you.
-
 ## Picking Color
 
-DKNightVersionManager will pick the proper color following this rule.
-
-```
-nightColor > normalColor
-```
-
-But I suggest to assign every UIKit component a night color to prevent errors.
+DKNightVersionManager will pick the proper color with `DKColorPicker` block
 
 # Contribute
 
