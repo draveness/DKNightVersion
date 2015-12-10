@@ -48,6 +48,44 @@ self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor
                                                              nightColor:DKColorFromRGB(0x313131)];
 ```
 
+## DKColor
+
+`DKColor` provides `- pickerWithNormalColor:nightColor:` to create `DKColorPicker`.
+
+```objectivec
++ (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor;
+```
+
+`DKColor` also provides a cluster of convienient `API` like `UIColor` which returns `DKColorPicker` block, these block return the same color when switch to night mode or switch back.
+
+```objectivec
++ (DKColorPicker)pickerWithUIColor:(UIColor *)color;
++ (DKColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
++ (DKColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
++ (DKColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
++ (DKColorPicker)colorWithCGColor:(CGColorRef)cgColor;
++ (DKColorPicker)colorWithPatternImage:(UIImage *)image;
+#if __has_include(<CoreImage/CoreImage.h>)
++ (DKColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
+#endif
+
++ (DKColorPicker)blackColor;
++ (DKColorPicker)darkGrayColor;
++ (DKColorPicker)lightGrayColor;
++ (DKColorPicker)whiteColor;
++ (DKColorPicker)grayColor;
++ (DKColorPicker)redColor;
++ (DKColorPicker)greenColor;
++ (DKColorPicker)blueColor;
++ (DKColorPicker)cyanColor;
++ (DKColorPicker)yellowColor;
++ (DKColorPicker)magentaColor;
++ (DKColorPicker)orangeColor;
++ (DKColorPicker)purpleColor;
++ (DKColorPicker)brownColor;
++ (DKColorPicker)clearColor;
+```
+
 ## Using DKNightVersionManager change theme
 
 Use `DKNightVersionManager` sets the theme.
