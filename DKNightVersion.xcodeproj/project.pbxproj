@@ -42,6 +42,10 @@
 		72B53CEA1C1854B20059F6A1 /* PresentingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 182BCC231AFF199A0095BF9C /* PresentingViewController.h */; };
 		72B53CEB1C1854B20059F6A1 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BCC241AFF199A0095BF9C /* PresentingViewController.m */; };
 		72B53CED1C1870580059F6A1 /* UIButton+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CDB1C18459F0059F6A1 /* UIButton+Night.m */; };
+		72B53CF01C191CE00059F6A1 /* UIImageView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */; };
+		72B53CF11C191CE00059F6A1 /* UIImageView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */; };
+		72B53CF41C191D0E0059F6A1 /* DKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CF21C191D0E0059F6A1 /* DKImage.h */; };
+		72B53CF51C191D0E0059F6A1 /* DKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CF31C191D0E0059F6A1 /* DKImage.m */; };
 		72BBA6A31C181B9600262693 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6931C181B9600262693 /* method.json */; };
 		72BBA6A41C181B9600262693 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6941C181B9600262693 /* project.json */; };
 		72BBA6A51C181B9600262693 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6951C181B9600262693 /* superklass.json */; };
@@ -131,6 +135,10 @@
 		72B53CD31C1840AD0059F6A1 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Animation.m"; path = "Classes/Manual/UINavigationBar+Animation.m"; sourceTree = SOURCE_ROOT; };
 		72B53CDA1C18459F0059F6A1 /* UIButton+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Night.h"; path = "Classes/Manual/UIButton+Night.h"; sourceTree = SOURCE_ROOT; };
 		72B53CDB1C18459F0059F6A1 /* UIButton+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Night.m"; path = "Classes/Manual/UIButton+Night.m"; sourceTree = SOURCE_ROOT; };
+		72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Night.h"; path = "Classes/Manual/UIImageView+Night.h"; sourceTree = SOURCE_ROOT; };
+		72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Night.m"; path = "Classes/Manual/UIImageView+Night.m"; sourceTree = SOURCE_ROOT; };
+		72B53CF21C191D0E0059F6A1 /* DKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKImage.h; path = Classes/Manual/DKImage.h; sourceTree = SOURCE_ROOT; };
+		72B53CF31C191D0E0059F6A1 /* DKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKImage.m; path = Classes/Manual/DKImage.m; sourceTree = SOURCE_ROOT; };
 		72BBA6931C181B9600262693 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
 		72BBA6941C181B9600262693 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
 		72BBA6951C181B9600262693 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
@@ -291,6 +299,8 @@
 				729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */,
 				72BBA6B91C182E1000262693 /* DKColor.h */,
 				72BBA6BA1C182E1000262693 /* DKColor.m */,
+				72B53CF21C191D0E0059F6A1 /* DKImage.h */,
+				72B53CF31C191D0E0059F6A1 /* DKImage.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -302,6 +312,8 @@
 				72B53CD31C1840AD0059F6A1 /* UINavigationBar+Animation.m */,
 				72B53CDA1C18459F0059F6A1 /* UIButton+Night.h */,
 				72B53CDB1C18459F0059F6A1 /* UIButton+Night.m */,
+				72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */,
+				72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */,
 			);
 			name = Manual;
 			path = ../../DKNightVersion;
@@ -413,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B53CE81C1854B20059F6A1 /* TableViewCell.h in Headers */,
+				72B53CF41C191D0E0059F6A1 /* DKImage.h in Headers */,
 				72B53CE61C1854B20059F6A1 /* SuccViewController.h in Headers */,
 				72B53CEA1C1854B20059F6A1 /* PresentingViewController.h in Headers */,
 				72BBA6BB1C182E1000262693 /* DKColor.h in Headers */,
@@ -422,6 +435,7 @@
 				DFEB849C14B8F83097314A0B /* UIView+Night.h in Headers */,
 				78C7508C04F0045503369ADB /* UILabel+Night.h in Headers */,
 				FF01816260F0FDBC597CCFD9 /* UINavigationBar+Night.h in Headers */,
+				72B53CF01C191CE00059F6A1 /* UIImageView+Night.h in Headers */,
 				5C359152AD3AEDC1109D1BBC /* UITabBar+Night.h in Headers */,
 				1524D725249271A525A9AE87 /* UIBarButtonItem+Night.h in Headers */,
 				405F691C5EA693BAB44B50CF /* UITableView+Night.h in Headers */,
@@ -600,6 +614,8 @@
 				D972DCC61DE650705293B1F6 /* UIToolBar+Night.m in Sources */,
 				ADCF48805E7BBDEA26699F42 /* UITableViewCell+Night.m in Sources */,
 				396B0D3BB78C1C605443C1DC /* UISwitch+Night.m in Sources */,
+				72B53CF51C191D0E0059F6A1 /* DKImage.m in Sources */,
+				72B53CF11C191CE00059F6A1 /* UIImageView+Night.m in Sources */,
 				2FB9129811327A4CB34C9565 /* UISlider+Night.m in Sources */,
 				FC8C8B91D19E746EAB8BFE74 /* UISearchBar+Night.m in Sources */,
 				B467E4F05362B410AE372B81 /* UIProgressView+Night.m in Sources */,
