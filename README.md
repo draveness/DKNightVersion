@@ -34,7 +34,7 @@ $ pod update
 
 Add this line to your `podfile`
 
-```
+```shell
 pod "DKNightVersion", "~> 1.0.0"
 ```
 
@@ -42,7 +42,7 @@ pod "DKNightVersion", "~> 1.0.0"
 
 Just add one line of code in your precompiled header, or import it where you need.
 
-```
+```objectivec
 #import "DKNightVersion.h"
 ```
 
@@ -114,7 +114,7 @@ If you have the same `DKColorPicker` for different UIKit components, use `DKColo
 
 DKColorTable provides three methods and a C function to manipulate color table and get picker from it.
 
-```objectivecg
+```objectivec
 DKPickerFromTable(NSString *key)
 
 + (void)addPicker:(DKColorPicker)picker withKey:(NSString *)key;
@@ -127,7 +127,7 @@ DKPickerFromTable(NSString *key)
 
 DKImage is similar with DKColor which contains methods to generate `DKImagePicker`
 
-```c
+```objectivec
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
 DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
 ```
@@ -137,13 +137,13 @@ DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
 
 Use `DKNightVersionManager` sets the theme.
 
-```
+```objectivec
 [DKNightVersionManager nightFalling];
 ```
 
 If you'd like to switch back to normal mode:
 
-```
+```objectivec
 [DKNightVersionManager dawnComing];
 ```
 
