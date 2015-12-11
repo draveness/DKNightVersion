@@ -11,13 +11,13 @@
 
 @interface NSObject ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKPicker> *pickers;
 
 @end
 
 @implementation NSObject (Night)
 
-- (void)setPickers:(NSMutableDictionary<NSString *,DKColorPicker> *)pickers {
+- (void)setPickers:(NSMutableDictionary<NSString *, DKPicker> *)pickers {
     objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (pickers == nil) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
@@ -25,8 +25,8 @@
     }
 }
 
-- (NSMutableDictionary<NSString *,DKColorPicker> *)pickers {
-    NSMutableDictionary<NSString *, DKColorPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
+- (NSMutableDictionary<NSString *, DKPicker> *)pickers {
+    NSMutableDictionary<NSString *, DKPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
         pickers = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -38,14 +38,14 @@
 }
 
 - (void)night_updateColor {
-    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
+    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
-        UIColor *resultColor = picker();
+        id result = picker();
         [UIView animateWithDuration:DKNightVersionAnimationDuration
                          animations:^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                             [self performSelector:sel withObject:resultColor];
+                             [self performSelector:sel withObject:result];
 #pragma clang diagnostic pop
                          }];
     }];

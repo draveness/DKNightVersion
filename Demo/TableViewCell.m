@@ -34,6 +34,10 @@
 
         self.dk_backgroundColorPicker = DKColorFromRGB(0xffffff, 0x343434);
 
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(280, 25, 50, 50)];
+
+        imageView.dk_imagePicker = DKPickerWithNames(@"normal", @"night");
+        [self.contentView addSubview:imageView];
     }
     return self;
 }

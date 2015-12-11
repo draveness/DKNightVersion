@@ -13,6 +13,7 @@ typedef NS_ENUM(NSUInteger, DKThemeVersion) {
     DKThemeVersionNight
 };
 
+typedef id(^DKPicker)(void);
 typedef UIColor *(^DKColorPicker)(void);
 typedef UIImage *(^DKImagePicker)(void);
 

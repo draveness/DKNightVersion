@@ -7,7 +7,14 @@
 //
 
 #import "UIImageView+Night.h"
+#import "NSObject+Night.h"
 #import <objc/runtime.h>
+
+@interface NSObject ()
+
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKPicker> *pickers;
+
+@end
 
 @implementation UIImageView (Night)
 
@@ -21,8 +28,11 @@
     return objc_getAssociatedObject(self, @selector(dk_imagePicker));
 }
 
-- (void)setDk_imagePicker:(DKImagePicker)dk_imagePicker {
-    objc_setAssociatedObject(self, @selector(dk_imagePicker), dk_imagePicker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setDk_imagePicker:(DKImagePicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_imagePicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    self.image = picker();
+    [self.pickers setValue:[picker copy] forKey:@"setImage:"];
+
 }
 
 @end
