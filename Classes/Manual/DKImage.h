@@ -10,9 +10,11 @@
 #import "DKNightVersionManager.h"
 
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
+DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
 
 @interface DKImage : NSObject
 
 + (DKImagePicker)imageNamed:(NSString *)name;
++ (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage;
 
 @end

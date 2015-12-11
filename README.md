@@ -22,8 +22,15 @@ The most delightful feature of DKNightVersion is that it appends one more proper
 
 ## Podfile
 
+Run following script in termianl
+
+```shell
+$ pod update
 ```
-pod update
+
+Add this line to your `podfile`
+
+```
 pod "DKNightVersion", "~> 0.9.1"
 ```
 
@@ -39,7 +46,7 @@ Just add one line of code in your precompiled header, or import it where you nee
 
 # How to use
 
-## Using night color
+## Night color
 
 DKNightVersion is based on picker `nightColor`, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc.
 
@@ -51,6 +58,15 @@ self.tableView.dk_backgroundColorPicker =  [DKColor pickerWithNormalColor:[UICol
 self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor lightGrayColor]
                                                              nightColor:DKColorFromRGB(0x313131)];
 ```
+
+## Night Image
+
+DKNightVersion providing new `API` to support image switching.
+
+```objectivec
+imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
+```
+
 
 ## DKColor
 
@@ -89,6 +105,15 @@ self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor
 + (DKColorPicker)brownColor;
 + (DKColorPicker)clearColor;
 ```
+
+## DKImage
+
+DKImage is similar with DKColor which contains methods to generate `DKImagePicker`
+
+```c
+DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
+```
+
 
 ## Using DKNightVersionManager change theme
 
