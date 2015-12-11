@@ -53,10 +53,9 @@ DKNightVersion is based on picker `nightColor`, such as `dk_backgroundColorPicke
 Assign the night mode color picker you want to the `UIKit` component like this:
 
 ```objectivec
-self.tableView.dk_backgroundColorPicker =  [DKColor pickerWithNormalColor:[UIColor whiteColor]
-                                                               nightColor:DKColorFromRGB(0x343434)];
-self.tableView.dk_separatorColorPicker = [DKColor pickerWithNormalColor:[UIColor lightGrayColor]
-                                                             nightColor:DKColorFromRGB(0x313131)];
+self.tableView.dk_backgroundColorPicker =  DKColorWithRGB(0xffffff, 0x343434);
+self.tableView.dk_separatorColorPicker = DKColorWithRGB(0xaaaaaa, 0x313131);
+navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UIColor whiteColor]);
 ```
 
 ## Night Image
@@ -73,7 +72,8 @@ imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
 `DKColor` provides `- pickerWithNormalColor:nightColor:` to create `DKColorPicker`.
 
 ```objectivec
-+ (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor;
+DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
+DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
 ```
 
 `DKColor` also provides a cluster of convienient `API` like `UIColor` which returns `DKColorPicker` block, these block return the same color when switch to night mode or switch back.
@@ -112,6 +112,7 @@ DKImage is similar with DKColor which contains methods to generate `DKImagePicke
 
 ```c
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
+DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
 ```
 
 
@@ -137,17 +138,9 @@ It's pretty easy to swich theme between night and normal mode.
 
 `nightFalling` method will post `DKNightVersionNightFallingNotification` when it is called. Similarly, `dawnComing` will post `DKNightVersionDawnComingNotification`. You can observe these notification in proper place, and make your own customize easily.
 
-## Picking Color
-
-DKNightVersionManager will pick the proper color with `DKColorPicker` block
-
 # Contribute
 
 Feel free to open an issue or pull request, if you need help or there is a bug.
-
-# More
-
-- ImageView support
 
 # Contact
 
@@ -157,7 +150,6 @@ Feel free to open an issue or pull request, if you need help or there is a bug.
 # Todo
 
 - Documentation
-
 
 # License
 
