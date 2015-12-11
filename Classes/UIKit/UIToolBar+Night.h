@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UIToolBar (Night)
+@interface UIToolbar (Night)
 
 @property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
 

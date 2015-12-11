@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKNightVersionManager.h"
+
+DKImagePicker DKPickerWithNames(NSString *normal, NSString *night);
 
 @interface DKImage : NSObject
 
-- (UIImage)
++ (DKImagePicker)imageNamed:(NSString *)name;
 
 @end
