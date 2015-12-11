@@ -10,11 +10,9 @@
 #import "DKNightVersionManager.h"
 
 DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
-DKColorPicker DKColorWithColor(UIColor *normalColor, UIColor *nightColor);
+DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
 
 @interface DKColor : NSObject
-
-+ (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor;
 
 + (DKColorPicker)pickerWithUIColor:(UIColor *)color;
 

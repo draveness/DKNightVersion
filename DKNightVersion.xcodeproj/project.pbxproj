@@ -54,12 +54,6 @@
 		72BBA6BC1C182E1000262693 /* DKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BBA6BA1C182E1000262693 /* DKColor.m */; };
 		72EAC66D1C1ACD870063012B /* UIImageView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */; };
 		72EAC66E1C1ACD870063012B /* UIImageView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */; };
-		72EAC6791C1AE2760063012B /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 1816313D1AFE549A00A20423 /* property.json */; };
-		72EAC67A1C1AE2760063012B /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 72EAC66F1C1AE2490063012B /* Rakefile */; };
-		72EAC67B1C1AE2760063012B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 72EAC6701C1AE2490063012B /* README.md */; };
-		72EAC67C1C1AE2760063012B /* DKNightVersion.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 72EAC6731C1AE2530063012B /* DKNightVersion.podspec */; };
-		72EAC67D1C1AE2760063012B /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 72EAC6741C1AE2530063012B /* Gemfile */; };
-		72EAC67E1C1AE2760063012B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 72EAC6771C1AE25F0063012B /* LICENSE */; };
 		76E3A365931532BB774C08E2 /* UITextView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = F794222E3954822111B1A581 /* UITextView+Night.h */; };
 		78192C2AC76E7F41A2F91866 /* UIView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = D49C84DBB4432DA30261D305 /* UIView+Night.m */; };
 		7A251640943891B4AA700156 /* UISlider+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD5CB0CF51B1AF93971AF9 /* UISlider+Night.m */; };
@@ -551,7 +545,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72EAC67D1C1AE2760063012B /* Gemfile in Resources */,
 				72BBA6A31C181B9600262693 /* method.json in Resources */,
 				72BBA6A61C181B9600262693 /* objc_class.rb in Resources */,
 				18D228A71AF8BC1A00872BF1 /* LaunchScreen.xib in Resources */,
@@ -562,14 +555,10 @@
 				72BBA6B01C181B9600262693 /* generator.rb in Resources */,
 				72BBA6A81C181B9600262693 /* parser.rb in Resources */,
 				72BBA6A41C181B9600262693 /* project.json in Resources */,
-				72EAC67E1C1AE2760063012B /* LICENSE in Resources */,
 				72BBA6A91C181B9600262693 /* project.rb in Resources */,
-				72EAC67A1C1AE2760063012B /* Rakefile in Resources */,
 				72BBA6AF1C181B9600262693 /* xcodeproj.rb in Resources */,
 				18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */,
-				72EAC67C1C1AE2760063012B /* DKNightVersion.podspec in Resources */,
 				72BBA6AC1C181B9600262693 /* color.m.erb in Resources */,
-				72EAC6791C1AE2760063012B /* property.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +604,6 @@
 				729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */,
 				72B53CE31C1854B20059F6A1 /* AppDelegate.m in Sources */,
 				72B53CED1C1870580059F6A1 /* UIButton+Night.m in Sources */,
-				72EAC67B1C1AE2760063012B /* README.md in Sources */,
 				72B53CF51C191D0E0059F6A1 /* DKImage.m in Sources */,
 				72EAC66E1C1ACD870063012B /* UIImageView+Night.m in Sources */,
 				78192C2AC76E7F41A2F91866 /* UIView+Night.m in Sources */,
