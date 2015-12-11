@@ -47,10 +47,6 @@
     [
         "barTintColor"    
     ],
-    "UITableViewCell":
-    [
-        "selectedTextColor"
-    ],
     "UISwitch":
     [
         "onTintColor",

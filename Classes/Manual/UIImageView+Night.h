@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DK"
 
 @interface UIImageView (Night)
 
 - (instancetype)initWithImage:(nullable UIImage *)image;
-- (instancetype)initWithImage:(nullable UIImage *)image highlightedImage:(nullable UIImage *)highlightedImage NS_AVAILABLE_IOS(3_0);
 
-@property (nullable, nonatomic, strong) UIImage *image; // default is nil
-@property (nullable, nonatomic, strong) UIImage *highlightedImage NS_AVAILABLE_IOS(3_0); // default is nil
+@property (nullable, nonatomic, strong) UIImage *image;
 
 @end
