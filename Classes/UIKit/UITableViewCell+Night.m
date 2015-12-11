@@ -21,16 +21,6 @@
 @implementation UITableViewCell (Night)
 
 
-- (DKColorPicker)dk_textColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
-}
-
-- (void)setDk_textColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.textColor = picker();
-    [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
-}
-
 - (DKColorPicker)dk_selectedTextColorPicker {
     return objc_getAssociatedObject(self, @selector(dk_selectedTextColorPicker));
 }

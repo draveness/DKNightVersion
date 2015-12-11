@@ -49,7 +49,6 @@
     ],
     "UITableViewCell":
     [
-        "textColor",
         "selectedTextColor"
     ],
     "UISwitch":
