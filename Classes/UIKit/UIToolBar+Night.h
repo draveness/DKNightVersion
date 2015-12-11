@@ -1,6 +1,6 @@
 //
-//  UIToolBar+Night.h
-//  UIToolBar+Night
+//  UIToolbar+Night.h
+//  UIToolbar+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
