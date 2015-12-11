@@ -7,6 +7,7 @@
 //
 
 #import "DKImage.h"
+#import "DKNightVersionManager.h"
 
 @implementation DKImage
 

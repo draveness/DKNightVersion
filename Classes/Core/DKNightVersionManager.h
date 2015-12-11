@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DKColor.h"
+#import "DKImage.h"
 
 typedef NS_ENUM(NSUInteger, DKThemeVersion) {
     DKThemeVersionNormal,
@@ -14,8 +16,6 @@ typedef NS_ENUM(NSUInteger, DKThemeVersion) {
 };
 
 typedef id(^DKPicker)(void);
-typedef UIColor *(^DKColorPicker)(void);
-typedef UIImage *(^DKImagePicker)(void);
 
 extern NSString *const DKNightVersionNightFallingNotification;
 extern NSString *const DKNightVersionDawnComingNotification;

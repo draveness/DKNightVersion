@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DKNightVersionManager.h"
+
+typedef UIImage *(^DKImagePicker)(void);
 
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
 DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);

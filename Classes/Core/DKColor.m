@@ -7,6 +7,7 @@
 //
 
 #import "DKColor.h"
+#import "DKNightVersionManager.h"
 
 @implementation DKColor
 

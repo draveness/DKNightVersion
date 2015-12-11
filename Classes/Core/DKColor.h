@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DKNightVersionManager.h"
+
+typedef UIColor *(^DKColorPicker)(void);
 
 DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
 DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);

@@ -110,6 +110,21 @@ DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
 + (DKColorPicker)clearColor;
 ```
 
+## DKColorTable
+
+If you have the same `DKColorPicker` for different UIKit components, use `DKColorTable` to save them and take out of them with `DKPickerFromTable(NSString *key)` function.
+
+DKColorTable provides three methods and a C function to manipulate color table and get picker from it.
+
+```objectivecg
+DKPickerFromTable(NSString *key)
+
++ (void)addPicker:(DKColorPicker)picker withKey:(NSString *)key;
++ (DKColorPicker)removePickerWithKey:(NSString *)key;
++ (DKColorPicker)pickerWithKey:(NSString *)key;
+```
+
+
 ## DKImage
 
 DKImage is similar with DKColor which contains methods to generate `DKImagePicker`
