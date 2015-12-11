@@ -1,6 +1,6 @@
 //
-//  UIToolBar+Night.m
-//  UIToolBar+Night
+//  UIToolbar+Night.m
+//  UIToolbar+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -8,17 +8,17 @@
 //  in this file, you are supposed to update the ruby code, run it and
 //  test it. And finally open a pull request.
 
-#import "UIToolBar+Night.h"
+#import "UIToolbar+Night.h"
 #import "DKNightVersionManager.h"
 #import <objc/runtime.h>
 
-@interface UIToolBar ()
+@interface UIToolbar ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKPicker> *pickers;
 
 @end
 
-@implementation UIToolBar (Night)
+@implementation UIToolbar (Night)
 
 
 - (DKColorPicker)dk_barTintColorPicker {

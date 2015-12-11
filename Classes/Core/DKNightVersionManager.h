@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#define DKColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
 typedef NS_ENUM(NSUInteger, DKThemeVersion) {
     DKThemeVersionNormal,
     DKThemeVersionNight
 };
 
+typedef id(^DKPicker)(void);
 typedef UIColor *(^DKColorPicker)(void);
+typedef UIImage *(^DKImagePicker)(void);
 
 extern NSString *const DKNightVersionNightFallingNotification;
 extern NSString *const DKNightVersionDawnComingNotification;

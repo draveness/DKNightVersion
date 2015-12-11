@@ -43,14 +43,9 @@
     [
         "tintColor"
     ],
-    "UIToolBar":
+    "UIToolbar":
     [
         "barTintColor"    
-    ],
-    "UITableViewCell":
-    [
-        "textColor",
-        "selectedTextColor"
     ],
     "UISwitch":
     [

@@ -1,6 +1,6 @@
 //
-//  UIToolBar+Night.h
-//  UIToolBar+Night
+//  UIToolbar+Night.h
+//  UIToolbar+Night
 //
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+Night.h"
 
-@interface UIToolBar (Night)
+@interface UIToolbar (Night)
 
 @property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
 

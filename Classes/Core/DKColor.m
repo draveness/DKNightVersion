@@ -10,7 +10,13 @@
 
 @implementation DKColor
 
-DKColorPicker DKColorPickerFromColor(UIColor *normalColor, UIColor *nightColor) {
+DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night) {
+    UIColor *normalColor = [UIColor colorWithRed:((float)((normal & 0xFF0000) >> 16))/255.0 green:((float)((normal & 0xFF00) >> 8))/255.0 blue:((float)(normal & 0xFF))/255.0 alpha:1.0];
+    UIColor *nightColor = [UIColor colorWithRed:((float)((night & 0xFF0000) >> 16))/255.0 green:((float)((night & 0xFF00) >> 8))/255.0 blue:((float)(night & 0xFF))/255.0 alpha:1.0];
+    return DKColorWithColor(normalColor, nightColor);
+}
+
+DKColorPicker DKColorWithColor(UIColor *normalColor, UIColor *nightColor) {
     return ^() {
         return [DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal ? normalColor : nightColor;
     };

@@ -10,10 +10,12 @@
 #define DKNightVerision_DKNightVersion_h
 
 #import "DKColor.h"
+#import "DKImage.h"
 #import "DKNightVersionManager.h"
 
 #import "NSObject+Night.h"
 #import "UIButton+Night.h"
+#import "UIImageView+Night.h"
 
 #import "UIView+Night.h"
 #import "UILabel+Night.h"
@@ -25,7 +27,6 @@
 #import "UITextView+Night.h"
 #import "UIControl+Night.h"
 #import "UIToolBar+Night.h"
-#import "UITableViewCell+Night.h"
 #import "UIPageControl+Night.h"
 #import "UIProgressView+Night.h"
 #import "UISearchBar+Night.h"

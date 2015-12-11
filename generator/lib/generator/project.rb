@@ -49,7 +49,7 @@ def get_group_name(production)
 end
 
 def should_remove(file_name)
-    return false if file_name.match('UIButton')
+    return false if file_name.match('UIButton') or file_name.match('UIImageView')
     /UI[a-zA-Z]+\+(?:[a-zA-Z]+?|Night)\.[hm]/.match(file_name)
 end
 
