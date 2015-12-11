@@ -52,9 +52,7 @@ Just add one line of code in your precompiled header, or import it where you nee
 
 ## Night color
 
-DKNightVersion is based on picker `nightColor`, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc.
-
-Assign the night mode color picker you want to the `UIKit` component like this:
+DKNightVersion is based on picker, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc. Assign the night mode color picker you want to the `UIKit` component like this:
 
 ```objectivec
 self.tableView.dk_backgroundColorPicker =  DKColorWithRGB(0xffffff, 0x343434);
