@@ -10,7 +10,7 @@
 
 @implementation DKImage
 
-DKImagePicker DKPickerWithNames(NSString *normal, NSString *night) {
+DKImagePicker DKImageWithNames(NSString *normal, NSString *night) {
     return [DKImage pickerWithNormalImage:[UIImage imageNamed:normal] nightImage:[UIImage imageNamed:night]];
 }
 
