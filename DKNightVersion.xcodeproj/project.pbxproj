@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		154820DC413AAC86262AB3C9 /* UIToolbar+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 823D9784B798C97844A81A5A /* UIToolbar+Night.h */; };
-		1816313E1AFE549A00A20423 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 1816313D1AFE549A00A20423 /* property.json */; };
 		186AC5221AF855410095ED95 /* DKNightVersionManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AC5211AF855410095ED95 /* DKNightVersionManagerTest.m */; };
 		18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */; };
 		18D228A11AF8BB7800872BF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2289F1AF8BB7800872BF1 /* main.m */; };
@@ -37,8 +36,6 @@
 		72B53CEA1C1854B20059F6A1 /* PresentingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 182BCC231AFF199A0095BF9C /* PresentingViewController.h */; };
 		72B53CEB1C1854B20059F6A1 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BCC241AFF199A0095BF9C /* PresentingViewController.m */; };
 		72B53CED1C1870580059F6A1 /* UIButton+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CDB1C18459F0059F6A1 /* UIButton+Night.m */; };
-		72B53CF41C191D0E0059F6A1 /* DKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CF21C191D0E0059F6A1 /* DKImage.h */; };
-		72B53CF51C191D0E0059F6A1 /* DKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CF31C191D0E0059F6A1 /* DKImage.m */; };
 		72BBA6A31C181B9600262693 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6931C181B9600262693 /* method.json */; };
 		72BBA6A41C181B9600262693 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6941C181B9600262693 /* project.json */; };
 		72BBA6A51C181B9600262693 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBA6951C181B9600262693 /* superklass.json */; };
@@ -55,6 +52,10 @@
 		72BBA6BC1C182E1000262693 /* DKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BBA6BA1C182E1000262693 /* DKColor.m */; };
 		72EAC66D1C1ACD870063012B /* UIImageView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */; };
 		72EAC66E1C1ACD870063012B /* UIImageView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */; };
+		72EAC6811C1AE7F00063012B /* DKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 72EAC67F1C1AE7F00063012B /* DKImage.h */; };
+		72EAC6821C1AE7F00063012B /* DKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EAC6801C1AE7F00063012B /* DKImage.m */; };
+		72EAC6851C1AE9F70063012B /* DKColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 72EAC6831C1AE9F70063012B /* DKColorTable.h */; };
+		72EAC6861C1AE9F70063012B /* DKColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EAC6841C1AE9F70063012B /* DKColorTable.m */; };
 		76E3A365931532BB774C08E2 /* UITextView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = F794222E3954822111B1A581 /* UITextView+Night.h */; };
 		78192C2AC76E7F41A2F91866 /* UIView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = D49C84DBB4432DA30261D305 /* UIView+Night.m */; };
 		7A251640943891B4AA700156 /* UISlider+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD5CB0CF51B1AF93971AF9 /* UISlider+Night.m */; };
@@ -131,8 +132,6 @@
 		72B53CDB1C18459F0059F6A1 /* UIButton+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Night.m"; path = "Classes/Manual/UIButton+Night.m"; sourceTree = SOURCE_ROOT; };
 		72B53CEE1C191CE00059F6A1 /* UIImageView+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Night.h"; path = "Classes/Manual/UIImageView+Night.h"; sourceTree = SOURCE_ROOT; };
 		72B53CEF1C191CE00059F6A1 /* UIImageView+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Night.m"; path = "Classes/Manual/UIImageView+Night.m"; sourceTree = SOURCE_ROOT; };
-		72B53CF21C191D0E0059F6A1 /* DKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKImage.h; path = Classes/Manual/DKImage.h; sourceTree = SOURCE_ROOT; };
-		72B53CF31C191D0E0059F6A1 /* DKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKImage.m; path = Classes/Manual/DKImage.m; sourceTree = SOURCE_ROOT; };
 		72BBA6931C181B9600262693 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
 		72BBA6941C181B9600262693 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
 		72BBA6951C181B9600262693 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
@@ -148,6 +147,15 @@
 		72BBA6B91C182E1000262693 /* DKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKColor.h; path = Classes/Core/DKColor.h; sourceTree = SOURCE_ROOT; };
 		72BBA6BA1C182E1000262693 /* DKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKColor.m; path = Classes/Core/DKColor.m; sourceTree = SOURCE_ROOT; };
 		72E9DB35AF44498BC296C3BC /* UIBarButtonItem+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Night.h"; path = "Classes/UIKit/UIBarButtonItem+Night.h"; sourceTree = "<group>"; };
+		72EAC66F1C1AE2490063012B /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = SOURCE_ROOT; };
+		72EAC6701C1AE2490063012B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		72EAC6731C1AE2530063012B /* DKNightVersion.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKNightVersion.podspec; sourceTree = SOURCE_ROOT; };
+		72EAC6741C1AE2530063012B /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = SOURCE_ROOT; };
+		72EAC6771C1AE25F0063012B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		72EAC67F1C1AE7F00063012B /* DKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKImage.h; path = Classes/Core/DKImage.h; sourceTree = SOURCE_ROOT; };
+		72EAC6801C1AE7F00063012B /* DKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKImage.m; path = Classes/Core/DKImage.m; sourceTree = SOURCE_ROOT; };
+		72EAC6831C1AE9F70063012B /* DKColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKColorTable.h; path = Classes/Core/DKColorTable.h; sourceTree = SOURCE_ROOT; };
+		72EAC6841C1AE9F70063012B /* DKColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKColorTable.m; path = Classes/Core/DKColorTable.m; sourceTree = SOURCE_ROOT; };
 		823B11134B2E45DF5F2A3E66 /* UILabel+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Night.h"; path = "Classes/UIKit/UILabel+Night.h"; sourceTree = "<group>"; };
 		823D9784B798C97844A81A5A /* UIToolbar+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIToolbar+Night.h"; path = "Classes/UIKit/UIToolbar+Night.h"; sourceTree = "<group>"; };
 		8BE378F507E44DBC9E4E5365 /* UISearchBar+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+Night.h"; path = "Classes/UIKit/UISearchBar+Night.h"; sourceTree = "<group>"; };
@@ -212,8 +220,14 @@
 			isa = PBXGroup;
 			children = (
 				1816313D1AFE549A00A20423 /* property.json */,
+				72EAC66F1C1AE2490063012B /* Rakefile */,
+				72EAC6701C1AE2490063012B /* README.md */,
+				72EAC6731C1AE2530063012B /* DKNightVersion.podspec */,
+				72EAC6741C1AE2530063012B /* Gemfile */,
+				72EAC6771C1AE25F0063012B /* LICENSE */,
 			);
 			name = MetaData;
+			path = ../Pod/Classes;
 			sourceTree = "<group>";
 		};
 		189854AD1ADD5B550050568B = {
@@ -237,6 +251,7 @@
 		189854B81ADD5B550050568B /* DKNightVersion */ = {
 			isa = PBXGroup;
 			children = (
+				1816313C1AFE549000A20423 /* MetaData */,
 				72BBA68F1C181B9600262693 /* generator */,
 				180CDCA91AECC17F00164D1F /* Demo */,
 				18063F361AF9C0C500A06A04 /* Pod */,
@@ -279,7 +294,6 @@
 				18D2288E1AF8BA7100872BF1 /* DKNightVersion.h */,
 				18A41E221AE019F000042CF4 /* Core */,
 				72B53CD11C1840630059F6A1 /* Manual */,
-				1816313C1AFE549000A20423 /* MetaData */,
 				D4ABEB8B26FEC56F04DE66B9 /* UIKit */,
 			);
 			name = Classes;
@@ -293,10 +307,12 @@
 				18D228901AF8BA8700872BF1 /* DKNightVersionManager.m */,
 				729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */,
 				729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */,
+				72EAC6831C1AE9F70063012B /* DKColorTable.h */,
+				72EAC6841C1AE9F70063012B /* DKColorTable.m */,
 				72BBA6B91C182E1000262693 /* DKColor.h */,
 				72BBA6BA1C182E1000262693 /* DKColor.m */,
-				72B53CF21C191D0E0059F6A1 /* DKImage.h */,
-				72B53CF31C191D0E0059F6A1 /* DKImage.m */,
+				72EAC67F1C1AE7F00063012B /* DKImage.h */,
+				72EAC6801C1AE7F00063012B /* DKImage.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -419,15 +435,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B53CE81C1854B20059F6A1 /* TableViewCell.h in Headers */,
-				72B53CF41C191D0E0059F6A1 /* DKImage.h in Headers */,
 				72B53CE61C1854B20059F6A1 /* SuccViewController.h in Headers */,
 				72B53CEA1C1854B20059F6A1 /* PresentingViewController.h in Headers */,
+				72EAC6851C1AE9F70063012B /* DKColorTable.h in Headers */,
 				72BBA6BB1C182E1000262693 /* DKColor.h in Headers */,
 				72B53CE41C1854B20059F6A1 /* RootViewController.h in Headers */,
 				729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */,
 				72B53CE21C1854B20059F6A1 /* AppDelegate.h in Headers */,
 				72EAC66D1C1ACD870063012B /* UIImageView+Night.h in Headers */,
 				F907B7089298BBCAF1EBF054 /* UIView+Night.h in Headers */,
+				72EAC6811C1AE7F00063012B /* DKImage.h in Headers */,
 				5D97FADC6AF2DF24CEC96B9A /* UILabel+Night.h in Headers */,
 				3E6A73E877DADBA89C096983 /* UINavigationBar+Night.h in Headers */,
 				5301710058043BFCDC7F53D1 /* UITabBar+Night.h in Headers */,
@@ -549,7 +566,6 @@
 				72BBA6AF1C181B9600262693 /* xcodeproj.rb in Resources */,
 				18D228A61AF8BB8D00872BF1 /* Images.xcassets in Resources */,
 				72BBA6AC1C181B9600262693 /* color.m.erb in Resources */,
-				1816313E1AFE549A00A20423 /* property.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +604,7 @@
 				72B53CE71C1854B20059F6A1 /* SuccViewController.m in Sources */,
 				72B53CE91C1854B20059F6A1 /* TableViewCell.m in Sources */,
 				72B53CE51C1854B20059F6A1 /* RootViewController.m in Sources */,
+				72EAC6821C1AE7F00063012B /* DKImage.m in Sources */,
 				72BBA6BC1C182E1000262693 /* DKColor.m in Sources */,
 				18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */,
 				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
@@ -595,7 +612,6 @@
 				729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */,
 				72B53CE31C1854B20059F6A1 /* AppDelegate.m in Sources */,
 				72B53CED1C1870580059F6A1 /* UIButton+Night.m in Sources */,
-				72B53CF51C191D0E0059F6A1 /* DKImage.m in Sources */,
 				72EAC66E1C1ACD870063012B /* UIImageView+Night.m in Sources */,
 				78192C2AC76E7F41A2F91866 /* UIView+Night.m in Sources */,
 				AE13169F66B1D359F2253A1B /* UILabel+Night.m in Sources */,
@@ -604,6 +620,7 @@
 				AC36654153B2380C4E28694E /* UIBarButtonItem+Night.m in Sources */,
 				896C6BB28EA063920C3844B8 /* UITableView+Night.m in Sources */,
 				56DE2F196BBE630F0466DC9C /* UITextView+Night.m in Sources */,
+				72EAC6861C1AE9F70063012B /* DKColorTable.m in Sources */,
 				98FBB4DCE2F72728B120070A /* UITextField+Night.m in Sources */,
 				B45F1D2968E07F77E4972ECF /* UIControl+Night.m in Sources */,
 				8A4E0C0ADEDC7E467490D57B /* UIToolbar+Night.m in Sources */,

@@ -7,11 +7,16 @@
 //
 
 #import "DKImage.h"
+#import "DKNightVersionManager.h"
 
 @implementation DKImage
 
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night) {
     return [DKImage pickerWithNormalImage:[UIImage imageNamed:normal] nightImage:[UIImage imageNamed:night]];
+}
+
+DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night) {
+    return [DKImage pickerWithNormalImage:normal nightImage:night];
 }
 
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage {
