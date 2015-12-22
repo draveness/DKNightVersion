@@ -38,7 +38,10 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     manager.themeVersion = DKThemeVersionNight;
     if (manager.changeStatusBar) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+#pragma clang diagnostic pop
     }
 }
 
@@ -46,7 +49,10 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     manager.themeVersion = DKThemeVersionNormal;
     if (manager.changeStatusBar) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+#pragma clang diagnostic pop
     }
 }
 
