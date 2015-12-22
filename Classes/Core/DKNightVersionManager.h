@@ -27,7 +27,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
 /**
  *  if `changeStatusBar` is set to `YES`, the status bar will change to `UIStatusBarStyleLightContent` when invoke `+ nightFalling` and `UIStatusBarStyleDefault` for `+ dawnComing`. if you would like to use `-[UIViewController preferredStatusBarStyle]`, set this value to `NO`. Default to `YES`
  */
-@property (nonatomic, assign) BOOL changeStatusBar;
+@property (nonatomic, assign, getter=shouldChangeStatusBar) BOOL changeStatusBar;
 
 /**
  *  Return the shared night version manager instance

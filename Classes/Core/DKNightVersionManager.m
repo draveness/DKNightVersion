@@ -37,7 +37,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
 + (void)nightFalling {
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     manager.themeVersion = DKThemeVersionNight;
-    if (manager.changeStatusBar) {
+    if (manager.shouldChangeStatusBar) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -48,7 +48,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
 + (void)dawnComing {
     DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
     manager.themeVersion = DKThemeVersionNormal;
-    if (manager.changeStatusBar) {
+    if (manager.shouldChangeStatusBar) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
