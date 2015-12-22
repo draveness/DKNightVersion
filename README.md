@@ -16,6 +16,7 @@
 - [x] Based on `objc/runtime`
 - [x] Generate by ruby script
 - [ ] Default DKColorPicker
+- [ ] Support NSAttributedString
 
 # Demo
 
