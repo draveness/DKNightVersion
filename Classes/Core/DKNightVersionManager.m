@@ -29,22 +29,29 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     static DKNightVersionManager *instance;
     dispatch_once(&once, ^{
         instance = [self new];
+        instance.changeStatusBar = YES;
     });
     return instance;
 }
 
 + (void)nightFalling {
-    self.sharedNightVersionManager.themeVersion = DKThemeVersionNight;
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
+    manager.themeVersion = DKThemeVersionNight;
+    if (manager.changeStatusBar) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
 }
 
 + (void)dawnComing {
-    self.sharedNightVersionManager.themeVersion = DKThemeVersionNormal;
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
+    manager.themeVersion = DKThemeVersionNormal;
+    if (manager.changeStatusBar) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    }
 }
 
 + (DKThemeVersion)currentThemeVersion {
-    return self.sharedNightVersionManager.themeVersion;
+    return [DKNightVersionManager sharedNightVersionManager].themeVersion;
 }
 
 - (void)setThemeVersion:(DKThemeVersion)themeVersion {
