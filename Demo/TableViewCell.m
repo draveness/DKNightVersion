@@ -17,9 +17,9 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 230, 80)];
+        self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 270, 80)];
         self.label.numberOfLines = 0;
-        self.label.text = @"DKNightVersion is a light wei-ght framework adding night   version to your iOS app.";
+        self.label.text = @"DKNightVersion is a light weight framework adding night mode to your iOS app.";
         self.label.textColor = [UIColor darkGrayColor];
         self.label.lineBreakMode = NSLineBreakByCharWrapping;
         [self.contentView addSubview:self.label];
@@ -34,7 +34,7 @@
 
         self.dk_backgroundColorPicker = DKColorWithRGB(0xffffff, 0x343434);
 
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(280, 25, 50, 50)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 25, 50, 50)];
 
         imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
         [self.contentView addSubview:imageView];
