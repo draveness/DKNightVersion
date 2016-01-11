@@ -13,4 +13,8 @@
 
 - (void)dk_setTitleColorPicker:(DKColorPicker)picker forState:(UIControlState)state;
 
+- (void)dk_setBackgroundImage:(DKImagePicker)picker forState:(UIControlState)state;
+
+- (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state;
+
 @end

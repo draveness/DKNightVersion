@@ -24,7 +24,29 @@
     if (!dictionary) {
         dictionary = [[NSMutableDictionary alloc] init];
     }
-    [dictionary setValue:[picker copy] forKey:@"setTitleColor:forState:"];
+    [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setTitleColor:forState:))];
+    [self.pickers setValue:dictionary forKey:key];
+}
+
+- (void)dk_setBackgroundImage:(DKImagePicker)picker forState:(UIControlState)state {
+    [self setBackgroundImage:picker() forState:state];
+    NSString *key = [NSString stringWithFormat:@"%@", @(state)];
+    NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
+    if (!dictionary) {
+        dictionary = [[NSMutableDictionary alloc] init];
+    }
+    [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBackgroundImage:forState:))];
+    [self.pickers setValue:dictionary forKey:key];
+}
+
+- (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state {
+    [self setImage:picker() forState:state];
+    NSString *key = [NSString stringWithFormat:@"%@", @(state)];
+    NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
+    if (!dictionary) {
+        dictionary = [[NSMutableDictionary alloc] init];
+    }
+    [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setImage:forState:))];
     [self.pickers setValue:dictionary forKey:key];
 }
 
@@ -33,12 +55,18 @@
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSDictionary<NSString *, DKColorPicker> *dictionary = (NSDictionary *)obj;
             [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
-                UIColor *resultColor = picker();
                 UIControlState state = [key integerValue];
                 [UIView animateWithDuration:DKNightVersionAnimationDuration
                                  animations:^{
                                      if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleColor:forState:))]) {
+                                         UIColor *resultColor = picker();
                                          [self setTitleColor:resultColor forState:state];
+                                     } else if ([selector isEqualToString:NSStringFromSelector(@selector(setBackgroundImage:forState:))]) {
+                                         UIImage *resultImage = ((DKImagePicker)picker)();
+                                         [self setBackgroundImage:resultImage forState:state];
+                                     } else if ([selector isEqualToString:NSStringFromSelector(@selector(setImage:forState:))]) {
+                                         UIImage *resultImage = ((DKImagePicker)picker)();
+                                         [self setImage:resultImage forState:state];
                                      }
                                  }];
             }];
