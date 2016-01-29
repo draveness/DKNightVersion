@@ -24,4 +24,10 @@ Pod::Spec.new do |s|
     ss.dependency 'DKNightVersion/Core'
   end
 
+  s.subspec 'CoreAnimation' do |ss|
+    ss.source_files = "Classes/CoreAnimation/*.{h,m}"
+    ss.dependency 'DKNightVersion/Core'
+  end
+
+
 end
