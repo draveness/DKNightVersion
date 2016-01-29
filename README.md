@@ -12,6 +12,7 @@
 - [x] `UIImage` and `UIImageView` support
 - [x] Hight performance
 - [x] Providing UIKit categoty
+- [x] Providing CoreAnimation categoty
 - [x] Easily integrate to iOS App
 - [x] Based on `objc/runtime`
 - [x] Generate by ruby script
