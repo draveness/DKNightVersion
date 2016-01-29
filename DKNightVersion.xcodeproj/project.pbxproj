@@ -295,6 +295,7 @@
 				18A41E221AE019F000042CF4 /* Core */,
 				72B53CD11C1840630059F6A1 /* Manual */,
 				D4ABEB8B26FEC56F04DE66B9 /* UIKit */,
+				729976511C5B2028000B87C1 /* CoreAnimation */,
 			);
 			name = Classes;
 			path = ../Pod/Classes;
@@ -315,6 +316,13 @@
 				72EAC6801C1AE7F00063012B /* DKImage.m */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		729976511C5B2028000B87C1 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreAnimation;
 			sourceTree = "<group>";
 		};
 		72B53CD11C1840630059F6A1 /* Manual */ = {
