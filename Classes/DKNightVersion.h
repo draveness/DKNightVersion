@@ -33,4 +33,6 @@
 #import "UISlider+Night.h"
 #import "UISwitch+Night.h"
 
+#import "CALayer+Night.h"
+
 #endif

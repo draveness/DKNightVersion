@@ -23,6 +23,8 @@
 		57F517A71D253A3B1437312E /* UISearchBar+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C95DE9FA07D246A5E538F54 /* UISearchBar+Night.m */; };
 		5D97FADC6AF2DF24CEC96B9A /* UILabel+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 823B11134B2E45DF5F2A3E66 /* UILabel+Night.h */; };
 		701DFDF1DFD3A69D6A39142D /* UIControl+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E525789AAE95CE7657471E /* UIControl+Night.h */; };
+		729976CC1C5B24C6000B87C1 /* CALayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 729976CA1C5B24C6000B87C1 /* CALayer+Night.h */; };
+		729976CD1C5B24C6000B87C1 /* CALayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 729976CB1C5B24C6000B87C1 /* CALayer+Night.m */; };
 		729CAAC31BEE3E2300E279D6 /* NSObject+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */; };
 		729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */; };
 		72B53CE21C1854B20059F6A1 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D228921AF8BB6200872BF1 /* AppDelegate.h */; };
@@ -124,6 +126,8 @@
 		4C95DE9FA07D246A5E538F54 /* UISearchBar+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+Night.m"; path = "Classes/UIKit/UISearchBar+Night.m"; sourceTree = "<group>"; };
 		5D15243FE855C62E21D76DEB /* UIProgressView+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+Night.m"; path = "Classes/UIKit/UIProgressView+Night.m"; sourceTree = "<group>"; };
 		6B5B160B90C408F03A044F4A /* UITableView+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+Night.m"; path = "Classes/UIKit/UITableView+Night.m"; sourceTree = "<group>"; };
+		729976CA1C5B24C6000B87C1 /* CALayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Night.h"; sourceTree = SOURCE_ROOT; };
+		729976CB1C5B24C6000B87C1 /* CALayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Night.m"; sourceTree = SOURCE_ROOT; };
 		729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Night.h"; path = "Classes/Core/NSObject+Night.h"; sourceTree = SOURCE_ROOT; };
 		729CAAC21BEE3E2300E279D6 /* NSObject+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Night.m"; path = "Classes/Core/NSObject+Night.m"; sourceTree = SOURCE_ROOT; };
 		72B53CD21C1840AD0059F6A1 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Animation.h"; path = "Classes/Manual/UINavigationBar+Animation.h"; sourceTree = SOURCE_ROOT; };
@@ -321,6 +325,8 @@
 		729976511C5B2028000B87C1 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				729976CA1C5B24C6000B87C1 /* CALayer+Night.h */,
+				729976CB1C5B24C6000B87C1 /* CALayer+Night.m */,
 			);
 			name = CoreAnimation;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				72EAC6811C1AE7F00063012B /* DKImage.h in Headers */,
 				5D97FADC6AF2DF24CEC96B9A /* UILabel+Night.h in Headers */,
 				3E6A73E877DADBA89C096983 /* UINavigationBar+Night.h in Headers */,
+				729976CC1C5B24C6000B87C1 /* CALayer+Night.h in Headers */,
 				5301710058043BFCDC7F53D1 /* UITabBar+Night.h in Headers */,
 				E748C0564D762F63B3CD48FB /* UIBarButtonItem+Night.h in Headers */,
 				80ACB8415307DE94A6A9F330 /* UITableView+Night.h in Headers */,
@@ -620,6 +627,7 @@
 				729CAAC41BEE3E2300E279D6 /* NSObject+Night.m in Sources */,
 				72B53CE31C1854B20059F6A1 /* AppDelegate.m in Sources */,
 				72B53CED1C1870580059F6A1 /* UIButton+Night.m in Sources */,
+				729976CD1C5B24C6000B87C1 /* CALayer+Night.m in Sources */,
 				72EAC66E1C1ACD870063012B /* UIImageView+Night.m in Sources */,
 				78192C2AC76E7F41A2F91866 /* UIView+Night.m in Sources */,
 				AE13169F66B1D359F2253A1B /* UILabel+Night.m in Sources */,
@@ -755,6 +763,7 @@
 		189854D41ADD5B560050568B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -762,12 +771,14 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		189854D51ADD5B560050568B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -775,6 +786,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.draven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
