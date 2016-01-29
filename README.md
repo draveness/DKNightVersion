@@ -38,7 +38,7 @@ $ pod update
 Add this line to your `podfile`
 
 ```shell
-pod "DKNightVersion", "~> 1.1.0"
+pod "DKNightVersion", "~> 1.1.1"
 ```
 
 ## Usage
