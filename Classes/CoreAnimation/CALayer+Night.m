@@ -33,7 +33,7 @@
 
 - (void)setDk_borderColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_borderColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.shadowColor = picker().CGColor;
+    self.borderColor = picker().CGColor;
     [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBorderColor:))];
 }
 
@@ -43,7 +43,7 @@
 
 - (void)setDk_backgroundColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.shadowColor = picker().CGColor;
+    self.backgroundColor = picker().CGColor;
     [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBorderColor:))];
 }
 
