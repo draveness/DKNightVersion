@@ -71,6 +71,10 @@
 		B45F1D2968E07F77E4972ECF /* UIControl+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 3954DC40654A699F6708AA6C /* UIControl+Night.m */; };
 		B59C8A0F1A2AC7A47C20ADCC /* UINavigationBar+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 35347EA2954B139579203AD0 /* UINavigationBar+Night.m */; };
 		CC1781A0031BF973B2AF7006 /* UITabBar+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E55509F1444870FA2EB033 /* UITabBar+Night.m */; };
+		D819B5331C7CC3AD0033AA7D /* DKDeallocBlockExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = D819B52F1C7CC3AD0033AA7D /* DKDeallocBlockExecutor.h */; };
+		D819B5341C7CC3AD0033AA7D /* DKDeallocBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = D819B5301C7CC3AD0033AA7D /* DKDeallocBlockExecutor.m */; };
+		D819B5351C7CC3AD0033AA7D /* NSObject+DeallocBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = D819B5311C7CC3AD0033AA7D /* NSObject+DeallocBlock.h */; };
+		D819B5361C7CC3AD0033AA7D /* NSObject+DeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D819B5321C7CC3AD0033AA7D /* NSObject+DeallocBlock.m */; };
 		D9D053D53D6CB768042E649D /* UIProgressView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D15243FE855C62E21D76DEB /* UIProgressView+Night.m */; };
 		DB12082D96E481346946FF1E /* UISwitch+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = D3B3AA8D426619B16FCC1163 /* UISwitch+Night.h */; };
 		E748C0564D762F63B3CD48FB /* UIBarButtonItem+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E9DB35AF44498BC296C3BC /* UIBarButtonItem+Night.h */; };
@@ -172,6 +176,10 @@
 		CA3AA60FE70B0CA68EA0C0B2 /* UISwitch+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Night.m"; path = "Classes/UIKit/UISwitch+Night.m"; sourceTree = "<group>"; };
 		D3B3AA8D426619B16FCC1163 /* UISwitch+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+Night.h"; path = "Classes/UIKit/UISwitch+Night.h"; sourceTree = "<group>"; };
 		D49C84DBB4432DA30261D305 /* UIView+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Night.m"; path = "Classes/UIKit/UIView+Night.m"; sourceTree = "<group>"; };
+		D819B52F1C7CC3AD0033AA7D /* DKDeallocBlockExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDeallocBlockExecutor.h; sourceTree = "<group>"; };
+		D819B5301C7CC3AD0033AA7D /* DKDeallocBlockExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDeallocBlockExecutor.m; sourceTree = "<group>"; };
+		D819B5311C7CC3AD0033AA7D /* NSObject+DeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeallocBlock.h"; sourceTree = "<group>"; };
+		D819B5321C7CC3AD0033AA7D /* NSObject+DeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeallocBlock.m"; sourceTree = "<group>"; };
 		E8FD5CB0CF51B1AF93971AF9 /* UISlider+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISlider+Night.m"; path = "Classes/UIKit/UISlider+Night.m"; sourceTree = "<group>"; };
 		E9B5BF01217933B970C26C49 /* UITextField+Night.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Night.m"; path = "Classes/UIKit/UITextField+Night.m"; sourceTree = "<group>"; };
 		F794222E3954822111B1A581 /* UITextView+Night.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+Night.h"; path = "Classes/UIKit/UITextView+Night.h"; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 			children = (
 				18D2288E1AF8BA7100872BF1 /* DKNightVersion.h */,
 				18A41E221AE019F000042CF4 /* Core */,
+				D819B52E1C7CC3AD0033AA7D /* DeallocBlockExecutor */,
 				72B53CD11C1840630059F6A1 /* Manual */,
 				D4ABEB8B26FEC56F04DE66B9 /* UIKit */,
 				729976511C5B2028000B87C1 /* CoreAnimation */,
@@ -441,6 +450,18 @@
 			name = UIKit;
 			sourceTree = SOURCE_ROOT;
 		};
+		D819B52E1C7CC3AD0033AA7D /* DeallocBlockExecutor */ = {
+			isa = PBXGroup;
+			children = (
+				D819B52F1C7CC3AD0033AA7D /* DKDeallocBlockExecutor.h */,
+				D819B5301C7CC3AD0033AA7D /* DKDeallocBlockExecutor.m */,
+				D819B5311C7CC3AD0033AA7D /* NSObject+DeallocBlock.h */,
+				D819B5321C7CC3AD0033AA7D /* NSObject+DeallocBlock.m */,
+			);
+			name = DeallocBlockExecutor;
+			path = Classes/DeallocBlockExecutor;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -451,6 +472,7 @@
 				72B53CE81C1854B20059F6A1 /* TableViewCell.h in Headers */,
 				72B53CE61C1854B20059F6A1 /* SuccViewController.h in Headers */,
 				72B53CEA1C1854B20059F6A1 /* PresentingViewController.h in Headers */,
+				D819B5351C7CC3AD0033AA7D /* NSObject+DeallocBlock.h in Headers */,
 				72EAC6851C1AE9F70063012B /* DKColorTable.h in Headers */,
 				72BBA6BB1C182E1000262693 /* DKColor.h in Headers */,
 				72B53CE41C1854B20059F6A1 /* RootViewController.h in Headers */,
@@ -466,6 +488,7 @@
 				E748C0564D762F63B3CD48FB /* UIBarButtonItem+Night.h in Headers */,
 				80ACB8415307DE94A6A9F330 /* UITableView+Night.h in Headers */,
 				76E3A365931532BB774C08E2 /* UITextView+Night.h in Headers */,
+				D819B5331C7CC3AD0033AA7D /* DKDeallocBlockExecutor.h in Headers */,
 				47CDFB5B6069850948AC1C37 /* UITextField+Night.h in Headers */,
 				701DFDF1DFD3A69D6A39142D /* UIControl+Night.h in Headers */,
 				154820DC413AAC86262AB3C9 /* UIToolbar+Night.h in Headers */,
@@ -621,6 +644,7 @@
 				72B53CE51C1854B20059F6A1 /* RootViewController.m in Sources */,
 				72EAC6821C1AE7F00063012B /* DKImage.m in Sources */,
 				72BBA6BC1C182E1000262693 /* DKColor.m in Sources */,
+				D819B5361C7CC3AD0033AA7D /* NSObject+DeallocBlock.m in Sources */,
 				18D228911AF8BA8700872BF1 /* DKNightVersionManager.m in Sources */,
 				18D228A11AF8BB7800872BF1 /* main.m in Sources */,
 				72B53CEB1C1854B20059F6A1 /* PresentingViewController.m in Sources */,
@@ -635,6 +659,7 @@
 				CC1781A0031BF973B2AF7006 /* UITabBar+Night.m in Sources */,
 				AC36654153B2380C4E28694E /* UIBarButtonItem+Night.m in Sources */,
 				896C6BB28EA063920C3844B8 /* UITableView+Night.m in Sources */,
+				D819B5341C7CC3AD0033AA7D /* DKDeallocBlockExecutor.m in Sources */,
 				56DE2F196BBE630F0466DC9C /* UITextView+Night.m in Sources */,
 				72EAC6861C1AE9F70063012B /* DKColorTable.m in Sources */,
 				98FBB4DCE2F72728B120070A /* UITextField+Night.m in Sources */,
