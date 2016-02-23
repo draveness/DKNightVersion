@@ -20,14 +20,6 @@ static void *DKViewDeallocHelperKey;
 
 @implementation NSObject (Night)
 
-- (void)setPickers:(NSMutableDictionary<NSString *, DKPicker> *)pickers {
-    objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (pickers == nil) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
-    }
-}
-
 - (NSMutableDictionary<NSString *, DKPicker> *)pickers {
     NSMutableDictionary<NSString *, DKPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
@@ -45,6 +37,9 @@ static void *DKViewDeallocHelperKey;
         
         pickers = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
         
         if ([[UIDevice currentDevice].systemVersion floatValue] < 9.0) {
             [[NSNotificationCenter defaultCenter] addObserverForName:DKNightVersionNightFallingNotification
