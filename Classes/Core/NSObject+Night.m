@@ -7,7 +7,10 @@
 //
 
 #import "NSObject+Night.h"
+#import "NSObject+DeallocBlock.h"
 #import <objc/runtime.h>
+
+static void *DKViewDeallocHelperKey;
 
 @interface NSObject ()
 
@@ -17,20 +20,27 @@
 
 @implementation NSObject (Night)
 
-- (void)setPickers:(NSMutableDictionary<NSString *, DKPicker> *)pickers {
-    objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (pickers == nil) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
-    }
-}
-
 - (NSMutableDictionary<NSString *, DKPicker> *)pickers {
     NSMutableDictionary<NSString *, DKPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
+        
+        @autoreleasepool {
+            // Need to removeObserver in dealloc
+            if (objc_getAssociatedObject(self, &DKViewDeallocHelperKey) == nil) {
+                __unsafe_unretained typeof(self) weakSelf = self; // NOTE: need to be __unsafe_unretained because __weak var will be reset to nil in dealloc
+                id deallocHelper = [self addDeallocBlock:^{
+                    [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
+                }];
+                objc_setAssociatedObject(self, &DKViewDeallocHelperKey, deallocHelper, OBJC_ASSOCIATION_ASSIGN);
+            }
+        }
+        
         pickers = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
+        
         if ([[UIDevice currentDevice].systemVersion floatValue] < 9.0) {
             [[NSNotificationCenter defaultCenter] addObserverForName:DKNightVersionNightFallingNotification
                                                               object:nil
