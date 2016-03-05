@@ -34,30 +34,15 @@ static void *DKViewDeallocHelperKey;
                 objc_setAssociatedObject(self, &DKViewDeallocHelperKey, deallocHelper, OBJC_ASSOCIATION_ASSIGN);
             }
         }
-        
+
         pickers = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, @selector(pickers), pickers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionNightFallingNotification object:nil];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:DKNightVersionDawnComingNotification object:nil];
         
-        if ([[UIDevice currentDevice].systemVersion floatValue] < 9.0) {
-            [[NSNotificationCenter defaultCenter] addObserverForName:DKNightVersionNightFallingNotification
-                                                              object:nil
-                                                               queue:nil
-                                                          usingBlock:^(NSNotification * _Nonnull note) {
-                                                              [self night_updateColor];
-                                                          }];
-            [[NSNotificationCenter defaultCenter] addObserverForName:DKNightVersionDawnComingNotification
-                                                              object:nil
-                                                               queue:nil
-                                                          usingBlock:^(NSNotification * _Nonnull note) {
-                                                              [self night_updateColor];
-                                                          }];
-        } else {
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionNightFallingNotification object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionDawnComingNotification object:nil];
-        }
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionNightFallingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(night_updateColor) name:DKNightVersionDawnComingNotification object:nil];
     }
     return pickers;
 }
