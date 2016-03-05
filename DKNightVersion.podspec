@@ -15,6 +15,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => s.version }
   s.source_files = "Classes/DKNightVersion.h"
 
+  s.subspec 'DeallocBlockExecutor' do |ss|
+    ss.source_files = "Classes/DeallocBlockExecutor/*.{h,m}"
+  end
+
   s.subspec 'Core' do |ss|
     ss.source_files = "Classes/Core/*.{h,m}"
     ss.dependency 'DKNightVersion/DeallocBlockExecutor'
@@ -28,10 +32,6 @@ Pod::Spec.new do |s|
   s.subspec 'CoreAnimation' do |ss|
     ss.source_files = "Classes/CoreAnimation/*.{h,m}"
     ss.dependency 'DKNightVersion/Core'
-  end
-
-  s.subspec 'DeallocBlockExecutor' do |ss|
-    ss.source_files = "Classes/DeallocBlockExecutor/*.{h,m}"
   end
 
 end
