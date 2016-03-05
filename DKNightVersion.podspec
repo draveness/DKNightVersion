@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = "Classes/Core/*.{h,m}"
+    ss.dependency 'DKNightVersion/DeallocBlockExecutor'
   end
 
   s.subspec 'UIKit' do |ss|
@@ -29,5 +30,8 @@ Pod::Spec.new do |s|
     ss.dependency 'DKNightVersion/Core'
   end
 
+  s.subspec 'DeallocBlockExecutor' do |ss|
+    ss.source_files = "Classes/DeallocBlockExecutor/*.{h,m}"
+  end
 
 end
