@@ -3,7 +3,7 @@
 //  DKNightVersion
 //
 //  Created by Draveness on 5/1/15.
-//  Copyright (c) 2015 DeltaX. All rights reserved.
+//  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
 #import "TableViewCell.h"

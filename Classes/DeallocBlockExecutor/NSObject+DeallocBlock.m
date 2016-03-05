@@ -3,7 +3,7 @@
 //  DKNightVersion
 //
 //  Created by nathanwhy on 16/2/24.
-//  Copyright © 2016年 DeltaX. All rights reserved.
+//  Copyright © 2016年 Draveness. All rights reserved.
 //
 
 #import "NSObject+DeallocBlock.h"
