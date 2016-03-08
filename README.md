@@ -27,6 +27,10 @@
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like DKNightVersion in your projects. See the [Get Started section](https://cocoapods.org/#get_started) for more details.
 
+## New Realease 1.4
+
++ Version 1.4 has some incampatiable changing, this version will change picker's setter method to `dk_setBackgroundColorPicker` instead of `setDk_BackgroundColorPicker` which is very ugly.
+
 ## Podfile
 
 Run following script in termianl
