@@ -29,7 +29,7 @@
 
 ## New Realease 1.4
 
-+ Version 1.4 has some incampatiable changing, this version will change picker's setter method to `dk_setBackgroundColorPicker` instead of `setDk_BackgroundColorPicker` which is very ugly.
++ Version 1.4 has some incampatiable changing, this version will change picker's setter method to `dk_setBackgroundColorPicker` instead of `setDk_BackgroundColorPicker` which is not elegant.
 
 ## Podfile
 
