@@ -13,6 +13,6 @@
 
 @interface UITableView (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_separatorColorPicker;
+@property (nonatomic, copy, setter = dk_setSeparatorColorPicker:) DKColorPicker dk_separatorColorPicker;
 
 @end

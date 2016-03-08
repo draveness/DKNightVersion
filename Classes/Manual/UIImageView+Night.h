@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)dk_initWithImagePicker:(DKImagePicker)picker;
 
-@property (nullable, nonatomic, copy) DKImagePicker dk_imagePicker;
+@property (nullable, nonatomic, copy, setter = dk_setImagePicker:) DKImagePicker dk_imagePicker;
 
 @end
 

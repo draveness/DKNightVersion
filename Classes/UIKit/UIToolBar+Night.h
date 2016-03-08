@@ -13,6 +13,6 @@
 
 @interface UIToolbar (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_barTintColorPicker;
+@property (nonatomic, copy, setter = dk_setBarTintColorPicker:) DKColorPicker dk_barTintColorPicker;
 
 @end
