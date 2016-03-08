@@ -25,7 +25,7 @@
     return objc_getAssociatedObject(self, @selector(dk_#{property.name}Picker));
 }
 
-- (void)setDk_#{property.name}Picker:(DKColorPicker)picker {
+- (void)dk_set#{property.cap_name}Picker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_#{property.name}Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.#{property.name} = picker();
     [self.pickers setValue:[picker copy] forKey:@\"#{property.setter}\"];
