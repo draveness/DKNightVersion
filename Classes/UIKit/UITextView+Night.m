@@ -25,7 +25,7 @@
     return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
 }
 
-- (void)setDk_textColorPicker:(DKColorPicker)picker {
+- (void)dk_setTextColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];

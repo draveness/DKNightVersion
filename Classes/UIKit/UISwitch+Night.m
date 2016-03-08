@@ -25,7 +25,7 @@
     return objc_getAssociatedObject(self, @selector(dk_onTintColorPicker));
 }
 
-- (void)setDk_onTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setOnTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_onTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.onTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setOnTintColor:"];
@@ -35,7 +35,7 @@
     return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
 }
 
-- (void)setDk_thumbTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];

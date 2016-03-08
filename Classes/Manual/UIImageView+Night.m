@@ -28,7 +28,7 @@
     return objc_getAssociatedObject(self, @selector(dk_imagePicker));
 }
 
-- (void)setDk_imagePicker:(DKImagePicker)picker {
+- (void)dk_setImagePicker:(DKImagePicker)picker {
     objc_setAssociatedObject(self, @selector(dk_imagePicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.image = picker();
     [self.pickers setValue:[picker copy] forKey:@"setImage:"];

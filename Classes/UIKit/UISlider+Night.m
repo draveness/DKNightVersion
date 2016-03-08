@@ -25,7 +25,7 @@
     return objc_getAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker));
 }
 
-- (void)setDk_minimumTrackTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setMinimumTrackTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.minimumTrackTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setMinimumTrackTintColor:"];
@@ -35,7 +35,7 @@
     return objc_getAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker));
 }
 
-- (void)setDk_maximumTrackTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setMaximumTrackTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.maximumTrackTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setMaximumTrackTintColor:"];
@@ -45,7 +45,7 @@
     return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
 }
 
-- (void)setDk_thumbTintColorPicker:(DKColorPicker)picker {
+- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];

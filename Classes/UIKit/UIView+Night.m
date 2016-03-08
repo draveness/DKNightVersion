@@ -25,7 +25,7 @@
     return objc_getAssociatedObject(self, @selector(dk_backgroundColorPicker));
 }
 
-- (void)setDk_backgroundColorPicker:(DKColorPicker)picker {
+- (void)dk_setBackgroundColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setBackgroundColor:"];
@@ -35,7 +35,7 @@
     return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
 }
 
-- (void)setDk_tintColorPicker:(DKColorPicker)picker {
+- (void)dk_setTintColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker();
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];
