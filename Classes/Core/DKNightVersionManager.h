@@ -10,15 +10,13 @@
 #import "DKColor.h"
 #import "DKImage.h"
 
-typedef NS_ENUM(NSUInteger, DKThemeVersion) {
-    DKThemeVersionNormal,
-    DKThemeVersionNight
-};
-
 typedef id(^DKPicker)(void);
 
-extern NSString *const DKNightVersionNightFallingNotification;
-extern NSString *const DKNightVersionDawnComingNotification;
+typedef NSString DKThemeVersion;
+
+extern NSString *const DKNightVersionThemeChangingNotificaiton;
+extern DKThemeVersion *const DKThemeVersionNormal;
+extern DKThemeVersion *const DKThemeVersionNight;
 
 extern CGFloat const DKNightVersionAnimationDuration;
 
@@ -30,18 +28,17 @@ extern CGFloat const DKNightVersionAnimationDuration;
 @property (nonatomic, assign, getter=shouldChangeStatusBar) BOOL changeStatusBar;
 
 /**
+ *  Current ThemeVersion, default is DKThemeVersionNormal, change it to change the global
+ *  theme
+ */
+@property (nonatomic, strong) DKThemeVersion *themeVersion;
+
+/**
  *  Return the shared night version manager instance
  *
  *  @return singleton instance for DKNightVersionManager
  */
 + (DKNightVersionManager *)sharedNightVersionManager;
-
-/**
- *  Current ThemeVersion, default is DKThemeVersionNormal.
- *
- *  @return Current theme version, default is DKThemeVersionNormal. Readonly
- */
-+ (DKThemeVersion)currentThemeVersion;
 
 /**
  *  Night falling. When nightFalling is called, post DKNightVersionNightFallingNotification. You  can setup customize with observing the notification.

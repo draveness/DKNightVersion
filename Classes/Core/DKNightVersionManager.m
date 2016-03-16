@@ -8,17 +8,14 @@
 
 #import "DKNightVersionManager.h"
 
-NSString *const DKNightVersionNightFallingNotification = @"DKNightVersionNightFallingNotification";
-NSString *const DKNightVersionDawnComingNotification = @"DKNightVersionDawnComingNotification";
+NSString *const DKThemeVersionNormal = @"NORMAL";
+NSString *const DKThemeVersionNight = @"NIGHT";
+
+NSString *const DKNightVersionThemeChangingNotificaiton = @"DKNightVersionThemeChangingNotificaiton";
 
 CGFloat const DKNightVersionAnimationDuration = 0.3;
 
 @interface DKNightVersionManager ()
-
-/**
- Set themeVersion to switch to night or normal theme, default is DKThemeVersionNormal.
- */
-@property (nonatomic, assign) DKThemeVersion themeVersion;
 
 @end
 
@@ -30,6 +27,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.changeStatusBar = YES;
+        instance.themeVersion = DKThemeVersionNormal;
     });
     return instance;
 }
@@ -56,21 +54,14 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     }
 }
 
-+ (DKThemeVersion)currentThemeVersion {
-    return [DKNightVersionManager sharedNightVersionManager].themeVersion;
-}
-
-- (void)setThemeVersion:(DKThemeVersion)themeVersion {
+- (void)setThemeVersion:(DKThemeVersion *)themeVersion {
     if (_themeVersion == themeVersion) {
         // if type does not change, don't execute code below to enhance performance.
         return;
     }
     _themeVersion = themeVersion;
-    if (themeVersion == DKThemeVersionNight) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionNightFallingNotification object:nil];
-    } else {
-        [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionDawnComingNotification object:nil];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotificaiton
+                                                        object:nil];
 }
 
 @end
