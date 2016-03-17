@@ -18,6 +18,7 @@
 - [x] Generate by ruby script
 - [ ] Default DKColorPicker
 - [ ] Support NSAttributedString
+- [ ] Support different themes
 
 # Demo
 
