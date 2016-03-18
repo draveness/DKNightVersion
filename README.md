@@ -16,6 +16,7 @@
 - [x] Easily integrate to iOS App
 - [x] Based on `objc/runtime`
 - [x] Generate by ruby script
+- [ ] Read color customization from file
 - [ ] Default DKColorPicker
 - [ ] Support NSAttributedString
 - [ ] Support different themes
