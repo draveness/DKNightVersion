@@ -1,0 +1,3 @@
+NORMAL    NIGHT
+0xffffff  0x343434 BG
+0xaaaaaa  0x313131 SEP

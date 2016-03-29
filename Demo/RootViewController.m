@@ -43,6 +43,8 @@
     self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorWithColors([UIColor blueColor], [UIColor whiteColor]);
     self.navigationItem.rightBarButtonItem.dk_tintColorPicker = DKColorWithColors([UIColor blueColor], [UIColor whiteColor]);
 
+    [DKColorTable sharedColorTable];
+
 }
 
 - (void)change {

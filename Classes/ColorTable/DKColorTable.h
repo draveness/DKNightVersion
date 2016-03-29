@@ -13,8 +13,8 @@ DKColorPicker DKPickerFromTable(NSString *key);
 
 @interface DKColorTable : NSObject
 
-+ (void)addPicker:(DKColorPicker)picker withKey:(NSString *)key;
-+ (DKColorPicker)removePickerWithKey:(NSString *)key;
+
++ (instancetype)sharedColorTable;
 + (DKColorPicker)pickerWithKey:(NSString *)key;
 
 @end

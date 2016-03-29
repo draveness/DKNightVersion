@@ -25,6 +25,19 @@ DKColorPicker DKPickerFromTable(NSString *key) {
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[self alloc] init];
+        NSString *filepath = [[NSBundle mainBundle] pathForResource:@"DKColorTable" ofType:@"txt"];
+        NSError *error;
+        NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
+
+        if (error)
+            NSLog(@"Error reading file: %@", error.localizedDescription);
+
+        // maybe for debugging...
+        NSLog(@"contents: %@", fileContents);
+
+        NSArray *listArray = [fileContents componentsSeparatedByString:@"\n"];
+        NSLog(@"items = %lu", (unsigned long)[listArray count]);
+
     });
     return _sharedInstance;
 }
