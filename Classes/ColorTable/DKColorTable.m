@@ -88,19 +88,12 @@ DKColorPicker DKPickerWithKey(NSString *key) {
     [self.table setValue:themeToColorDictionary forKey:key];
 }
 
-- (void)addPicker:(DKColorPicker)picker withKey:(NSString *)key {
-    NSAssert(picker != nil, @"Parameter picker must not be nil");
-    NSAssert(key != nil, @"Parameter key must not be nil");
-    [self setValue:picker forKey:key];
-}
-
 - (DKColorPicker)pickerWithKey:(NSString *)key {
     NSAssert(key != nil, @"Parameter key must not be nil");
     DKColorPicker picker = ^() {
         NSDictionary *themeToColorDictionary = [self.table valueForKey:key];
         return [themeToColorDictionary valueForKey:[[DKNightVersionManager sharedNightVersionManager] themeVersion]];
     };
-    NSAssert(picker != nil, @"picker with key %@ does not exist.", key);
     return picker;
 
 }
@@ -117,10 +110,14 @@ DKColorPicker DKPickerWithKey(NSString *key) {
 #pragma mark - Helper
 
 - (NSUInteger)intFromHexString:(NSString *)hexStr {
-    NSUInteger hexInt = 0;
+    unsigned int hexInt = 0;
 
     NSScanner *scanner = [NSScanner scannerWithString:hexStr];
-    [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
+
+    NSMutableCharacterSet *set = [[NSCharacterSet characterSetWithCharactersInString:@"#"] mutableCopy];
+    [set addCharactersInString:@"0x"];
+
+    [scanner setCharactersToBeSkipped:set];
     [scanner scanHexInt:&hexInt];
     
     return hexInt;
