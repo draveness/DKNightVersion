@@ -37,7 +37,9 @@ DKColorPicker DKPickerWithKey(NSString *key) {
 - (void)reloadColorTable {
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"DKColorTable" ofType:@"txt"];
     NSError *error;
-    NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
+    NSString *fileContents = [NSString stringWithContentsOfFile:filepath
+                                                       encoding:NSUTF8StringEncoding
+                                                          error:&error];
 
     if (error)
         NSLog(@"Error reading file: %@", error.localizedDescription);
