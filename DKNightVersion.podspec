@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.subspec 'ColorTable' do |ss|
     ss.source_files = "Classes/ColorTable/*{h,m}"
     ss.dependency 'DKNightVersion/Core'
+    ss.resource = "Classes/ColorTable/DKColorTable.txt"
   end
 
   s.subspec 'Core' do |ss|
