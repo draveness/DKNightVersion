@@ -20,10 +20,6 @@ UIColor *colorFromRGB(NSUInteger hex) {
     return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0];
 }
 
-DKColorPicker DKPickerWithKey(NSString *key) {
-    return [[DKColorTable sharedColorTable] pickerWithKey:key];
-}
-
 + (instancetype)sharedColorTable {
     static id _sharedInstance = nil;
     static dispatch_once_t oncePredicate;

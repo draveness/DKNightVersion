@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "DKNightVersionManager.h"
 
-DKColorPicker DKPickerWithKey(NSString *key);
+#define DKPickerWithKey(key) [[DKColorTable sharedColorTable] pickerWithKey:@#key]
 
 @interface DKColorTable : NSObject
+
 
 + (instancetype)sharedColorTable;
 
