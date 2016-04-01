@@ -13,32 +13,32 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
   s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => s.version }
-  s.source_files = "Classes/DKNightVersion.h"
+  s.source_files = "DKNightVersion/DKNightVersion.h"
 
-  s.public_header_files = "Classes/DKNightVersion.h"
+  s.public_header_files = "DKNightVersion/DKNightVersion.h"
 
   s.subspec 'DeallocBlockExecutor' do |ss|
-    ss.source_files = "Classes/DeallocBlockExecutor/*.{h,m}"
+    ss.source_files = "DKNightVersion/DeallocBlockExecutor/*.{h,m}"
   end
 
   s.subspec 'ColorTable' do |ss|
-    ss.source_files = "Classes/ColorTable/*{h,m}"
+    ss.source_files = "DKNightVersion/ColorTable/*{h,m}"
     ss.dependency 'DKNightVersion/Core'
-    ss.resource = "Classes/ColorTable/DKColorTable.txt"
+    ss.resource = "DKNightVersion/ColorTable/DKColorTable.txt"
   end
 
   s.subspec 'Core' do |ss|
-    ss.source_files = "Classes/Core/*.{h,m}"
+    ss.source_files = "DKNightVersion/Core/*.{h,m}"
     ss.dependency 'DKNightVersion/DeallocBlockExecutor'
   end
 
   s.subspec 'UIKit' do |ss|
-    ss.source_files = "Classes/UIKit/*.{h,m}", "Classes/Manual/*.{h,m}"
+    ss.source_files = "DKNightVersion/UIKit/*.{h,m}", "DKNightVersion/Manual/*.{h,m}"
     ss.dependency 'DKNightVersion/Core'
   end
 
   s.subspec 'CoreAnimation' do |ss|
-    ss.source_files = "Classes/CoreAnimation/*.{h,m}"
+    ss.source_files = "DKNightVersion/CoreAnimation/*.{h,m}"
     ss.dependency 'DKNightVersion/Core'
   end
 

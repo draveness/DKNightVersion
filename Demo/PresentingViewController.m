@@ -32,7 +32,7 @@
     [self.view addSubview:button];
     [self.view addSubview:switchButton];
 
-    self.view.dk_backgroundColorPicker = DKColorWithRGB(0xffffff, 0x343434);
+    self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
     [button dk_setTitleColorPicker:DKColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
     [switchButton dk_setTitleColorPicker:DKColorWithColors([UIColor blueColor], [UIColor whiteColor]) forState:UIControlStateNormal];
 

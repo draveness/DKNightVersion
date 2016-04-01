@@ -32,7 +32,7 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.button];
 
-        self.dk_backgroundColorPicker = DKPickerWithKey(@"BG");
+        self.dk_backgroundColorPicker = DKPickerWithKey(BG);
 
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 25, 50, 50)];
 

@@ -36,7 +36,7 @@
     self.navigationItem.rightBarButtonItem = item;
 
 
-    self.tableView.dk_backgroundColorPicker =  DKPickerWithKey(@"BG");
+    self.tableView.dk_backgroundColorPicker =  DKPickerWithKey(BG);
     self.tableView.dk_separatorColorPicker = DKColorWithRGB(0xaaaaaa, 0x313131);
     navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UIColor whiteColor]);
     self.navigationController.navigationBar.dk_barTintColorPicker = DKColorWithRGB(0xffffff, 0x444444);
