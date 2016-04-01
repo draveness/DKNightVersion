@@ -25,5 +25,7 @@
 #import "UITextView+Night.h"
 #import "UIToolbar+Night.h"
 #import "UIView+Night.h"
+#import "UIButton+Night.h"
+#import "UIImageView+Night.h"
 
 #endif /* UIKit_Night_h */
