@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
-#ifndef DKNightVerision_DKNightVersion_h
-#define DKNightVerision_DKNightVersion_h
+//! Project version string for MyFramework.
+FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
+//! Project version number for MyFramework.
+FOUNDATION_EXPORT double DKNightVersionVersionNumber;
+
+#ifndef _DKNIGHTVERSION_
+#define _DKNIGHTVERSION_
 
 #import "DKColor.h"
 #import "DKImage.h"
@@ -36,4 +41,4 @@
 
 #import "CALayer+Night.h"
 
-#endif
+#endif /* _DKNIGHTVERSION_ */

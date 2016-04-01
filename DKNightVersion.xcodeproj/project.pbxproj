@@ -134,6 +134,7 @@
 		7219A5671CAA8F7200D53165 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKColorTable.txt; path = Classes/ColorTable/DKColorTable.txt; sourceTree = SOURCE_ROOT; };
 		7219A5691CAA8F9600D53165 /* DKColorTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKColorTable.h; path = Classes/ColorTable/DKColorTable.h; sourceTree = SOURCE_ROOT; };
 		7219A56A1CAA8F9600D53165 /* DKColorTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKColorTable.m; path = Classes/ColorTable/DKColorTable.m; sourceTree = SOURCE_ROOT; };
+		72618DBA1CAE28A600D550C8 /* UIKit+Night.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIKit+Night.h"; path = "Classes/UIKit/UIKit+Night.h"; sourceTree = "<group>"; };
 		729976CE1C5B28EB000B87C1 /* CALayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+Night.h"; path = "Classes/CoreAnimation/CALayer+Night.h"; sourceTree = SOURCE_ROOT; };
 		729976CF1C5B28EB000B87C1 /* CALayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+Night.m"; path = "Classes/CoreAnimation/CALayer+Night.m"; sourceTree = SOURCE_ROOT; };
 		729CAAC11BEE3E2300E279D6 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Night.h"; path = "Classes/Core/NSObject+Night.h"; sourceTree = SOURCE_ROOT; };
@@ -427,6 +428,7 @@
 		D4ABEB8B26FEC56F04DE66B9 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				72618DBA1CAE28A600D550C8 /* UIKit+Night.h */,
 				ADFEC388A6995875AD117D0E /* UIView+Night.h */,
 				D49C84DBB4432DA30261D305 /* UIView+Night.m */,
 				823B11134B2E45DF5F2A3E66 /* UILabel+Night.h */,
@@ -802,6 +804,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = Classes/;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -817,6 +820,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = Classes/;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

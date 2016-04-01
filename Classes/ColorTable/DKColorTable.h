@@ -13,7 +13,6 @@
 
 @interface DKColorTable : NSObject
 
-
 + (instancetype)sharedColorTable;
 
 - (void)reloadColorTable;

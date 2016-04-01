@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => s.version }
   s.source_files = "Classes/DKNightVersion.h"
 
+  s.public_header_files = "Classes/DKNightVersion.h"
+
   s.subspec 'DeallocBlockExecutor' do |ss|
     ss.source_files = "Classes/DeallocBlockExecutor/*.{h,m}"
   end
