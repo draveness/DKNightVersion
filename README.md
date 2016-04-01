@@ -16,10 +16,10 @@
 - [x] Easily integrate to iOS App
 - [x] Based on `objc/runtime`
 - [x] Generate by ruby script
-- [ ] Read color customization from file
-- [ ] Default DKColorPicker
+- [x] Read color customization from file
+- [x] Support different themes
 - [ ] Support NSAttributedString
-- [ ] Support different themes
+- [ ] Default DKColorPicker
 
 # Demo
 
@@ -28,10 +28,6 @@
 # Installation with CocoaPods
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like DKNightVersion in your projects. See the [Get Started section](https://cocoapods.org/#get_started) for more details.
-
-## New Release 1.4
-
-+ Version 1.4 has some incampatiable changing, this version will change picker's setter method to `dk_setBackgroundColorPicker` instead of `setDk_BackgroundColorPicker` which is not elegant.
 
 ## Podfile
 
@@ -44,7 +40,7 @@ $ pod update
 Add this line to your `podfile`
 
 ```shell
-pod "DKNightVersion", "~> 1.4"
+pod "DKNightVersion", "~> 2.0.0"
 ```
 
 ## Usage
@@ -58,6 +54,38 @@ Just add one line of code in your precompiled header, or import it where you nee
 ----
 
 # How to use
+
+## DKColorTable
+
++ Version 2.0 bring us a very powerful feature, DKNightVersion **supported different themes and read color from a txt file**.
+
+There is a `DKColorTable.txt` file in your project, you can also create it by yourself. DKNightVersion will read color setting from this file when app is start launching. This file look like this.
+
+```
+NORMAL   NIGHT
+#ffffff  #343434 BG
+#aaaaaa  #313131 SEP
+```
+
+`NORMAL` is the default column, and `NIGHT` is for night mode, you can also create other theme `RED` like this:
+
+```
+NORMAL   NIGHT   RED
+#ffffff  #343434 #ff0000 BG
+#aaaaaa  #313131 #ff0000 SEP
+```
+
+When you successfully and `RED`, you can change to `RED` theme by this, it will trigger global theme change to `RED`.
+
+```objectivec
+[DKNightVersionManager sharedNightVersionManager].themeVersion = @"RED";
+```
+
+Use `DKPickerWithKey` to generate a DKColorPicker
+
+```objectivec
+self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
+```
 
 ## Night color
 
