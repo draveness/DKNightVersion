@@ -17,7 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 
-fastlane/report.*
+fastlane/report.xml
 
 # CocoaPods
 #
