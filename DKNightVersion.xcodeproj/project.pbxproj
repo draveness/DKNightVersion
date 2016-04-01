@@ -26,8 +26,6 @@
 		72618E001CAE2A4200D550C8 /* DKDeallocBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DD51CAE2A4200D550C8 /* DKDeallocBlockExecutor.m */; };
 		72618E011CAE2A4200D550C8 /* NSObject+DeallocBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618DD61CAE2A4200D550C8 /* NSObject+DeallocBlock.h */; };
 		72618E021CAE2A4200D550C8 /* NSObject+DeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618DD71CAE2A4200D550C8 /* NSObject+DeallocBlock.m */; };
-		72618E2B1CAE2A5C00D550C8 /* CALayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E291CAE2A5C00D550C8 /* CALayer+Night.h */; };
-		72618E2C1CAE2A5C00D550C8 /* CALayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E2A1CAE2A5C00D550C8 /* CALayer+Night.m */; };
 		72618E2E1CAE2A7300D550C8 /* DKNightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */; };
 		72618E551CAE2C6A00D550C8 /* UIBarButtonItem+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E301CAE2C6A00D550C8 /* UIBarButtonItem+Night.h */; };
 		72618E561CAE2C6A00D550C8 /* UIBarButtonItem+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E311CAE2C6A00D550C8 /* UIBarButtonItem+Night.m */; };
@@ -66,6 +64,8 @@
 		72618E771CAE2C6A00D550C8 /* UIToolbar+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E521CAE2C6A00D550C8 /* UIToolbar+Night.m */; };
 		72618E781CAE2C6A00D550C8 /* UIView+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E531CAE2C6A00D550C8 /* UIView+Night.h */; };
 		72618E791CAE2C6A00D550C8 /* UIView+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E541CAE2C6A00D550C8 /* UIView+Night.m */; };
+		72618E7D1CAE2CA600D550C8 /* CALayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72618E7B1CAE2CA600D550C8 /* CALayer+Night.h */; };
+		72618E7E1CAE2CA600D550C8 /* CALayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72618E7C1CAE2CA600D550C8 /* CALayer+Night.m */; };
 		72B53CE21C1854B20059F6A1 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D228921AF8BB6200872BF1 /* AppDelegate.h */; };
 		72B53CE31C1854B20059F6A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D228931AF8BB6200872BF1 /* AppDelegate.m */; };
 		72B53CE41C1854B20059F6A1 /* RootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D228951AF8BB6800872BF1 /* RootViewController.h */; };
@@ -135,8 +135,6 @@
 		72618DD51CAE2A4200D550C8 /* DKDeallocBlockExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDeallocBlockExecutor.m; sourceTree = "<group>"; };
 		72618DD61CAE2A4200D550C8 /* NSObject+DeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeallocBlock.h"; sourceTree = "<group>"; };
 		72618DD71CAE2A4200D550C8 /* NSObject+DeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeallocBlock.m"; sourceTree = "<group>"; };
-		72618E291CAE2A5C00D550C8 /* CALayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Night.h"; sourceTree = "<group>"; };
-		72618E2A1CAE2A5C00D550C8 /* CALayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Night.m"; sourceTree = "<group>"; };
 		72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKNightVersion.h; path = DKNightVersion/DKNightVersion.h; sourceTree = SOURCE_ROOT; };
 		72618E301CAE2C6A00D550C8 /* UIBarButtonItem+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Night.h"; sourceTree = "<group>"; };
 		72618E311CAE2C6A00D550C8 /* UIBarButtonItem+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Night.m"; sourceTree = "<group>"; };
@@ -175,6 +173,9 @@
 		72618E521CAE2C6A00D550C8 /* UIToolbar+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+Night.m"; sourceTree = "<group>"; };
 		72618E531CAE2C6A00D550C8 /* UIView+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Night.h"; sourceTree = "<group>"; };
 		72618E541CAE2C6A00D550C8 /* UIView+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Night.m"; sourceTree = "<group>"; };
+		72618E7B1CAE2CA600D550C8 /* CALayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Night.h"; sourceTree = "<group>"; };
+		72618E7C1CAE2CA600D550C8 /* CALayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Night.m"; sourceTree = "<group>"; };
+		72618E7F1CAE2CC500D550C8 /* CoreAnimation+Night.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreAnimation+Night.h"; sourceTree = "<group>"; };
 		72BBA6931C181B9600262693 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
 		72BBA6941C181B9600262693 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
 		72BBA6951C181B9600262693 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
@@ -315,8 +316,7 @@
 				72618E2D1CAE2A7300D550C8 /* DKNightVersion.h */,
 				72618DBB1CAE2A2400D550C8 /* ColorTable */,
 				72618DC21CAE2A2E00D550C8 /* Core */,
-				72618DD31CAE2A4200D550C8 /* DeallocBlockExecutor */,
-				72618E281CAE2A5C00D550C8 /* CoreAnimation */,
+				72618E7A1CAE2CA600D550C8 /* CoreAnimation */,
 				72618E2F1CAE2C6A00D550C8 /* UIKit */,
 			);
 			name = Classes;
@@ -337,6 +337,7 @@
 		72618DC21CAE2A2E00D550C8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				72618DD31CAE2A4200D550C8 /* DeallocBlockExecutor */,
 				72618DC31CAE2A2E00D550C8 /* DKColor.h */,
 				72618DC41CAE2A2E00D550C8 /* DKColor.m */,
 				72618DC51CAE2A2E00D550C8 /* DKImage.h */,
@@ -361,16 +362,6 @@
 			name = DeallocBlockExecutor;
 			path = DKNightVersion/DeallocBlockExecutor;
 			sourceTree = SOURCE_ROOT;
-		};
-		72618E281CAE2A5C00D550C8 /* CoreAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				72618E291CAE2A5C00D550C8 /* CALayer+Night.h */,
-				72618E2A1CAE2A5C00D550C8 /* CALayer+Night.m */,
-			);
-			name = CoreAnimation;
-			path = ../../DKNightVersion/CoreAnimation;
-			sourceTree = "<group>";
 		};
 		72618E2F1CAE2C6A00D550C8 /* UIKit */ = {
 			isa = PBXGroup;
@@ -415,6 +406,17 @@
 			);
 			name = UIKit;
 			path = DKNightVersion/UIKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		72618E7A1CAE2CA600D550C8 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				72618E7F1CAE2CC500D550C8 /* CoreAnimation+Night.h */,
+				72618E7B1CAE2CA600D550C8 /* CALayer+Night.h */,
+				72618E7C1CAE2CA600D550C8 /* CALayer+Night.m */,
+			);
+			name = CoreAnimation;
+			path = DKNightVersion/CoreAnimation;
 			sourceTree = SOURCE_ROOT;
 		};
 		72BBA68F1C181B9600262693 /* generator */ = {
@@ -485,6 +487,7 @@
 			files = (
 				72618E6A1CAE2C6A00D550C8 /* UISlider+Night.h in Headers */,
 				72618E721CAE2C6A00D550C8 /* UITextField+Night.h in Headers */,
+				72618E7D1CAE2CA600D550C8 /* CALayer+Night.h in Headers */,
 				72B53CE81C1854B20059F6A1 /* TableViewCell.h in Headers */,
 				72618E601CAE2C6A00D550C8 /* UINavigationBar+Animation.h in Headers */,
 				72B53CE61C1854B20059F6A1 /* SuccViewController.h in Headers */,
@@ -495,7 +498,6 @@
 				72618E571CAE2C6A00D550C8 /* UIButton+Night.h in Headers */,
 				72618DCB1CAE2A2E00D550C8 /* DKColor.h in Headers */,
 				72618E741CAE2C6A00D550C8 /* UITextView+Night.h in Headers */,
-				72618E2B1CAE2A5C00D550C8 /* CALayer+Night.h in Headers */,
 				72618E6C1CAE2C6A00D550C8 /* UISwitch+Night.h in Headers */,
 				72618E2E1CAE2A7300D550C8 /* DKNightVersion.h in Headers */,
 				72618E5D1CAE2C6A00D550C8 /* UIKit+Night.h in Headers */,
@@ -675,7 +677,7 @@
 				72B53CE31C1854B20059F6A1 /* AppDelegate.m in Sources */,
 				72618E6D1CAE2C6A00D550C8 /* UISwitch+Night.m in Sources */,
 				72618E561CAE2C6A00D550C8 /* UIBarButtonItem+Night.m in Sources */,
-				72618E2C1CAE2A5C00D550C8 /* CALayer+Night.m in Sources */,
+				72618E7E1CAE2CA600D550C8 /* CALayer+Night.m in Sources */,
 				72618E5F1CAE2C6A00D550C8 /* UILabel+Night.m in Sources */,
 				72618E651CAE2C6A00D550C8 /* UIPageControl+Night.m in Sources */,
 				72618E5A1CAE2C6A00D550C8 /* UIControl+Night.m in Sources */,

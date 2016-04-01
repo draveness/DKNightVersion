@@ -14,14 +14,15 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #ifndef _DKNIGHTVERSION_
 #define _DKNIGHTVERSION_
 
-#import "DKColor.h"
-#import "DKImage.h"
-#import "DKNightVersionManager.h"
+#import <Core/DKColor.h>
+#import <Core/DKImage.h>
+#import <Core/DKNightVersionManager.h>
+#import <Core/NSObject+Night.h>
+
+#import <ColorTable/DKColorTable.h>
+
 #import <UIKit/UIKit+Night.h>
-#import "DKColorTable.h"
+#import <CoreAnimation/CoreAnimation+Night.h>
 
-#import "NSObject+Night.h"
-
-#import "CALayer+Night.h"
 
 #endif /* _DKNIGHTVERSION_ */
