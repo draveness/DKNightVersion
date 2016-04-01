@@ -4,5 +4,7 @@ before_install:
     - env
     - locale
 
+osx_image: xcode7.3
+
 script:
     - pod lib lint 
