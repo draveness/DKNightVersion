@@ -22,11 +22,6 @@ module Fastlane
         ]
       end
 
-      def self.authors
-        # So no one will ever forget your contribution to fastlane :) You are awesome btw!
-        ["onevcat"]
-      end
-
       def self.is_supported?(platform)
         true
       end
