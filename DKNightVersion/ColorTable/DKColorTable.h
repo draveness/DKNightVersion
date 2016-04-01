@@ -13,6 +13,8 @@
 
 @interface DKColorTable : NSObject
 
+@property (nonatomic, strong) NSString *file;
+
 + (instancetype)sharedColorTable;
 
 - (void)reloadColorTable;

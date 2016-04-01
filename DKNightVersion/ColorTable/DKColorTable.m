@@ -21,17 +21,21 @@ UIColor *colorFromRGB(NSUInteger hex) {
 }
 
 + (instancetype)sharedColorTable {
-    static id _sharedInstance = nil;
+    static DKColorTable *sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _sharedInstance = [[self alloc] init];
-        [_sharedInstance reloadColorTable];
+        sharedInstance = [[DKColorTable alloc] init];
+        sharedInstance.file = @"DKColorTable.txt";
     });
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 - (void)reloadColorTable {
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"DKColorTable" ofType:@"txt"];
+    // Clear previos color table
+    self.table = nil;
+
+    // Load color table file
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
     NSError *error;
     NSString *fileContents = [NSString stringWithContentsOfFile:filepath
                                                        encoding:NSUTF8StringEncoding
@@ -47,6 +51,8 @@ UIColor *colorFromRGB(NSUInteger hex) {
     [entries removeObjectAtIndex:0]; // Remove theme entry
 
     NSArray *themes = [self themesFromContents:fileContents];
+
+    // Add entry to color table
     for (NSString *entry in entries) {
         NSArray *colors = [self colorsFromEntry:entry];
         NSString *key = [self keyFromEntry:entry];
@@ -103,6 +109,11 @@ UIColor *colorFromRGB(NSUInteger hex) {
         _table = [[NSMutableDictionary alloc] init];
     }
     return _table;
+}
+
+- (void)setFile:(NSString *)file {
+    _file = file;
+    [self reloadColorTable];
 }
 
 #pragma mark - Helper
