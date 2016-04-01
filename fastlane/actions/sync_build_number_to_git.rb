@@ -27,21 +27,6 @@ module Fastlane
           ['BUILD_NUMBER', 'The new build number']
         ]
       end
-      #####################################################
-      # @!group Documentation
-      #####################################################
-
-      def self.description
-        "Set the build version of your project to the same number of your total git commit count"
-      end
-
-      def self.authors
-        ["Draveness"]
-      end
-
-      def self.is_supported?(platform)
-        [:ios].include? platform
-      end
     end
   end
 end
