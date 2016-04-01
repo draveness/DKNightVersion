@@ -25,19 +25,19 @@
 }
 
 - (void)testManagerDefaultThemeVersion {
-    DKThemeVersion themeVersion = [DKNightVersionManager currentThemeVersion];
+    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
     XCTAssert(themeVersion == DKThemeVersionNormal, @"DKNightVersionManager default theme version should be DKThemeVersionNormal");
 }
 
 - (void)testDawnComing {
     [DKNightVersionManager dawnComing];
-    DKThemeVersion themeVersion = [DKNightVersionManager currentThemeVersion];
+    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
     XCTAssert(themeVersion == DKThemeVersionNormal, @"After execute dawn coming method, DKNightVersionManager theme version should be DKThemeVersionNormal");
 }
 
 - (void)testNightFalling {
     [DKNightVersionManager nightFalling];
-    DKThemeVersion themeVersion = [DKNightVersionManager currentThemeVersion];
+    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
     XCTAssert(themeVersion == DKThemeVersionNight, @"After execute night falling method, DKNightVersionManager theme version should be DKThemeVersionNight");
 }
 
