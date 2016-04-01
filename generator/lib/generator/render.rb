@@ -32,7 +32,7 @@ def objc_code_generator(klasses, p='.')
     color_header        = File.join(template_folder, 'color.h.erb')
     color_imp           = File.join(template_folder, 'color.m.erb')
 
-    relative_path = File.join('Classes', 'UIKit')
+    relative_path = File.join('DKNightVersion', 'UIKit')
     FileUtils.rm_rf(relative_path)
     FileUtils.mkdir_p(relative_path)
     klasses.each do |klass|
