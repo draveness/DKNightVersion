@@ -1,0 +1,24 @@
+fastlane_version "1.70.0"
+
+default_platform :ios
+
+# Fastfile
+desc "Release new version"
+lane :release do |options|
+  target_version = options[:version]
+  raise "The version is missed." if target_version.nil?
+  ensure_git_branch
+  ensure_git_statu _clean
+  scan                  
+
+  sync_build_number_to_git   
+  increment_version_number(version_number: target_version)
+
+  version_bump_podspec(path: "DKNightVersion.podspec",
+             version_number: target_version)             
+  git_commit_all(message: "Bump version to #{target_version}")
+  add_git_tag tag: target_version                            
+  push_to_git_remote                                        
+  pod_push                                                 
+end
+
