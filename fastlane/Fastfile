@@ -9,7 +9,7 @@ lane :release do |options|
   raise "The version is missed." if target_version.nil?
   ensure_git_branch
   ensure_git_status_clean
-  xctool :test
+# scan
 
   sync_build_number_to_git   
   increment_version_number(version_number: target_version)
