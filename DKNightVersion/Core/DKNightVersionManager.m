@@ -21,7 +21,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
 
 @implementation DKNightVersionManager
 
-+ (DKNightVersionManager *)sharedNightVersionManager {
++ (DKNightVersionManager *)sharedManager {
     static dispatch_once_t once;
     static DKNightVersionManager *instance;
     dispatch_once(&once, ^{
@@ -32,8 +32,12 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     return instance;
 }
 
++ (DKNightVersionManager *)sharedNightVersionManager {
+    return [self sharedManager];
+}
+
 + (void)nightFalling {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
+    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
     manager.themeVersion = DKThemeVersionNight;
     if (manager.shouldChangeStatusBar) {
 #pragma clang diagnostic push
@@ -44,7 +48,7 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
 }
 
 + (void)dawnComing {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
+    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
     manager.themeVersion = DKThemeVersionNormal;
     if (manager.shouldChangeStatusBar) {
 #pragma clang diagnostic push

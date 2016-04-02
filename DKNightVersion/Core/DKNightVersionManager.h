@@ -10,8 +10,6 @@
 #import "DKColor.h"
 #import "DKImage.h"
 
-typedef id(^DKPicker)(void);
-
 typedef NSString DKThemeVersion;
 
 extern NSString *const DKNightVersionThemeChangingNotificaiton;
@@ -29,7 +27,16 @@ extern CGFloat const DKNightVersionAnimationDuration;
 
 /**
  *  Current ThemeVersion, default is DKThemeVersionNormal, change it to change the global
- *  theme
+ *  theme, this will post `DKNightVersionThemeChangingNotificaiton`, if you want to customize
+ *  your theme you can observe this notification.
+ *  
+ *  Ex:
+ *
+ *      ```objectivec
+ *          DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
+ *          manager.themeVersion = @"RED"; // DKThemeVersionNormal or DKThemeVersionNight
+ *      ```
+ *
  */
 @property (nonatomic, strong) DKThemeVersion *themeVersion;
 
@@ -38,16 +45,27 @@ extern CGFloat const DKNightVersionAnimationDuration;
  *
  *  @return singleton instance for DKNightVersionManager
  */
-+ (DKNightVersionManager *)sharedNightVersionManager;
++ (DKNightVersionManager *)sharedManager;
 
 /**
- *  Night falling. When nightFalling is called, post DKNightVersionNightFallingNotification. You  can setup customize with observing the notification.
+ *  Night falling. When nightFalling is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  You can setup customize with observing the notification. `themeVersion` of the manager will
+ *  be set to `DKNightVersionNight`. This is a convinient method for switching theme the
+ *  `DKThemeVersionNight`.
  */
 + (void)nightFalling;
 
 /**
- *  Dawn coming. When dawnComing is called, post DKNightVersionDawnComingNotification. You  can setup customize with observing the notification.
+ *  Dawn coming. When dawnComing is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  You can setup customize with observing the notification.`themeVersion` of the manager will
+ *  be set to `DKNightVersionNormal`. This is a convinient method for switching theme the
+ *  `DKThemeVersionNormal`.
  */
 + (void)dawnComing;
+
+/** 
+ *  This method is deprecated, use `- [DKNightVersion sharedManager]` instead
+ */
++ (DKNightVersionManager *)sharedNightVersionManager __deprecated_msg("use `- [DKNightVersion sharedManager]` instead");
 
 @end

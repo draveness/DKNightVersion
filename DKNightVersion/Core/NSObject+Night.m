@@ -14,14 +14,14 @@ static void *DKViewDeallocHelperKey;
 
 @interface NSObject ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
 
 @end
 
 @implementation NSObject (Night)
 
-- (NSMutableDictionary<NSString *, DKPicker> *)pickers {
-    NSMutableDictionary<NSString *, DKPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
+- (NSMutableDictionary<NSString *, DKColorPicker> *)pickers {
+    NSMutableDictionary<NSString *, DKColorPicker> *pickers = objc_getAssociatedObject(self, @selector(pickers));
     if (!pickers) {
         
         @autoreleasepool {
@@ -46,7 +46,7 @@ static void *DKViewDeallocHelperKey;
 }
 
 - (void)night_updateColor {
-    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKPicker  _Nonnull picker, BOOL * _Nonnull stop) {
+    [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
         id result = picker();
         [UIView animateWithDuration:DKNightVersionAnimationDuration

@@ -43,7 +43,7 @@
 }
 
 - (void)switchColor {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedNightVersionManager];
+    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
     if (manager.themeVersion == DKThemeVersionNormal) {
         [DKNightVersionManager nightFalling];
     } else {

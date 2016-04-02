@@ -14,7 +14,7 @@
 
 @interface UISlider ()
 
-@property (nonatomic, strong) NSMutableDictionary<NSString *, DKPicker> *pickers;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
 
 @end
 
