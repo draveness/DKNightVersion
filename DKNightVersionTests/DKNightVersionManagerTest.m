@@ -12,32 +12,31 @@
 
 @interface DKNightVersionManagerTest : XCTestCase
 
+@property (nonatomic, strong) DKNightVersionManager *manager;
+
 @end
 
 @implementation DKNightVersionManagerTest
 
 - (void)setUp {
     [super setUp];
+    self.manager = [DKNightVersionManager sharedManager];
 }
 
 - (void)tearDown {
     [super tearDown];
-}
-
-- (void)testManagerDefaultThemeVersion {
-    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
-    XCTAssert(themeVersion == DKThemeVersionNormal, @"DKNightVersionManager default theme version should be DKThemeVersionNormal");
+    self.manager = nil;
 }
 
 - (void)testDawnComing {
     [DKNightVersionManager dawnComing];
-    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
+    DKThemeVersion *themeVersion = self.manager.themeVersion;
     XCTAssert(themeVersion == DKThemeVersionNormal, @"After execute dawn coming method, DKNightVersionManager theme version should be DKThemeVersionNormal");
 }
 
 - (void)testNightFalling {
     [DKNightVersionManager nightFalling];
-    DKThemeVersion *themeVersion = [DKNightVersionManager sharedNightVersionManager].themeVersion;
+    DKThemeVersion *themeVersion = self.manager.themeVersion;
     XCTAssert(themeVersion == DKThemeVersionNight, @"After execute night falling method, DKNightVersionManager theme version should be DKThemeVersionNight");
 }
 
