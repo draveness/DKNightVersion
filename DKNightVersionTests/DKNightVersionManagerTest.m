@@ -31,13 +31,13 @@
 - (void)testDawnComing {
     [DKNightVersionManager dawnComing];
     DKThemeVersion *themeVersion = self.manager.themeVersion;
-    XCTAssert(themeVersion == DKThemeVersionNormal, @"After execute dawn coming method, DKNightVersionManager theme version should be DKThemeVersionNormal");
+    XCTAssert([self.manager.themeVersion isEqualToString:themeVersion], @"After execute dawn coming method, DKNightVersionManager theme version should be DKThemeVersionNormal");
 }
 
 - (void)testNightFalling {
     [DKNightVersionManager nightFalling];
     DKThemeVersion *themeVersion = self.manager.themeVersion;
-    XCTAssert(themeVersion == DKThemeVersionNight, @"After execute night falling method, DKNightVersionManager theme version should be DKThemeVersionNight");
+    XCTAssert([self.manager.themeVersion isEqualToString:themeVersion], @"After execute night falling method, DKNightVersionManager theme version should be DKThemeVersionNight");
 }
 
 - (void)testDawnComingPerformance {

@@ -8,12 +8,14 @@
 
 #import "DKNightVersionManager.h"
 
-NSString *const DKThemeVersionNormal = @"NORMAL";
-NSString *const DKThemeVersionNight = @"NIGHT";
+NSString * const DKThemeVersionNormal = @"NORMAL";
+NSString * const DKThemeVersionNight = @"NIGHT";
 
-NSString *const DKNightVersionThemeChangingNotificaiton = @"DKNightVersionThemeChangingNotificaiton";
+NSString * const DKNightVersionThemeChangingNotificaiton = @"DKNightVersionThemeChangingNotificaiton";
 
 CGFloat const DKNightVersionAnimationDuration = 0.3;
+
+NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.manager.themeversion";
 
 @interface DKNightVersionManager ()
 
@@ -27,7 +29,10 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
     dispatch_once(&once, ^{
         instance = [self new];
         instance.changeStatusBar = YES;
-        instance.themeVersion = DKThemeVersionNormal;
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        DKThemeVersion *themeVersion = [userDefaults valueForKey:DKNightVersionCurrentThemeVersionKey];
+        themeVersion = themeVersion ?: DKThemeVersionNormal;
+        instance.themeVersion = themeVersion;
     });
     return instance;
 }
@@ -39,33 +44,35 @@ CGFloat const DKNightVersionAnimationDuration = 0.3;
 + (void)nightFalling {
     DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
     manager.themeVersion = DKThemeVersionNight;
-    if (manager.shouldChangeStatusBar) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-#pragma clang diagnostic pop
-    }
 }
 
 + (void)dawnComing {
     DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
     manager.themeVersion = DKThemeVersionNormal;
-    if (manager.shouldChangeStatusBar) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-#pragma clang diagnostic pop
-    }
 }
 
 - (void)setThemeVersion:(DKThemeVersion *)themeVersion {
-    if (_themeVersion == themeVersion) {
+    if ([_themeVersion isEqualToString:themeVersion]) {
         // if type does not change, don't execute code below to enhance performance.
         return;
     }
     _themeVersion = themeVersion;
+
+    // Save current theme version to user default
+    [[NSUserDefaults standardUserDefaults] setValue:themeVersion forKey:DKNightVersionCurrentThemeVersionKey];
     [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotificaiton
                                                         object:nil];
+
+    if (self.shouldChangeStatusBar) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        if ([themeVersion isEqualToString:DKThemeVersionNormal]) {
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        } else {
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        }
+#pragma clang diagnostic pop
+    }
 }
 
 @end

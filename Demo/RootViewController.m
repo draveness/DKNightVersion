@@ -48,7 +48,7 @@
 - (void)change {
     DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
 
-    if (manager.themeVersion == DKThemeVersionNight) {
+    if ([manager.themeVersion isEqualToString:DKThemeVersionNight]) {
         [DKNightVersionManager dawnComing];
     } else {
         [DKNightVersionManager nightFalling];

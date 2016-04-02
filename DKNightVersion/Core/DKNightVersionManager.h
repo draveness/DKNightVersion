@@ -12,9 +12,10 @@
 
 typedef NSString DKThemeVersion;
 
-extern NSString *const DKNightVersionThemeChangingNotificaiton;
-extern DKThemeVersion *const DKThemeVersionNormal;
-extern DKThemeVersion *const DKThemeVersionNight;
+extern NSString * const DKNightVersionThemeChangingNotificaiton;
+
+extern DKThemeVersion * const DKThemeVersionNormal;
+extern DKThemeVersion * const DKThemeVersionNight;
 
 extern CGFloat const DKNightVersionAnimationDuration;
 
