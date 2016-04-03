@@ -10,12 +10,16 @@
 #import "DKColor.h"
 #import "DKImage.h"
 
+/**
+ *  DKThemeVersion is just a alias to string, use `- isEqualToString` to
+ *  compare with each `DKThemeVersion` instead of symbol `==`.
+ */
 typedef NSString DKThemeVersion;
-
-extern NSString * const DKNightVersionThemeChangingNotificaiton;
 
 extern DKThemeVersion * const DKThemeVersionNormal;
 extern DKThemeVersion * const DKThemeVersionNight;
+
+extern NSString * const DKNightVersionThemeChangingNotificaiton;
 
 extern CGFloat const DKNightVersionAnimationDuration;
 

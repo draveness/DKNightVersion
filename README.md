@@ -78,7 +78,7 @@ NORMAL   NIGHT   RED
 When you successfully and `RED`, you can change to `RED` theme by this, it will trigger global theme change to `RED`.
 
 ```objectivec
-[DKNightVersionManager sharedNightVersionManager].themeVersion = @"RED";
+[DKNightVersionManager sharedManager].themeVersion = @"RED";
 ```
 
 Use `DKPickerWithKey` to generate a DKColorPicker
@@ -230,3 +230,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
