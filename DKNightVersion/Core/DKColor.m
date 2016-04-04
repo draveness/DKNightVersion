@@ -95,28 +95,28 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
     return [self pickerWithUIColor:[UIColor clearColor]];
 }
 
-+ (DKColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha {
++ (DKColorPicker)colorPickerWithWhite:(CGFloat)white alpha:(CGFloat)alpha {
     return [self pickerWithUIColor:[UIColor colorWithWhite:white alpha:alpha]];
 }
 
-+ (DKColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha {
++ (DKColorPicker)colorPickerWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha {
     return [self pickerWithUIColor:[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha]];
 }
 
-+ (DKColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
++ (DKColorPicker)colorPickerWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     return [self pickerWithUIColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha]];
 }
 
-+ (DKColorPicker)colorWithCGColor:(CGColorRef)cgColor {
++ (DKColorPicker)colorPickerWithCGColor:(CGColorRef)cgColor {
     return [self pickerWithUIColor:[UIColor colorWithCGColor:cgColor]];
 }
 
-+ (DKColorPicker)colorWithPatternImage:(UIImage *)image {
++ (DKColorPicker)colorPickerWithPatternImage:(UIImage *)image {
     return [self pickerWithUIColor:[UIColor colorWithPatternImage:image]];
 }
 
 #if __has_include(<CoreImage/CoreImage.h>)
-+ (DKColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0) {
++ (DKColorPicker)colorPickerWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0) {
     return [self pickerWithUIColor:[UIColor colorWithCIColor:ciColor]];
 }
 #endif

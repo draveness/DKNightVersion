@@ -19,13 +19,13 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 
 + (DKColorPicker)pickerWithUIColor:(UIColor *)color;
 
-+ (DKColorPicker)colorWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-+ (DKColorPicker)colorWithCGColor:(CGColorRef)cgColor;
-+ (DKColorPicker)colorWithPatternImage:(UIImage *)image;
++ (DKColorPicker)colorPickerWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
++ (DKColorPicker)colorPickerWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
++ (DKColorPicker)colorPickerWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
++ (DKColorPicker)colorPickerWithCGColor:(CGColorRef)cgColor;
++ (DKColorPicker)colorPickerWithPatternImage:(UIImage *)image;
 #if __has_include(<CoreImage/CoreImage.h>)
-+ (DKColorPicker)colorWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
++ (DKColorPicker)colorPickerWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0);
 #endif
 
 + (DKColorPicker)blackColor;
