@@ -16,13 +16,35 @@
  */
 typedef NSString DKThemeVersion;
 
+/**
+ *  DKThemeVersionNormal is just a const string @"NORMAL", but use `- isEqualToString:`
+ *  to compare with another string.
+ */
 extern DKThemeVersion * const DKThemeVersionNormal;
+
+/**
+ *  DKThemeVersionNight is just a const string @"NIGHT", but use `- isEqualToString:`
+ *  to compare with another string.
+ */
 extern DKThemeVersion * const DKThemeVersionNight;
 
+/**
+ *  This notification will post, every time you change current theme version
+ *  of DKNightVersionManager glbal instance.
+ */
 extern NSString * const DKNightVersionThemeChangingNotificaiton;
 
+/**
+ *  When change theme version, it will gives us a smooth animation. And this
+ *  is the duration for this animation.
+ */
 extern CGFloat const DKNightVersionAnimationDuration;
 
+/**
+ *  DKNightVersionManager is the core class for DKNightVersion, it manages all
+ *  the different themes in the color table. Use `- sharedInstance` instead of 
+ *  `- init` to get an instance.
+ */
 @interface DKNightVersionManager : NSObject
 
 /**
