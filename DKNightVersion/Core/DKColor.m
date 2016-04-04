@@ -29,95 +29,95 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
     };
 }
 
-+ (DKColorPicker)pickerWithUIColor:(UIColor *)color {
++ (DKColorPicker)colorPickerWithUIColor:(UIColor *)color {
     return ^(DKThemeVersion *themeVersion) {
         return color;
     };
 }
 
 + (DKColorPicker)blackColor {
-    return [self pickerWithUIColor:[UIColor blackColor]];
+    return [self colorPickerWithUIColor:[UIColor blackColor]];
 }
 
 + (DKColorPicker)darkGrayColor {
-    return [self pickerWithUIColor:[UIColor darkGrayColor]];
+    return [self colorPickerWithUIColor:[UIColor darkGrayColor]];
 }
 
 + (DKColorPicker)lightGrayColor {
-    return [self pickerWithUIColor:[UIColor lightGrayColor]];
+    return [self colorPickerWithUIColor:[UIColor lightGrayColor]];
 }
 
 + (DKColorPicker)whiteColor {
-    return [self pickerWithUIColor:[UIColor whiteColor]];
+    return [self colorPickerWithUIColor:[UIColor whiteColor]];
 }
 
 + (DKColorPicker)grayColor {
-    return [self pickerWithUIColor:[UIColor grayColor]];
+    return [self colorPickerWithUIColor:[UIColor grayColor]];
 }
 
 + (DKColorPicker)redColor {
-    return [self pickerWithUIColor:[UIColor redColor]];
+    return [self colorPickerWithUIColor:[UIColor redColor]];
 }
 
 + (DKColorPicker)greenColor {
-    return [self pickerWithUIColor:[UIColor greenColor]];
+    return [self colorPickerWithUIColor:[UIColor greenColor]];
 }
 
 + (DKColorPicker)blueColor {
-    return [self pickerWithUIColor:[UIColor blueColor]];
+    return [self colorPickerWithUIColor:[UIColor blueColor]];
 }
 
 + (DKColorPicker)cyanColor {
-    return [self pickerWithUIColor:[UIColor cyanColor]];
+    return [self colorPickerWithUIColor:[UIColor cyanColor]];
 }
 
 + (DKColorPicker)yellowColor {
-    return [self pickerWithUIColor:[UIColor yellowColor]];
+    return [self colorPickerWithUIColor:[UIColor yellowColor]];
 }
 
 + (DKColorPicker)magentaColor {
-    return [self pickerWithUIColor:[UIColor magentaColor]];
+    return [self colorPickerWithUIColor:[UIColor magentaColor]];
 }
 
 + (DKColorPicker)orangeColor {
-    return [self pickerWithUIColor:[UIColor orangeColor]];
+    return [self colorPickerWithUIColor:[UIColor orangeColor]];
 }
 
 + (DKColorPicker)purpleColor {
-    return [self pickerWithUIColor:[UIColor purpleColor]];
+    return [self colorPickerWithUIColor:[UIColor purpleColor]];
 }
 
 + (DKColorPicker)brownColor {
-    return [self pickerWithUIColor:[UIColor brownColor]];
+    return [self colorPickerWithUIColor:[UIColor brownColor]];
 }
 
 + (DKColorPicker)clearColor {
-    return [self pickerWithUIColor:[UIColor clearColor]];
+    return [self colorPickerWithUIColor:[UIColor clearColor]];
 }
 
 + (DKColorPicker)colorPickerWithWhite:(CGFloat)white alpha:(CGFloat)alpha {
-    return [self pickerWithUIColor:[UIColor colorWithWhite:white alpha:alpha]];
+    return [self colorPickerWithUIColor:[UIColor colorWithWhite:white alpha:alpha]];
 }
 
 + (DKColorPicker)colorPickerWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha {
-    return [self pickerWithUIColor:[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha]];
+    return [self colorPickerWithUIColor:[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha]];
 }
 
 + (DKColorPicker)colorPickerWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
-    return [self pickerWithUIColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha]];
+    return [self colorPickerWithUIColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha]];
 }
 
 + (DKColorPicker)colorPickerWithCGColor:(CGColorRef)cgColor {
-    return [self pickerWithUIColor:[UIColor colorWithCGColor:cgColor]];
+    return [self colorPickerWithUIColor:[UIColor colorWithCGColor:cgColor]];
 }
 
 + (DKColorPicker)colorPickerWithPatternImage:(UIImage *)image {
-    return [self pickerWithUIColor:[UIColor colorWithPatternImage:image]];
+    return [self colorPickerWithUIColor:[UIColor colorWithPatternImage:image]];
 }
 
 #if __has_include(<CoreImage/CoreImage.h>)
 + (DKColorPicker)colorPickerWithCIColor:(CIColor *)ciColor NS_AVAILABLE_IOS(5_0) {
-    return [self pickerWithUIColor:[UIColor colorWithCIColor:ciColor]];
+    return [self colorPickerWithUIColor:[UIColor colorWithCIColor:ciColor]];
 }
 #endif
 

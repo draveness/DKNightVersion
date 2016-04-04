@@ -17,7 +17,7 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 
 @interface DKColor : NSObject
 
-+ (DKColorPicker)pickerWithUIColor:(UIColor *)color;
++ (DKColorPicker)colorPickerWithUIColor:(UIColor *)color;
 
 + (DKColorPicker)colorPickerWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
 + (DKColorPicker)colorPickerWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;

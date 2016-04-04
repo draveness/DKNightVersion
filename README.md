@@ -118,7 +118,7 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 `DKColor` also provides a cluster of convienient `API` like `UIColor` which returns `DKColorPicker` block, these block return the same color when switch to night mode or switch back.
 
 ```objectivec
-+ (DKColorPicker)pickerWithUIColor:(UIColor *)color;
++ (DKColorPicker)colorPickerWithUIColor:(UIColor *)color;
 + (DKColorPicker)colorPickerWithWhite:(CGFloat)white alpha:(CGFloat)alpha;
 + (DKColorPicker)colorPickerWithHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
 + (DKColorPicker)colorPickerWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
