@@ -23,7 +23,7 @@
     [super viewDidLoad];
 
     self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
-    self.navigationController.navigationBar.dk_tintColorPicker = DKColorPickerWithColors([UIColor blueColor], [UIColor redColor]);
+    self.navigationController.navigationBar.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 }
 
 @end

@@ -32,17 +32,33 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Present" style:UIBarButtonItemStylePlain target:self action:@selector(present)];
     self.navigationItem.leftBarButtonItem = item;
 
-    item = [[UIBarButtonItem alloc] initWithTitle:@"Change" style:UIBarButtonItemStylePlain target:self action:@selector(change)];
-    self.navigationItem.rightBarButtonItem = item;
+    UIBarButtonItem *normalItem = [[UIBarButtonItem alloc] initWithTitle:@"Normal" style:UIBarButtonItemStylePlain target:self action:@selector(normal)];
+    normalItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    UIBarButtonItem *nightItem = [[UIBarButtonItem alloc] initWithTitle:@"Night" style:UIBarButtonItemStylePlain target:self action:@selector(night)];
+    nightItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    UIBarButtonItem *redItem = [[UIBarButtonItem alloc] initWithTitle:@"Red" style:UIBarButtonItemStylePlain target:self action:@selector(red)];
+    redItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 
+    self.navigationItem.rightBarButtonItems = @[normalItem, nightItem, redItem];
 
     self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
-    self.tableView.dk_separatorColorPicker = DKColorPickerWithRGB(0xaaaaaa, 0x313131);
-    navigationLabel.dk_textColorPicker = DKColorPickerWithColors([UIColor blackColor], [UIColor whiteColor]);
-    self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithRGB(0xffffff, 0x444444);
-    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorPickerWithColors([UIColor blueColor], [UIColor whiteColor]);
-    self.navigationItem.rightBarButtonItem.dk_tintColorPicker = DKColorPickerWithColors([UIColor blueColor], [UIColor whiteColor]);
+    self.tableView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
+    navigationLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+    self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 
+}
+
+- (void)night {
+    self.dk_manager.themeVersion = DKThemeVersionNight;
+}
+
+- (void)normal {
+    self.dk_manager.themeVersion = DKThemeVersionNormal;
+}
+
+- (void)red {
+    self.dk_manager.themeVersion = @"RED";
 }
 
 - (void)change {
