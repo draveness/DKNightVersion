@@ -22,14 +22,13 @@ DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night) {
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage {
     NSAssert(normalImage, @"- pickerWithNormalImage:nightImage: lack parameter normalImage");
     NSAssert(nightImage, @"- pickerWithNormalImage:nightImage: lack parameter nightImage");
-    return ^() {
-        DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-        return [manager.themeVersion isEqualToString:DKThemeVersionNormal] ? normalImage : nightImage;
+    return ^(DKThemeVersion *themeVersion) {
+        return [themeVersion isEqualToString:DKThemeVersionNormal] ? normalImage : nightImage;
     };
 }
 
 + (DKImagePicker)pickerWithImage:(UIImage *)image {
-    return ^() {
+    return ^(DKThemeVersion *themeVersion) {
         return image;
     };
 }

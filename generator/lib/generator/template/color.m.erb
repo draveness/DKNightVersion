@@ -27,7 +27,7 @@
 
 - (void)dk_set#{property.cap_name}Picker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_#{property.name}Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.#{property.name} = picker();
+    self.#{property.name} = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@\"#{property.setter}\"];
 }
 """ %><% end %>

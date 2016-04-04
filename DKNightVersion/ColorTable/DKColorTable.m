@@ -95,8 +95,8 @@ UIColor *colorFromRGB(NSUInteger hex) {
 - (DKColorPicker)pickerWithKey:(NSString *)key {
     NSAssert(key != nil, @"Parameter key must not be nil");
     NSDictionary *themeToColorDictionary = [self.table valueForKey:key];
-    DKColorPicker picker = ^() {
-        return [themeToColorDictionary valueForKey:[[DKNightVersionManager sharedManager] themeVersion]];
+    DKColorPicker picker = ^(DKThemeVersion *themeVersion) {
+        return [themeToColorDictionary valueForKey:themeVersion];
     };
     return picker;
 

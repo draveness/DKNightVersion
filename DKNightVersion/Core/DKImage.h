@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef UIImage *(^DKImagePicker)(void);
+typedef NSString DKThemeVersion;
+
+typedef UIImage *(^DKImagePicker)(DKThemeVersion *themeVersion);
 
 DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
 DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);

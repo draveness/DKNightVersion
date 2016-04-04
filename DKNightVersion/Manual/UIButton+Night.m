@@ -18,7 +18,7 @@
 @implementation UIButton (Night)
 
 - (void)dk_setTitleColorPicker:(DKColorPicker)picker forState:(UIControlState)state {
-    [self setTitleColor:picker() forState:state];
+    [self setTitleColor:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
     if (!dictionary) {
@@ -29,7 +29,7 @@
 }
 
 - (void)dk_setBackgroundImage:(DKImagePicker)picker forState:(UIControlState)state {
-    [self setBackgroundImage:picker() forState:state];
+    [self setBackgroundImage:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
     if (!dictionary) {
@@ -40,7 +40,7 @@
 }
 
 - (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state {
-    [self setImage:picker() forState:state];
+    [self setImage:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
     if (!dictionary) {
@@ -59,13 +59,13 @@
                 [UIView animateWithDuration:DKNightVersionAnimationDuration
                                  animations:^{
                                      if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleColor:forState:))]) {
-                                         UIColor *resultColor = picker();
+                                         UIColor *resultColor = picker(self.dk_manager.themeVersion);
                                          [self setTitleColor:resultColor forState:state];
                                      } else if ([selector isEqualToString:NSStringFromSelector(@selector(setBackgroundImage:forState:))]) {
-                                         UIImage *resultImage = ((DKImagePicker)picker)();
+                                         UIImage *resultImage = ((DKImagePicker)picker)(self.dk_manager.themeVersion);
                                          [self setBackgroundImage:resultImage forState:state];
                                      } else if ([selector isEqualToString:NSStringFromSelector(@selector(setImage:forState:))]) {
-                                         UIImage *resultImage = ((DKImagePicker)picker)();
+                                         UIImage *resultImage = ((DKImagePicker)picker)(self.dk_manager.themeVersion);
                                          [self setImage:resultImage forState:state];
                                      }
                                  }];
@@ -73,7 +73,7 @@
         } else {
             SEL sel = NSSelectorFromString(key);
             DKColorPicker picker = (DKColorPicker)obj;
-            UIColor *resultColor = picker();
+            UIColor *resultColor = picker(self.dk_manager.themeVersion);
             [UIView animateWithDuration:DKNightVersionAnimationDuration
                              animations:^{
 #pragma clang diagnostic push

@@ -27,7 +27,7 @@
 
 - (void)dk_setSeparatorColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_separatorColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.separatorColor = picker();
+    self.separatorColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setSeparatorColor:"];
 }
 

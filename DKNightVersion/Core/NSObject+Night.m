@@ -45,10 +45,14 @@ static void *DKViewDeallocHelperKey;
     return pickers;
 }
 
+- (DKNightVersionManager *)dk_manager {
+    return [DKNightVersionManager sharedManager];
+}
+
 - (void)night_updateColor {
     [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(selector);
-        id result = picker();
+        id result = picker(self.dk_manager.themeVersion);
         [UIView animateWithDuration:DKNightVersionAnimationDuration
                          animations:^{
 #pragma clang diagnostic push

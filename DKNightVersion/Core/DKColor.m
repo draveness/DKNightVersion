@@ -18,21 +18,19 @@ DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night) {
 }
 
 DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor) {
-    return ^() {
-        DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-        return [manager.themeVersion isEqualToString:DKThemeVersionNormal] ? normalColor : nightColor;
+    return ^(DKThemeVersion *themeVersion) {
+        return [themeVersion isEqualToString:DKThemeVersionNormal] ? normalColor : nightColor;
     };
 }
 
 + (DKColorPicker)pickerWithNormalColor:(UIColor *)normalColor nightColor:(UIColor *)nightColor {
-    return ^() {
-        DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-        return [manager.themeVersion isEqualToString:DKThemeVersionNormal] ? normalColor : nightColor;
+    return ^(DKThemeVersion *themeVersion) {
+        return [themeVersion isEqualToString:DKThemeVersionNormal] ? normalColor : nightColor;
     };
 }
 
 + (DKColorPicker)pickerWithUIColor:(UIColor *)color {
-    return ^() {
+    return ^(DKThemeVersion *themeVersion) {
         return color;
     };
 }

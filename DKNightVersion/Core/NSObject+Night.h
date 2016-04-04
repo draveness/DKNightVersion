@@ -11,4 +11,6 @@
 
 @interface NSObject (Night)
 
+@property (nonatomic, strong, readonly) DKNightVersionManager *dk_manager;
+
 @end

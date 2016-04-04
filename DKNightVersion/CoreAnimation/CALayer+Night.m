@@ -23,7 +23,7 @@
 
 - (void)setDk_shadowColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_shadowColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.shadowColor = picker().CGColor;
+    self.shadowColor = picker(self.dk_manager.themeVersion).CGColor;
     [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setShadowColor:))];
 }
 
@@ -33,7 +33,7 @@
 
 - (void)setDk_borderColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_borderColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.borderColor = picker().CGColor;
+    self.borderColor = picker(self.dk_manager.themeVersion).CGColor;
     [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBorderColor:))];
 }
 
@@ -43,13 +43,13 @@
 
 - (void)setDk_backgroundColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    self.backgroundColor = picker().CGColor;
+    self.backgroundColor = picker(self.dk_manager.themeVersion).CGColor;
     [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBorderColor:))];
 }
 
 - (void)night_updateColor {
     [self.pickers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull selector, DKColorPicker  _Nonnull picker, BOOL * _Nonnull stop) {
-        CGColorRef result = picker().CGColor;
+        CGColorRef result = picker(self.dk_manager.themeVersion).CGColor;
         [UIView animateWithDuration:DKNightVersionAnimationDuration
                          animations:^{
 #pragma clang diagnostic push
