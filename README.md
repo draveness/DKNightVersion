@@ -50,7 +50,7 @@ $ pod update
 Add this line to your `podfile`
 
 ```shell
-pod "DKNightVersion", "~> 2.0.0"
+pod "DKNightVersion", "~> 2.1.0"
 ```
 
 ### Import
