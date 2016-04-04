@@ -13,6 +13,8 @@
 #import "TableViewCell.h"
 
 
+@pickerify(TableViewCell, cellTintColor)
+
 
 @interface RootViewController ()
 
@@ -90,7 +92,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-
+    cell.dk_cellTintColorPicker = DKColorPickerWithKey(BG);
     return cell;
 }
 

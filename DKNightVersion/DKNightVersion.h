@@ -14,6 +14,8 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #ifndef _DKNIGHTVERSION_
 #define _DKNIGHTVERSION_
 
+#import <objc/runtime.h>
+
 #import "DKColor.h"
 #import "DKImage.h"
 #import "DKNightVersionManager.h"
@@ -40,6 +42,30 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #import "UIView+Night.h"
 #import "UIButton+Night.h"
 #import "UIImageView+Night.h"
+
+#define _DKSetterWithProperty(lowercase) [NSString stringWithFormat:@"set%@:", [[[lowercase substringToIndex:1] uppercaseString] stringByAppendingString:[lowercase substringFromIndex:1]]]
+
+#define pickerify(klass, prop) interface \
+    klass (Night) \
+    @property (nonatomic, copy, setter = dk_set ## prop ## Picker:) DKColorPicker dk_ ## prop ## Picker; \
+    @end \
+    @interface \
+    klass () \
+    @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers; \
+    @end \
+    @implementation \
+    klass (Night) \
+    - (DKColorPicker)dk_ ## prop ## Picker { \
+    return objc_getAssociatedObject(self, @selector(dk_ ## prop ## Picker)); \
+    } \
+    - (void)dk_set ## prop ## Picker:(DKColorPicker)picker { \
+    objc_setAssociatedObject(self, @selector(dk_ ## prop ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
+    [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@#prop];\
+    [self.pickers setValue:[picker copy] forKey:_DKSetterWithProperty(@#prop)]; \
+    } \
+    @end
+
+
 
 
 #endif /* _DKNIGHTVERSION_ */
