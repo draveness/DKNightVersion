@@ -80,7 +80,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
  *  be set to `DKNightVersionNight`. This is a convinient method for switching theme the
  *  `DKThemeVersionNight`.
  */
-+ (void)nightFalling;
+- (void)nightFalling;
 
 /**
  *  Dawn coming. When dawnComing is called, post `DKNightVersionThemeChangingNotificaiton`.
@@ -88,7 +88,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
  *  be set to `DKNightVersionNormal`. This is a convinient method for switching theme the
  *  `DKThemeVersionNormal`.
  */
-+ (void)dawnComing;
+- (void)dawnComing;
 
 /** 
  *  This method is deprecated, use `- [DKNightVersion sharedManager]` instead

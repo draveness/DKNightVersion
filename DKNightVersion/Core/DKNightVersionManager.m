@@ -41,14 +41,12 @@ NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.man
     return [self sharedManager];
 }
 
-+ (void)nightFalling {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-    manager.themeVersion = DKThemeVersionNight;
+- (void)nightFalling {
+    self.themeVersion = DKThemeVersionNight;
 }
 
-+ (void)dawnComing {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-    manager.themeVersion = DKThemeVersionNormal;
+- (void)dawnComing {
+    self.themeVersion = DKThemeVersionNormal;
 }
 
 - (void)setThemeVersion:(DKThemeVersion *)themeVersion {

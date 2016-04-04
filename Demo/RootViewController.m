@@ -46,12 +46,11 @@
 }
 
 - (void)change {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
 
-    if ([manager.themeVersion isEqualToString:DKThemeVersionNight]) {
-        [DKNightVersionManager dawnComing];
+    if ([self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
+        [self.dk_manager dawnComing];
     } else {
-        [DKNightVersionManager nightFalling];
+        [self.dk_manager nightFalling];
     }
 }
 

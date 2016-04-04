@@ -43,11 +43,10 @@
 }
 
 - (void)switchColor {
-    DKNightVersionManager *manager = [DKNightVersionManager sharedManager];
-    if ([manager.themeVersion isEqualToString:DKThemeVersionNormal]) {
-        [DKNightVersionManager nightFalling];
+    if ([self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
+        [self.dk_manager dawnComing];
     } else {
-        [DKNightVersionManager dawnComing];
+        [self.dk_manager nightFalling];
     }
 }
 
