@@ -11,11 +11,11 @@
 
 @implementation DKImage
 
-DKImagePicker DKImageWithNames(NSString *normal, NSString *night) {
+DKImagePicker DKImagePickerWithNames(NSString *normal, NSString *night) {
     return [DKImage pickerWithNormalImage:[UIImage imageNamed:normal] nightImage:[UIImage imageNamed:night]];
 }
 
-DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night) {
+DKImagePicker DKImagePickerWithImages(UIImage *normal, UIImage *night) {
     return [DKImage pickerWithNormalImage:normal nightImage:night];
 }
 

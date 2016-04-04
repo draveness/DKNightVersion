@@ -12,8 +12,8 @@ typedef NSString DKThemeVersion;
 
 typedef UIImage *(^DKImagePicker)(DKThemeVersion *themeVersion);
 
-DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
-DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
+DKImagePicker DKImagePickerWithNames(NSString *normal, NSString *night);
+DKImagePicker DKImagePickerWithImages(UIImage *normal, UIImage *night);
 
 @interface DKImage : NSObject
 

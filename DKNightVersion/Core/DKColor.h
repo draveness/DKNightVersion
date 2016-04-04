@@ -12,8 +12,8 @@ typedef NSString DKThemeVersion;
 
 typedef UIColor *(^DKColorPicker)(DKThemeVersion *themeVersion);
 
-DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
-DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
+DKColorPicker DKColorPickerWithRGB(NSUInteger normal, NSUInteger night);
+DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor);
 
 @interface DKColor : NSObject
 

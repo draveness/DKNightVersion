@@ -81,10 +81,10 @@ When you successfully and `RED`, you can change to `RED` theme by this, it will 
 [DKNightVersionManager sharedManager].themeVersion = @"RED";
 ```
 
-Use `DKPickerWithKey` to generate a DKColorPicker
+Use `DKColorPickerWithKey` to generate a DKColorPicker
 
 ```objectivec
-self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
+self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 ```
 
 ## Night color
@@ -92,9 +92,9 @@ self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
 DKNightVersion is based on picker, such as `dk_backgroundColorPicker` `dk_separatorColorPicker` and etc. Assign the night mode color picker you want to the `UIKit` component like this:
 
 ```objectivec
-self.tableView.dk_backgroundColorPicker =  DKColorWithRGB(0xffffff, 0x343434);
-self.tableView.dk_separatorColorPicker = DKColorWithRGB(0xaaaaaa, 0x313131);
-navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UIColor whiteColor]);
+self.tableView.dk_backgroundColorPicker =  DKColorPickerWithRGB(0xffffff, 0x343434);
+self.tableView.dk_separatorColorPicker = DKColorPickerWithRGB(0xaaaaaa, 0x313131);
+navigationLabel.dk_textColorPicker = DKColorPickerWithColors([UIColor blackColor], [UIColor whiteColor]);
 ```
 
 ## Night Image
@@ -102,7 +102,7 @@ navigationLabel.dk_textColorPicker = DKColorWithColors([UIColor blackColor], [UI
 DKNightVersion providing new `API` to support image switching.
 
 ```objectivec
-imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
+imageView.dk_imagePicker = DKImagePickerWithNames(@"normal1", @"night1");
 ```
 
 
@@ -111,8 +111,8 @@ imageView.dk_imagePicker = DKImageWithNames(@"normal1", @"night1");
 `DKColor` provides `- pickerWithNormalColor:nightColor:` to create `DKColorPicker`.
 
 ```objectivec
-DKColorPicker DKColorWithRGB(NSUInteger normal, NSUInteger night);
-DKColorPicker DKColorWithColors(UIColor *normalColor, UIColor *nightColor);
+DKColorPicker DKColorPickerWithRGB(NSUInteger normal, NSUInteger night);
+DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor);
 ```
 
 `DKColor` also provides a cluster of convienient `API` like `UIColor` which returns `DKColorPicker` block, these block return the same color when switch to night mode or switch back.
@@ -165,8 +165,8 @@ DKPickerFromTable(NSString *key)
 DKImage is similar with DKColor which contains methods to generate `DKImagePicker`
 
 ```objectivec
-DKImagePicker DKImageWithNames(NSString *normal, NSString *night);
-DKImagePicker DKImageWithImages(UIImage *normal, UIImage *night);
+DKImagePicker DKImagePickerWithNames(NSString *normal, NSString *night);
+DKImagePicker DKImagePickerWithImages(UIImage *normal, UIImage *night);
 ```
 
 

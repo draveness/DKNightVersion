@@ -16,7 +16,7 @@
  *
  *  @return DKColorPicker
  */
-#define DKPickerWithKey(key) [[DKColorTable sharedColorTable] pickerWithKey:@#key]
+#define DKColorPickerWithKey(key) [[DKColorTable sharedColorTable] pickerWithKey:@#key]
 
 /**
  *  DKColorTable is a new feature in 2.x, which providing you a very convinient and
@@ -58,7 +58,7 @@
 - (void)reloadColorTable;
 
 /**
- *  Return a `DKColorPicker` with `key`, but I suggest you use marcho `DKPickerWithKey(key)`
+ *  Return a `DKColorPicker` with `key`, but I suggest you use marcho `DKColorPickerWithKey(key)`
  *  instead of calling this method.
  *
  *  Ex:
@@ -67,7 +67,7 @@
  *      #ffffff  #343434 BG
  *      #aaaaaa  #313131 SEP
  *  
- *      self.view.dk_backgroundColorPicker = DKPickerWithKey(BG);
+ *      self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
  *
  *  If current themeVersion is NORMAL, view's background color will be set to #ffffff. When theme
  *  changes, it will automatically reload color from global color table and update current color
