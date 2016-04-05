@@ -44,7 +44,7 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #import "UIImageView+Night.h"
 
 #import "metamacros.h"
-#import "extobjc/EXTKeyPathCoding.h"
+#import "EXTKeyPathCoding.h"
 
 #define _DKSetterWithPROPERTYerty(LOWERCASE) [NSString stringWithFormat:@"set%@:", [[[LOWERCASE substringToIndex:1] uppercaseString] stringByAppendingString:[LOWERCASE substringFromIndex:1]]]
 
