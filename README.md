@@ -33,7 +33,9 @@
 	+ [DKImagePicker](#dkimagepicker)
 
 
-# Get Started
+# How To Get Started
+
+DKNightVersion supports multiple methods for installing the library in a project.
 
 ## Installation with CocoaPods
 
@@ -41,17 +43,18 @@
 
 ### Podfile
 
-Run following script in termianl
-
-```shell
-$ pod update
-```
-
-Add this line to your `podfile`
+To integrate DKNightVersion into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```shell
 pod "DKNightVersion", "~> 2.1.0"
 ```
+
+Then, run the following command:
+
+```shell
+$ pod install
+```
+
 
 ### Import
 
