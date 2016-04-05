@@ -43,25 +43,25 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #import "UIButton+Night.h"
 #import "UIImageView+Night.h"
 
-#define _DKSetterWithProperty(lowercase) [NSString stringWithFormat:@"set%@:", [[[lowercase substringToIndex:1] uppercaseString] stringByAppendingString:[lowercase substringFromIndex:1]]]
+#define _DKSetterWithPROPERTYerty(LOWERCASE) [NSString stringWithFormat:@"set%@:", [[[LOWERCASE substringToIndex:1] uppercaseString] stringByAppendingString:[LOWERCASE substringFromIndex:1]]]
 
-#define pickerify(klass, prop) interface \
-    klass (Night) \
-    @property (nonatomic, copy, setter = dk_set ## prop ## Picker:) DKColorPicker dk_ ## prop ## Picker; \
+#define pickerify(KLASS, PROPERTY) interface \
+    KLASS (Night) \
+    @property (nonatomic, copy, setter = dk_set ## PROPERTY ## Picker:) DKColorPicker dk_ ## PROPERTY ## Picker; \
     @end \
     @interface \
-    klass () \
+    KLASS () \
     @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers; \
     @end \
     @implementation \
-    klass (Night) \
-    - (DKColorPicker)dk_ ## prop ## Picker { \
-    return objc_getAssociatedObject(self, @selector(dk_ ## prop ## Picker)); \
+    KLASS (Night) \
+    - (DKColorPicker)dk_ ## PROPERTY ## Picker { \
+        return objc_getAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker)); \
     } \
-    - (void)dk_set ## prop ## Picker:(DKColorPicker)picker { \
-    objc_setAssociatedObject(self, @selector(dk_ ## prop ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
-    [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@#prop];\
-    [self.pickers setValue:[picker copy] forKey:_DKSetterWithProperty(@#prop)]; \
+    - (void)dk_set ## PROPERTY ## Picker:(DKColorPicker)picker { \
+        objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
+        [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@#PROPERTY];\
+        [self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
     } \
     @end
 
