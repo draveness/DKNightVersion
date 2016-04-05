@@ -12,9 +12,7 @@
 #import "DKNightVersion.h"
 #import "TableViewCell.h"
 
-
 @pickerify(TableViewCell, cellTintColor)
-
 
 @interface RootViewController ()
 
