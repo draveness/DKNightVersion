@@ -43,6 +43,9 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
 #import "UIButton+Night.h"
 #import "UIImageView+Night.h"
 
+#import "metamacros.h"
+#import "extobjc/EXTKeyPathCoding.h"
+
 #define _DKSetterWithPROPERTYerty(LOWERCASE) [NSString stringWithFormat:@"set%@:", [[[LOWERCASE substringToIndex:1] uppercaseString] stringByAppendingString:[LOWERCASE substringFromIndex:1]]]
 
 #define pickerify(KLASS, PROPERTY) interface \
@@ -60,7 +63,7 @@ FOUNDATION_EXPORT double DKNightVersionVersionNumber;
     } \
     - (void)dk_set ## PROPERTY ## Picker:(DKColorPicker)picker { \
         objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
-        [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@#PROPERTY];\
+        [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@keypath(self, PROPERTY)];\
         [self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
     } \
     @end
