@@ -24,7 +24,7 @@
 	+ [Import](#Import)
 + [Usage](#Usage)
 + [Advanced Usage](#Advanced-Usage)
-	+ [DKNightVerManager](#DKNightVersionManger)
+	+ [DKNightVersionManger](#DKNightVersionManger)
 		+ [Change Theme](#Change-Theme)
 		+ [Post Notification](#Post-Notification)
 	+ [DKColorPicker](#DKColorPicker)
