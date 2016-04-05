@@ -20,17 +20,17 @@
 ----
 
 + [Installation with CocoaPods](#Installation-with-CocoaPods)
-	+ [Podfile](#Podfile)
-	+ [Import](#Import)
-+ [Usage](#Usage)
-+ [Advanced Usage](#Advanced-Usage)
-	+ [DKNightVersionManger](#DKNightVersionManger)
-		+ [Change Theme](#Change-Theme)
-		+ [Post Notification](#Post-Notification)
-	+ [DKColorPicker](#DKColorPicker)
-	+ [DKColorTable](#DKColorTable)
-	+ [Create temporary DKColorPicker](#Create-temporary-DKColorPicker)
-	+ [DKImagePicker](#DKImagePicker)
+	+ [Podfile](#podfile)
+	+ [Import](#import)
++ [Usage](#usage)
++ [Advanced Usage](#advanced-usage)
+	+ [DKNightVersionManger](#dknightversionmanager)
+		+ [Change Theme](#change-theme)
+		+ [Post Notification](#post-notification)
+	+ [DKColorPicker](#dkColorpicker)
+	+ [DKColorTable](#dkcolortable)
+	+ [Create temporary DKColorPicker](#create-temporary-dkcolorpicker)
+	+ [DKImagePicker](#dkimagepicker)
 
 
 # Get Started
