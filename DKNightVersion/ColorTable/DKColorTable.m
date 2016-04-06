@@ -113,7 +113,7 @@ UIColor *colorFromRGB(NSUInteger hex) {
 
 - (NSArray<DKThemeVersion *> *)themes {
     NSString *firstKey = self.table.allKeys.firstObject;
-    NSAssert(NO, @"Empty DKColotTable.");
+    NSAssert(firstKey, @"Current DKColorTable is empty, cannot get themes info from it.");
     return [self.table[firstKey] allKeys];
 }
 

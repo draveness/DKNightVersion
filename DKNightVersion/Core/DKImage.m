@@ -40,7 +40,7 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 
 + (DKImagePicker)pickerWithNames:(NSArray<NSString *> *)names {
     DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    NSAssert(names.count != colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    NSAssert(names.count == colorTable.themes.count, @"Image Names must be equal to Themes Count");
     return ^(DKThemeVersion *themeVersion) {
         NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
         if (index >= colorTable.themes.count) {
@@ -52,7 +52,7 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 
 + (DKImagePicker)pickerWithImages:(NSArray<UIImage *> *)images {
     DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    NSAssert(images.count != colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    NSAssert(images.count == colorTable.themes.count, @"Image Names must be equal to Themes Count");
     return ^(DKThemeVersion *themeVersion) {
         NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
         if (index >= colorTable.themes.count) {
