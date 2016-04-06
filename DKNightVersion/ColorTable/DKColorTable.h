@@ -44,6 +44,11 @@
 @property (nonatomic, strong) NSString *file;
 
 /**
+ *  An array of DKThemeVersion, order is exactly the same in `file`.
+ */
+@property (nonatomic, strong, readonly) NSArray<DKThemeVersion *> *themes;
+
+/**
  *  Return color table instance, you MUST use this method instead of `- init`,
  *  `- init` method may have negative impact on your performance.
  *

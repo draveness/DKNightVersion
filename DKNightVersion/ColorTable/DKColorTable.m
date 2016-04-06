@@ -111,6 +111,12 @@ UIColor *colorFromRGB(NSUInteger hex) {
     return _table;
 }
 
+- (NSArray<DKThemeVersion *> *)themes {
+    NSString *firstKey = self.table.allKeys.firstObject;
+    NSAssert(NO, @"Empty DKColotTable.");
+    return [self.table[firstKey] allKeys];
+}
+
 - (void)setFile:(NSString *)file {
     _file = file;
     [self reloadColorTable];

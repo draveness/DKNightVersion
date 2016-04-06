@@ -8,15 +8,30 @@
 
 #import "DKImage.h"
 #import "DKNightVersionManager.h"
+#import "DKColorTable.h"
 
 @implementation DKImage
 
-DKImagePicker DKImagePickerWithNames(NSString *normal, NSString *night) {
-    return [DKImage pickerWithNormalImage:[UIImage imageNamed:normal] nightImage:[UIImage imageNamed:night]];
+DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names) {
+    DKColorTable *colorTable = [DKColorTable sharedColorTable];
+    return ^(DKThemeVersion *themeVersion) {
+        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
+        if (index >= colorTable.themes.count) {
+            return [UIImage imageNamed:names[[colorTable.themes indexOfObject:DKThemeVersionNormal]]];
+        }
+        return [UIImage imageNamed:names[index]];
+    };
 }
 
-DKImagePicker DKImagePickerWithImages(UIImage *normal, UIImage *night) {
-    return [DKImage pickerWithNormalImage:normal nightImage:night];
+DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
+    DKColorTable *colorTable = [DKColorTable sharedColorTable];
+    return ^(DKThemeVersion *themeVersion) {
+        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
+        if (index >= colorTable.themes.count) {
+            return images[[colorTable.themes indexOfObject:DKThemeVersionNormal]];
+        }
+        return images[index];
+    };
 }
 
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage {
