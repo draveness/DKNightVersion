@@ -13,25 +13,11 @@
 @implementation DKImage
 
 DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names) {
-    DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    return ^(DKThemeVersion *themeVersion) {
-        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
-        if (index >= colorTable.themes.count) {
-            return [UIImage imageNamed:names[[colorTable.themes indexOfObject:DKThemeVersionNormal]]];
-        }
-        return [UIImage imageNamed:names[index]];
-    };
+    return [DKImage pickerWithNames:names];
 }
 
 DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
-    DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    return ^(DKThemeVersion *themeVersion) {
-        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
-        if (index >= colorTable.themes.count) {
-            return images[[colorTable.themes indexOfObject:DKThemeVersionNormal]];
-        }
-        return images[index];
-    };
+    return [DKImage pickerWithImages:images];
 }
 
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage {
@@ -50,6 +36,30 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 
 + (DKImagePicker)imageNamed:(NSString *)name {
     return [self pickerWithImage:[UIImage imageNamed:name]];
+}
+
++ (DKImagePicker)pickerWithNames:(NSArray<NSString *> *)names {
+    DKColorTable *colorTable = [DKColorTable sharedColorTable];
+    NSAssert(names.count != colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    return ^(DKThemeVersion *themeVersion) {
+        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
+        if (index >= colorTable.themes.count) {
+            return [UIImage imageNamed:names[[colorTable.themes indexOfObject:DKThemeVersionNormal]]];
+        }
+        return [UIImage imageNamed:names[index]];
+    };
+}
+
++ (DKImagePicker)pickerWithImages:(NSArray<UIImage *> *)images {
+    DKColorTable *colorTable = [DKColorTable sharedColorTable];
+    NSAssert(images.count != colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    return ^(DKThemeVersion *themeVersion) {
+        NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
+        if (index >= colorTable.themes.count) {
+            return images[[colorTable.themes indexOfObject:DKThemeVersionNormal]];
+        }
+        return images[index];
+    };
 }
 
 @end

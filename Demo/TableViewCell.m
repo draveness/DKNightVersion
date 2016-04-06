@@ -36,7 +36,7 @@
 
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 25, 50, 50)];
 
-        imageView.dk_imagePicker = DKImagePickerWithNames(@"normal1", @"night1");
+        imageView.dk_imagePicker = DKImagePickerWithNames(@[@"normal1", @"night1"]);
         [self.contentView addSubview:imageView];
     }
     return self;

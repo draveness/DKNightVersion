@@ -36,7 +36,47 @@ DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names);
 
 @interface DKImage : NSObject
 
+/**
+ *  A method takes an array of images return a image picker, the
+ *  order of the images is just like the themes order in DKColorTable.txt
+ *  file.
+ *
+ *  @param images An array of images
+ *
+ *  @return A DKImagePicker
+ */
++ (DKImagePicker)pickerWithNames:(NSArray<NSString *> *)names;
+
+/**
+ *  A method takes an array of images return a image picker, the
+ *  order of the images is just like the themes order in DKColorTable.txt
+ *  file.
+ *
+ *  @param images An array of image names
+ *
+ *  @return A DKImagePicker
+ */
++ (DKImagePicker)pickerWithImages:(NSArray<UIImage *> *)images;
+
+/**
+ *  Returns a image picker return the same image no matter what the current
+ *  theme version is
+ *
+ *  @param name The name for image
+ *
+ *  @return A DKImagePicker
+ */
 + (DKImagePicker)imageNamed:(NSString *)name;
+
+/**
+ *  Returns a image picker return night image when current theme version is
+ *  DKThemeVersionNight, return normal image in other cases.
+ *
+ *  @param normalImage Normal image
+ *  @param nightImage  Image returns when theme version is DKThemeVersionNight
+ *
+ *  @return A DKImagePicker
+ */
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage;
 
 @end
