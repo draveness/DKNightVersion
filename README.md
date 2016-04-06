@@ -47,7 +47,7 @@ DKNightVersion supports multiple methods for installing the library in a project
 To integrate DKNightVersion into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```shell
-pod "DKNightVersion", "~> 2.1.0"
+pod "DKNightVersion", "~> 2.2.0"
 ```
 
 Then, run the following command:
@@ -259,34 +259,35 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 Use `DKImagePicker` to change images when `manager.themeVersion` changes.
 
 ```objectivec
-imageView.dk_imagePicker = DKImagePickerWithNames(@"normal1", @"night1");
+imageView.dk_imagePicker = DKImagePickerWithNames(@[@"normal", @"night"]]);
 ```
 
-The first image is for `NORMAL` the second is for `NIGHT`.
+The first image is for `NORMAL` the second is for `NIGHT`, cuz themes order in 
+DKColorTable.txt file is NORMAL NIGHT.
+
+If your file like this:
+
+```
+NORMAL   NIGHT    RED
+#ffffff  #343434  #fafafa BG
+#aaaaaa  #313131  #aaaaaa SEP
+#0000ff  #ffffff  #fa0000 TINT
+#000000  #ffffff  #000000 TEXT
+#ffffff  #444444  #ffffff BAR
+```
+
+Set your image picker in this order:
 
 ```objectivec
-DKImagePicker DKImagePickerWithNames(NSString *normal, NSString *night);
-DKImagePicker DKImagePickerWithImages(UIImage *normal, UIImage *night);
+imageView.dk_imagePicker = DKImagePickerWithNames(@[@"normal", @"night", @"red"]]);
 ```
 
-> DKImagePicker doesn't supported in DKColorTable yet. 
-
-You can set different images like this:
+The order of images or names is exactly the same in DKColorTable.txt file.
 
 ```objectivec
-imageView.dk_imagePicker = ^(DKThemeVersion *themeVersion) {
-  if ([themeVersion isEqualToString:DKThemeVersionNormal]) {
-      return [UIImage imageNamed:@"normal"];
-  } else if ([themeVersion isEqualToString:DKThemeVersionNight]) {
-      return [UIImage imageNamed:@"night"];
-  } else if ([themeVersion isEqualToString:@"RED"]) {
-      return [UIImage imageNamed:@"red"];
-  }
-  return [UIImage new];
-};
+DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images);
+DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names);
 ```
-
-This is just a temporary solution.
 
 # Contribute
 
