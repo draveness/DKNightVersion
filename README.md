@@ -12,6 +12,7 @@
 - [x] Providing UIKit and CoreAnimation categoty
 - [x] Read color customization from file
 - [x] Support different themes
+- [x] Generate picker for other lib with one line macro
 
 # Demo
 
