@@ -11,6 +11,7 @@
 @interface DKColorTable ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, UIColor *> *> *table;
+@property (nonatomic, strong, readwrite) NSArray<DKThemeVersion *> *themes;
 
 @end
 
@@ -33,6 +34,7 @@ UIColor *colorFromRGB(NSUInteger hex) {
 - (void)reloadColorTable {
     // Clear previos color table
     self.table = nil;
+    self.themes = nil;
 
     // Load color table file
     NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
@@ -50,14 +52,14 @@ UIColor *colorFromRGB(NSUInteger hex) {
     NSMutableArray *entries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
     [entries removeObjectAtIndex:0]; // Remove theme entry
 
-    NSArray *themes = [self themesFromContents:fileContents];
+    self.themes = [self themesFromContents:fileContents];
 
     // Add entry to color table
     for (NSString *entry in entries) {
         NSArray *colors = [self colorsFromEntry:entry];
         NSString *key = [self keyFromEntry:entry];
 
-        [self addEntryWithKey:key colors:colors themes:themes];
+        [self addEntryWithKey:key colors:colors themes:self.themes];
     }
 }
 
@@ -109,12 +111,6 @@ UIColor *colorFromRGB(NSUInteger hex) {
         _table = [[NSMutableDictionary alloc] init];
     }
     return _table;
-}
-
-- (NSArray<DKThemeVersion *> *)themes {
-    NSString *firstKey = self.table.allKeys.firstObject;
-    NSAssert(firstKey, @"Current DKColorTable is empty, cannot get themes info from it.");
-    return [self.table[firstKey] allKeys];
 }
 
 - (void)setFile:(NSString *)file {
