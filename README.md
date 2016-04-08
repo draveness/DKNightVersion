@@ -30,6 +30,7 @@
 		+ [Post Notification](#post-notification)
 	+ [DKColorPicker](#dkColorpicker)
 	+ [DKColorTable](#dkcolortable)
+    + [pickerif](#pickerify)
 	+ [Create temporary DKColorPicker](#create-temporary-dkcolorpicker)
 	+ [DKImagePicker](#dkimagepicker)
 
@@ -253,6 +254,12 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 + (DKColorPicker)brownColor;
 + (DKColorPicker)clearColor;
 ```
+
+### pickerify
+
+DKNightVersion provides a extremely powerful feature which can generates dk_xxxColorPicker with a macro called `pickerify`.
+
+
 
 ### DKImagePicker
 
