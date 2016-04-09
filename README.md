@@ -8,8 +8,8 @@
 <a href="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"><img src="https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg"></a>
 </p>
 
-- [x] Easily integrate and high performace
-- [x] Providing UIKit and CoreAnimation categoty
+- [x] Easily integrate and high performance
+- [x] Providing UIKit and CoreAnimation category
 - [x] Read color customization from file
 - [x] Support different themes
 - [x] Generate picker for other lib with one line macro
@@ -223,7 +223,7 @@ DKColorPicker DKColorPickerWithRGB(NSUInteger normal, NSUInteger night);
 DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor);
 ```
 
-`DKColor` also provides a cluster of convinient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
+`DKColor` also provides a cluster of convenient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
 
 ```objectivec
 + (DKColorPicker)colorPickerWithUIColor:(UIColor *)color;
