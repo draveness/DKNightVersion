@@ -259,6 +259,11 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor)
 
 DKNightVersion provides a extremely powerful feature which can generates dk_xxxColorPicker with a macro called `pickerify`.
 
+```objectivec
+@pickerify(TableViewCell, cellTintColor)
+```
+
+This will automatically generate `dk_cellTintColorPicker` for you.
 
 
 ### DKImagePicker
