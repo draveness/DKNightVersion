@@ -18,7 +18,7 @@
 		729324051CB9FAF1009E544E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729324041CB9FAF1009E544E /* Assets.xcassets */; };
 		729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729324061CB9FAF1009E544E /* LaunchScreen.storyboard */; };
 		72B2B5941CB9FB9700F1F291 /* DKNightVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B2B5931CB9FB9700F1F291 /* DKNightVersion.framework */; };
-		72E18B1A1CBA01F20004EBB2 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72E18B191CBA01F20004EBB2 /* DKColorTable.txt */; };
+		72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		729324071CB9FAF1009E544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729324091CB9FAF1009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B2B5931CB9FB9700F1F291 /* DKNightVersion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKNightVersion.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/DKNightVersion-dxexqagxzanpuuaxpbczvbxgdyww/Build/Products/Debug-iphonesimulator/DKNightVersion.framework"; sourceTree = "<group>"; };
-		72E18B191CBA01F20004EBB2 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKColorTable.txt; path = ../../DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt; sourceTree = "<group>"; };
+		72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKColorTable.txt; path = ../../DKNightVersion/ColorTable/DKColorTable.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 		729323F81CB9FAF1009E544E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				72E18B191CBA01F20004EBB2 /* DKColorTable.txt */,
+				72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */,
 				72B2B5931CB9FB9700F1F291 /* DKNightVersion.framework */,
 				729323F91CB9FAF1009E544E /* main.m */,
 			);
@@ -163,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E18B1A1CBA01F20004EBB2 /* DKColorTable.txt in Resources */,
 				729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */,
 				729324051CB9FAF1009E544E /* Assets.xcassets in Resources */,
+				72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */,
 				729324031CB9FAF1009E544E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
