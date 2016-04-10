@@ -21,35 +21,35 @@ FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
 
 #import <objc/runtime.h>
 
-#import "DKColor.h"
-#import "DKImage.h"
-#import "DKNightVersionManager.h"
-#import "NSObject+Night.h"
+#import <DKNightVersion/DKColor.h>
+#import <DKNightVersion/DKImage.h>
+#import <DKNightVersion/DKNightVersionManager.h>
+#import <DKNightVersion/NSObject+Night.h>
 
-#import "DKColorTable.h"
+#import <DKNightVersion/DKColorTable.h>
 
-#import "CoreAnimation+Night.h"
+#import <DKNightVersion/CoreAnimation+Night.h>
 
-#import "UIBarButtonItem+Night.h"
-#import "UIControl+Night.h"
-#import "UILabel+Night.h"
-#import "UINavigationBar+Night.h"
-#import "UIPageControl+Night.h"
-#import "UIProgressView+Night.h"
-#import "UISearchBar+Night.h"
-#import "UISlider+Night.h"
-#import "UISwitch+Night.h"
-#import "UITabBar+Night.h"
-#import "UITableView+Night.h"
-#import "UITextField+Night.h"
-#import "UITextView+Night.h"
-#import "UIToolbar+Night.h"
-#import "UIView+Night.h"
-#import "UIButton+Night.h"
-#import "UIImageView+Night.h"
+#import <DKNightVersion/UIBarButtonItem+Night.h>
+#import <DKNightVersion/UIControl+Night.h>
+#import <DKNightVersion/UILabel+Night.h>
+#import <DKNightVersion/UINavigationBar+Night.h>
+#import <DKNightVersion/UIPageControl+Night.h>
+#import <DKNightVersion/UIProgressView+Night.h>
+#import <DKNightVersion/UISearchBar+Night.h>
+#import <DKNightVersion/UISlider+Night.h>
+#import <DKNightVersion/UISwitch+Night.h>
+#import <DKNightVersion/UITabBar+Night.h>
+#import <DKNightVersion/UITableView+Night.h>
+#import <DKNightVersion/UITextField+Night.h>
+#import <DKNightVersion/UITextView+Night.h>
+#import <DKNightVersion/UIToolbar+Night.h>
+#import <DKNightVersion/UIView+Night.h>
+#import <DKNightVersion/UIButton+Night.h>
+#import <DKNightVersion/UIImageView+Night.h>
 
-#import "metamacros.h"
-#import "EXTKeyPathCoding.h"
+#import <DKNightVersion/metamacros.h>
+#import <DKNightVersion/EXTKeyPathCoding.h>
 
 #define _DKSetterWithPROPERTYerty(LOWERCASE) [NSString stringWithFormat:@"set%@:", [[[LOWERCASE substringToIndex:1] uppercaseString] stringByAppendingString:[LOWERCASE substringFromIndex:1]]]
 
@@ -72,8 +72,6 @@ FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
         [self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
     } \
     @end
-
-
 
 
 #endif /* _DKNIGHTVERSION_ */

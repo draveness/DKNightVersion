@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */; };
 		72E18B261CBA03360004EBB2 /* DKNightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E18B251CBA03360004EBB2 /* DKNightVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72E18B661CBA03480004EBB2 /* UIBarButtonItem+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E18B281CBA03480004EBB2 /* UIBarButtonItem+Night.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72E18B671CBA03480004EBB2 /* UIBarButtonItem+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E18B291CBA03480004EBB2 /* UIBarButtonItem+Night.m */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		729323391CB9F98C009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKNightVersion.podspec; sourceTree = "<group>"; };
 		72E18B251CBA03360004EBB2 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
 		72E18B281CBA03480004EBB2 /* UIBarButtonItem+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Night.h"; sourceTree = "<group>"; };
 		72E18B291CBA03480004EBB2 /* UIBarButtonItem+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Night.m"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		7293232A1CB9F98C009E544E = {
 			isa = PBXGroup;
 			children = (
+				729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */,
 				729323361CB9F98C009E544E /* DKNightVersion */,
 				729323351CB9F98C009E544E /* Products */,
 			);
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E18B9D1CBA03480004EBB2 /* DKColorTable.txt in Resources */,
+				729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
