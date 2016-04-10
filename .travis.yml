@@ -1,10 +1,23 @@
 language: objective-c
+osx_image: xcode7.3
+xcode_project: DKNightVersion.xcodeproj
+xcode_scheme: DKNightVersion
 before_install:
     - export LANG=en_US.UTF-8
     - env
     - locale
-
-osx_image: xcode7.3
-
+    - brew update
+    - brew install carthage
+before_deploy:
+    - carthage build --no-skip-current
+    - carthage archive DKNightVersion
 script:
-    - pod lib lint 
+    - pod lib lint
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ytNR/5Dv829ymx1GQVK1Iv/UpJzz0YkbCehjL+lAp2x8Tex0SmXKPZF1pOs43gV8R2iPYcajvdGqS9EaeP9vEq2Fwea+X5+8tD07nqLAJQ1PqxTbsuLYaNMhKb8x05n7m7/Y8IOUTlTa3enc1px4dkbqVi/9GfXOyqR4Vnvcp7U=
+  file: DKNightVersion.framework.zip
+  on:
+    repo: Draveness/DKNightVersion
