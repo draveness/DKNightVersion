@@ -7,7 +7,7 @@
 //
 
 #import "TableViewCell.h"
-#import "DKNightVersion.h"
+#import <DKNightVersion/DKNightVersion.h>
 
 @interface TableViewCell ()
 

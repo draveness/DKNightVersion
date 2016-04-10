@@ -7,7 +7,7 @@
 //
 
 #import "PresentingViewController.h"
-#import "DKNightVersion.h"
+#import <DKNightVersion/DKNightVersion.h>
 
 @interface PresentingViewController ()
 

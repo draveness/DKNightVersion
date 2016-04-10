@@ -7,7 +7,7 @@
 //
 
 #import "SuccViewController.h"
-#import "DKNightVersion.h"
+#import <DKNightVersion/DKNightVersion.h>
 
 @interface SuccViewController ()
 

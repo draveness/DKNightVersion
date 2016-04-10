@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "SuccViewController.h"
 #import "PresentingViewController.h"
-#import "DKNightVersion.h"
+#import <DKNightVersion/DKNightVersion.h>
 #import "TableViewCell.h"
 
 @pickerify(TableViewCell, cellTintColor)

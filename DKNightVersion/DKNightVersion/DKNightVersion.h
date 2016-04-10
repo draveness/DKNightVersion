@@ -6,10 +6,15 @@
 //  Copyright (c) 2015 Draveness. All rights reserved.
 //
 
-//! Project version string for MyFramework.
-FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
-//! Project version number for MyFramework.
+#import <UIKit/UIKit.h>
+
+//! Project version number for DKNightVersion.
 FOUNDATION_EXPORT double DKNightVersionVersionNumber;
+
+//! Project version string for DKNightVersion.
+FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <DKNightVersion/PublicHeader.h>
 
 #ifndef _DKNIGHTVERSION_
 #define _DKNIGHTVERSION_

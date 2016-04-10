@@ -1,14 +1,15 @@
 //
 //  AppDelegate.m
-//  DKNightVersion
+//  Example
 //
-//  Created by Draveness on 4/14/15.
-//  Copyright (c) 2015 Draveness. All rights reserved.
+//  Created by Draveness on 16/4/10.
+//  Copyright © 2016年 Draveness. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "SuccViewController.h"
+
 @interface AppDelegate ()
 
 @end
