@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */; };
 		729A5D601CBB347700E8A164 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 729A5D5F1CBB347700E8A164 /* README.md */; };
+		729A5D631CBB363600E8A164 /* UITextField+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 729A5D611CBB363600E8A164 /* UITextField+Keyboard.h */; };
+		729A5D641CBB363600E8A164 /* UITextField+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 729A5D621CBB363600E8A164 /* UITextField+Keyboard.m */; };
 		72E18B261CBA03360004EBB2 /* DKNightVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E18B251CBA03360004EBB2 /* DKNightVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72E18B661CBA03480004EBB2 /* UIBarButtonItem+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E18B281CBA03480004EBB2 /* UIBarButtonItem+Night.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72E18B671CBA03480004EBB2 /* UIBarButtonItem+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E18B291CBA03480004EBB2 /* UIBarButtonItem+Night.m */; };
@@ -73,6 +75,8 @@
 		729323391CB9F98C009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKNightVersion.podspec; sourceTree = "<group>"; };
 		729A5D5F1CBB347700E8A164 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		729A5D611CBB363600E8A164 /* UITextField+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Keyboard.h"; sourceTree = "<group>"; };
+		729A5D621CBB363600E8A164 /* UITextField+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Keyboard.m"; sourceTree = "<group>"; };
 		72E18B251CBA03360004EBB2 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
 		72E18B281CBA03480004EBB2 /* UIBarButtonItem+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Night.h"; sourceTree = "<group>"; };
 		72E18B291CBA03480004EBB2 /* UIBarButtonItem+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Night.m"; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				72E18B4A1CBA03480004EBB2 /* UIImageView+Night.m */,
 				72E18B4B1CBA03480004EBB2 /* UINavigationBar+Animation.h */,
 				72E18B4C1CBA03480004EBB2 /* UINavigationBar+Animation.m */,
+				729A5D611CBB363600E8A164 /* UITextField+Keyboard.h */,
+				729A5D621CBB363600E8A164 /* UITextField+Keyboard.m */,
 			);
 			path = Manual;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 				72E18B921CBA03480004EBB2 /* CoreAnimation+Night.h in Headers */,
 				72E18B681CBA03480004EBB2 /* UIControl+Night.h in Headers */,
 				72E18B661CBA03480004EBB2 /* UIBarButtonItem+Night.h in Headers */,
+				729A5D631CBB363600E8A164 /* UITextField+Keyboard.h in Headers */,
 				72E18B971CBA03480004EBB2 /* DKNightVersionManager.h in Headers */,
 				72E18B7A1CBA03480004EBB2 /* UITableView+Night.h in Headers */,
 				72E18B741CBA03480004EBB2 /* UISlider+Night.h in Headers */,
@@ -411,6 +418,7 @@
 				72E18B851CBA03480004EBB2 /* UIButton+Night.m in Sources */,
 				72E18B9C1CBA03480004EBB2 /* DKColorTable.m in Sources */,
 				72E18B7F1CBA03480004EBB2 /* UITextView+Night.m in Sources */,
+				729A5D641CBB363600E8A164 /* UITextField+Keyboard.m in Sources */,
 				72E18B791CBA03480004EBB2 /* UITabBar+Night.m in Sources */,
 				72E18B8D1CBA03480004EBB2 /* DKDeallocBlockExecutor.m in Sources */,
 				72E18B941CBA03480004EBB2 /* DKColor.m in Sources */,
