@@ -21,8 +21,8 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 }
 
 + (DKImagePicker)pickerWithNormalImage:(UIImage *)normalImage nightImage:(UIImage *)nightImage {
-    NSAssert(normalImage, @"- pickerWithNormalImage:nightImage: lack parameter normalImage");
-    NSAssert(nightImage, @"- pickerWithNormalImage:nightImage: lack parameter nightImage");
+    NSParameterAssert(normalImage);
+    NSParameterAssert(nightImage);
     return ^(DKThemeVersion *themeVersion) {
         return [themeVersion isEqualToString:DKThemeVersionNight] ? nightImage : normalImage;
     };
@@ -40,7 +40,7 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 
 + (DKImagePicker)pickerWithNames:(NSArray<NSString *> *)names {
     DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    NSAssert(names.count == colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    NSParameterAssert(names.count == colorTable.themes.count);
     return ^(DKThemeVersion *themeVersion) {
         NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
         if (index >= colorTable.themes.count) {
@@ -52,7 +52,7 @@ DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
 
 + (DKImagePicker)pickerWithImages:(NSArray<UIImage *> *)images {
     DKColorTable *colorTable = [DKColorTable sharedColorTable];
-    NSAssert(images.count == colorTable.themes.count, @"Image Names must be equal to Themes Count");
+    NSParameterAssert(images.count == colorTable.themes.count);
     return ^(DKThemeVersion *themeVersion) {
         NSUInteger index = [colorTable.themes indexOfObject:themeVersion];
         if (index >= colorTable.themes.count) {

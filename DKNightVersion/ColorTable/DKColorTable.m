@@ -83,7 +83,7 @@ UIColor *colorFromRGB(NSUInteger hex) {
 }
 
 - (void)addEntryWithKey:(NSString *)key colors:(NSArray *)colors themes:(NSArray *)themes {
-    NSAssert(themes.count == colors.count, @"FATAL ERROR: Themes count must equal to colors count!");
+    NSParameterAssert(themes.count == colors.count);
 
     __block NSMutableDictionary *themeToColorDictionary = [@{} mutableCopy];
 
@@ -95,7 +95,8 @@ UIColor *colorFromRGB(NSUInteger hex) {
 }
 
 - (DKColorPicker)pickerWithKey:(NSString *)key {
-    NSAssert(key != nil, @"Parameter key must not be nil");
+    NSParameterAssert(key);
+
     NSDictionary *themeToColorDictionary = [self.table valueForKey:key];
     DKColorPicker picker = ^(DKThemeVersion *themeVersion) {
         return [themeToColorDictionary valueForKey:themeVersion];
