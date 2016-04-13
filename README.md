@@ -31,7 +31,7 @@
 		+ [Post Notification](#post-notification)
 	+ [DKColorPicker](#dkColorpicker)
 	+ [DKColorTable](#dkcolortable)
-    + [pickerif](#pickerify)
+    + [pickerify](#pickerify)
 	+ [Create temporary DKColorPicker](#create-temporary-dkcolorpicker)
 	+ [DKImagePicker](#dkimagepicker)
 
