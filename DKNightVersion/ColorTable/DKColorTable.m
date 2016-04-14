@@ -18,11 +18,11 @@
 @implementation DKColorTable
 
 UIColor *DKColorFromRGB(NSUInteger hex) {
-	return [UIColor colorWithRed:((CGFloat)((hex >> 16) & 0xFF)/255.0) green:((CGFloat)((hex >> 8) & 0xFF)/255.0) blue:((CGFloat)(hex & 0xFF)/255.0) alpha:1.0];
+    return [UIColor colorWithRed:((CGFloat)((hex >> 16) & 0xFF)/255.0) green:((CGFloat)((hex >> 8) & 0xFF)/255.0) blue:((CGFloat)(hex & 0xFF)/255.0) alpha:1.0];
 }
 
 UIColor *DKColorFromRGBA(NSUInteger hex) {
-	return [UIColor colorWithRed:((CGFloat)((hex >> 24) & 0xFF)/255.0) green:((CGFloat)((hex >> 16) & 0xFF)/255.0) blue:((CGFloat)((hex >> 8) & 0xFF)/255.0) alpha:((CGFloat)(hex & 0xFF)/255.0)];
+    return [UIColor colorWithRed:((CGFloat)((hex >> 24) & 0xFF)/255.0) green:((CGFloat)((hex >> 16) & 0xFF)/255.0) blue:((CGFloat)((hex >> 8) & 0xFF)/255.0) alpha:((CGFloat)(hex & 0xFF)/255.0)];
 }
 
 + (instancetype)sharedColorTable {
@@ -77,7 +77,7 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     [colors removeLastObject];
     NSMutableArray *result = [@[] mutableCopy];
     for (NSString *number in colors) {
-		[result addObject:[self colorFromString:number]];
+        [result addObject:[self colorFromString:number]];
     }
     return result;
 }
@@ -126,29 +126,29 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 #pragma mark - Helper
 
 - (UIColor*)colorFromString:(NSString*)hexStr {
-	hexStr = [hexStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	if([hexStr hasPrefix:@"0x"]) {
-		hexStr = [hexStr substringFromIndex:2];
-	}
-	if([hexStr hasPrefix:@"#"]) {
-		hexStr = [hexStr substringFromIndex:1];
-	}
-	
-	NSUInteger hex = [self intFromHexString:hexStr];
-	if(hexStr.length > 6) {
-		return DKColorFromRGBA(hex);
-	}
-	
-	return DKColorFromRGB(hex);
+    hexStr = [hexStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if([hexStr hasPrefix:@"0x"]) {
+        hexStr = [hexStr substringFromIndex:2];
+    }
+    if([hexStr hasPrefix:@"#"]) {
+        hexStr = [hexStr substringFromIndex:1];
+    }
+
+    NSUInteger hex = [self intFromHexString:hexStr];
+    if(hexStr.length > 6) {
+        return DKColorFromRGBA(hex);
+    }
+
+    return DKColorFromRGB(hex);
 }
 
 - (NSUInteger)intFromHexString:(NSString *)hexStr {
     unsigned int hexInt = 0;
-	
+
     NSScanner *scanner = [NSScanner scannerWithString:hexStr];
 
     [scanner scanHexInt:&hexInt];
-    
+
     return hexInt;
 }
 
