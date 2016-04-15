@@ -67,6 +67,8 @@ extern CGFloat const DKNightVersionAnimationDuration;
  */
 @property (nonatomic, strong) DKThemeVersion *themeVersion;
 
+@property (nonatomic, assign) BOOL supportsKeyboard;
+
 /**
  *  Return the shared night version manager instance
  *
