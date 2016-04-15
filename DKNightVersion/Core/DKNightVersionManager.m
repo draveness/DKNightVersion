@@ -33,6 +33,7 @@ NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.man
         DKThemeVersion *themeVersion = [userDefaults valueForKey:DKNightVersionCurrentThemeVersionKey];
         themeVersion = themeVersion ?: DKThemeVersionNormal;
         instance.themeVersion = themeVersion;
+        instance.supportsKeyboard = YES;
     });
     return instance;
 }

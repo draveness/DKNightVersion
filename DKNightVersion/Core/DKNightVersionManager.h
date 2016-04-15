@@ -67,6 +67,11 @@ extern CGFloat const DKNightVersionAnimationDuration;
  */
 @property (nonatomic, strong) DKThemeVersion *themeVersion;
 
+/**
+ *  Support keyboard type changes when swiching to DKThemeNight. If this value is YES,
+ *  `keyboardType` for UITextField will change to `UIKeyboardAppearanceDark` only current theme
+ *  version is DKThemeNight. Default is YES.
+ */
 @property (nonatomic, assign) BOOL supportsKeyboard;
 
 /**

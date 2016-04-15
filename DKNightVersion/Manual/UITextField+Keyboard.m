@@ -50,7 +50,7 @@
 
 - (instancetype)dk_init {
     UITextField *obj = [self dk_init];
-    if ([self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
+    if (self.dk_manager.supportsKeyboard && [self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
 #ifdef __IPHONE_7_0
         obj.keyboardAppearance = UIKeyboardAppearanceDark;
 #else
@@ -64,7 +64,7 @@
 
 - (void)night_updateColor {
     [super night_updateColor];
-    if ([self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
+    if (self.dk_manager.supportsKeyboard && [self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
 #ifdef __IPHONE_7_0
         self.keyboardAppearance = UIKeyboardAppearanceDark;
 #else
