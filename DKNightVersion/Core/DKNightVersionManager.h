@@ -10,6 +10,8 @@
 #import "DKColor.h"
 #import "DKImage.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  DKThemeVersion is just a alias to string, use `- isEqualToString` to
  *  compare with each `DKThemeVersion` instead of symbol `==`.
@@ -103,3 +105,5 @@ extern CGFloat const DKNightVersionAnimationDuration;
 + (DKNightVersionManager *)sharedNightVersionManager __deprecated_msg("use `- [DKNightVersion sharedManager]` instead");
 
 @end
+
+NS_ASSUME_NONNULL_END
