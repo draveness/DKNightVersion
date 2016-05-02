@@ -221,8 +221,8 @@ view.dk_backgroundColorPicker =  DKColorPickerWithRGB(0xffffff, 0x343434);
 There are also some similar functions like `DKColorPickerWithColors`
 
 ```objectivec
-DKColorPicker DKColorPickerWithRGB(NSUInteger normal, NSUInteger night);
-DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor);
+DKColorPicker DKColorPickerWithRGB(NSUInteger normal, ...);
+DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...);
 ```
 
 `DKColor` also provides a cluster of convenient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
@@ -272,7 +272,7 @@ This will automatically generate `dk_cellTintColorPicker` for you.
 Use `DKImagePicker` to change images when `manager.themeVersion` changes.
 
 ```objectivec
-imageView.dk_imagePicker = DKImagePickerWithNames(@[@"normal", @"night"]]);
+imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night");
 ```
 
 The first image is for `NORMAL` the second is for `NIGHT`, cuz themes order in 
@@ -292,14 +292,14 @@ NORMAL   NIGHT    RED
 Set your image picker in this order:
 
 ```objectivec
-imageView.dk_imagePicker = DKImagePickerWithNames(@[@"normal", @"night", @"red"]]);
+imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night", @"red");
 ```
 
 The order of images or names is exactly the same in DKColorTable.txt file.
 
 ```objectivec
-DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images);
-DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names);
+DKImagePicker DKImagePickerWithImages(UIImage *normalImage, ...);
+DKImagePicker DKImagePickerWithNames(NSString *normalName, ...);
 ```
 
 # Contribute
