@@ -12,11 +12,35 @@
 
 @implementation DKImage
 
-DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names) {
+DKImagePicker DKImagePickerWithNames(NSString *normalName, ...) {
+    NSArray<DKThemeVersion *> *themes = [DKColorTable sharedColorTable].themes;
+    NSMutableArray<NSString *> *names = [[NSMutableArray alloc] initWithCapacity:themes.count];
+    [names addObject:normalName];
+    NSUInteger num_args = themes.count - 1;
+    va_list names_list;
+    va_start(names_list, num_args);
+    for (NSUInteger i = 0; i < num_args; i++) {
+        NSString *name = va_arg(names_list, NSString *);
+        [names addObject:name];
+    }
+    va_end(names_list);
+
     return [DKImage pickerWithNames:names];
 }
 
-DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images) {
+DKImagePicker DKImagePickerWithImages(UIImage *normalImage, ...) {
+    NSArray<DKThemeVersion *> *themes = [DKColorTable sharedColorTable].themes;
+    NSMutableArray<UIImage *> *images = [[NSMutableArray alloc] initWithCapacity:themes.count];
+    [images addObject:normalImage];
+    NSUInteger num_args = themes.count - 1;
+    va_list images_list;
+    va_start(images_list, num_args);
+    for (NSUInteger i = 0; i < num_args; i++) {
+        UIImage *image = va_arg(images_list, UIImage *);
+        [images addObject:image];
+    }
+    va_end(images_list);
+
     return [DKImage pickerWithImages:images];
 }
 

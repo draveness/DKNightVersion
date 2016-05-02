@@ -17,22 +17,24 @@ typedef UIImage *(^DKImagePicker)(DKThemeVersion *themeVersion);
  *  order of the images is just like the themes order in DKColorTable.txt
  *  file.
  *
- *  @param images An array of images
+ *  @param normalImage Image when current themeVersion is DKThemeVersionNormal
+ *  @param ...         Other images, the order is the same as DKColorTable
  *
  *  @return A DKImagePicker
  */
-DKImagePicker DKImagePickerWithImages(NSArray<UIImage *> *images);
+DKImagePicker DKImagePickerWithImages(UIImage *normalImage, ...);
 
 /**
  *  A C function takes an array of names return a image picker, the
  *  order of the images is just like the themes order in DKColorTable.txt
  *  file.
  *
- *  @param names An array of image names
+ *  @param normalName Names when current themeVersion is DKThemeVersionNormal
+ *  @param ...        Other names, the order is the same as DKColorTable
  *
  *  @return A DKImagePicker
  */
-DKImagePicker DKImagePickerWithNames(NSArray<NSString *> *names);
+DKImagePicker DKImagePickerWithNames(NSString *normalName, ...);
 
 @interface DKImage : NSObject
 
