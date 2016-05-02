@@ -11,6 +11,10 @@
 
 @interface NSObject (Night)
 
+/**
+ *  Default global DKNightVersionManager, this property gives us a more
+ *  convinient way to access it.
+ */
 @property (nonatomic, strong, readonly) DKNightVersionManager *dk_manager;
 
 @end
