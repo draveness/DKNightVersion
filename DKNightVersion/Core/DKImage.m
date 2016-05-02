@@ -18,7 +18,10 @@ DKImagePicker DKImagePickerWithNames(NSString *normalName, ...) {
     [names addObject:normalName];
     NSUInteger num_args = themes.count - 1;
     va_list names_list;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     va_start(names_list, num_args);
+#pragma clang diagnostic pop
     for (NSUInteger i = 0; i < num_args; i++) {
         NSString *name = va_arg(names_list, NSString *);
         [names addObject:name];
@@ -34,7 +37,10 @@ DKImagePicker DKImagePickerWithImages(UIImage *normalImage, ...) {
     [images addObject:normalImage];
     NSUInteger num_args = themes.count - 1;
     va_list images_list;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     va_start(images_list, num_args);
+#pragma clang diagnostic pop
     for (NSUInteger i = 0; i < num_args; i++) {
         UIImage *image = va_arg(images_list, UIImage *);
         [images addObject:image];

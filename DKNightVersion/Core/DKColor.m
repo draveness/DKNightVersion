@@ -20,7 +20,10 @@ DKColorPicker DKColorPickerWithRGB(NSUInteger normal, ...) {
     [colors addObject:normalColor];
     NSUInteger num_args = themes.count - 1;
     va_list rgbs;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     va_start(rgbs, num_args);
+#pragma clang diagnostic pop
     for (NSUInteger i = 0; i < num_args; i++) {
         NSUInteger rgb = va_arg(rgbs, NSUInteger);
         UIColor *color = [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0];
@@ -40,7 +43,11 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...) {
     [colors addObject:normalColor];
     NSUInteger num_args = themes.count - 1;
     va_list colors_list;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvarargs"
     va_start(colors_list, num_args);
+#pragma clang diagnostic pop
+
     for (NSUInteger i = 0; i < num_args; i++) {
         UIColor *color = va_arg(colors_list, UIColor *);
         [colors addObject:color];
