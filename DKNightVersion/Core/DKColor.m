@@ -8,18 +8,49 @@
 
 #import "DKColor.h"
 #import "DKNightVersionManager.h"
+#import "DKColorTable.h"
 
 @implementation DKColor
 
-DKColorPicker DKColorPickerWithRGB(NSUInteger normal, NSUInteger night) {
+DKColorPicker DKColorPickerWithRGB(NSUInteger normal, ...) {
     UIColor *normalColor = [UIColor colorWithRed:((float)((normal & 0xFF0000) >> 16))/255.0 green:((float)((normal & 0xFF00) >> 8))/255.0 blue:((float)(normal & 0xFF))/255.0 alpha:1.0];
-    UIColor *nightColor = [UIColor colorWithRed:((float)((night & 0xFF0000) >> 16))/255.0 green:((float)((night & 0xFF00) >> 8))/255.0 blue:((float)(night & 0xFF))/255.0 alpha:1.0];
-    return DKColorPickerWithColors(normalColor, nightColor);
+//    UIColor *nightColor = [UIColor colorWithRed:((float)((night & 0xFF0000) >> 16))/255.0 green:((float)((night & 0xFF00) >> 8))/255.0 blue:((float)(night & 0xFF))/255.0 alpha:1.0];
+
+    NSArray<DKThemeVersion *> *themes = [DKColorTable sharedColorTable].themes;
+    NSMutableArray<UIColor *> *colors = [[NSMutableArray alloc] initWithCapacity:themes.count];
+    [colors addObject:normalColor];
+    NSUInteger num_args = themes.count - 1;
+    va_list rgbs;
+    va_start(rgbs, num_args);
+    for (NSUInteger i = 0; i < num_args; i++) {
+        NSUInteger rgb = va_arg(rgbs, NSUInteger);
+        UIColor *color = [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0];
+        [colors addObject:color];
+    }
+    va_end(rgbs);
+
+    return ^(DKThemeVersion *themeVersion) {
+        NSUInteger index = [themes indexOfObject:themeVersion];
+        return colors[index];
+    };
 }
 
-DKColorPicker DKColorPickerWithColors(UIColor *normalColor, UIColor *nightColor) {
+DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...) {
+    NSArray<DKThemeVersion *> *themes = [DKColorTable sharedColorTable].themes;
+    NSMutableArray<UIColor *> *colors = [[NSMutableArray alloc] initWithCapacity:themes.count];
+    [colors addObject:normalColor];
+    NSUInteger num_args = themes.count - 1;
+    va_list colors_list;
+    va_start(colors_list, num_args);
+    for (NSUInteger i = 0; i < num_args; i++) {
+        UIColor *color = va_arg(colors_list, UIColor *);
+        [colors addObject:color];
+    }
+    va_end(colors_list);
+
     return ^(DKThemeVersion *themeVersion) {
-        return [themeVersion isEqualToString:DKThemeVersionNormal] ? normalColor : nightColor;
+        NSUInteger index = [themes indexOfObject:themeVersion];
+        return colors[index];
     };
 }
 

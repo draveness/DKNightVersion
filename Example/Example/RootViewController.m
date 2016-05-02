@@ -41,7 +41,8 @@
 
     self.navigationItem.rightBarButtonItems = @[normalItem, nightItem, redItem];
 
-    self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
+//    self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
+    self.tableView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
     self.tableView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
     navigationLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
@@ -90,7 +91,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.dk_cellTintColorPicker = DKColorPickerWithKey(BG);
+    cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+
     return cell;
 }
 
