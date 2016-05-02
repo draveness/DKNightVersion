@@ -49,7 +49,7 @@ DKNightVersion supports multiple methods for installing the library in a project
 To integrate DKNightVersion into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```shell
-pod "DKNightVersion", "~> 2.2.0"
+pod "DKNightVersion"
 ```
 
 Then, run the following command:
