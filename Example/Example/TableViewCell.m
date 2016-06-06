@@ -32,7 +32,7 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.button];
 
-//        self.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+//        self.contentView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 25, 50, 50)];
 
@@ -44,11 +44,16 @@
 
 - (void)setCellTintColor:(UIColor *)cellTintColor {
     _cellTintColor = cellTintColor;
-    self.backgroundColor = _cellTintColor;
+    self.contentView.backgroundColor = _cellTintColor;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    if (highlighted) {
+        self.contentView.dk_backgroundColorPicker = DKColorPickerWithKey(HIGHLIGHTED);
+    } else {
+        self.contentView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    }
 }
 
 @end

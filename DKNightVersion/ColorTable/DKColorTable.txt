@@ -4,3 +4,4 @@ NORMAL   NIGHT    RED
 #0000ff  #ffffff  #fa0000 TINT
 #000000  #ffffff  #000000 TEXT
 #ffffff  #444444  #ffffff BAR
+#f0f0f0  #222222  #dedede HIGHLIGHTED
