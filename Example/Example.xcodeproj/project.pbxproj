@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723EC9C41D05DB7D00A02220 /* DKNightVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723EC9C31D05DB7D00A02220 /* DKNightVersion.framework */; };
+		723EC9C51D05DB7D00A02220 /* DKNightVersion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 723EC9C31D05DB7D00A02220 /* DKNightVersion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7261ADF91CB9FB2D007E283C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF21CB9FB2D007E283C /* PresentingViewController.m */; };
 		7261ADFA1CB9FB2D007E283C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF41CB9FB2D007E283C /* RootViewController.m */; };
 		7261ADFB1CB9FB2D007E283C /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF61CB9FB2D007E283C /* SuccViewController.m */; };
@@ -21,7 +23,22 @@
 		72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		723EC9C61D05DB7E00A02220 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				723EC9C51D05DB7D00A02220 /* DKNightVersion.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		723EC9C31D05DB7D00A02220 /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = DKNightVersion.framework; path = "/Users/apple/Library/Developer/Xcode/DerivedData/DKNightVersion-gzwybvmnrearmpfqbbgyixwiuuuu/Build/Products/Debug-iphoneos/DKNightVersion.framework"; sourceTree = "<absolute>"; };
 		7261ADF11CB9FB2D007E283C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		7261ADF21CB9FB2D007E283C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		7261ADF31CB9FB2D007E283C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -50,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B2B5941CB9FB9700F1F291 /* DKNightVersion.framework in Frameworks */,
+				723EC9C41D05DB7D00A02220 /* DKNightVersion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		729323EC1CB9FAF1009E544E = {
 			isa = PBXGroup;
 			children = (
+				723EC9C31D05DB7D00A02220 /* DKNightVersion.framework */,
 				729323F71CB9FAF1009E544E /* Example */,
 				729323F61CB9FAF1009E544E /* Products */,
 			);
@@ -116,6 +135,7 @@
 				729323F11CB9FAF1009E544E /* Sources */,
 				729323F21CB9FAF1009E544E /* Frameworks */,
 				729323F31CB9FAF1009E544E /* Resources */,
+				723EC9C61D05DB7E00A02220 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
