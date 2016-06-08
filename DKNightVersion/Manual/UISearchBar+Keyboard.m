@@ -48,7 +48,7 @@
 }
 
 - (instancetype)dk_init {
-    UITextView *obj = [self dk_init];
+    UISearchBar *obj = [self dk_init];
     if (self.dk_manager.supportsKeyboard && [self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
 #ifdef __IPHONE_7_0
         obj.keyboardAppearance = UIKeyboardAppearanceDark;
