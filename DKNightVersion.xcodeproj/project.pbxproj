@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
 		7287AB791D0437A300D544B4 /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */; };
+		7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */; };
+		7295D7CC1D07E2A000525182 /* UISearchBar+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7295D7CA1D07E2A000525182 /* UISearchBar+Keyboard.m */; };
 		729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */; };
 		729A5D601CBB347700E8A164 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 729A5D5F1CBB347700E8A164 /* README.md */; };
 		729A5D631CBB363600E8A164 /* UITextField+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 729A5D611CBB363600E8A164 /* UITextField+Keyboard.h */; };
@@ -77,6 +79,8 @@
 		7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		729323391CB9F98C009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Keyboard.h"; sourceTree = "<group>"; };
+		7295D7CA1D07E2A000525182 /* UISearchBar+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Keyboard.m"; sourceTree = "<group>"; };
 		729A5D5D1CBA0CC600E8A164 /* DKNightVersion.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKNightVersion.podspec; sourceTree = "<group>"; };
 		729A5D5F1CBB347700E8A164 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		729A5D611CBB363600E8A164 /* UITextField+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Keyboard.h"; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				729A5D621CBB363600E8A164 /* UITextField+Keyboard.m */,
 				7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */,
 				7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */,
+				7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */,
+				7295D7CA1D07E2A000525182 /* UISearchBar+Keyboard.m */,
 			);
 			path = Manual;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				72E18B881CBA03480004EBB2 /* UINavigationBar+Animation.h in Headers */,
 				72E18B8B1CBA03480004EBB2 /* metamacros.h in Headers */,
 				72E18B901CBA03480004EBB2 /* CALayer+Night.h in Headers */,
+				7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */,
 				72E18B6E1CBA03480004EBB2 /* UIPageControl+Night.h in Headers */,
 				72E18B931CBA03480004EBB2 /* DKColor.h in Headers */,
 				72E18B991CBA03480004EBB2 /* NSObject+Night.h in Headers */,
@@ -407,6 +414,7 @@
 			files = (
 				72E18B711CBA03480004EBB2 /* UIProgressView+Night.m in Sources */,
 				72E18B751CBA03480004EBB2 /* UISlider+Night.m in Sources */,
+				7295D7CC1D07E2A000525182 /* UISearchBar+Keyboard.m in Sources */,
 				72E18B691CBA03480004EBB2 /* UIControl+Night.m in Sources */,
 				72E18B6B1CBA03480004EBB2 /* UILabel+Night.m in Sources */,
 				72E18B891CBA03480004EBB2 /* UINavigationBar+Animation.m in Sources */,

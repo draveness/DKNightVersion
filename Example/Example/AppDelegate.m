@@ -24,6 +24,7 @@
     [self.window makeKeyAndVisible];
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
     self.window.rootViewController = navigation;
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
     return YES;
 }
 
