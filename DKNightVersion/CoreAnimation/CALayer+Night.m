@@ -44,7 +44,7 @@
 - (void)setDk_backgroundColorPicker:(DKColorPicker)picker {
     objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker(self.dk_manager.themeVersion).CGColor;
-    [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBorderColor:))];
+    [self.pickers setValue:[picker copy] forKey:NSStringFromSelector(@selector(setBackgroundColor:))];
 }
 
 - (void)night_updateColor {

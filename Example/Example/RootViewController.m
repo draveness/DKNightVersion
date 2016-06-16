@@ -47,7 +47,6 @@
     navigationLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
     self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
-
 }
 
 - (void)night {
