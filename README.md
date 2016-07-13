@@ -15,7 +15,6 @@
 - [x] Support different themes
 - [x] Generate picker for other lib with one line macro
 
-> If you want to implement night mode in Swift project without import Objective-C code. This is the Swift version [NightNight](https://github.com/Draveness/NightNight)
 
 # Demo
 
@@ -37,6 +36,7 @@
 	+ [Create temporary DKColorPicker](#create-temporary-dkcolorpicker)
 	+ [DKImagePicker](#dkimagepicker)
 
+> If you want to implement night mode in Swift project without import Objective-C code. This is the Swift version [NightNight](https://github.com/Draveness/NightNight)
 
 # How To Get Started
 
