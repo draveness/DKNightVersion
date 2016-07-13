@@ -18,7 +18,9 @@
 
 # Demo
 
-![](./images/DKNightVersion.gif)
+<p align='center'>
+  <img src="./images/DKNightVersion.gif">
+</p>
 
 ----
 
