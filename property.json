@@ -25,7 +25,10 @@
     ],
     "UITableView":
     [ 
-        "separatorColor"
+        "separatorColor",
+        "sectionIndexColor",
+        "sectionIndexBackgroundColor",
+        "sectionIndexTrackingBackgroundColor"
     ],
     "UITextView":
     [

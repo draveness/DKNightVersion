@@ -14,5 +14,8 @@
 @interface UITableView (Night)
 
 @property (nonatomic, copy, setter = dk_setSeparatorColorPicker:) DKColorPicker dk_separatorColorPicker;
+@property (nonatomic, copy, setter = dk_setSectionIndexColorPicker:) DKColorPicker dk_sectionIndexColorPicker;
+@property (nonatomic, copy, setter = dk_setSectionIndexBackgroundColorPicker:) DKColorPicker dk_sectionIndexBackgroundColorPicker;
+@property (nonatomic, copy, setter = dk_setSectionIndexTrackingBackgroundColorPicker:) DKColorPicker dk_sectionIndexTrackingBackgroundColorPicker;
 
 @end
