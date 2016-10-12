@@ -8,6 +8,29 @@
 
 #import "DKColorTable.h"
 
+@interface NSString (Trimming)
+
+@end
+
+@implementation NSString (Trimming)
+
+- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet {
+    NSUInteger location = 0;
+    NSUInteger length = [self length];
+    unichar charBuffer[length];
+    [self getCharacters:charBuffer];
+    
+    for (length; length > 0; length--) {
+        if (![characterSet characterIsMember:charBuffer[length - 1]]) {
+            break;
+        }
+    }
+    
+    return [self substringWithRange:NSMakeRange(location, length - location)];
+}
+
+@end
+
 @interface DKColorTable ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, UIColor *> *> *table;
@@ -53,17 +76,26 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     NSLog(@"DKColorTable:\n%@", fileContents);
 
 
-    NSMutableArray *entries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
+    NSMutableArray *tempEntries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
+    
+    // Fixed whitespace error in txt file, fix https://github.com/Draveness/DKNightVersion/issues/64
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+    [tempEntries enumerateObjectsUsingBlock:^(NSString *  _Nonnull entry, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *trimmingEntry = [entry stringByTrimmingTrailingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        [entries addObject:trimmingEntry];
+    }];
+    [entries filterUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
+
     [entries removeObjectAtIndex:0]; // Remove theme entry
 
     self.themes = [self themesFromContents:fileContents];
-
+    
     // Add entry to color table
     for (NSString *entry in entries) {
         NSArray *colors = [self colorsFromEntry:entry];
-        NSString *key = [self keyFromEntry:entry];
-
-        [self addEntryWithKey:key colors:colors themes:self.themes];
+        NSString *keys = [self keyFromEntry:entry];
+        
+        [self addEntryWithKey:keys colors:colors themes:self.themes];
     }
 }
 
@@ -154,7 +186,7 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 
 - (NSArray *)separateString:(NSString *)string {
     NSArray *array = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    return[array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
+    return [array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
 }
 
 @end
