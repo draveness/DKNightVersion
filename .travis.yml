@@ -7,6 +7,7 @@ before_install:
     - env
     - locale
     - brew update
+    - brew unlink carthage
     - brew install carthage
 before_deploy:
     - carthage build --no-skip-current
