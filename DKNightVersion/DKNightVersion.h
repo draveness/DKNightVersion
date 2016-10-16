@@ -54,22 +54,19 @@ FOUNDATION_EXPORT const unsigned char DKNightVersionVersionString[];
 #define _DKSetterWithPROPERTYerty(LOWERCASE) [NSString stringWithFormat:@"set%@:", [[[LOWERCASE substringToIndex:1] uppercaseString] stringByAppendingString:[LOWERCASE substringFromIndex:1]]]
 
 #define pickerify(KLASS, PROPERTY) interface \
-    KLASS (Night) \
+    KLASS (Night_ ## PROPERTY ## _Picker) \
     @property (nonatomic, copy, setter = dk_set ## PROPERTY ## Picker:) DKColorPicker dk_ ## PROPERTY ## Picker; \
     @end \
-    @interface \
-    KLASS () \
-    @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers; \
-    @end \
     @implementation \
-    KLASS (Night) \
+    KLASS (Night_ ## PROPERTY ## _Picker) \
     - (DKColorPicker)dk_ ## PROPERTY ## Picker { \
         return objc_getAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker)); \
     } \
     - (void)dk_set ## PROPERTY ## Picker:(DKColorPicker)picker { \
         objc_setAssociatedObject(self, @selector(dk_ ## PROPERTY ## Picker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC); \
         [self setValue:picker(self.dk_manager.themeVersion) forKeyPath:@keypath(self, PROPERTY)];\
-        [self.pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
+        NSMutableDictionary *pickers = [self valueForKeyPath:@"pickers"];\
+        [pickers setValue:[picker copy] forKey:_DKSetterWithPROPERTYerty(@#PROPERTY)]; \
     } \
     @end
 
