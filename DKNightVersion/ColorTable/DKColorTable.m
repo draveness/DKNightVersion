@@ -20,7 +20,7 @@
     unichar charBuffer[length];
     [self getCharacters:charBuffer];
     
-    for (length; length > 0; length--) {
+    for (; length > 0; length--) {
         if (![characterSet characterIsMember:charBuffer[length - 1]]) {
             break;
         }
