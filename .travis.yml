@@ -8,7 +8,7 @@ before_install:
     - locale
     - rvm install 2.3
     - rvm use 2.3
-    - gem install cocoapods --pre
+    - gem install cocoapods
     - brew update
     - brew unlink carthage
     - brew install carthage
