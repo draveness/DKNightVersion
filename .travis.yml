@@ -6,6 +6,9 @@ before_install:
     - export LANG=en_US.UTF-8
     - env
     - locale
+    - rvm install 2.3
+    - rvm use 2.3
+    - gem install cocoapods --pre
     - brew update
     - brew unlink carthage
     - brew install carthage
