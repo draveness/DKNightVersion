@@ -130,7 +130,7 @@ self.dk_manager.themeVersion = @"RED";
 
 #### Post Notification
 
-Every time the current theme version changes, `DKNightVersionManager` will post a `DKNightVersionThemeChangingNotificaiton`. If you wanna to do some customization, you can observe this notification and react with proper actions.
+Every time the current theme version changes, `DKNightVersionManager` will post a `DKNightVersionThemeChangingNotification`. If you wanna to do some customization, you can observe this notification and react with proper actions.
 
 ### DKColorPicker
 
