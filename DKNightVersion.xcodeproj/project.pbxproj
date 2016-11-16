@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341009701DDCA07400CA390F /* CAShapeLayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */; };
+		341009711DDCA07400CA390F /* CAShapeLayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */; };
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
 		7287AB791D0437A300D544B4 /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */; };
 		7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */; };
@@ -75,6 +77,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+Night.h"; sourceTree = "<group>"; };
+		3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+Night.m"; sourceTree = "<group>"; };
 		7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
 		7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +274,8 @@
 			children = (
 				72E18B561CBA03480004EBB2 /* CALayer+Night.h */,
 				72E18B571CBA03480004EBB2 /* CALayer+Night.m */,
+				3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */,
+				3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */,
 				72E18B581CBA03480004EBB2 /* CoreAnimation+Night.h */,
 			);
 			path = CoreAnimation;
@@ -324,6 +330,7 @@
 				72E18B6E1CBA03480004EBB2 /* UIPageControl+Night.h in Headers */,
 				72E18B931CBA03480004EBB2 /* DKColor.h in Headers */,
 				72E18B991CBA03480004EBB2 /* NSObject+Night.h in Headers */,
+				341009701DDCA07400CA390F /* CAShapeLayer+Night.h in Headers */,
 				72E18B8E1CBA03480004EBB2 /* NSObject+DeallocBlock.h in Headers */,
 				72E18B921CBA03480004EBB2 /* CoreAnimation+Night.h in Headers */,
 				72E18B681CBA03480004EBB2 /* UIControl+Night.h in Headers */,
@@ -418,6 +425,7 @@
 				72E18B691CBA03480004EBB2 /* UIControl+Night.m in Sources */,
 				72E18B6B1CBA03480004EBB2 /* UILabel+Night.m in Sources */,
 				72E18B891CBA03480004EBB2 /* UINavigationBar+Animation.m in Sources */,
+				341009711DDCA07400CA390F /* CAShapeLayer+Night.m in Sources */,
 				72E18B911CBA03480004EBB2 /* CALayer+Night.m in Sources */,
 				72E18B731CBA03480004EBB2 /* UISearchBar+Night.m in Sources */,
 				72E18B771CBA03480004EBB2 /* UISwitch+Night.m in Sources */,
