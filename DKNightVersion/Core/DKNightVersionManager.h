@@ -34,7 +34,7 @@ extern DKThemeVersion * const DKThemeVersionNight;
  *  This notification will post, every time you change current theme version
  *  of DKNightVersionManager glbal instance.
  */
-extern NSString * const DKNightVersionThemeChangingNotificaiton;
+extern NSString * const DKNightVersionThemeChangingNotification;
 
 /**
  *  When change theme version, it will gives us a smooth animation. And this
@@ -56,7 +56,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
 
 /**
  *  Current ThemeVersion, default is DKThemeVersionNormal, change it to change the global
- *  theme, this will post `DKNightVersionThemeChangingNotificaiton`, if you want to customize
+ *  theme, this will post `DKNightVersionThemeChangingNotification`, if you want to customize
  *  your theme you can observe this notification.
  *  
  *  Ex:
@@ -84,7 +84,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
 + (DKNightVersionManager *)sharedManager;
 
 /**
- *  Night falling. When nightFalling is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  Night falling. When nightFalling is called, post `DKNightVersionThemeChangingNotification`.
  *  You can setup customize with observing the notification. `themeVersion` of the manager will
  *  be set to `DKNightVersionNight`. This is a convinient method for switching theme the
  *  `DKThemeVersionNight`.
@@ -92,7 +92,7 @@ extern CGFloat const DKNightVersionAnimationDuration;
 - (void)nightFalling;
 
 /**
- *  Dawn coming. When dawnComing is called, post `DKNightVersionThemeChangingNotificaiton`.
+ *  Dawn coming. When dawnComing is called, post `DKNightVersionThemeChangingNotification`.
  *  You can setup customize with observing the notification.`themeVersion` of the manager will
  *  be set to `DKNightVersionNormal`. This is a convinient method for switching theme the
  *  `DKThemeVersionNormal`.

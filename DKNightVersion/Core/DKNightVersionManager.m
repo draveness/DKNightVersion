@@ -11,7 +11,7 @@
 NSString * const DKThemeVersionNormal = @"NORMAL";
 NSString * const DKThemeVersionNight = @"NIGHT";
 
-NSString * const DKNightVersionThemeChangingNotificaiton = @"DKNightVersionThemeChangingNotificaiton";
+NSString * const DKNightVersionThemeChangingNotification = @"DKNightVersionThemeChangingNotification";
 
 CGFloat const DKNightVersionAnimationDuration = 0.3;
 
@@ -59,7 +59,7 @@ NSString * const DKNightVersionCurrentThemeVersionKey = @"com.dknightversion.man
 
     // Save current theme version to user default
     [[NSUserDefaults standardUserDefaults] setValue:themeVersion forKey:DKNightVersionCurrentThemeVersionKey];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotificaiton
+    [[NSNotificationCenter defaultCenter] postNotificationName:DKNightVersionThemeChangingNotification
                                                         object:nil];
 
     if (self.shouldChangeStatusBar) {
