@@ -9,10 +9,6 @@
 #import "DKColorTable.h"
 #import "DKNightVersionConfig.h"
 
-@interface NSString (Trimming)
-
-@end
-
 @implementation NSString (Trimming)
 
 - (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet {
@@ -38,6 +34,9 @@
 @property (nonatomic, strong, readwrite) NSArray<DKThemeVersion *> *themes;
 
 @end
+
+@interface DKColorTable (PlainText) - (void)loadFromPlainText; @end
+@interface DKColorTable (Plist)     - (void)loadFromPlist;     @end
 
 @implementation DKColorTable
 
@@ -73,89 +72,6 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     } else {
         NSAssert(NO, @"Unknown path extension %@ for file %@", pathExtension, self.file);
     }
-}
-
-- (void)loadFromPlist {
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
-    NSDictionary *infos = [NSDictionary dictionaryWithContentsOfFile:filepath];
-    for (NSString *key in infos) {
-        NSMutableDictionary *themeToColorDictionary = [infos[key] mutableCopy];
-        [themeToColorDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-            UIColor *color = [self colorFromString:obj];
-            themeToColorDictionary[key] = color;
-        }];
-        [self.table setValue:themeToColorDictionary forKey:key];
-    }
-}
-
-- (void)loadFromPlainText {
-        // Load color table file
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
-    NSError *error;
-    NSString *fileContents = [NSString stringWithContentsOfFile:filepath
-                                                       encoding:NSUTF8StringEncoding
-                                                          error:&error];
-
-    if (error)
-        NSLog(@"Error reading file: %@", error.localizedDescription);
-
-    NSLog(@"DKColorTable:\n%@", fileContents);
-
-
-    NSMutableArray *tempEntries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
-
-        // Fixed whitespace error in txt file, fix https://github.com/Draveness/DKNightVersion/issues/64
-    NSMutableArray *entries = [[NSMutableArray alloc] init];
-    [tempEntries enumerateObjectsUsingBlock:^(NSString *  _Nonnull entry, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *trimmingEntry = [entry stringByTrimmingTrailingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        [entries addObject:trimmingEntry];
-    }];
-    [entries filterUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
-
-    [entries removeObjectAtIndex:0]; // Remove theme entry
-
-    if (![self.themes isEqualToArray:[self themesFromContents:fileContents]]) {
-        NSAssert(NO, @"Invalid themes count %@ compares to %@", self.themes, [self themesFromContents:fileContents]);
-    }
-
-        // Add entry to color table
-    for (NSString *entry in entries) {
-        NSArray *colors = [self colorsFromEntry:entry];
-        NSString *keys = [self keyFromEntry:entry];
-
-        [self addEntryWithKey:keys colors:colors themes:self.themes];
-    }
-}
-
-- (NSArray *)themesFromContents:(NSString *)content {
-    NSString *rawThemes = [content componentsSeparatedByString:@"\n"].firstObject;
-    return [self separateString:rawThemes];
-}
-
-- (NSArray *)colorsFromEntry:(NSString *)entry {
-    NSMutableArray *colors = [[self separateString:entry] mutableCopy];
-    [colors removeLastObject];
-    NSMutableArray *result = [@[] mutableCopy];
-    for (NSString *number in colors) {
-        [result addObject:[self colorFromString:number]];
-    }
-    return result;
-}
-
-- (NSString *)keyFromEntry:(NSString *)entry {
-    return [self separateString:entry].lastObject;
-}
-
-- (void)addEntryWithKey:(NSString *)key colors:(NSArray *)colors themes:(NSArray *)themes {
-    NSParameterAssert(themes.count == colors.count);
-
-    __block NSMutableDictionary *themeToColorDictionary = [@{} mutableCopy];
-
-    [themes enumerateObjectsUsingBlock:^(NSString * _Nonnull theme, NSUInteger idx, BOOL * _Nonnull stop) {
-        [themeToColorDictionary setValue:colors[idx] forKey:theme];
-    }];
-
-    [self.table setValue:themeToColorDictionary forKey:key];
 }
 
 - (DKColorPicker)pickerWithKey:(NSString *)key {
@@ -215,6 +131,101 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 - (NSArray *)separateString:(NSString *)string {
     NSArray *array = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     return [array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
+}
+
+@end
+
+@implementation DKColorTable (PlainText)
+
+- (void)loadFromPlainText {
+    // Load color table file
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    NSError *error;
+    NSString *fileContents = [NSString stringWithContentsOfFile:filepath
+                                                       encoding:NSUTF8StringEncoding
+                                                          error:&error];
+
+    if (error)
+        NSLog(@"Error reading file: %@", error.localizedDescription);
+
+    NSLog(@"DKColorTable:\n%@", fileContents);
+
+
+    NSMutableArray *tempEntries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
+
+    // Fixed whitespace error in txt file, fix https://github.com/Draveness/DKNightVersion/issues/64
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+    [tempEntries enumerateObjectsUsingBlock:^(NSString *  _Nonnull entry, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *trimmingEntry = [entry stringByTrimmingTrailingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        [entries addObject:trimmingEntry];
+    }];
+    [entries filterUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
+
+    [entries removeObjectAtIndex:0]; // Remove theme entry
+
+    if (![self.themes isEqualToArray:[self themesFromContents:fileContents]]) {
+        NSAssert(NO, @"Invalid themes count %@ compares to %@", self.themes, [self themesFromContents:fileContents]);
+    }
+
+    // Add entry to color table
+    for (NSString *entry in entries) {
+        NSArray *colors = [self colorsFromEntry:entry];
+        NSString *keys = [self keyFromEntry:entry];
+
+        [self addEntryWithKey:keys colors:colors themes:self.themes];
+    }
+}
+
+- (NSArray *)themesFromContents:(NSString *)content {
+    NSString *rawThemes = [content componentsSeparatedByString:@"\n"].firstObject;
+    return [self separateString:rawThemes];
+}
+
+- (NSArray *)colorsFromEntry:(NSString *)entry {
+    NSMutableArray *colors = [[self separateString:entry] mutableCopy];
+    [colors removeLastObject];
+    NSMutableArray *result = [@[] mutableCopy];
+    for (NSString *number in colors) {
+        [result addObject:[self colorFromString:number]];
+    }
+    return result;
+}
+
+- (NSString *)keyFromEntry:(NSString *)entry {
+    return [self separateString:entry].lastObject;
+}
+
+- (void)addEntryWithKey:(NSString *)key colors:(NSArray *)colors themes:(NSArray *)themes {
+    NSParameterAssert(themes.count == colors.count);
+
+    __block NSMutableDictionary *themeToColorDictionary = [@{} mutableCopy];
+
+    [themes enumerateObjectsUsingBlock:^(NSString * _Nonnull theme, NSUInteger idx, BOOL * _Nonnull stop) {
+        [themeToColorDictionary setValue:colors[idx] forKey:theme];
+    }];
+
+    [self.table setValue:themeToColorDictionary forKey:key];
+}
+
+@end
+
+@implementation DKColorTable (Plist)
+
+
+- (void)loadFromPlist {
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    NSDictionary *infos = [NSDictionary dictionaryWithContentsOfFile:filepath];
+    NSSet *configThemes = [NSSet setWithArray:DKNightVersion.themes];
+    for (NSString *key in infos) {
+        NSMutableDictionary *themeToColorDictionary = [infos[key] mutableCopy];
+        NSSet *themesInFile = [NSSet setWithArray:themeToColorDictionary.allKeys];
+        NSAssert([themesInFile isEqualToSet:configThemes], @"Invalid theme to themes to color dictionary %@ for key %@", themeToColorDictionary, key);
+        [themeToColorDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+            UIColor *color = [self colorFromString:obj];
+            themeToColorDictionary[key] = color;
+        }];
+        [self.table setValue:themeToColorDictionary forKey:key];
+    }
 }
 
 @end
