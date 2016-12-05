@@ -14,10 +14,10 @@
 		7292FC181D673B030054F827 /* DKNightVersion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7292FC171D673B030054F827 /* DKNightVersion.framework */; };
 		729323FA1CB9FAF1009E544E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 729323F91CB9FAF1009E544E /* main.m */; };
 		729323FD1CB9FAF1009E544E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 729323FC1CB9FAF1009E544E /* AppDelegate.m */; };
-		729324001CB9FAF1009E544E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729323FF1CB9FAF1009E544E /* ViewController.m */; };
 		729324031CB9FAF1009E544E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729324011CB9FAF1009E544E /* Main.storyboard */; };
 		729324051CB9FAF1009E544E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729324041CB9FAF1009E544E /* Assets.xcassets */; };
 		729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729324061CB9FAF1009E544E /* LaunchScreen.storyboard */; };
+		72D62E171DDBF14D009189A9 /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72D62E161DDBF14D009189A9 /* DKColorTable.plist */; };
 		72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +35,11 @@
 		729323F91CB9FAF1009E544E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		729323FB1CB9FAF1009E544E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		729323FC1CB9FAF1009E544E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		729323FE1CB9FAF1009E544E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		729323FF1CB9FAF1009E544E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		729324021CB9FAF1009E544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		729324041CB9FAF1009E544E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729324071CB9FAF1009E544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729324091CB9FAF1009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D62E161DDBF14D009189A9 /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
 		72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKColorTable.txt; path = ../../DKNightVersion/ColorTable/DKColorTable.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +77,6 @@
 			children = (
 				729323FB1CB9FAF1009E544E /* AppDelegate.h */,
 				729323FC1CB9FAF1009E544E /* AppDelegate.m */,
-				729323FE1CB9FAF1009E544E /* ViewController.h */,
-				729323FF1CB9FAF1009E544E /* ViewController.m */,
 				7261ADF11CB9FB2D007E283C /* PresentingViewController.h */,
 				7261ADF21CB9FB2D007E283C /* PresentingViewController.m */,
 				7261ADF31CB9FB2D007E283C /* RootViewController.h */,
@@ -102,6 +99,7 @@
 			children = (
 				72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */,
 				729323F91CB9FAF1009E544E /* main.m */,
+				72D62E161DDBF14D009189A9 /* DKColorTable.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,6 +164,7 @@
 				729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */,
 				729324051CB9FAF1009E544E /* Assets.xcassets in Resources */,
 				72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */,
+				72D62E171DDBF14D009189A9 /* DKColorTable.plist in Resources */,
 				729324031CB9FAF1009E544E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +177,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7261ADFC1CB9FB2D007E283C /* TableViewCell.m in Sources */,
-				729324001CB9FAF1009E544E /* ViewController.m in Sources */,
 				729323FD1CB9FAF1009E544E /* AppDelegate.m in Sources */,
 				729323FA1CB9FAF1009E544E /* main.m in Sources */,
 				7261ADF91CB9FB2D007E283C /* PresentingViewController.m in Sources */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725CD6C81DF53B9F005098FB /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 725CD6C71DF53B9F005098FB /* DKColorTable.plist */; };
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
 		7287AB791D0437A300D544B4 /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */; };
 		7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */; };
@@ -75,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		725CD6C71DF53B9F005098FB /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
 		7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
 		7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +298,7 @@
 				72E18B631CBA03480004EBB2 /* DKColorTable.h */,
 				72E18B641CBA03480004EBB2 /* DKColorTable.m */,
 				72E18B651CBA03480004EBB2 /* DKColorTable.txt */,
+				725CD6C71DF53B9F005098FB /* DKColorTable.plist */,
 			);
 			path = ColorTable;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				72E18B9D1CBA03480004EBB2 /* DKColorTable.txt in Resources */,
 				729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */,
+				725CD6C81DF53B9F005098FB /* DKColorTable.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
