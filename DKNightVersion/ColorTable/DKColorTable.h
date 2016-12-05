@@ -44,7 +44,7 @@
 @property (nonatomic, strong) NSString *file;
 
 /**
- *  An array of DKThemeVersion, order is exactly the same in `file`.
+ *  An array of DKThemeVersion, default is `@[@"NORMAL", @"NIGHT"]`.
  */
 @property (nonatomic, strong, readonly) NSArray<DKThemeVersion *> *themes;
 

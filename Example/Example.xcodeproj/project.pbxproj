@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725CD6DE1DF5445C005098FB /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 725CD6DD1DF5445C005098FB /* DKColorTable.plist */; };
 		7261ADF91CB9FB2D007E283C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF21CB9FB2D007E283C /* PresentingViewController.m */; };
 		7261ADFA1CB9FB2D007E283C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF41CB9FB2D007E283C /* RootViewController.m */; };
 		7261ADFB1CB9FB2D007E283C /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF61CB9FB2D007E283C /* SuccViewController.m */; };
@@ -17,11 +18,11 @@
 		729324031CB9FAF1009E544E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729324011CB9FAF1009E544E /* Main.storyboard */; };
 		729324051CB9FAF1009E544E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729324041CB9FAF1009E544E /* Assets.xcassets */; };
 		729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729324061CB9FAF1009E544E /* LaunchScreen.storyboard */; };
-		72D62E171DDBF14D009189A9 /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72D62E161DDBF14D009189A9 /* DKColorTable.plist */; };
 		72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		725CD6DD1DF5445C005098FB /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
 		7261ADF11CB9FB2D007E283C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		7261ADF21CB9FB2D007E283C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		7261ADF31CB9FB2D007E283C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		729324041CB9FAF1009E544E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729324071CB9FAF1009E544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729324091CB9FAF1009E544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72D62E161DDBF14D009189A9 /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
 		72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DKColorTable.txt; path = ../../DKNightVersion/ColorTable/DKColorTable.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,9 +97,9 @@
 		729323F81CB9FAF1009E544E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				725CD6DD1DF5445C005098FB /* DKColorTable.plist */,
 				72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */,
 				729323F91CB9FAF1009E544E /* main.m */,
-				72D62E161DDBF14D009189A9 /* DKColorTable.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 				729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */,
 				729324051CB9FAF1009E544E /* Assets.xcassets in Resources */,
 				72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */,
-				72D62E171DDBF14D009189A9 /* DKColorTable.plist in Resources */,
+				725CD6DE1DF5445C005098FB /* DKColorTable.plist in Resources */,
 				729324031CB9FAF1009E544E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

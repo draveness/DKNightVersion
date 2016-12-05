@@ -7,6 +7,7 @@
 //
 
 #import "DKColorTable.h"
+#import "DKNightVersionConfig.h"
 
 @interface NSString (Trimming)
 
@@ -53,7 +54,8 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         sharedInstance = [[DKColorTable alloc] init];
-        sharedInstance.file = @"DKColorTable.txt";
+        sharedInstance.themes = DKNightVersion.themes;
+        sharedInstance.file = @"DKColorTable.plist";
     });
     return sharedInstance;
 }
@@ -61,9 +63,33 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 - (void)reloadColorTable {
     // Clear previos color table
     self.table = nil;
-    self.themes = nil;
 
-    // Load color table file
+    NSString *pathExtension = self.file.pathExtension;
+
+    if ([pathExtension isEqualToString:@"plist"]) {
+        [self loadFromPlist];
+    } else if ([pathExtension isEqualToString:@"txt"] || [pathExtension isEqualToString:@""]) {
+        [self loadFromPlainText];
+    } else {
+        NSAssert(NO, @"Unknown path extension %@ for file %@", pathExtension, self.file);
+    }
+}
+
+- (void)loadFromPlist {
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    NSDictionary *infos = [NSDictionary dictionaryWithContentsOfFile:filepath];
+    for (NSString *key in infos) {
+        NSMutableDictionary *themeToColorDictionary = [infos[key] mutableCopy];
+        [themeToColorDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+            UIColor *color = [self colorFromString:obj];
+            themeToColorDictionary[key] = color;
+        }];
+        [self.table setValue:themeToColorDictionary forKey:key];
+    }
+}
+
+- (void)loadFromPlainText {
+        // Load color table file
     NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
     NSError *error;
     NSString *fileContents = [NSString stringWithContentsOfFile:filepath
@@ -77,8 +103,8 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 
 
     NSMutableArray *tempEntries = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
-    
-    // Fixed whitespace error in txt file, fix https://github.com/Draveness/DKNightVersion/issues/64
+
+        // Fixed whitespace error in txt file, fix https://github.com/Draveness/DKNightVersion/issues/64
     NSMutableArray *entries = [[NSMutableArray alloc] init];
     [tempEntries enumerateObjectsUsingBlock:^(NSString *  _Nonnull entry, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *trimmingEntry = [entry stringByTrimmingTrailingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -88,13 +114,15 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 
     [entries removeObjectAtIndex:0]; // Remove theme entry
 
-    self.themes = [self themesFromContents:fileContents];
-    
-    // Add entry to color table
+    if (![self.themes isEqualToArray:[self themesFromContents:fileContents]]) {
+        NSAssert(NO, @"Invalid themes count %@ compares to %@", self.themes, [self themesFromContents:fileContents]);
+    }
+
+        // Add entry to color table
     for (NSString *entry in entries) {
         NSArray *colors = [self colorsFromEntry:entry];
         NSString *keys = [self keyFromEntry:entry];
-        
+
         [self addEntryWithKey:keys colors:colors themes:self.themes];
     }
 }
@@ -157,7 +185,7 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
 
 #pragma mark - Helper
 
-- (UIColor*)colorFromString:(NSString*)hexStr {
+- (UIColor *)colorFromString:(NSString *)hexStr {
     hexStr = [hexStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if([hexStr hasPrefix:@"0x"]) {
         hexStr = [hexStr substringFromIndex:2];

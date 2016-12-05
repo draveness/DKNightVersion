@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		725CD6C81DF53B9F005098FB /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 725CD6C71DF53B9F005098FB /* DKColorTable.plist */; };
+		725CD6D01DF53F3B005098FB /* DKNightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 725CD6CE1DF53F3B005098FB /* DKNightVersion.m */; };
+		725CD6D31DF53FE8005098FB /* DKNightVersionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 725CD6D11DF53FE8005098FB /* DKNightVersionConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		725CD6D41DF53FE8005098FB /* DKNightVersionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 725CD6D21DF53FE8005098FB /* DKNightVersionConfig.m */; };
+		725CD6DB1DF5407A005098FB /* DKNightVersionConfig+Internel.h in Headers */ = {isa = PBXBuildFile; fileRef = 725CD6D91DF5407A005098FB /* DKNightVersionConfig+Internel.h */; };
+		725CD6DC1DF5407A005098FB /* DKNightVersionConfig+Internel.m in Sources */ = {isa = PBXBuildFile; fileRef = 725CD6DA1DF5407A005098FB /* DKNightVersionConfig+Internel.m */; };
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
 		7287AB791D0437A300D544B4 /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */; };
 		7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */; };
@@ -77,6 +82,11 @@
 
 /* Begin PBXFileReference section */
 		725CD6C71DF53B9F005098FB /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
+		725CD6CE1DF53F3B005098FB /* DKNightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersion.m; sourceTree = "<group>"; };
+		725CD6D11DF53FE8005098FB /* DKNightVersionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionConfig.h; sourceTree = "<group>"; };
+		725CD6D21DF53FE8005098FB /* DKNightVersionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionConfig.m; sourceTree = "<group>"; };
+		725CD6D91DF5407A005098FB /* DKNightVersionConfig+Internel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKNightVersionConfig+Internel.h"; sourceTree = "<group>"; };
+		725CD6DA1DF5407A005098FB /* DKNightVersionConfig+Internel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKNightVersionConfig+Internel.m"; sourceTree = "<group>"; };
 		7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
 		7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +309,11 @@
 				72E18B641CBA03480004EBB2 /* DKColorTable.m */,
 				72E18B651CBA03480004EBB2 /* DKColorTable.txt */,
 				725CD6C71DF53B9F005098FB /* DKColorTable.plist */,
+				725CD6CE1DF53F3B005098FB /* DKNightVersion.m */,
+				725CD6D11DF53FE8005098FB /* DKNightVersionConfig.h */,
+				725CD6D21DF53FE8005098FB /* DKNightVersionConfig.m */,
+				725CD6D91DF5407A005098FB /* DKNightVersionConfig+Internel.h */,
+				725CD6DA1DF5407A005098FB /* DKNightVersionConfig+Internel.m */,
 			);
 			path = ColorTable;
 			sourceTree = "<group>";
@@ -321,6 +336,7 @@
 				72E18B6A1CBA03480004EBB2 /* UILabel+Night.h in Headers */,
 				72E18B801CBA03480004EBB2 /* UIToolbar+Night.h in Headers */,
 				72E18B881CBA03480004EBB2 /* UINavigationBar+Animation.h in Headers */,
+				725CD6DB1DF5407A005098FB /* DKNightVersionConfig+Internel.h in Headers */,
 				72E18B8B1CBA03480004EBB2 /* metamacros.h in Headers */,
 				72E18B901CBA03480004EBB2 /* CALayer+Night.h in Headers */,
 				7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */,
@@ -343,6 +359,7 @@
 				72E18B9B1CBA03480004EBB2 /* DKColorTable.h in Headers */,
 				72E18B721CBA03480004EBB2 /* UISearchBar+Night.h in Headers */,
 				72E18B8C1CBA03480004EBB2 /* DKDeallocBlockExecutor.h in Headers */,
+				725CD6D31DF53FE8005098FB /* DKNightVersionConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +438,7 @@
 				7295D7CC1D07E2A000525182 /* UISearchBar+Keyboard.m in Sources */,
 				72E18B691CBA03480004EBB2 /* UIControl+Night.m in Sources */,
 				72E18B6B1CBA03480004EBB2 /* UILabel+Night.m in Sources */,
+				725CD6D01DF53F3B005098FB /* DKNightVersion.m in Sources */,
 				72E18B891CBA03480004EBB2 /* UINavigationBar+Animation.m in Sources */,
 				72E18B911CBA03480004EBB2 /* CALayer+Night.m in Sources */,
 				72E18B731CBA03480004EBB2 /* UISearchBar+Night.m in Sources */,
@@ -433,10 +451,12 @@
 				72E18B871CBA03480004EBB2 /* UIImageView+Night.m in Sources */,
 				72E18B981CBA03480004EBB2 /* DKNightVersionManager.m in Sources */,
 				72E18B6D1CBA03480004EBB2 /* UINavigationBar+Night.m in Sources */,
+				725CD6DC1DF5407A005098FB /* DKNightVersionConfig+Internel.m in Sources */,
 				729A5D601CBB347700E8A164 /* README.md in Sources */,
 				72E18B671CBA03480004EBB2 /* UIBarButtonItem+Night.m in Sources */,
 				72E18B851CBA03480004EBB2 /* UIButton+Night.m in Sources */,
 				72E18B9C1CBA03480004EBB2 /* DKColorTable.m in Sources */,
+				725CD6D41DF53FE8005098FB /* DKNightVersionConfig.m in Sources */,
 				72E18B7F1CBA03480004EBB2 /* UITextView+Night.m in Sources */,
 				729A5D641CBB363600E8A164 /* UITextField+Keyboard.m in Sources */,
 				72E18B791CBA03480004EBB2 /* UITabBar+Night.m in Sources */,
