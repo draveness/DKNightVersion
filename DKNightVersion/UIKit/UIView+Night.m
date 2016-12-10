@@ -15,7 +15,7 @@
 @interface UIView ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, DKColorPicker> *pickers;
-
+@property (nonatomic, strong) NSMutableDictionary<NSString *, DKAlphaPicker> *alphaPickers;
 @end
 
 @implementation UIView (Night)
@@ -39,6 +39,16 @@
     objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];
+}
+
+- (DKAlphaPicker)dk_alphaPicker {
+    return objc_getAssociatedObject(self, @selector(dk_alphaPicker));
+}
+
+- (void)dk_setAlphaPicker:(DKAlphaPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_alphaPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    self.alpha = picker(self.dk_manager.themeVersion);
+    [self.alphaPickers setValue:[picker copy] forKey:@"setAlpha:"];
 }
 
 

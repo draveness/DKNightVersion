@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039558091DFB8376002AC625 /* DKAlpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 039558071DFB8376002AC625 /* DKAlpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0395580A1DFB8376002AC625 /* DKAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 039558081DFB8376002AC625 /* DKAlpha.m */; };
 		341009701DDCA07400CA390F /* CAShapeLayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */; };
 		341009711DDCA07400CA390F /* CAShapeLayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */; };
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
@@ -77,6 +79,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		039558071DFB8376002AC625 /* DKAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAlpha.h; sourceTree = "<group>"; };
+		039558081DFB8376002AC625 /* DKAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAlpha.m; sourceTree = "<group>"; };
 		3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+Night.h"; sourceTree = "<group>"; };
 		3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+Night.m"; sourceTree = "<group>"; };
 		7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 				72E18B5B1CBA03480004EBB2 /* DKColor.m */,
 				72E18B5C1CBA03480004EBB2 /* DKImage.h */,
 				72E18B5D1CBA03480004EBB2 /* DKImage.m */,
+				039558071DFB8376002AC625 /* DKAlpha.h */,
+				039558081DFB8376002AC625 /* DKAlpha.m */,
 				72E18B5E1CBA03480004EBB2 /* DKNightVersionManager.h */,
 				72E18B5F1CBA03480004EBB2 /* DKNightVersionManager.m */,
 				72E18B601CBA03480004EBB2 /* NSObject+Night.h */,
@@ -340,6 +346,7 @@
 				72E18B7A1CBA03480004EBB2 /* UITableView+Night.h in Headers */,
 				72E18B741CBA03480004EBB2 /* UISlider+Night.h in Headers */,
 				72E18B261CBA03360004EBB2 /* DKNightVersion.h in Headers */,
+				039558091DFB8376002AC625 /* DKAlpha.h in Headers */,
 				72E18B781CBA03480004EBB2 /* UITabBar+Night.h in Headers */,
 				72E18B7C1CBA03480004EBB2 /* UITextField+Night.h in Headers */,
 				72E18B841CBA03480004EBB2 /* UIButton+Night.h in Headers */,
@@ -377,7 +384,7 @@
 		7293232B1CB9F98C009E544E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Draveness;
 				TargetAttributes = {
 					729323331CB9F98C009E544E = {
@@ -444,6 +451,7 @@
 				72E18B7F1CBA03480004EBB2 /* UITextView+Night.m in Sources */,
 				729A5D641CBB363600E8A164 /* UITextField+Keyboard.m in Sources */,
 				72E18B791CBA03480004EBB2 /* UITabBar+Night.m in Sources */,
+				0395580A1DFB8376002AC625 /* DKAlpha.m in Sources */,
 				72E18B8D1CBA03480004EBB2 /* DKDeallocBlockExecutor.m in Sources */,
 				72E18B941CBA03480004EBB2 /* DKColor.m in Sources */,
 				72E18B7D1CBA03480004EBB2 /* UITextField+Night.m in Sources */,
@@ -470,8 +478,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -518,8 +528,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -549,6 +561,7 @@
 		7293233D1CB9F98C009E544E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 2;
@@ -565,6 +578,7 @@
 		7293233E1CB9F98C009E544E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 2;
