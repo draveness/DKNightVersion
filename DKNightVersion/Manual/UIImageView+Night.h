@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy, setter = dk_setImagePicker:) DKImagePicker dk_imagePicker;
 
+@property (nonatomic, copy, setter = dk_setAlphaPicker:) DKAlphaPicker dk_alphaPicker;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,6 +16,4 @@
 @property (nonatomic, copy, setter = dk_setBackgroundColorPicker:) DKColorPicker dk_backgroundColorPicker;
 @property (nonatomic, copy, setter = dk_setTintColorPicker:) DKColorPicker dk_tintColorPicker;
 
-@property (nonatomic, copy, setter = dk_setAlphaPicker:) DKAlphaPicker dk_alphaPicker;
-
 @end

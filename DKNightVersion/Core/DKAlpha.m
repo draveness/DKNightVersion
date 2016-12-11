@@ -22,7 +22,7 @@ DKAlphaPicker DKAlphaPickerWithAlphas(CGFloat normal, ...) {
     va_start(args, num_args);
 #pragma clang diagnostic pop
     for (NSUInteger i = 0; i < num_args; i++) {
-        NSUInteger alpha = va_arg(args, NSUInteger);
+        CGFloat alpha = va_arg(args, CGFloat);
         [alphas addObject:@(alpha)];
     }
     va_end(args);

@@ -36,8 +36,6 @@
     [button dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
     [switchButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
     
-    DKAlphaPicker picker = DKAlphaPickerWithAlphas(0.5, 1.0);
-
 }
 
 - (void)back {
