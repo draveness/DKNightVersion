@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		341009701DDCA07400CA390F /* CAShapeLayer+Night.h in Headers */ = {isa = PBXBuildFile; fileRef = 3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */; };
 		341009711DDCA07400CA390F /* CAShapeLayer+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */; };
+		65FDA3C11E1FCC1700177F10 /* DKColorMapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65FDA3C01E1FCC1700177F10 /* DKColorMapping.plist */; };
 		7287AB781D0437A300D544B4 /* UITextView+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */; };
 		7287AB791D0437A300D544B4 /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */; };
 		7295D7CB1D07E2A000525182 /* UISearchBar+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7295D7C91D07E2A000525182 /* UISearchBar+Keyboard.h */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		3410096E1DDCA07400CA390F /* CAShapeLayer+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+Night.h"; sourceTree = "<group>"; };
 		3410096F1DDCA07400CA390F /* CAShapeLayer+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+Night.m"; sourceTree = "<group>"; };
+		65FDA3C01E1FCC1700177F10 /* DKColorMapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorMapping.plist; sourceTree = "<group>"; };
 		7287AB761D0437A300D544B4 /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
 		7287AB771D0437A300D544B4 /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
 		729323341CB9F98C009E544E /* DKNightVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DKNightVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +304,7 @@
 				72E18B631CBA03480004EBB2 /* DKColorTable.h */,
 				72E18B641CBA03480004EBB2 /* DKColorTable.m */,
 				72E18B651CBA03480004EBB2 /* DKColorTable.txt */,
+				65FDA3C01E1FCC1700177F10 /* DKColorMapping.plist */,
 			);
 			path = ColorTable;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E18B9D1CBA03480004EBB2 /* DKColorTable.txt in Resources */,
+				65FDA3C11E1FCC1700177F10 /* DKColorMapping.plist in Resources */,
 				729A5D5E1CBA0CC600E8A164 /* DKNightVersion.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

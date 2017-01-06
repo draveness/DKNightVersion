@@ -44,6 +44,12 @@
 @property (nonatomic, strong) NSString *file;
 
 /**
+ *  Call '- (UIColor*)colorFromCustomDefine:(NSString*)customStr' will use the colorStr you
+ *  define your self. you can deifine your own color with a string to mapping the hex value.
+ */
+@property (nonatomic, strong) NSString *colorMappingFile;
+
+/**
  *  An array of DKThemeVersion, order is exactly the same in `file`.
  */
 @property (nonatomic, strong, readonly) NSArray<DKThemeVersion *> *themes;
