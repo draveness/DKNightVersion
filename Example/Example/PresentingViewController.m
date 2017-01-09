@@ -35,7 +35,7 @@
     self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
     [button dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
     [switchButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
-
+    
 }
 
 - (void)back {

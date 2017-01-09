@@ -41,5 +41,4 @@
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];
 }
 
-
 @end
