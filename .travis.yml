@@ -16,7 +16,7 @@ before_deploy:
     - carthage build --no-skip-current
     - carthage archive DKNightVersion
 script:
-    - pod lib lint
+    - pod lib lint --verbose
 
 deploy:
   provider: releases
