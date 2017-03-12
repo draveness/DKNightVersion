@@ -3,7 +3,7 @@ osx_image: xcode8
 xcode_project: DKNightVersion.xcodeproj
 xcode_scheme: DKNightVersion
 rvm:
-    - 2.4
+    - ruby-2.4.0
 before_install:
     - export LANG=en_US.UTF-8
     - env
