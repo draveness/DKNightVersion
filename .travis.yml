@@ -2,12 +2,12 @@ language: objective-c
 osx_image: xcode8
 xcode_project: DKNightVersion.xcodeproj
 xcode_scheme: DKNightVersion
+rvm:
+    - 2.4
 before_install:
     - export LANG=en_US.UTF-8
     - env
     - locale
-    - rvm install 2.4
-    - rvm use 2.4
     - gem install cocoapods
     - brew update
     - brew unlink carthage
