@@ -11,7 +11,6 @@
 #import "DKColorTable.h"
 
 DKAlphaPicker DKAlphaPickerWithAlphas(CGFloat normal, ...) {
-    
     NSArray<DKThemeVersion *> *themes = [DKColorTable sharedColorTable].themes;
     NSMutableArray<NSNumber *> *alphas = [[NSMutableArray alloc] initWithCapacity:themes.count];
     [alphas addObject:@(normal)];
@@ -22,7 +21,7 @@ DKAlphaPicker DKAlphaPickerWithAlphas(CGFloat normal, ...) {
     va_start(args, num_args);
 #pragma clang diagnostic pop
     for (NSUInteger i = 0; i < num_args; i++) {
-        CGFloat alpha = va_arg(args, CGFloat);
+        double alpha = va_arg(args, double);
         [alphas addObject:@(alpha)];
     }
     va_end(args);
