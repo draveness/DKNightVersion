@@ -35,9 +35,11 @@ DKAlphaPicker DKAlphaPickerWithAlphas(CGFloat normal, ...) {
 
 
 @implementation DKAlpha
+
 + (DKAlphaPicker)alphaPickerWithAlpha:(CGFloat)alpha {
     return ^(DKThemeVersion *themeVersion) {
         return alpha;
     };
 }
+
 @end

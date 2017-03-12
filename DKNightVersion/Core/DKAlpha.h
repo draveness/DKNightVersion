@@ -15,5 +15,7 @@ typedef CGFloat (^DKAlphaPicker)(DKThemeVersion *themeVersion);
 DKAlphaPicker DKAlphaPickerWithAlphas(CGFloat normal, ...);
 
 @interface DKAlpha : NSObject
+
 + (DKAlphaPicker)alphaPickerWithAlpha:(CGFloat)alpha;
+
 @end
