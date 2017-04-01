@@ -1,4 +1,5 @@
 language: objective-c
+os: osx
 osx_image: xcode8.3
 xcode_project: DKNightVersion.xcodeproj
 xcode_scheme: DKNightVersion
