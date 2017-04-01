@@ -6,6 +6,7 @@ rvm:
     - ruby-2.4.0
 before_install:
     - export LANG=en_US.UTF-8
+      gem install cocoapods
     - brew update
     - brew outdated carthage || brew upgrade carthage
 before_deploy:
