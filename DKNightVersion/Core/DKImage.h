@@ -43,7 +43,7 @@ DKImagePicker DKImagePickerWithNames(NSString *normalName, ...);
  *  order of the images is just like the themes order in DKColorTable.txt
  *  file.
  *
- *  @param images An array of images
+ *  @param names An array of images
  *
  *  @return A DKImagePicker
  */
