@@ -10,8 +10,8 @@
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 </p>
 
-- [x] Easily integrate and high performance
-- [x] Providing UIKit and CoreAnimation category
+- [x] Easily integrate and high performace
+- [x] Providing UIKit and CoreAnimation categoty
 - [x] Read color customization from file
 - [x] Support different themes
 - [x] Generate picker for other libs with one line macro
@@ -231,7 +231,7 @@ DKColorPicker DKColorPickerWithRGB(NSUInteger normal, ...);
 DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...);
 ```
 
-`DKColor` also provides a cluster of convenient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
+`DKColor` also provides a cluster of convinient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
 
 ```objectivec
 + (DKColorPicker)colorPickerWithUIColor:(UIColor *)color;
