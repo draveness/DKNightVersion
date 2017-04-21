@@ -34,6 +34,7 @@
 @interface DKColorTable ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, UIColor *> *> *table;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSString *> *customColorMapping;
 @property (nonatomic, strong, readwrite) NSArray<DKThemeVersion *> *themes;
 
 @end
@@ -54,6 +55,7 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     dispatch_once(&oncePredicate, ^{
         sharedInstance = [[DKColorTable alloc] init];
         sharedInstance.file = @"DKColorTable.txt";
+        sharedInstance.colorMappingFile = @"DKColorMapping.plist";
     });
     return sharedInstance;
 }
@@ -97,6 +99,15 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
         
         [self addEntryWithKey:keys colors:colors themes:self.themes];
     }
+}
+
+- (void)reloadCustomColorMapping{
+    //Clear previos color table
+    self.customColorMapping = nil;
+    
+    // Load color mapping file
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:self.file.stringByDeletingPathExtension ofType:self.file.pathExtension];
+    self.customColorMapping = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
 }
 
 - (NSArray *)themesFromContents:(NSString *)content {
@@ -155,23 +166,39 @@ UIColor *DKColorFromRGBA(NSUInteger hex) {
     [self reloadColorTable];
 }
 
+- (void)setColorMappingFile:(NSString *)colorMappingFile {
+    _colorMappingFile = colorMappingFile;
+    [self reloadCustomColorMapping];
+    [self reloadColorTable];
+}
+
 #pragma mark - Helper
-
-- (UIColor*)colorFromString:(NSString*)hexStr {
-    hexStr = [hexStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if([hexStr hasPrefix:@"0x"]) {
-        hexStr = [hexStr substringFromIndex:2];
+- (UIColor*)colorFromString:(NSString*)colorStr {
+    colorStr = [colorStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if([colorStr hasPrefix:@"0x"]) {
+        colorStr = [colorStr substringFromIndex:2];
     }
-    if([hexStr hasPrefix:@"#"]) {
-        hexStr = [hexStr substringFromIndex:1];
+    if([colorStr hasPrefix:@"#"]) {
+        colorStr = [colorStr substringFromIndex:1];
+    }
+    if([colorStr hasPrefix:@"@"]){
+        colorStr = [colorStr substringFromIndex:1];
+        return [self colorFromCustomDefine:colorStr];
     }
 
-    NSUInteger hex = [self intFromHexString:hexStr];
-    if(hexStr.length > 6) {
+    NSUInteger hex = [self intFromHexString:colorStr];
+    if(colorStr.length > 6) {
         return DKColorFromRGBA(hex);
     }
 
     return DKColorFromRGB(hex);
+}
+
+- (UIColor*)colorFromCustomDefine:(NSString*)customStr{
+    NSArray *allKeys = [self.customColorMapping allKeys];
+    NSParameterAssert([allKeys containsObject:customStr]);
+    NSString *hexStr = self.customColorMapping[customStr];
+    return [self colorFromString:hexStr];
 }
 
 - (NSUInteger)intFromHexString:(NSString *)hexStr {
