@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "SuccViewController.h"
+#import "ViewController.h"
+
+#import "UITabBarItem+Night.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +21,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    RootViewController *vc1 = [[RootViewController alloc] init];
+    vc1.tabBarItem.title = @"Root";
+    vc1.tabBarItem.image = [UIImage imageNamed:@"tabBar_association_normal"];
+    vc1.tabBarItem.image = [UIImage imageNamed:@"tabBar_association_selected"];
+    [vc1.tabBarItem dk_setTitleAttributePicker:DKAttributePickerWithAttributes(@{NSForegroundColorAttributeName: [UIColor blackColor]}, @{NSForegroundColorAttributeName: [UIColor orangeColor]}, @{NSForegroundColorAttributeName: [UIColor grayColor]}) forState:(UIControlStateNormal)];
+    [vc1.tabBarItem dk_setTitleAttributePicker:DKAttributePickerWithAttributes(@{NSForegroundColorAttributeName: [UIColor redColor]}, @{NSForegroundColorAttributeName: [UIColor blueColor]}, @{NSForegroundColorAttributeName: [UIColor greenColor]}) forState:(UIControlStateSelected)];
+    UINavigationController *navigation1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    
+    ViewController *vc2 = [[ViewController alloc] init];
+    vc2.tabBarItem.title = @"My";
+    vc2.tabBarItem.image = [UIImage imageNamed:@"tabBar_profile_normal"];
+    vc2.tabBarItem.image = [UIImage imageNamed:@"tabBar_profile_selected"];
+    [vc2.tabBarItem dk_setTitleAttributePicker:DKAttributePickerWithAttributes(@{NSForegroundColorAttributeName: [UIColor blackColor]}, @{NSForegroundColorAttributeName: [UIColor orangeColor]}, @{NSForegroundColorAttributeName: [UIColor grayColor]}) forState:(UIControlStateNormal)];
+    [vc2.tabBarItem dk_setTitleAttributePicker:DKAttributePickerWithAttributes(@{NSForegroundColorAttributeName: [UIColor redColor]}, @{NSForegroundColorAttributeName: [UIColor blueColor]}, @{NSForegroundColorAttributeName: [UIColor greenColor]}) forState:(UIControlStateSelected)];
+    UINavigationController *navigation2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    tabController.viewControllers = @[navigation1, navigation2];
+    self.window.rootViewController = tabController;
     [self.window makeKeyAndVisible];
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
-    self.window.rootViewController = navigation;
-    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    
     return YES;
 }
 
