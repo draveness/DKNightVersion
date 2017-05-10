@@ -17,14 +17,36 @@
 @implementation UITabBarItem (Night)
 
 - (void)dk_setTitleAttributePicker:(DKAttributePicker)picker forState:(UIControlState)state {
-    
     [self setTitleTextAttributes:picker(self.dk_manager.themeVersion) forState:state];
+    
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
     if (!dictionary) {
         dictionary = [[NSMutableDictionary alloc] init];
     }
     [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setTitleTextAttributes:forState:))];
+    [self.pickers setValue:dictionary forKey:key];
+}
+
+- (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state {
+    
+    if (UIControlStateNormal == state) {
+        [self setImage:picker(self.dk_manager.themeVersion)];
+    } else if (UIControlStateSelected == state) {
+        [self setSelectedImage:picker(self.dk_manager.themeVersion)];
+    }
+    
+    NSString *key = [NSString stringWithFormat:@"%@", @(state)];
+    NSMutableDictionary *dictionary = [self.pickers valueForKey:key];
+    if (!dictionary) {
+        dictionary = [[NSMutableDictionary alloc] init];
+    }
+    
+    if (UIControlStateNormal == state) {
+        [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setImage:))];
+    } else if (UIControlStateSelected == state) {
+        [dictionary setValue:[picker copy] forKey:NSStringFromSelector(@selector(setSelectedImage:))];
+    }
     [self.pickers setValue:dictionary forKey:key];
 }
 
@@ -38,14 +60,17 @@
                 if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleTextAttributes:forState:))]) {
                     NSDictionary *attribute = picker(self.dk_manager.themeVersion);
                     [self setTitleTextAttributes:attribute forState:state];
+                } else if ([selector isEqualToString:NSStringFromSelector(@selector(setImage:))]) {
+                    if (UIControlStateNormal == state) {
+                        UIImage *resultImage = ((DKImagePicker)picker)(self.dk_manager.themeVersion);
+                        [self setImage:resultImage];
+                    }
+                } else if ([selector isEqualToString:NSStringFromSelector(@selector(setSelectedImage:))]) {
+                    if (UIControlStateSelected == state) {
+                        UIImage *resultImage = ((DKImagePicker)picker)(self.dk_manager.themeVersion);
+                        [self setSelectedImage:resultImage];
+                    }
                 }
-//                [UIView animateWithDuration:DKNightVersionAnimationDuration
-//                                 animations:^{
-//                                     if ([selector isEqualToString:NSStringFromSelector(@selector(setTitleTextAttributes:forState:))]) {
-//                                         NSDictionary *attribute = picker(self.dk_manager.themeVersion);
-//                                         [self setTitleTextAttributes:attribute forState:state];
-//                                     }
-//                                 }];
             }];
         } else {
             SEL sel = NSSelectorFromString(key);

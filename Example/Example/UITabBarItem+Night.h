@@ -15,5 +15,6 @@
 @interface UITabBarItem (Night)
 
 - (void)dk_setTitleAttributePicker:(DKAttributePicker)picker forState:(UIControlState)state;
+- (void)dk_setImage:(DKImagePicker)picker forState:(UIControlState)state;
 
 @end
