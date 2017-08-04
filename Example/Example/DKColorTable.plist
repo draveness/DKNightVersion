@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BG</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#000000</string>
+		<key>NIGHT</key>
+		<string>#343434</string>
+		<key>RED</key>
+		<string>#fafafa</string>
+	</dict>
+	<key>SEP</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#aaaaaa</string>
+		<key>NIGHT</key>
+		<string>#313131</string>
+		<key>RED</key>
+		<string>#aaaaaa</string>
+	</dict>
+	<key>TINT</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#0000ff</string>
+		<key>NIGHT</key>
+		<string>#ffffff</string>
+		<key>RED</key>
+		<string>#fa0000</string>
+	</dict>
+	<key>TEXT</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#000000</string>
+		<key>NIGHT</key>
+		<string>#ffffff</string>
+		<key>RED</key>
+		<string>#000000</string>
+	</dict>
+	<key>BAR</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#ffffff</string>
+		<key>NIGHT</key>
+		<string>#444444</string>
+		<key>RED</key>
+		<string>#ffffff</string>
+	</dict>
+	<key>HIGHLIGHTED</key>
+	<dict>
+		<key>NORMAL</key>
+		<string>#f0f0f0</string>
+		<key>NIGHT</key>
+		<string>#222222</string>
+		<key>RED</key>
+		<string>#dedede</string>
+	</dict>
+</dict>
+</plist>

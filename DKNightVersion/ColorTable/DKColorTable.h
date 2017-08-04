@@ -33,12 +33,15 @@
  *  And you can directly change `[DKNightVersionManager sharedManager].themeVersion` to
  *  what you want, like: `RED` `NORMAL` and `NIGHT`. And trigger to post notification 
  *  and update corresponding color.
+ *
+ *  DKColorTable support different file format in 3.x: txt and plist.
+ *
  */
 @interface DKColorTable : NSObject
 
 /**
  *  Call `- reloadColorTable` will trigger `DKColorTable` to load this file,
- *  default is `DKColorTable.txt`. Don't need to call `- reloadColorTable` after
+ *  default is `DKColorTable.plist`. Don't need to call `- reloadColorTable` after
  *  setting this property, cuz we have already do it for you.
  */
 @property (nonatomic, strong) NSString *file;

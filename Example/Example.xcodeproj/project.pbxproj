@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721A67411F3491D400B289EF /* DKColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 721A67401F3491D400B289EF /* DKColorTable.plist */; };
 		7261ADF91CB9FB2D007E283C /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF21CB9FB2D007E283C /* PresentingViewController.m */; };
 		7261ADFA1CB9FB2D007E283C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF41CB9FB2D007E283C /* RootViewController.m */; };
 		7261ADFB1CB9FB2D007E283C /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261ADF61CB9FB2D007E283C /* SuccViewController.m */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		721A67401F3491D400B289EF /* DKColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DKColorTable.plist; sourceTree = "<group>"; };
 		7261ADF11CB9FB2D007E283C /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		7261ADF21CB9FB2D007E283C /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		7261ADF31CB9FB2D007E283C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				72E18B9E1CBA038E0004EBB2 /* DKColorTable.txt */,
+				721A67401F3491D400B289EF /* DKColorTable.plist */,
 				729323F91CB9FAF1009E544E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -166,6 +169,7 @@
 				729324081CB9FAF1009E544E /* LaunchScreen.storyboard in Resources */,
 				729324051CB9FAF1009E544E /* Assets.xcassets in Resources */,
 				72E18B9F1CBA038E0004EBB2 /* DKColorTable.txt in Resources */,
+				721A67411F3491D400B289EF /* DKColorTable.plist in Resources */,
 				729324031CB9FAF1009E544E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
