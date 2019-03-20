@@ -12,7 +12,7 @@
 
 - [x] Easily integrate and high performance
 - [x] Providing UIKit and CoreAnimation category
-- [x] Read color customization from file
+- [x] Read colour customisation from file
 - [x] Support different themes
 - [x] Generate picker for other libs with one line macro
 
@@ -39,7 +39,8 @@
     + [Create temporary DKColorPicker](#create-temporary-dkcolorpicker)
     + [DKImagePicker](#dkimagepicker)
 
-> If you want to implement night mode in Swift project without import Objective-C code. This is the Swift version [NightNight](https://github.com/Draveness/NightNight)
+> If you want to implement night mode in Swift project without import Objective-C code. [NightNight](https://github.com/Draveness/NightNight)
+ is the Swift version which does the same work.
 
 # How To Get Started
 
@@ -81,21 +82,21 @@ NORMAL   NIGHT
 #aaaaaa  #313131 SEP
 ```
 
-> You can also create another color table file, and specify it with [DKColorTable](#dkcolortable).
+> You can also create another colour table file, and specify it with [DKColorTable](#dkcolortable).
 
-And then, set color picker like this with `DKColorPickerWithKey`, which generates a DKColorPicker block
+A, set color picker like this with `DKColorPickerWithKey`, which generates a DKColorPicker block
 
 ```objectivec
 self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 ```
 
-After the current theme version change to `DKThemeVersionNight`, the view background color will switch to `#343434`.
+After the current theme version change to `DKThemeVersionNight`, the view background colour would switch to `#343434`.
 
 ```objectivec
 [DKNightVersionManager nightFalling];
 ``` 
 
-or change theme version by manager's property `themeVersion` which is a string
+Alternatively, you could change the theme version by manager's property `themeVersion` which is a string
 
 ```objectivec
 DKNightVersionManager *manager = [DKNightVersionManager sharedInstance];
@@ -112,14 +113,14 @@ The latest version for DKNightVersion add a readonly `dk_manager` property for `
 
 #### Change Theme
 
-You can call `nightFalling` or `dawnComing` to switch current theme version to `DKThemeVersionNight` or `DKThemeVersionNormal`.
+You can call `nightFalling` or `dawnComing` to switch the current theme version to `DKThemeVersionNight` or `DKThemeVersionNormal`.
 
 ```objectivec
 [self.dk_manager dawnComing];
 [self.dk_manager nightFalling];
 ```
 
-Modify `themeVersion` property to directly switch theme version.
+Modify `themeVersion` property to switch the theme version directly.
 
 ```objectivec
 self.dk_manager.themeVersion = DKThemeVersionNormal;
@@ -131,7 +132,7 @@ self.dk_manager.themeVersion = @"RED";
 
 #### Post Notification
 
-Every time the current theme version changes, `DKNightVersionManager` will post a `DKNightVersionThemeChangingNotification`. If you wanna to do some customization, you can observe this notification and react with proper actions.
+Every time the current theme version changes, `DKNightVersionManager` would post a `DKNightVersionThemeChangingNotification`. If you want to do some customisation, you can observe this notification and react with proper actions.
 
 ### DKColorPicker
 
@@ -162,7 +163,7 @@ typedef UIColor *(^DKColorPicker)(DKThemeVersion *themeVersion);
 
 ### DKColorTable
 
-`DKColorTable` is a new feature in DKNightVersion which providing us an elegant way to manage color setting in a project. Use as follows:
+`DKColorTable` is a new feature in DKNightVersion which providing us with an elegant way to manage colour setting in a project. Use as follows:
 
 There is a file called `DKColorTable.txt`
 
@@ -172,7 +173,7 @@ NORMAL   NIGHT
 #aaaaaa  #313131 SEP
 ```
 
-The first line of this file indicated different themes. **NORMAL is required column**, and others are optional. So if you don't need to integrate different themes in your app, just leave the first column in this file, like this:
+The first line of this file indicated different themes. **NORMAL is required column**, and others are optional. So if you don't need to integrate different themes in your app, leave the first column in this file, like this:
 
 ```
 NORMAL
@@ -190,7 +191,7 @@ NORMAL   NIGHT    RED
 #aaaaaa  #313131  #ff0000 SEP
 ```
 
-The last column is the key for a color entry, DKNightVersion uses the current `themeVersion` (ex: `NORMAL` `NIGHT` and `RED`) and key (ex: `BG`, `SEP`) to find the corresponding color in DKColorTable.
+The last column is the key for a colour entry, DKNightVersion uses the current `themeVersion` (ex: `NORMAL` `NIGHT` and `RED`) and key (ex: `BG`, `SEP`) to find the corresponding colour in DKColorTable.
 
 `DKColorTable` has a property `file`, it will loads the color setting in this `file` when `+ [DKColorTable sharedColorTable` is called. Default value of `file` is `DKColorTable.txt`.
 
@@ -198,7 +199,7 @@ The last column is the key for a color entry, DKNightVersion uses the current `t
 @property (nonatomic, strong) NSString *file;
 ```
 
-You can also add another file into your project and fill your color setting in that file.
+You can also add another file into your project and fill your colour setting in that file.
 
 ```
 // color.txt
@@ -206,13 +207,13 @@ NORMAL   NIGHT
 #ffffff  #343434 BG
 ```
 
-And change `file` value
+Also, do not forget to change the `file` property of the colour table.
 
 ```objectivec
 [DKColorTable sharedColorTable].file = @"color.txt"
 ```
 
-This will reload color setting from `color.txt` file.
+The code above would reload colour setting from `color.txt` file.
 
 ### Create temporary DKColorPicker
 
@@ -231,7 +232,7 @@ DKColorPicker DKColorPickerWithRGB(NSUInteger normal, ...);
 DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...);
 ```
 
-`DKColor` also provides a cluster of convenient `API` which returns `DKColorPicker` block, these blocks **return the same color in different themes**.
+`DKColor` also provides a cluster of convenient `API` which returns `DKColorPicker` block, these blocks **return the same colour in different themes**.
 
 ```objectivec
 + (DKColorPicker)colorPickerWithUIColor:(UIColor *)color;
@@ -264,13 +265,13 @@ DKColorPicker DKColorPickerWithColors(UIColor *normalColor, ...);
 
 ### pickerify
 
-DKNightVersion provides an extremely powerful feature which can generate dk_xxxColorPicker with a macro called `pickerify`.
+DKNightVersion provides a powerful feature which can generate dk_xxxColorPicker with a macro called `pickerify`.
 
 ```objectivec
 @pickerify(TableViewCell, cellTintColor)
 ```
 
-This will automatically generate `dk_cellTintColorPicker` for you.
+It automatically generates `dk_cellTintColorPicker` for you.
 
 
 ### DKImagePicker
@@ -281,8 +282,8 @@ Use `DKImagePicker` to change images when `manager.themeVersion` changes.
 imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night");
 ```
 
-The first image is used for `NORMAL` theme the second is used for `NIGHT` theme, cuz themes order in 
-DKColorTable.txt file is NORMAL NIGHT.
+The first argument passed into the function is used for `NORMAL` theme, and the second is used for `NIGHT` theme, the themes order is determined by the configuration in 
+DKColorTable.txt file which is NORMAL and NIGHT.
 
 If your file like this:
 
@@ -301,7 +302,7 @@ Set your image picker in this order:
 imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night", @"red");
 ```
 
-The order of images or names is exactly the same in DKColorTable.txt file.
+The order of images or names is the same in DKColorTable.txt file.
 
 ```objectivec
 DKImagePicker DKImagePickerWithImages(UIImage *normalImage, ...);
