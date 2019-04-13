@@ -15,4 +15,6 @@
 
 @property (nonatomic, copy, setter = dk_setBarTintColorPicker:) DKColorPicker dk_barTintColorPicker;
 
+@property (nonatomic, copy, setter = dk_setBarBackgroundColorPicker:) DKColorPicker dk_barBackgroundColorPicker;
+
 @end
