@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/Draveness/DKNightVersion.git", :tag => s.version }
   s.source_files = "DKNightVersion/DKNightVersion.h"
-  s.xcconfig = { 'require only app-extension-safe api' => 'NO' }
 
   s.public_header_files = "DKNightVersion/DKNightVersion.h"
+  s.resource = "DKNightVersion/ColorTable/DKColorTable.txt"
 
   s.subspec 'Core' do |ss|
     ss.source_files = "DKNightVersion/Core/*.{h,m}", "DKNightVersion/ColorTable/*{h,m}"
