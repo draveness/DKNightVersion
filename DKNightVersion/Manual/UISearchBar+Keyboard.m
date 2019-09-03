@@ -50,28 +50,29 @@
 - (instancetype)dk_init {
     UISearchBar *obj = [self dk_init];
     if (self.dk_manager.supportsKeyboard && [self.dk_manager.themeVersion isEqualToString:DKThemeVersionNight]) {
-        
-#if defined(__IPHONE_13_0)
-        UISearchTextField *searchField = obj.searchTextField;
-        searchField.keyboardAppearance = UIKeyboardAppearanceDark;
-#elif defined(__IPHONE_7_0)
-        UITextField *searchField = [obj valueForKey:@"_searchField"];
-        searchField.keyboardAppearance = UIKeyboardAppearanceDark;
-#else
-        obj.keyboardAppearance = UIKeyboardAppearanceAlert;
-#endif
-    } else {
-#if defined(__IPHONE_13_0)
-        UISearchTextField *searchField = obj.searchTextField;
-        searchField.keyboardAppearance = UIKeyboardAppearanceDefault;
-#elif defined(__IPHONE_7_0)
-        UITextField *searchField = [obj valueForKey:@"_searchField"];
-        searchField.keyboardAppearance = UIKeyboardAppearanceDefault;
-#else
-        obj.keyboardAppearance = UIKeyboardAppearanceDefault;
-#endif
-    }
 
+        if (@available(iOS 13.0, *)) { // 13 and later
+            UISearchTextField *searchField = obj.searchTextField;
+            searchField.keyboardAppearance = UIKeyboardAppearanceDark;
+        }else if (@available(iOS 7.0, *)) { // 7 to 12
+            UITextField *searchField = [obj valueForKey:@"_searchField"];
+            searchField.keyboardAppearance = UIKeyboardAppearanceDark;
+        }else{
+            obj.keyboardAppearance = UIKeyboardAppearanceAlert;
+        }
+    } else {
+        
+        if (@available(iOS 13.0, *)) { // 13 and later
+            UISearchTextField *searchField = obj.searchTextField;
+            searchField.keyboardAppearance = UIKeyboardAppearanceDefault;
+        }else if (@available(iOS 7.0, *)) { // 7 to 12
+            UITextField *searchField = [obj valueForKey:@"_searchField"];
+            searchField.keyboardAppearance = UIKeyboardAppearanceDefault;
+        }else{ //before 7.0
+            obj.keyboardAppearance = UIKeyboardAppearanceDefault;
+        }
+    }
+    
     return obj;
 }
 
